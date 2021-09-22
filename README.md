@@ -2,9 +2,14 @@
 
 本项目地址：
 
-1.Git地址： [https://github.com/funet8/book.git](https://github.com/funet8/book.git)
+1.Git地址： [git@gitee.com:funet8/g.xgss.net.git(git@gitee.com:funet8/g.xgss.net.git)
+
+项目闭源：
+git@gitee.com:funet8/g.xgss.net.git
+
 
 2.github-pages地址： [http://gitbook.xgss.net/](http://gitbook.xgss.net/)
+
 ```
 gitbook.xgss.net CNAME解析到  funet8.github.io
 ```
@@ -13,7 +18,12 @@ gitbook.xgss.net CNAME解析到  funet8.github.io
 
 解析路径：域名--->CDN--->NGINX转发（云服务）--->gitbook服务
 
+# 部署方案
+```
+# cd /data/wwwroot/web/
+# git clone git@gitee.com:funet8/g.xgss.net.git
 
+```
 # 上线提交流程
 在本地PC编辑项目，项目编辑完成提交到 github仓库，github的webhook给jenkins发送消息，jenkins执行脚本，构建项目上线
 
