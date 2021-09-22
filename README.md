@@ -5,7 +5,8 @@
 1.Git地址： [git@gitee.com:funet8/g.xgss.net.git(git@gitee.com:funet8/g.xgss.net.git)
 
 项目闭源：
-git@gitee.com:funet8/g.xgss.net.git
+https://gitee.com/funet8/g.xgss.net
+http://g.xgss.net
 
 
 2.github-pages地址： [http://gitbook.xgss.net/](http://gitbook.xgss.net/)
