@@ -20,13 +20,13 @@ gitbook build .
 
 
 # 杀死进程
-kill -9 `ps aux |grep 'gitbook'|grep 'serve' |awk {'printf $2'}`
+#kill -9 `ps aux |grep 'gitbook'|grep 'serve' |awk {'printf $2'}`
 
 # 启动gitbook
 #nohup /usr/bin/gitbook serve $Gitbook_Path --port $GitPort  > /dev/null 2>&1 &
 
-/usr/bin/gitbook serve $Gitbook_Path --port $GitPort
-echo "重启gitbook 端口：$GitPort"
+#/usr/bin/gitbook serve $Gitbook_Path --port $GitPort
+#echo "重启gitbook 端口：$GitPort"
 
 
 
