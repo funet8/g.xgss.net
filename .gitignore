@@ -1,0 +1,8 @@
+# 忽略gitbook生成的项目目录
+_book
+# 忽略PhpStorm编辑器
+.idea
+node_modules
+
+#自动提交jenkins
+webhook.sh
