@@ -22,6 +22,7 @@ gitbook.xgss.net CNAME解析到  funet8.github.io
 ```
 # cd /data/wwwroot/web/
 # git clone git@gitee.com:funet8/g.xgss.net.git
+# 修改文件属性
 
 ```
 # 上线提交流程
