@@ -4,6 +4,7 @@
   * [CentOS 7 安装](doc/CentOS-7-Install.md)
   * [CentOS 6 和 CentOS 7 差异](doc/CentOS6-and-CentOS7.md)
   * [拥有一台云服务器能干嘛](doc/Cloud-Server-What-todo.md)
+  * [一文读懂CDN和CDN实现的原理](doc/cdn.md)
 * [Gitbook+Jenkins+Github实现文档持续集成](doc/gitbook/README.md)
   * [Gitbook基本使用方法](doc/gitbook/Gitbook.md)
   * [Jenkins+Github实现文档持续集成](doc/gitbook/Jenkins_Github.md)
@@ -19,3 +20,5 @@
   * [程序员必备-Typora+PicGo+阿里云oss实现图床](doc/software/Typora_PicGo_aliyun_oss.md)
   * [PicGo failed to Fetch 出错解决方案](doc/software/Typora_PicGo_failedto_Fetch.md)
   * [安装PhpStorm、破解、汉化](doc/software/Install-PhpStorm.md)
+* [互联网](doc/internet/README.md)
+  * [互联网程序员各个职位技能图-多图警告](doc/internet/programmer_position_skills.md) 
