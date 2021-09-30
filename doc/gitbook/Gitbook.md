@@ -1,4 +1,4 @@
-# 使用Gitbook可以人制作发布个人的电子书籍
+# 使用Gitbook制作发布个人的电子书籍
 
 ![gitbooklogo](http://imgoss.xgss.net/picgo/gitbooklogo.jpg?aliyunoss)
 
@@ -21,7 +21,7 @@ gitbook.com网站是一个简单的个人在线书籍网站，在这里可以把
 ```
 系统： Centos7
 
-IP： 192.168.1.5(内网穿透、或者腾讯云服务器)
+IP： 192.168.1.5(内网穿透、或者云服务器)
 
 地址： https://g.xgss.net/
 

@@ -15,4 +15,6 @@
 * [服务器安全](doc/safe/readme.md)
   * [WEB服务器攻击类型和应对方案](doc/safe/Web-safe.md)
 * [常用软件](doc/software/README.md)
+  * [Typora+PicGo+Gitee或github实现markdown自带图床效果](doc/software/Typora_PicGo_Gitee_markdown_pic.md)
+  * [PicGo failed to Fetch 出错解决方案](doc/software/Typora_PicGo_failedto_Fetch.md)
   * [安装PhpStorm、破解、汉化](doc/software/Install-PhpStorm.md)
