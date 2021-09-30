@@ -2,14 +2,17 @@
 
 本项目地址：
 
-1.Git地址： [git@gitee.com:funet8/g.xgss.net.git(git@gitee.com:funet8/g.xgss.net.git)
+1.Git地址： [git@gitee.com:funet8/g.xgss.net.git](git@gitee.com:funet8/g.xgss.net.git)
 
 项目闭源：
 https://gitee.com/funet8/g.xgss.net
-http://g.xgss.net
+
+https://g.xgss.net
 
 
 2.github-pages地址： [http://gitbook.xgss.net/](http://gitbook.xgss.net/)
+
+GitHUB地址： https://github.com/funet8/book
 
 ```
 gitbook.xgss.net CNAME解析到  funet8.github.io
