@@ -22,6 +22,8 @@
   * [安装PhpStorm、破解、汉化](doc/software/Install-PhpStorm.md)
 * [互联网](doc/internet/README.md)
   * [互联网程序员各个职位技能图-多图警告](doc/internet/programmer_position_skills.md)
+  * [青龙面板每天自动获取某东豆](doc/internet/qinglong_jingdongdou.md)
+  * [利用谷歌浏览器获取京东Cookie抓取](doc/internet/jd_cookie.md)
 * [开源软件](doc/Open-Source-Software/README.md)
   * [Archery-基于docker安装](doc/Open-Source-Software/1_Archery_Install_Docker.md)
   * [Archery-后台配置基本操作](doc/Open-Source-Software/2_Archery_config.md)
