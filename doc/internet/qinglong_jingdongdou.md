@@ -20,6 +20,8 @@
 
 缺点：安装面板前需要有服务器安装docker，或者能安装docker都可以。再安装面板，之后还需要拉取jing东签到的各种脚本，对脚本做稍微修改。过程较为繁琐，没有一键搞定的功能。
 
+![docker-qinglong](http://imgoss.xgss.net/picgo/docker-qinglong.jpg?aliyunoss)
+
 # 系统说明
 
 青龙面板可以做什么？
