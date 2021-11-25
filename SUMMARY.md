@@ -16,6 +16,7 @@
   * [基于centos7的jenkins安卓自动打包](doc/android-to-apk/3.Centos7-Android-jenkins.md)
 * [服务器安全](doc/safe/readme.md)
   * [WEB服务器攻击类型和应对方案](doc/safe/Web-safe.md)
+  * [为什么说HTTPS是安全的](doc/safe/why-ssl-safe.md)
 * [常用软件](doc/software/README.md)
   * [Typora+PicGo+Gitee或github实现markdown自带图床效果](doc/software/Typora_PicGo_Gitee_markdown_pic.md)
   * [程序员必备-Typora+PicGo+阿里云oss实现图床](doc/software/Typora_PicGo_aliyun_oss.md)
