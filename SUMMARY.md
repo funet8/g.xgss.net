@@ -27,6 +27,7 @@
   * [程序员必备-Typora+PicGo+阿里云oss实现图床](doc/software/Typora_PicGo_aliyun_oss.md)
   * [PicGo failed to Fetch 出错解决方案](doc/software/Typora_PicGo_failedto_Fetch.md)
   * [安装PhpStorm、破解、汉化](doc/software/Install-PhpStorm.md)
+  * [Xmind2021安装激活破解](doc/software/Xmind2021安装激活破解.md)
 * [互联网](doc/internet/README.md)
   * [互联网程序员各个职位技能图-多图警告](doc/internet/programmer_position_skills.md)
   * [青龙面板每天自动获取某东豆](doc/internet/qinglong_jingdongdou.md)

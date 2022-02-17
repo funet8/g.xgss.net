@@ -39,8 +39,7 @@ gitbook.xgss.net CNAME解析到  funet8.github.io
 感谢开源 https://github.com/judasn/Linux-Tutorial 给的灵感，在工作中总结的文档加上开源项目，查漏补缺 ，不断提升自己！
 
 # 收款码
-![微信](https://img.funet8.com/images/wechat_donate.jpg)
+<img src="https://img.funet8.com/images/wechat_donate.jpg" alt="微信" style="zoom:50%;" />
 
-![支付宝](https://img.funet8.com/images/alipay_donate.jpg)
-
+<img src="https://img.funet8.com/images/alipay_donate.jpg" alt="支付宝" style="zoom:50%;" />
 
