@@ -11,8 +11,9 @@
   
 * [服务器基础工具](doc/basis-tools/README.md)
 
-  [Linux服务器配置SSH免密码登陆](doc/linux-basis/Linux服务器配置SSH免密码登陆.md)
-
+  * [Linux使用mail配合smtp发送邮件](doc/basis-tools/Linux使用mail配合smtp发送邮件.md)
+  * [Linux服务器配置SSH免密码登陆](doc/linux-basis/Linux服务器配置SSH免密码登陆.md)
+  
 * [WEB服务](doc/web/README.md)
   
   * [Centos7安装openresty实现WAF防火墙功能](doc/web/Centos7-install-openresty-waf.md)

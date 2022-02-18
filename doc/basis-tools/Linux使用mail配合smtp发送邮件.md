@@ -123,13 +123,6 @@ GeoTrust SSL CA                                              P,P,P
 
 
 
-
-
-
- 
-
-
-
 ## 配置/etc/mail.rc
 
 ```
