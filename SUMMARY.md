@@ -19,7 +19,7 @@
 * [文件系统](doc/file-system/README.md)
   * [CentOS7下LVM给硬盘扩容操作](doc/file-system/CentOS7下LVM给硬盘扩容操作.md)
   * [CentOS7下LVM给腾讯云云硬盘扩容操作](doc/file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.md)
-  * [Linux安装桑巴(samba)与windows实现共享文件夹](doc/file-system/Linux安装桑巴(samba)与windows实现共享文件夹.md)
+  * [Linux安装samba与windows实现共享文件夹](doc/file-system/Linux安装samba与windows实现共享文件夹.md)
   
 * [Gitbook+Jenkins+Github实现文档持续集成](doc/gitbook/README.md)
   * [Gitbook基本使用方法](doc/gitbook/Gitbook.md)
