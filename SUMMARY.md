@@ -6,6 +6,7 @@
   * [拥有一台云服务器能干嘛](doc/linux-basis/Cloud-Server-What-todo.md)
   * [一文读懂CDN和CDN实现的原理](doc/linux-basis/cdn.md)
   * [资深运维工程师必须了解的操作系统基础](doc/linux-basis/operating-system-based.md)
+  * [Linux服务器配置SSH免密码登陆](doc/linux-basis/Linux服务器配置SSH免密码登陆.md)
 * [WEB服务](doc/web/README.md)
   * [Centos7安装openresty实现WAF防火墙功能](doc/web/Centos7-install-openresty-waf.md)
 * [文件系统](doc/file-system/README.md)
