@@ -1,4 +1,10 @@
-## Linux使用mail配合smtp发送邮件
+# Linux使用mail配合smtp发送邮件
+
+由于工作需要结合shell脚本需要发送邮件通知，linux自带的mail可以实现外部smtp发邮件。不需要本地配置postfix，sendmail邮件服务器。
+
+本文教程包含25端口发送邮件和mail使用465端口加密发邮件，mail基本命令发送邮件三个知识点，测试系统是centos7
+
+![Linux-mail-smtp](https://imgoss.xgss.net/picgo/Linux-mail-smtp.jpg?aliyun)
 
 
 
@@ -6,7 +12,7 @@
 
 ```
 #  yum -y install mailx
-# yum -y install sendmail
+#  yum -y install sendmail
 
 centos6
 # /etc/init.d/sendmail start
@@ -15,6 +21,17 @@ centos6
 centos7
 systemctl enable sendmail
 ```
+
+
+
+关闭其他的邮件工具
+
+```
+# systemctl stop sendmail
+# systemctl stop postfix
+```
+
+
 
 
 
@@ -144,14 +161,14 @@ set nss-config-dir=/root/.certs #证书所在目录
 ## 发送邮件测试
 
 ```
-[root@along ~]# echo "邮件正文" | mail -s "邮件主题" xxx@163.com
+# echo "邮件正文" | mail -s "邮件主题" xxx@163.com
 ```
 
 邮件发送成功
 
 ![image-20220218134340670](https://imgoss.xgss.net/picgo/image-20220218134340670.png?aliyun)
 
-# mail命令发送邮件
+# mail基本命令发送邮件
 
 1.标题为"test"内容为空的邮件，容易被邮箱服务判为垃圾邮件。
 
@@ -191,23 +208,17 @@ echo "hello,username3...." | mail -s "hello" username3@163.com
 
 
 
-5、使用外部smtp(qq的SMTP)来发送邮件
+5、使用外部smtp来发送邮件
 
 ```
 # vi /etc/mail.rc          #文末添加以下
-set from=username1@163.com smtp=smtp.163.com
-set smtp-auth-user=username1@163.com smtp-auth-password=password smtp-auth=login
+set from=username1@163.com 
+smtp=smtp.163.com
+set smtp-auth-user=username1@163.com 
+smtp-auth-password=password 
+smtp-auth=login
 
 # source /etc/mail.rc	【本人测试，不需要这步即可】
-# mail -s "51cto" username3@163.com < /etc/passwd
+# mail -s "testmail" username@163.com < /etc/passwd
 ```
-
-
-
-
-
-
-
-
-
 
