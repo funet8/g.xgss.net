@@ -23,7 +23,7 @@
         "favicon",
         "tbfed-pagefooter",
         "expandable-chapters-small",
-        "-pageview-count",
+        "pageview-count",
         "popup"
     ],
     "pluginsConfig": {
