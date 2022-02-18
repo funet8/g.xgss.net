@@ -1,4 +1,5 @@
 * [项目介绍](README.md)
+
 * [Linux基础教程](README.md)
   * [Linux 介绍](doc/linux-basis/Linux.md)
   * [CentOS 7 安装](doc/linux-basis/CentOS-7-Install.md)
@@ -7,37 +8,51 @@
   * [一文读懂CDN和CDN实现的原理](doc/linux-basis/cdn.md)
   * [资深运维工程师必须了解的操作系统基础](doc/linux-basis/operating-system-based.md)
   * [Linux服务器配置SSH免密码登陆](doc/linux-basis/Linux服务器配置SSH免密码登陆.md)
+  
+* [服务器基础工具](doc/basis-tools/README.md)
+
+  [Linux服务器配置SSH免密码登陆](doc/linux-basis/Linux服务器配置SSH免密码登陆.md)
+
 * [WEB服务](doc/web/README.md)
+  
   * [Centos7安装openresty实现WAF防火墙功能](doc/web/Centos7-install-openresty-waf.md)
+  
 * [文件系统](doc/file-system/README.md)
   * [CentOS7下LVM给硬盘扩容操作](doc/file-system/CentOS7下LVM给硬盘扩容操作.md)
   * [CentOS7下LVM给腾讯云云硬盘扩容操作](doc/file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.md)
+  
 * [Gitbook+Jenkins+Github实现文档持续集成](doc/gitbook/README.md)
   * [Gitbook基本使用方法](doc/gitbook/Gitbook.md)
   * [Jenkins+Github实现文档持续集成](doc/gitbook/Jenkins_Github.md)
   * [Github Page怎么绑定自己的域名](doc/gitbook/Github-Page-my-domain.md)
+  
 * [在CentOS7下构建安卓编译环境](doc/android-to-apk/README.md)
   * [在CentOS 7下构建安卓Android编译环境](doc/android-to-apk/1.Centos7-Android-software.md)
   * [CentOS7下安装Jenkins](doc/jenkins/CentOS-7-Install-Jenkins.md)
   * [基于centos7的jenkins安卓自动打包](doc/android-to-apk/3.Centos7-Android-jenkins.md)
+  
 * [服务器安全](doc/safe/readme.md)
   * [WEB服务器攻击类型和应对方案](doc/safe/Web-safe.md)
   * [为什么说HTTPS是安全的](doc/safe/why-ssl-safe.md)
-* [常用软件](doc/software/README.md)
+  
+* [开发常用](doc/software/README.md)
   * [Typora+PicGo+Gitee或github实现markdown自带图床效果](doc/software/Typora_PicGo_Gitee_markdown_pic.md)
   * [程序员必备-Typora+PicGo+阿里云oss实现图床](doc/software/Typora_PicGo_aliyun_oss.md)
   * [PicGo failed to Fetch 出错解决方案](doc/software/Typora_PicGo_failedto_Fetch.md)
   * [安装PhpStorm、破解、汉化](doc/software/Install-PhpStorm.md)
   * [Xmind2021安装激活破解](doc/software/Xmind2021安装激活破解.md)
   * [Windows下VSCode及中文配置](doc/software/Windows下VSCode及中文配置.md)
+  
 * [互联网](doc/internet/README.md)
   * [互联网程序员各个职位技能图-多图警告](doc/internet/programmer_position_skills.md)
   * [青龙面板每天自动获取某东豆](doc/internet/qinglong_jingdongdou.md)
   * [利用谷歌浏览器获取京东Cookie抓取](doc/internet/jd_cookie.md)
+  
 * [开源软件](doc/Open-Source-Software/README.md)
   * [Archery-基于docker安装](doc/Open-Source-Software/1_Archery_Install_Docker.md)
   * [Archery-后台配置基本操作](doc/Open-Source-Software/2_Archery_config.md)
   * [Archery-SQL上线流程](doc/Open-Source-Software/3_Archery_online.md)
   * [Archery-SQL上线提示库名过长，建议使用别名解析](doc/Open-Source-Software/4.sql-bieming.md)
+  
 * [网盘系统](doc/cloud-disk/README.md)
   * [OwnCloud搭建自己的私有云盘](doc/cloud-disk/OwnCloud.md)
