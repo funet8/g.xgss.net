@@ -4,6 +4,7 @@
   * [Linux 介绍](doc/linux-basis/Linux.md)
   * [CentOS 7 安装](doc/linux-basis/CentOS-7-Install.md)
   * [CentOS 6 和 CentOS 7 差异](doc/linux-basis/CentOS6-and-CentOS7.md)
+  * [Linux常用命令及其使用详解](doc/linux-basis/Linux常用命令及其使用详解.md)
   * [拥有一台云服务器能干嘛](doc/linux-basis/Cloud-Server-What-todo.md)
   * [一文读懂CDN和CDN实现的原理](doc/linux-basis/cdn.md)
   * [资深运维工程师必须了解的操作系统基础](doc/linux-basis/operating-system-based.md)
@@ -11,10 +12,11 @@
   
 * [服务器基础工具](doc/basis-tools/README.md)
   * [Linux使用mail配合smtp发送邮件](doc/basis-tools/Linux使用mail配合smtp发送邮件.md)
-  * [Linux服务器配置SSH免密码登陆](doc/linux-basis/Linux服务器配置SSH免密码登陆.md)
+  * [GoAccess轻量nginx日志分析工具](doc/basis-tools/GoAccess轻量nginx日志分析工具.md)
   
 * [WEB服务](doc/web/README.md)
   * [Centos7安装openresty实现WAF防火墙功能](doc/web/Centos7-install-openresty-waf.md)
+  * [Linux服务器故障排查基本方案](doc/web/Linux服务器故障排查基本方案.md)
   
 * [文件系统](doc/file-system/README.md)
   * [CentOS7下LVM给硬盘扩容操作](doc/file-system/CentOS7下LVM给硬盘扩容操作.md)
@@ -53,6 +55,7 @@
   * [Archery-后台配置基本操作](doc/Open-Source-Software/2_Archery_config.md)
   * [Archery-SQL上线流程](doc/Open-Source-Software/3_Archery_online.md)
   * [Archery-SQL上线提示库名过长，建议使用别名解析](doc/Open-Source-Software/4.sql-bieming.md)
+  * [免费开源iPhone推送消息工具+服务端-Bark](doc/Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.md)
   
 * [网盘系统](doc/cloud-disk/README.md)
   * [OwnCloud搭建自己的私有云盘](doc/cloud-disk/OwnCloud.md)
