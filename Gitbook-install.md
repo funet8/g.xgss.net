@@ -41,6 +41,6 @@ gitbook.xgss.net CNAME解析到  funet8.github.io
 
 # 收款码
 
-<img src="images/wechat_donate.jpg" alt="微信" style="zoom:50%;" />
+<img src="https://imgoss.xgss.net/picgo/wechat_donate.jpg?aliyun" alt="微信" style="zoom:50%;" />
 
-<img src="images/alipay_donate.jpg" alt="支付宝" style="zoom:50%;" />
+<img src="https://imgoss.xgss.net/picgo/alipay_donate.jpg?aliyun" alt="支付宝" style="zoom:50%;" />
