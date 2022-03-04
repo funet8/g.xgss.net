@@ -7,6 +7,7 @@
   * [Linux常用命令及其使用详解](doc/linux-basis/Linux常用命令及其使用详解.md)
   * [拥有一台云服务器能干嘛](doc/linux-basis/Cloud-Server-What-todo.md)
   * [一文读懂CDN和CDN实现的原理](doc/linux-basis/cdn.md)
+  * [负载均衡和CDN技术](doc/linux-basis/负载均衡和CDN技术.md)
   * [资深运维工程师必须了解的操作系统基础](doc/linux-basis/operating-system-based.md)
   * [Linux服务器配置SSH免密码登陆](doc/linux-basis/Linux服务器配置SSH免密码登陆.md)
   
