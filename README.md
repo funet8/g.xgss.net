@@ -32,8 +32,6 @@
 | 蓝天采集器   | [sky.funet8.com](http://sky.funet8.com)     | 域名停解析，绑定hosts访问 |                                                     |
 | 测试站       | [t.funet8.com](http://t.funet8.com)         | 域名停解析，绑定hosts访问 |                                                     |
 |              |                                             |                           |                                                     |
-|              |                                             |                           |                                                     |
-|              |                                             |                           |                                                     |
 
 
 
@@ -63,9 +61,9 @@
 
 ## 后端
 
-[JavaCollection](https://github.com/hansonwang99/JavaCollection)
+[JavaCollection](https://github.com/hansonwang99/JavaCollection) | Java开源项目之「自学编程之路」
 
-[cdk8s-team-style](https://github.com/cdk8s/cdk8s-team-style)
+[cdk8s-team-style](https://github.com/cdk8s/cdk8s-team-style) | 寻找志同道合的人，引发自身的思考
 
 [bestJavaer](https://github.com/crisxuan/bestJavaer) | 这是一个成为更好的Java程序员的系列教程
 

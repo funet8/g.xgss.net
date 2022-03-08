@@ -59,6 +59,7 @@
   * [免费开源iPhone推送消息工具+服务端-Bark](doc/Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.md)
   * [如何给公司节约成本，搭建免费开源监控系统uptime-kuma](doc/Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.md)
   * [免费开源Github Page实现短链接方案](doc/Open-Source-Software/免费开源Github Page实现短链接方案.md)
+  * [云服务器搭建自己的ngrok服务实现内网穿透](doc/Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.md)
   
 * [网盘系统](doc/cloud-disk/README.md)
   * [OwnCloud搭建自己的私有云盘](doc/cloud-disk/OwnCloud.md)
