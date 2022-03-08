@@ -1,18 +1,22 @@
 # 星哥说事导航
 
-| 项目名         | **正式域名**                                 | 说明                                                         | 开源仓库                                      |
-| -------------- | -------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------- |
-| 星哥说事首页   | [www.xgss.net](https://www.xgss.net)         | 基于wordpress搭建博客系统                                    |                                               |
-| 静态资源图片等 | [s.xgss.net](https://s.xgss.net)             | 蜘蛛采集的图片                                               |                                               |
-| 看云-书籍      | http://book.xgss.net/                        | 测试用的，看云空间只有50M，放弃了                            |                                               |
-| 图库           | [imgoss.xgss.net](https://imgoss.xgss.net)   | 主要用于图片存放，通过typora编写上传到阿里云oss上            |                                               |
-| owncloud云盘   | [o.xgss.net](https://o.xgss.net)             | owncloud云盘                                                 |                                               |
-| 私人网盘       | [z.xgss.net](https://z.xgss.net)             | 基于zfile搭建                                                |                                               |
-| gitbook        | [gitbook.xgss.net](http://gitbook.xgss.net/) | gitbook.xgss.net CNAME解析到  funet8.github.io，服务器在github |                                               |
-| 私人文档库     | [g.xgss.net](http://g.xgss.net/)             | 本地编辑md文件，通过gitbook工具生成html文件，上传到腾讯云。  |                                               |
-| 私人图片库     | [p.xgss.net](http://p.xgss.net/)             | 基于开源欧奥[PicHome](https://oaooa.com/pichome.html)搭建，私人相册库 | [开源地址](https://gitee.com/zyx0814/Pichome) |
-| 开源短链接     | [d.xgss.net](http://d.xgss.net)              | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
-|                |                                              |                                                              |                                               |
+| 项目名          | **正式域名**                                 | 说明                                                         | 开源仓库                                      |
+| --------------- | -------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------- |
+| 星哥说事首页    | [www.xgss.net](https://www.xgss.net)         | 基于wordpress搭建博客系统                                    |                                               |
+| 静态资源图片等  | [s.xgss.net](https://s.xgss.net)             | 蜘蛛采集的图片                                               |                                               |
+| 看云-书籍       | http://book.xgss.net/                        | 测试用的，看云空间只有50M，放弃了                            |                                               |
+| 图库            | [imgoss.xgss.net](https://imgoss.xgss.net)   | 主要用于图片存放，通过typora编写上传到阿里云oss上            |                                               |
+| owncloud云盘    | [o.xgss.net](https://o.xgss.net)             | owncloud云盘                                                 |                                               |
+| 私人网盘        | [z.xgss.net](https://z.xgss.net)             | 基于zfile搭建                                                |                                               |
+| gitbook         | [gitbook.xgss.net](http://gitbook.xgss.net/) | gitbook.xgss.net CNAME解析到  funet8.github.io，服务器在github |                                               |
+| 私人文档库      | [g.xgss.net](http://g.xgss.net/)             | 本地编辑md文件，通过gitbook工具生成html文件，上传到腾讯云。  |                                               |
+| 私人图片库      | [p.xgss.net](http://p.xgss.net/)             | 基于开源欧奥[PicHome](https://oaooa.com/pichome.html)搭建，私人相册库 | [开源地址](https://gitee.com/zyx0814/Pichome) |
+| 开源短链接      | [d.xgss.net](http://d.xgss.net)              | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
+| 开源短链接-模板 | [d.xgss.net](http://d.xgss.net)              | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
+
+
+
+[阿里云服务器优惠](http://d.xgss.net/2) | [腾讯云服务器优惠](http://d.xgss.net/3)
 
 
 
@@ -31,7 +35,11 @@
 |              |                                             |                           |                                                     |
 |              |                                             |                           |                                                     |
 
-# [安装Gitbook](doc/Gitbook-install.md)
+
+
+
+
+# [安装Gitbook](Gitbook-install.md)
 
 
 
@@ -59,9 +67,11 @@
 
 [cdk8s-team-style](https://github.com/cdk8s/cdk8s-team-style)
 
-这是一个成为更好的Java程序员的系列教程 [bestJavaer](https://github.com/crisxuan/bestJavaer)
+[bestJavaer](https://github.com/crisxuan/bestJavaer) | 这是一个成为更好的Java程序员的系列教程
 
 [27天成为Java大神](https://github.com/DuGuQiuBai/Java)
+
+[HelloGithub](https://github.com/521xueweihan/HelloGitHub) | 分享 GitHub 上有趣、入门级的开源项目
 
 
 
