@@ -10,6 +10,7 @@
   * [负载均衡和CDN技术](doc/linux-basis/负载均衡和CDN技术.md)
   * [资深运维工程师必须了解的操作系统基础](doc/linux-basis/operating-system-based.md)
   * [Linux服务器配置SSH免密码登陆](doc/linux-basis/Linux服务器配置SSH免密码登陆.md)
+  * [一张图学会Git](doc/linux-basis/一张图学会Git.md)
   
 * [服务器基础工具](doc/basis-tools/README.md)
   * [Linux使用mail配合smtp发送邮件](doc/basis-tools/Linux使用mail配合smtp发送邮件.md)

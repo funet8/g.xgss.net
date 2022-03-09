@@ -39,6 +39,8 @@
 
 
 
+
+
 ## 什么叫ngrok？
 
 ngrok 是一个反向代理，通过在公共的端点和本地运行的 Web 服务器之间建立一个安全的通道。ngrok 可捕获和分析所有通道上的流量，便于后期分析和重放。
@@ -46,6 +48,8 @@ ngrok 是一个反向代理，通过在公共的端点和本地运行的 Web 服
 开源地址：https://github.com/inconshreveable/ngrok.git 和其类似的功能还有开源的frp： https://github.com/fatedier/frp
 
 ![whatisngrok](https://imgoss.xgss.net/picgo/whatisngrok.jpg?aliyun)
+
+
 
 ## 自建ngrok准备
 
