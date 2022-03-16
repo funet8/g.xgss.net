@@ -12,11 +12,12 @@
 | 私人文档库      | [g.xgss.net](http://g.xgss.net/)             | 本地编辑md文件，通过gitbook工具生成html文件，上传到腾讯云。  |                                               |
 | 私人图片库      | [p.xgss.net](http://p.xgss.net/)             | 基于开源欧奥[PicHome](https://oaooa.com/pichome.html)搭建，私人相册库 | [开源地址](https://gitee.com/zyx0814/Pichome) |
 | 开源短链接      | [d.xgss.net](http://d.xgss.net)              | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
+| 开源yourls      | [y.xgss.net](http://y.xgss.net)              | 基于开源[yourls](http://y.xgss.net/yourls)搭建，[添加url地址](http://y.xgss.net/admin) | [开源地址](http://y.xgss.net/yourls)          |
 | 开源短链接-模板 | [d.xgss.net](http://d.xgss.net)              | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
 
 
 
-[阿里云服务器优惠](http://d.xgss.net/2) | [腾讯云服务器优惠](http://d.xgss.net/3)
+[阿里云服务器优惠](http://y.xgss.net/aliyun) | [腾讯云服务器优惠](http://y.xgss.net/tx)
 
 
 
@@ -76,6 +77,10 @@
 ## 其他
 
 [程序员考公指南](https://github.com/coder2gwy/coder2gwy)
+
+[超赞的 Linux 软件](https://github.com/alim0x/Awesome-Linux-Software-zh_CN) | 一个 Linux 上超赞的应用，软件，工具以及其它资源的集中地
+
+
 
 
 
