@@ -3,7 +3,7 @@ _book
 # 忽略PhpStorm编辑器
 .idea
 node_modules
-#images
+images
 
 #自动提交jenkins
 webhook.sh
