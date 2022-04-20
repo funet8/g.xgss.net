@@ -63,6 +63,9 @@
   * [免费开源Github Page实现短链接方案](doc/Open-Source-Software/免费开源Github Page实现短链接方案.md)
   * [云服务器搭建自己的ngrok服务实现内网穿透](doc/Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.md)
   * [云服务器部署开源短链生成-YOURLS](doc/Open-Source-Software/云服务器部署开源短链生成-YOURLS.md)
+  * [通过Heimdall开源免费，搭建自己的网络书签](doc/Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.md)
+  * [AdGuard搭建去广告公共DNS](doc/Open-Source-Software/AdGuard搭建去广告公共DNS.md)
+  * [开源文档管理系统汇总](doc/Open-Source-Software/开源文档管理系统.md)
   
 * [网盘系统](doc/cloud-disk/README.md)
   * [OwnCloud搭建自己的私有云盘](doc/cloud-disk/OwnCloud.md)

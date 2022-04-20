@@ -25,6 +25,14 @@ YOURLS 的安装流程类似于PHP站点。
 
 YOURLS免费开源，可以在Github下载最新版本（https://github.com/YOURLS/YOURLS/releases），解压后放到站点根目录，并将config-sample.php更名为config.php。
 
+```
+wget https://github.com/YOURLS/YOURLS/archive/refs/tags/1.8.2.tar.gz
+```
+
+
+
+
+
 ## 配置MySQL数据库
 
 需要先新建一个MySQL数据库，并设置好账号、密码，然后修改user/config.php配置文件，填写正确的MySQL信息，配置信息如下。
@@ -48,9 +56,14 @@ define( 'YOURLS_SITE', 'http://y.xgss.net' );
 
 //设置用户名和密码
 $yourls_user_passwords = [
-	'admin' => 'password123',
+	'admin' => '123456', // 设置好密码
 ];
 ```
+
+输入管理员账号密码登录后如果出现“Could not auto-encrypt passwords. Error was: “cannot write file”.”报错，请将user/config.php文件的权限改为666，然后刷新网页，再把权限改回644，因为你刚才填写密码时用的是明文，这样很危险，所以程序需要对其加密。
+
+
+
 
 
 
@@ -66,7 +79,8 @@ server {
 
 
         location / {
-                try_files  $uri $uri/ /yourls-loader.php;
+        		index index.php
+                try_files  $uri $uri/ /yourls-loader.php
         }
         location ~ ^/.+\.php {
         fastcgi_index            index.php;
@@ -100,17 +114,20 @@ server {
 
 汉化包的git地址为https://github.com/guox/yourls-zh_CN，下载中文包然后解压后放在放在user/languages/目录下
 
-```
-wget https://github.com/guox/yourls-zh_CN/archive/master.zip
-unzip master.zip
-```
-
-修改配置文件
+YOURLS默认是中文界面，不方便操作，看到有网友提供了汉化，访问[yourls-zh_CN](https://github.com/guox/yourls-zh_CN/archive/master.zip)下载汉化包，并解压至`user/languages`目录，然后修改`user/config.php`
 
 ```
-vim user/config.php
-define( 'YOURLS_LANG', 'zh_CN.mo' );
-# https://github.com/YOURLS/YOURLS/wiki/YOURLS-in-your-language
+#语言包放到languages
+[root@aliyun-hz languages]# ll
+total 68
+-rw-r--r-- 1 www www   210 Apr 23  2017 index.html
+-rw-r--r-- 1 www www    51 Mar 24  2013 README.md
+-rw-r--r-- 1 www www 22123 Mar 24  2013 zh_CN.mo
+-rw-r--r-- 1 www www 32783 Mar 24  2013 zh_CN.po
+#修改配置文件启用中文
+vi user/config.php
+#启用中文
+define( 'YOURLS_LANG', 'zh_CN' );
 ```
 
 
@@ -214,6 +231,37 @@ data = {"signature":"6962355501","url":"http://www.baidu.com","format":"json","a
 response = requests.post(url, data)
 print(json.loads(response.text))
 ```
+
+# 安装Sleeky主题，美化YOURLS
+
+YOURLS界面显得非常古老，风格挺老的，前几天在Github上看到一款YOURLS主题Sleeky，这篇文章分享下Sleeky主题的安装，希望对你有所帮助。
+
+安装Sleeky主题
+
+最新版Sleeky主题可前往Github下载：https://github.com/Flynntes/Sleeky/releases
+
+Sleeky主题主题包括两部分，一部分是YOURLS前端，另一部分是YOURLS后台管理。下载Sleeky主题主题后可看到有2个文件夹：
+
+    sleeky-frontend: 前端主题
+    sleeky-backend：后端主题
+
+将sleeky-frontend文件夹下的内容放到YOURLS站点根目录下即可，不需要额外的设置，直接访问YOURLS主界面即可看到效果。
+
+![image-20220324135010266](https://imgoss.xgss.net/picgo/image-20220324135010266.png?aliyun)
+
+将后端文件夹sleeky-backend放到YOURLS下的/user/plugins目录，并在YOURLS后台启用Sleeky主题插件，如下图。
+
+![image-20220324135929039](https://imgoss.xgss.net/picgo/image-20220324135929039.png?aliyun)
+
+旧的后台地址：
+
+![image-20220324140031738](https://imgoss.xgss.net/picgo/image-20220324140031738.png?aliyun)
+
+新的后台界面：
+
+![image-20220324135959700](https://imgoss.xgss.net/picgo/image-20220324135959700.png?aliyun)
+
+
 
 
 

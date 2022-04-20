@@ -14,7 +14,7 @@
 
 ![img](http://imgoss.xgss.net/picgo/f9add4b1c06248e89208e4d4dab88085?aliyunoss)
 
-地址栏输入 [https://wqs.jd.com/](https://www.ddayh.com/go.php/?url=https://wqs.jd.com/) 回车(下图)
+地址栏输入 [https://wqs.jd.com/](https://wqs.jd.com/) 回车(下图)
 
 ![img](http://imgoss.xgss.net/picgo/95dbb8f147634f5da344b56eae772e15?aliyunoss)
 

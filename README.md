@@ -14,6 +14,7 @@
 | 开源短链接      | [d.xgss.net](http://d.xgss.net)              | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
 | 开源yourls      | [y.xgss.net](http://y.xgss.net)              | 基于开源[yourls](http://y.xgss.net/yourls)搭建，[添加url地址](http://y.xgss.net/admin) | [开源地址](http://y.xgss.net/yourls)          |
 | 开源短链接-模板 | [d.xgss.net](http://d.xgss.net)              | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
+| 青龙签到        | [ql.xgss.net](http://ql.xgss.net)            | [青龙面板每天自动获取京东豆](doc/internet/qinglong_jingdongdou.md) |                                               |
 
 
 
@@ -32,13 +33,12 @@
 | 腾讯企业邮箱 | [腾讯企业邮箱](https://exmail.qq.com/login) | funet8.com的域名解析      |                                                     |
 | 蓝天采集器   | [sky.funet8.com](http://sky.funet8.com)     | 域名停解析，绑定hosts访问 |                                                     |
 | 测试站       | [t.funet8.com](http://t.funet8.com)         | 域名停解析，绑定hosts访问 |                                                     |
-|              |                                             |                           |                                                     |
 
 
 
 
 
-# [安装Gitbook](Gitbook-install.md)
+# [安装Gitbook](doc/gitbook/Gitbook-install.md)
 
 
 
