@@ -9,18 +9,17 @@
 
 # 定义仓库地址
 Git_Url='git@github.com:funet8/book.git'
-Gitbook_Path='/data/wwwroot/web/gitbook.xgss.net'
 NowTime=`date +%Y%m%d-%H:%M:%S` 
 
-echo '开始执行命令'
-
-cd $Gitbook_Path
 echo '安装插件'
 gitbook install
 
 # 生成静态文件
 echo '执行命令：gitbook build .'
 gitbook build .
+
+echo "执行命令：git push -f $Git_Url main"
+git push -f $Git_Url main
 
 # 进入生成的文件夹
 echo "执行命令：cd ./_book\n"
