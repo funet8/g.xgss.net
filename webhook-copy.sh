@@ -5,11 +5,10 @@ git commit -m "webhook自动提交"
 git push
 
 
-echo '安装插件'
+# 安装插件
 gitbook install
 
 # 生成静态文件
-echo '执行命令：gitbook build .'
 gitbook build .
 
 # 进入生成的HTML文件夹
