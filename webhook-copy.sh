@@ -11,16 +11,18 @@ gitbook install
 # 生成静态文件
 gitbook build .
 
-# 进入生成的HTML文件夹
-cd ./_book
-
 # 提交到Git仓库的gh-pages分支中
-git add -A
+cd ./_book
+git init
+git remote add origin git@github.com:funet8/g.xgss.net.git
+git add .
 git commit -m "脚本自动提交"
-git push -f git@github.com:funet8/g.xgss.net.git main:gh-pages
+git branch -M master
 
-
-
+#git checkout master
+#将_book中的master分支强制提交
+git push --force --quiet "git@github.com:funet8/g.xgss.net.git" master:gh-pages
+cd ..
 
 
 ###########################################################################

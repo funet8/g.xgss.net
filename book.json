@@ -22,7 +22,6 @@
         "anchor-navigation-ex",
         "favicon",
         "tbfed-pagefooter",
-        "expandable-chapters-small",
         "pageview-count",
         "popup"
     ],
@@ -33,13 +32,13 @@
         "donate": {
             "wechat": "https://img.funet8.com/images/wechat_donate.jpg",
             "alipay": "https://img.funet8.com/images/alipay_donate.jpg",
-            "title": "",
+            "title": "喝杯奶茶",
             "button": "打赏",
             "alipayText": "支付宝打赏",
             "wechatText": "微信打赏"
         },
         "github": {
-            "url": "https://github.com/funet8"
+            "url": "https://github.com/funet8/g.xgss.net"
         },
         "github-buttons": {
             "repo": "funet8/book",
@@ -61,9 +60,6 @@
             "星哥说事" : "https://www.xgss.net",
             "阿里云优惠" : "https://www.aliyun.com/minisite/goods?userCode=5qfzbvhn"
         }
-    },
-    "github": {
-        "url": "https://github.com/funet8/book"
     },
     "github-buttons": {
         "buttons": [{
