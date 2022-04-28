@@ -1,97 +1,147 @@
 # 互联网程序员各个职位技能图-多图警告
 
+
+
 ## 程序开发语言综述
 
-![kaifayuyan](https://gitee.com/funet8/blogimage/raw/master/picgo/kaifayuyan.jpg)
+![kaifayuyan](https://imgoss.xgss.net/picgo/kaifayuyan.jpg?aliyun)
+
+
 
 ## DBA技能图谱
 
-![DBA](https://gitee.com/funet8/blogimage/raw/master/picgo/DBA.jpg)
+![DBA](https://imgoss.xgss.net/picgo/DBA.jpg?aliyun)
 
 ## HADOOP家族技能图谱
 
-![HADOOP](https://gitee.com/funet8/blogimage/raw/master/picgo/HADOOP.jpg)
+![HADOOP](https://imgoss.xgss.net/picgo/HADOOP.jpg?aliyun)
 
 ## HTML5开发技能图谱
 
-![HTML5](https://gitee.com/funet8/blogimage/raw/master/picgo/HTML5.jpg)
+![HTML5](https://imgoss.xgss.net/picgo/HTML5.jpg?aliyun)
 
 
 
 ## IOS开发工程师技能图谱
 
-![IOS](https://gitee.com/funet8/blogimage/raw/master/picgo/IOS.jpg)
+![IOS](https://imgoss.xgss.net/picgo/IOS.jpg?aliyun)
 
 ## JAVA技能图谱
 
-![Java1](https://gitee.com/funet8/blogimage/raw/master/picgo/Java1.jpg)
+![Java1](https://imgoss.xgss.net/picgo/Java1.jpg?aliyun)
 
-![java2](https://gitee.com/funet8/blogimage/raw/master/picgo/java2.jpg)
+
+
+## JAVA学习
+
+![java2](https://imgoss.xgss.net/picgo/java2.jpg?aliyun)
+
+
 
 ## OpenResty技能图谱
 
-![OpenResty](https://gitee.com/funet8/blogimage/raw/master/picgo/OpenResty.jpg)
+![OpenResty](https://imgoss.xgss.net/picgo/OpenResty.jpg?aliyun)
 
 
 
 ## PHP正则表达式
 
-![PHP-zhengze](https://gitee.com/funet8/blogimage/raw/master/picgo/PHP-zhengze.jpg)
+![PHP-zhengze](https://imgoss.xgss.net/picgo/PHP-zhengze.jpg?aliyun)
+
+
 
 ## WEB测试避雷指南
 
-![WEB-test](https://gitee.com/funet8/blogimage/raw/master/picgo/WEB-test.jpg)
+![WEB-test](https://imgoss.xgss.net/picgo/WEB-test.jpg?aliyun)
 
-安全工程师必备技能
 
-![anquangongceshieng](https://gitee.com/funet8/blogimage/raw/master/picgo/anquangongceshieng.jpg)
+
+## 安全工程师必备技能
+
+![anquangongceshieng](https://imgoss.xgss.net/picgo/anquangongceshieng.jpg?aliyun)
+
+
 
 ## 大数据必备技能
 
-![bigdate](https://gitee.com/funet8/blogimage/raw/master/picgo/bigdate.jpg)
+![bigdate](https://imgoss.xgss.net/picgo/bigdate.jpg?aliyun)
+
+
 
 ## 机器学习技能图谱
 
-![jiqixuexi](https://gitee.com/funet8/blogimage/raw/master/picgo/jiqixuexi.jpg)
+![jiqixuexi](https://imgoss.xgss.net/picgo/jiqixuexi.jpg?aliyun)
+
+
 
 ## 架构师技能图谱
 
-![jiagoushi](https://gitee.com/funet8/blogimage/raw/master/picgo/jiagoushi.jpg)
+![jiagoushi](https://imgoss.xgss.net/picgo/jiagoushi.jpg?aliyun)
+
+
 
 ## 嵌入式开发必备技能
 
-![qianrushi](https://gitee.com/funet8/blogimage/raw/master/picgo/qianrushi.jpg)
+![qianrushi](https://imgoss.xgss.net/picgo/qianrushi.jpg?aliyun)
+
+
 
 ## 云计算必备技能
 
-![yunjisuan](https://gitee.com/funet8/blogimage/raw/master/picgo/yunjisuan.jpg)
+![yunjisuan](https://imgoss.xgss.net/picgo/yunjisuan.jpg?aliyun)
+
+
 
 ## 运维工程师必备技能
 
-![yunwei](https://gitee.com/funet8/blogimage/raw/master/picgo/yunwei.jpg)
+![yunwei](https://imgoss.xgss.net/picgo/yunwei.jpg?aliyun)
 
-![yunwei-jineng](https://gitee.com/funet8/blogimage/raw/master/picgo/yunwei-jineng.jpg)
 
-![yunwei-jineng2](https://gitee.com/funet8/blogimage/raw/master/picgo/yunwei-jineng2-1602505500407.jpg)
+
+## 运维工程师技能
+
+![yunwei-jineng](https://imgoss.xgss.net/picgo/yunwei-jineng.jpg?aliyun)
+
+
+
+## 运维知识体系
+
+![yunwei-jineng2](https://imgoss.xgss.net/picgo/yunwei-jineng2-1602505500407-165113235367342.jpg?aliyun)
+
+
+
+
 
 ## 移动性能优化技能图谱
 
-![yidong](https://gitee.com/funet8/blogimage/raw/master/picgo/yidong.jpg)
+![yidong](https://imgoss.xgss.net/picgo/yidong.jpg?aliyun)
+
+
 
 ## 前端工程师必备技能
 
-![qianduan1](https://gitee.com/funet8/blogimage/raw/master/picgo/qianduan1.jpg)
+![qianduan1](https://imgoss.xgss.net/picgo/qianduan1.jpg?aliyun)
 
-![qianduan2](https://gitee.com/funet8/blogimage/raw/master/picgo/qianduan2.jpg)
+
+
+## 前端工程师
+
+![qianduan2](https://imgoss.xgss.net/picgo/qianduan2.jpg?aliyun)
+
+
 
 ## 前端知识体系图
 
-![qianduan3](https://gitee.com/funet8/blogimage/raw/master/picgo/qianduan3.jpg)
+![qianduan3](https://imgoss.xgss.net/picgo/qianduan3.jpg?aliyun)
+
+
 
 ## 缓存知识体系
 
-![huancun](https://gitee.com/funet8/blogimage/raw/master/picgo/huancun.jpg)
+![huancun](https://imgoss.xgss.net/picgo/huancun.jpg?aliyun)
+
+
 
 ## 常见服务器集群
 
-![fuwuqijiqun](https://gitee.com/funet8/blogimage/raw/master/picgo/fuwuqijiqun.jpg)
+![fuwuqijiqun](https://imgoss.xgss.net/picgo/fuwuqijiqun.jpg?aliyun)

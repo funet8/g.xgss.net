@@ -31,12 +31,12 @@
 | 网络云盘     | [d.funet8.com](http://d.funet8.com)         | KodExplorer-开源云桌面    | [开源地址](https://gitee.com/kalcaddle/KODExplorer) |
 | 微擎         | [we7.funet8.com](https://we7.funet8.com/)   | 微擎项目                  |                                                     |
 | 腾讯企业邮箱 | [腾讯企业邮箱](https://exmail.qq.com/login) | funet8.com的域名解析      |                                                     |
-| 蓝天采集器   | [sky.funet8.com](http://sky.funet8.com)     | 域名停解析，绑定hosts访问 |                                                     |
-| 测试站       | [t.funet8.com](http://t.funet8.com)         | 域名停解析，绑定hosts访问 |                                                     |
+| 蓝天采集器   | [sky.funet8.com](http://sky.funet8.com)     | 域名停解析，绑定hosts访问 | [开源地址](https://gitee.com/zorlan/skycaiji)       |
+| 测试站       | [t.funet8.com](http://t.funet8.com)         | 域名停解析，绑定hosts访问 | wordpress                                           |
 
 
 
-# 测试2
+# 关于Gitbook
 
 
 

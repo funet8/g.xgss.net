@@ -14,7 +14,7 @@
 
 进入OSS控制台，右上角选择创建Bucket
 
-![image-20210115165106604](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20210115165106604.png)
+![image-20210115165106604](https://imgoss.xgss.net/picgo/image-20210115165106604.png?aliyun)
 
 Bucket名称 （配置PicGo需要用到）
 Endpoint的地址（配置PicGo需要用到）
@@ -25,33 +25,33 @@ Endpoint的地址（配置PicGo需要用到）
 
 右上角，访问控制 左边操作栏，选择 人员管理——用户 去新建用户。找个记事本，记下来，AccessKey ID 和 AccessKeySecret，之后配置PicGo需要用到
 
-![image-20210115165336905](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20210115165336905.png)
+![image-20210115165336905](https://imgoss.xgss.net/picgo/image-20210115165336905.png?aliyun)
 
-![image-20210115165422156](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20210115165422156.png)
+![image-20210115165422156](https://imgoss.xgss.net/picgo/image-20210115165422156.png?aliyun)
 
-![image-20210115165512934](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20210115165512934.png)
+![image-20210115165512934](https://imgoss.xgss.net/picgo/image-20210115165512934.png?aliyun)
 
 ### 3.分配权限
 
 对这个用户进行权限管理，选择 AliyunOSSFullAccess——管理对象存储服务（OSS）权限
 
-![image-20210115165849219](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20210115165849219.png)
+![image-20210115165849219](https://imgoss.xgss.net/picgo/image-20210115165849219.png?aliyun)
 
 ## 2.配置域名绑定到阿里云OSS中
 
 回到阿里云OSS配置中，“传输管理”--->域名管理
 
-![image-20210115170155705](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20210115170155705.png)
+![image-20210115170155705](https://imgoss.xgss.net/picgo/image-20210115170155705.png?aliyun)
 
 imgoss.xgss.net cname解析到
 
-![image-20210115170052179](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20210115170052179.png)
+![image-20210115170052179](https://imgoss.xgss.net/picgo/image-20210115170052179.png?aliyun)
 
 
 
 imgoss.xgss.net 域名CNAME解析到外网访问 imgoss-xgss-net.oss-cn-shenzhen.aliyuncs.com
 
-![image-20210115171648865](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20210115171648865.png)
+![image-20210115171648865](https://imgoss.xgss.net/picgo/image-20210115171648865.png?aliyun)
 
 
 
@@ -66,7 +66,7 @@ http://imgoss.xgss.net/picgo/1.png
 
 ## 二、PicGo设置阿里云OSS
 
-![image-20210115173001239](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20210115173001239.png)
+![image-20210115173001239](https://imgoss.xgss.net/picgo/image-20210115173001239.png?aliyun)
 
 KeyId 就是上面记在小本本上的，AccessKey ID
 Secret 就是 AccessKeySecret

@@ -25,12 +25,12 @@
   * [CentOS7下LVM给腾讯云云硬盘扩容操作](doc/file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.md)
   * [Linux安装samba与windows实现共享文件夹](doc/file-system/Linux安装samba与windows实现共享文件夹.md)
   
-* [Gitbook+Jenkins+Github实现文档持续集成](doc/gitbook/README.md)
+* [Gitbook](doc/gitbook/README.md)
   * [Gitbook基本使用方法](doc/gitbook/Gitbook.md)
   * [Jenkins+Github实现文档持续集成](doc/gitbook/Jenkins_Github.md)
   * [Github Page怎么绑定自己的域名](doc/gitbook/Github-Page-my-domain.md)
   
-* [在CentOS7下构建安卓编译环境](doc/android-to-apk/README.md)
+* [自动打包安卓APP](doc/android-to-apk/README.md)
   * [在CentOS 7下构建安卓Android编译环境](doc/android-to-apk/1.Centos7-Android-software.md)
   * [CentOS7下安装Jenkins](doc/jenkins/CentOS-7-Install-Jenkins.md)
   * [基于centos7的jenkins安卓自动打包](doc/android-to-apk/3.Centos7-Android-jenkins.md)
@@ -59,13 +59,17 @@
   * [Archery-SQL上线流程](doc/Open-Source-Software/3_Archery_online.md)
   * [Archery-SQL上线提示库名过长，建议使用别名解析](doc/Open-Source-Software/4.sql-bieming.md)
   * [免费开源iPhone推送消息工具+服务端-Bark](doc/Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.md)
-  * [如何给公司节约成本，搭建免费开源监控系统uptime-kuma](doc/Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.md)
+  * [搭建免费开源监控系统uptime-kuma](doc/Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.md)
   * [免费开源Github Page实现短链接方案](doc/Open-Source-Software/免费开源Github Page实现短链接方案.md)
   * [云服务器搭建自己的ngrok服务实现内网穿透](doc/Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.md)
   * [云服务器部署开源短链生成-YOURLS](doc/Open-Source-Software/云服务器部署开源短链生成-YOURLS.md)
   * [通过Heimdall开源免费，搭建自己的网络书签](doc/Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.md)
   * [AdGuard搭建去广告公共DNS](doc/Open-Source-Software/AdGuard搭建去广告公共DNS.md)
   * [开源文档管理系统汇总](doc/Open-Source-Software/开源文档管理系统.md)
-  
+
+* [开源软件-Apollo](doc/Apollo/readme.md)
+  * [基于Linux搭建开源配置管理中心apollo](doc/Apollo/1.基于Linux搭建开源配置管理中心apollo.md)
+  * [开源配置管理中心apollo使用方法](doc/Apollo/2.开源配置管理中心apollo使用方法.md)
+
 * [网盘系统](doc/cloud-disk/README.md)
   * [OwnCloud搭建自己的私有云盘](doc/cloud-disk/OwnCloud.md)

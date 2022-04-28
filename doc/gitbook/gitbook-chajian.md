@@ -9,7 +9,7 @@
         "search-pro",
         "back-to-top-button",
         "-sharing",
-        "splitter",
+        "splitter",  //侧边栏宽度可调节
         "expandable-chapters-small", //导航折叠
         "anchors",	//标题带有github样式的锚点
         "github",
@@ -21,7 +21,7 @@
         "tbfed-pagefooter",   //版权页脚插件
         "expandable-chapters-small", //大纲目录自动编号
         "pageview-count",
-        "popup"
+        "popup"   //popup 弹出大图
     ],
 ```
 

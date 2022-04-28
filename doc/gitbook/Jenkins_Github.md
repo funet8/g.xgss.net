@@ -23,7 +23,8 @@ IP： 192.168.1.5(内网穿透、腾讯云服务器)
 
 域名： gitbook.xgss.net
 
-github:https://github.com/funet8/book.git
+github:https://github.com/funet8/g.xgss.net.git
+gitee:https://gitee.com/funet8/g.xgss.net.git
 
 https://www.gitbook.com/
 ```
@@ -88,7 +89,11 @@ JENKINS_URL/job/gitbook.xgss.net_github_online/build?token=TOKEN_NAME
 
 ![image-20210915184202566](http://imgoss.xgss.net/picgo/image-20210915184202566.png?aliyunoss)
 
+
+
 发现只能有get方法，post方法会报403
+
+
 
 写了一个shell脚本每次写完自动提交，并且通知jenkins
 

@@ -10,7 +10,9 @@ Github开源的短链接：https://nlsn.cf/1
 
 不需要自己有[服务器](http://d.xgss.net/2)，通过自有域名解析到Github Page，在指定的issue上添加目标地址即可实现，链接跳转。
 
-![github-gp-dlj](https://gitee.com/funet8/blogimage/raw/master/picgo/github-gp-dlj.jpg)
+![github-gp-dlj](https://imgoss.xgss.net/picgo/github-gp-dlj-16511312944362.jpg?aliyun)
+
+
 
 # 搭建准备
 
@@ -24,9 +26,13 @@ github账号：笔者的funet8
 
 打开https://nlsn.cf/1页面，点击fork，将原来的仓库拷贝到自己的账号下。
 
-![image-20220307160441365](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20220307160441365.png)
+![image-20220307160441365](https://imgoss.xgss.net/picgo/image-20220307160441365.png?aliyun)
 
-![image-20220307160538052](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20220307160538052.png)
+
+
+![image-20220307160538052](https://imgoss.xgss.net/picgo/image-20220307160538052.png?aliyun)
+
+
 
 获取到仓库：https://github.com/{你的用户名}/gh-pages-url-shortener， 我的仓库是 https://github.com/funet8/gh-pages-url-shortener
 
@@ -35,9 +41,13 @@ github账号：笔者的funet8
 github pages 可以做什么?
 github pages 可以放一些纯静态的网站,比如你的项目介绍等.当然,也可以使用一些静态博客工具在本地通过markdown写博客,生成静态页面后发布到github pages
 
-![image-20220307163103417](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20220307163103417.png)
+![image-20220307163103417](https://imgoss.xgss.net/picgo/image-20220307163103417.png?aliyun)
 
-![image-20220307163121048](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20220307163121048.png)
+
+
+![image-20220307163121048](https://imgoss.xgss.net/picgo/image-20220307163121048.png?aliyun)
+
+
 
 
 
@@ -45,7 +55,9 @@ github pages 可以放一些纯静态的网站,比如你的项目介绍等.当�
 
 GitHub 上新建一个仓库，当做数据库用来存储链接，笔者这里命名为 gh-pages-url-shortener-db，得到 https://github.com/funet8/gh-pages-url-shortener-db
 
-![image-20220307161348791](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20220307161348791.png)
+![image-20220307161348791](https://imgoss.xgss.net/picgo/image-20220307161348791.png?aliyun)
+
+
 
 
 
@@ -84,15 +96,21 @@ var GITHUB_ISSUES_LINK =
 d.xgss.net 解析到 funet8.github.io
 ```
 
-![image-20220307162851318](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20220307162851318.png)
+![image-20220307162851318](https://imgoss.xgss.net/picgo/image-20220307162851318.png?aliyun)
+
+
 
 访问： http://d.xgss.net/
 
 再在 https://github.com/funet8/gh-pages-url-shortener-db/issues 提交一个issue，在里面就会有一个id号
 
-![image-20220307164145678](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20220307164145678.png)
+![image-20220307164145678](https://imgoss.xgss.net/picgo/image-20220307164145678.png?aliyun)
 
-![image-20220307164406837](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20220307164406837.png)
+
+
+![image-20220307164406837](https://imgoss.xgss.net/picgo/image-20220307164406837-165113136913213.png?aliyun)
+
+
 
 访问 http://d.xgss.net/1 即可跳转到你提交的地址上，以后就可以在github仓库中的issues的标题添加目标地址，就可以实现短链接跳转了。
 
@@ -102,7 +120,9 @@ d.xgss.net 解析到 funet8.github.io
 
 设置为私有，就所有的url的地址都是404了，只能手动定时清理，避免出现麻烦。
 
-![image-20220307165642994](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20220307165642994.png)
+![image-20220307165642994](https://imgoss.xgss.net/picgo/image-20220307165642994.png?aliyun)
+
+
 
 
 

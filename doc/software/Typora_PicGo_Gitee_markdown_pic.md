@@ -10,7 +10,7 @@ github下载应用：https://github.com/Molunerfinn/PicGo/releases 建议下载P
 
 安装完成之后，进入软件安装gitee插件（注：若没有安装 node.js ，则会安装不了插件。因为插件下载需要使用到 node.js 的npm！）
 
-![image-20200903190323139](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200903190323139.png)
+![image-20200903190323139](https://imgoss.xgss.net/picgo/image-20200903190323139.png?aliyun)
 
 ### **安装 node.js**
 
@@ -42,7 +42,7 @@ GitHub图床
 
 配置Typora上传设定:文件--->偏好设置--> 图像 --> 上传服务设定
 
-![image-20200904103414304](https://raw.githubusercontent.com/funet8/blogimg/master/picgo/image-20200904103414304.png)
+![image-20200904103414304](https://imgoss.xgss.net/picgo/image-20200904103414304.png?aliyun)
 
 
 
@@ -54,7 +54,7 @@ GitHub图床
 
 注意仓库要是public的，不然上传的图片还是无法使用的。
 
-![image-20200904101141370](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200904101141370.png)
+![image-20200904101141370](https://imgoss.xgss.net/picgo/image-20200904101141370.png?aliyun)
 
 https://gitee.com/funet8/blogimage.git
 
@@ -62,11 +62,11 @@ https://gitee.com/funet8/blogimage.git
 
 这个token是给 [PicGo](https://github.com/Molunerfinn/PicGo) 使用的
 
-![image-20200904093500784](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200904093500784.png)
+![image-20200904093500784](https://imgoss.xgss.net/picgo/image-20200904093500784.png?aliyun)
 
 如果安装没有反应请安装node.js，否则插件可能一直在安装中，那就非常蛋疼了。
 
-![image-20200904144057735](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200904144057735.png)
+![image-20200904144057735](https://imgoss.xgss.net/picgo/image-20200904144057735.png?aliyun)
 
 
 
@@ -80,21 +80,21 @@ https://gitee.com/funet8/blogimage.git
 
 ## 新建github仓库并且新建token
 
-![image-20200904101516069](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200904101516069.png)
+![image-20200904101516069](https://imgoss.xgss.net/picgo/image-20200904101516069.png?aliyun)
 
 设置--> settings--->developer settings--->
 
-![image-20200904101648373](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200904101648373.png)
+![image-20200904101648373](https://imgoss.xgss.net/picgo/image-20200904101648373.png?aliyun)
 
-![image-20200904101816676](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200904101816676.png)
+![image-20200904101816676](https://imgoss.xgss.net/picgo/image-20200904101816676.png?aliyun)
 
 勾选repo
 
-![image-20200904101924546](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200904101924546.png)
+![image-20200904101924546](https://imgoss.xgss.net/picgo/image-20200904101924546.png?aliyun)
 
 页面拉到最下有一个绿色的`Generate token`按钮，按一下就会生成token。
 
-![image-20200904102033508](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200904102033508.png)
+![image-20200904102033508](https://imgoss.xgss.net/picgo/image-20200904102033508.png?aliyun)
 
 将生成的token复制下来，给PicGo使用。
 
@@ -114,11 +114,11 @@ https://github.com/funet8/blogimage.git
 
 指定存储路径：随意  我这里填写 picgo/
 
-![image-20200904144924798](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200904144924798.png)
+![image-20200904144924798](https://imgoss.xgss.net/picgo/image-20200904144924798.png?aliyun)
 
 
 
-![image-20200904103104345](https://raw.githubusercontent.com/funet8/blogimg/master/picgo/image-20200904103104345.png)
+![image-20200904103104345](https://imgoss.xgss.net/picgo/image-20200904103104345.png?aliyun)
 
 提示上传成功
 

@@ -13,44 +13,53 @@
         "back-to-top-button",
         "-sharing",
         "splitter",
-        "expandable-chapters-small",
         "anchors",
         "github",
-        "github-buttons",
         "donate",
         "sharing-plus",
         "anchor-navigation-ex",
         "favicon",
-        "tbfed-pagefooter",
+        "tbfed-pagefooter", 
         "pageview-count",
-        "popup"
+		"lightbox",
+		"-page-treeview",
+		"-page-toc-button",
+		"expandable-chapters",
+		"chapter-fold",
+		"code",
+		"splitter"
     ],
     "pluginsConfig": {
         "anchor-navigation-ex": {
-            "isShowTocTitleIcon": true
+            "isShowTocTitleIcon": false,
+			 "showLevel": false,
+             "showGoTop": false
         },
+		"sharing": {
+             "douban": true,
+             "facebook": true,
+             "google": true,
+             "pocket": true,
+             "qq": true,
+             "qzone": true,
+             "twitter": true,
+             "weibo": true,
+		"all": [
+               "weibo","douban", "qq", "qzone","facebook", "google", "instapaper", "linkedin","twitter","messenger","viber","whatsapp"
+		]},
         "donate": {
             "wechat": "https://img.funet8.com/images/wechat_donate.jpg",
             "alipay": "https://img.funet8.com/images/alipay_donate.jpg",
-            "title": "喝杯奶茶",
+            "title": "请俺喝杯奶茶",
             "button": "打赏",
             "alipayText": "支付宝打赏",
             "wechatText": "微信打赏"
         },
         "github": {
-            "url": "https://github.com/funet8/g.xgss.net"
-        },
-        "github-buttons": {
-            "repo": "funet8/book",
-            "types": [
-                "star",
-                "watch",
-                "fork"
-            ],
-            "size": "small"
+            "url": "https://github.com/funet8/g.xgss.net?g.xgss.net"
         },
         "tbfed-pagefooter": {
-            "copyright":"Copyright &copy g.xgss.net 2020",
+            "copyright":"Copyright &copy g.xgss.net 2022",
             "modify_label": "该文件修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         }
@@ -58,7 +67,8 @@
     "links" : {
         "sidebar" : {
             "星哥说事" : "https://www.xgss.net",
-            "阿里云优惠" : "https://www.aliyun.com/minisite/goods?userCode=5qfzbvhn"
+            "阿里云优惠" : "http://y.xgss.net/aliyun",
+			"腾讯云优惠" : "http://y.xgss.net/tx"
         }
     },
     "github-buttons": {

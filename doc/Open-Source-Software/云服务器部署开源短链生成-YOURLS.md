@@ -1,4 +1,4 @@
-# 云服务器部署开源短链生成-YOURLS
+# 简单部署开源短链工具-YOURLS
 
 YOURLS是一款使用PHP+Mysql开发的短链接程序，相比公共短网址好处是数据掌握在自己手中，可控性更高。开源地址：https://github.com/YOURLS/YOURLS
 
@@ -9,6 +9,12 @@ window系统推荐phpStudy等集成PHP环境
 linux系统：LNMP（Linux+Nginx+Mysql+PHP）环境
 
 域名，如果服务器在国内，则需要备案，笔者使用二级域名，http://y.xgss.net
+
+![简单部署开源短链工具-YOURLS](https://imgoss.xgss.net/picgo/简单部署开源短链工具-YOURLS.jpg?aliyun)
+
+## 示例
+
+[http://y.xgss.net/aliyun](http://y.xgss.net/aliyun) | [http://y.xgss.net/tx](http://y.xgss.net/tx)
 
 # 部署
 
