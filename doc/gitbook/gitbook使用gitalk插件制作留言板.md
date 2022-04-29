@@ -157,7 +157,6 @@ gitbook-plugin-tbfed-pagefooter
 └── package.json
 
 1 directory, 5 files
-$ 
 ```
 
 为了基本看懂项目文件作用,特意去看了下 [gitbook 插件开发文档](https://links.jianshu.com/go?to=https%3A%2F%2Ftoolchain.gitbook.com%2Fplugins%2F),目标锁定在 `index.js` .
@@ -189,7 +188,7 @@ hooks: {
       str += '\n\n<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">'+
       '\n\n<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>'+
       '\n\n<div id="gitalk-container"></div>'+
-      '\n\n<script src="https://snowdreams1006.github.io/gitalk-config.js"></script>';
+      '\n\n<script src="https://g.xgss.net/gitalk-config.js"></script>';
 
       page.content = page.content + str;
       return page;
@@ -206,14 +205,15 @@ hooks: {
 
 
 ```dart
+<div id="gitalk-container"></div>
 var gitalk = new Gitalk({
-  "clientID": "3f62415a283d19cbd696",
-  "clientSecret": "aed0e1db0620bf5d0e3a3f0225f801997ad74e58",
-  "repo": "snowdreams1006.github.io",
-  "owner": "snowdreams1006",
-  "admin": ["snowdreams1006"],
-  "id": window.location.pathname,
-  "distractionFreeMode": false
+  "clientID": "05fb7151030cefa1a084",
+  "clientSecret": "d5013b1052b33b3b69101563018692f8338b38fb",
+  "repo": "g.xgss.net",
+  "owner": "funet8",
+  "admin": ["funet8],
+  "id": location.pathname,      
+  "distractionFreeMode": false  
 });
 gitalk.render("gitalk-container");
 ```
@@ -222,19 +222,3 @@ gitalk.render("gitalk-container");
 
 > 当然也不一定非要借助 `gitbook-plugin-tbfed-pagefooter` 插件帮忙,也可以借助别的插件进行集成,甚至自己写个更好的插件.
 
-### 小结
-
-`gitalk` 插件相对 `disqus` 插件来说,更符合基本国情,只不过默认的集成方式只能一个页面一个页面去集成,当数量比较多时,工作量不敢想象.
-
-因此,通过 `gitbook` 插件开发的方式,在源码文件输出为目标文件时加入相关集成代码,相当于手写100条输出语句和循环写100条输出语句.
-
-其实本质上并没有改变什么,仍然是集成到每个页面中,但是简化了人工操作的工作量就是效率的提升.
-
-如果有更高效更优雅的集成方式,欢迎大家一起探讨.
-
-
-
-作者：雪之梦技术驿站
-链接：https://www.jianshu.com/p/567df1c904f6
-来源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
