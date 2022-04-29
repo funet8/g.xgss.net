@@ -31,15 +31,15 @@
 
 新建应用,首页 url 和授权回调 url 填写相同的首页链接即可,其他情况自定义填写.
 
-![img](https:////upload-images.jianshu.io/upload_images/16648241-4ddd2948acf8a18e.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+![image-20220429152149366](https://imgoss.xgss.net/picgo/image-20220429152149366.png?aliyun)
 
-gitbook-plugin-gitalk-register-application.png
+
 
 应用登记成功后会生成 `token` 令牌,`clientId` 和 `clientSecret` 需要重点保存下来,待会需要用到.
 
-![img](https:////upload-images.jianshu.io/upload_images/16648241-f5392eda026d51b2.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+![image-20220429152312092](https://imgoss.xgss.net/picgo/image-20220429152312092.png?aliyun)
 
-gitbook-plugin-gitalk-generate-token.png
+
 
 ### 安装并集成到网站
 
@@ -105,9 +105,7 @@ gitalk.render("gitalk-container");
 
 > 上述参数仅供参考,实际使用中请替换成自己的配置,不然你也没有我仓库的权限,肯定会报错的啊!
 
-![img](https:////upload-images.jianshu.io/upload_images/16648241-321266582c35c698.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
 
-gitbook-plugin-gitalk-init-issue.png
 
 心心相念的 `gitalk` 评论区呢?是不是哪里配置错了,为啥没有出来?
 
@@ -119,7 +117,7 @@ gitbook-plugin-gitalk-init-issue.png
 
 ![img](https:////upload-images.jianshu.io/upload_images/16648241-c6840e17705960dd.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
 
-gitbook-plugin-gitalk-index-success.png
+
 
 终于集成了评论功能,而且还支持 `markdown` 格式的评论呢!
 
@@ -135,7 +133,7 @@ gitbook-plugin-gitalk-index-success.png
 
 聪明的你或许已经想到了,解铃还须系铃人,当然是向推荐给我插件的大牛提问了!
 
-他确实提供了一种思路,以下是网友[@八一菜刀](https://links.jianshu.com/go?to=https%3A%2F%2Fmy.oschina.net%2Fu%2F254762)原话:
+他确实提供了一种思路,以下是网友[@八一菜刀](https://my.oschina.net/u/254762)原话:
 
 > 文档里面我用的是tbfed-pagefooter插件，不过我是在本地使用gitbook install后重写了该插件的js，无非就是在js里面加一段Gitalk的调用代码，这样使用gitbook build命令的时候，所有的页面都会有Gitalk的评论调用
 
