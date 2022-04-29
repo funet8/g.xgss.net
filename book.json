@@ -27,7 +27,9 @@
 		"expandable-chapters",
 		"chapter-fold",
 		"code",
-		"splitter"
+		"splitter",
+		"theme-comscore",
+		"prism"
     ],
     "pluginsConfig": {
         "anchor-navigation-ex": {
@@ -38,6 +40,14 @@
 		"baidu-tongji": {
             "token": "559562c6410b9fd49a0afe52650d40bd"
         },
+		"prism": {
+			"css": [
+			  "prismjs/themes/prism-solarizedlight.css"
+			],
+			"lang": {
+			  "shell": "bash"
+			}
+		},
 		"sharing": {
              "douban": true,
              "facebook": true,
