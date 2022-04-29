@@ -16,11 +16,11 @@
         "anchors",
         "github",
         "donate",
-        "sharing-plus",
+        "-sharing-plus",
         "anchor-navigation-ex",
         "favicon",
         "tbfed-pagefooter", 
-        "pageview-count",
+        "-pageview-count",
 		"lightbox",
 		"-page-treeview",
 		"-page-toc-button",
@@ -34,6 +34,9 @@
             "isShowTocTitleIcon": false,
 			 "showLevel": false,
              "showGoTop": false
+        },
+		"baidu-tongji": {
+            "token": "559562c6410b9fd49a0afe52650d40bd"
         },
 		"sharing": {
              "douban": true,

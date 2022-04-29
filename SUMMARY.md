@@ -29,6 +29,7 @@
   * [Gitbook基本使用方法](doc/gitbook/Gitbook.md)
   * [Jenkins+Github实现文档持续集成](doc/gitbook/Jenkins_Github.md)
   * [Github Page怎么绑定自己的域名](doc/gitbook/Github-Page-my-domain.md)
+  * [gitbook中使用百度统计查看页面访问情况](doc/gitbook/gitbook中使用百度统计查看页面访问情况.md)
   
 * [自动打包安卓APP](doc/android-to-apk/README.md)
   * [在CentOS 7下构建安卓Android编译环境](doc/android-to-apk/1.Centos7-Android-software.md)
