@@ -6,6 +6,7 @@ Git地址： https://github.com/funet8/Git-Tutorial
 
 
 
-![Git入门和使用规范@星哥](images/Git入门和使用规范@星哥-16467965471634.png)
+![Git入门和使用规范@星哥](https://imgoss.xgss.net/picgo/Git入门和使用规范@星哥.png?aliyun)
+
 
 
