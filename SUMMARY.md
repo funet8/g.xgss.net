@@ -30,6 +30,7 @@
   * [Jenkins+Github实现文档持续集成](doc/gitbook/Jenkins_Github.md)
   * [Github Page怎么绑定自己的域名](doc/gitbook/Github-Page-my-domain.md)
   * [gitbook中使用百度统计查看页面访问情况](doc/gitbook/gitbook中使用百度统计查看页面访问情况.md)
+  * [gitbook使用gitalk插件制作留言板](doc/gitbook/gitbook使用gitalk插件制作留言板.md)
   
 * [自动打包安卓APP](doc/android-to-apk/README.md)
   * [在CentOS 7下构建安卓Android编译环境](doc/android-to-apk/1.Centos7-Android-software.md)
@@ -73,6 +74,7 @@
     * [Archery-后台配置基本操作](doc/Open-databases/2_Archery_config.md)
     * [Archery-SQL上线流程](doc/Open-databases/3_Archery_online.md)
     * [Archery-SQL上线提示库名过长，建议使用别名解析](doc/Open-databases/4.sql-bieming.md)
+  * [开源的数据同步中间件-DBSyncer](doc/Open-databases/开源的数据同步中间件-DBSyncer.md)
   
 * [网盘系统](doc/cloud-disk/README.md)
   * [OwnCloud搭建自己的私有云盘](doc/cloud-disk/OwnCloud.md)
