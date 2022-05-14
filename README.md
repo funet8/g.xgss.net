@@ -38,6 +38,26 @@
 
 # 关于Gitbook
 
+gitbook常用命令
+
+```
+1.获取帮助
+# gitbook --help
+
+2.启动服务
+# gitbook serve
+可以访问： http://localhost:4000
+
+3.安装插件
+# gitbook install
+
+4.生成静态文件
+# gitbook build .
+
+
+
+```
+
 
 
 # 开源知识推荐
