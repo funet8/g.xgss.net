@@ -79,10 +79,11 @@
 	* [开源的数据同步中间件-DBSyncer](doc/Open-databases/开源的数据同步中间件-DBSyncer.md)
 	
 * [网盘系统](doc/cloud-disk/README.md)
-  * [OwnCloud搭建自己的私有云盘](doc/cloud-disk/OwnCloud.md)
+	* [OwnCloud搭建自己的私有云盘](doc/cloud-disk/OwnCloud.md)
 * [博客系统](doc/blog/README.md)
-  * [基于VuePress和github搭建无服务器博客、文档系统](doc/blog/基于VuePress和github搭建无服务器博客、文档系统.md)
+	* [基于VuePress和github搭建无服务器博客、文档系统](doc/blog/基于VuePress和github搭建无服务器博客、文档系统.md)
 * [调试Debug](doc/debug/README.md)
+	* [Mysql数据库在释放一个数亿记录的表报错](doc/debug/innodb_online_alter_log_max_size.md)
 
-  * [Mysql数据库在释放一个数亿记录的表时报该错innodb_online_alter_log_max_size](doc/cloud-disk/Mysql数据库在释放一个数亿记录的表时报该错innodb_online_alter_log_max_size.md)
+
 
