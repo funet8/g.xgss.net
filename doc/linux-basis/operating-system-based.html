@@ -1,0 +1,1471 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>资深运维工程师必须了解的操作系统基础 · Linux私有教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="星哥的书籍">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Linux服务器配置SSH免密码登陆.html" />
+    
+    
+    <link rel="prev" href="负载均衡和CDN技术.html" />
+    
+
+    
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.xgss.net" target="_blank" class="custom-link">星哥说事</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://y.xgss.net/aliyun" target="_blank" class="custom-link">阿里云优惠</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://y.xgss.net/tx" target="_blank" class="custom-link">腾讯云优惠</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    项目介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linux基础教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Linux.html">
+            
+                <a href="Linux.html">
+            
+                    
+                    Linux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="CentOS-7-Install.html">
+            
+                <a href="CentOS-7-Install.html">
+            
+                    
+                    CentOS 7 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="CentOS6-and-CentOS7.html">
+            
+                <a href="CentOS6-and-CentOS7.html">
+            
+                    
+                    CentOS 6 和 CentOS 7 差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="Linux常用命令及其使用详解.html">
+            
+                <a href="Linux常用命令及其使用详解.html">
+            
+                    
+                    Linux常用命令及其使用详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="Cloud-Server-What-todo.html">
+            
+                <a href="Cloud-Server-What-todo.html">
+            
+                    
+                    拥有一台云服务器能干嘛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="cdn.html">
+            
+                <a href="cdn.html">
+            
+                    
+                    一文读懂CDN和CDN实现的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="负载均衡和CDN技术.html">
+            
+                <a href="负载均衡和CDN技术.html">
+            
+                    
+                    负载均衡和CDN技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.8" data-path="operating-system-based.html">
+            
+                <a href="operating-system-based.html">
+            
+                    
+                    资深运维工程师必须了解的操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="Linux服务器配置SSH免密码登陆.html">
+            
+                <a href="Linux服务器配置SSH免密码登陆.html">
+            
+                    
+                    Linux服务器配置SSH免密码登陆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="一张图学会Git.html">
+            
+                <a href="一张图学会Git.html">
+            
+                    
+                    一张图学会Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basis-tools/">
+            
+                <a href="../basis-tools/">
+            
+                    
+                    服务器基础工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basis-tools/Linux使用mail配合smtp发送邮件.html">
+            
+                <a href="../basis-tools/Linux使用mail配合smtp发送邮件.html">
+            
+                    
+                    Linux使用mail配合smtp发送邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basis-tools/GoAccess轻量nginx日志分析工具.html">
+            
+                <a href="../basis-tools/GoAccess轻量nginx日志分析工具.html">
+            
+                    
+                    GoAccess轻量nginx日志分析工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../web/">
+            
+                <a href="../web/">
+            
+                    
+                    WEB服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../web/Centos7-install-openresty-waf.html">
+            
+                <a href="../web/Centos7-install-openresty-waf.html">
+            
+                    
+                    Centos7安装openresty实现WAF防火墙功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../web/Linux服务器故障排查基本方案.html">
+            
+                <a href="../web/Linux服务器故障排查基本方案.html">
+            
+                    
+                    Linux服务器故障排查基本方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../file-system/">
+            
+                <a href="../file-system/">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../file-system/CentOS7下LVM给硬盘扩容操作.html">
+            
+                <a href="../file-system/CentOS7下LVM给硬盘扩容操作.html">
+            
+                    
+                    CentOS7下LVM给硬盘扩容操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.html">
+            
+                <a href="../file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.html">
+            
+                    
+                    CentOS7下LVM给腾讯云云硬盘扩容操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../file-system/Linux安装samba与windows实现共享文件夹.html">
+            
+                <a href="../file-system/Linux安装samba与windows实现共享文件夹.html">
+            
+                    
+                    Linux安装samba与windows实现共享文件夹
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../gitbook/Gitbook.html">
+            
+                <a href="../gitbook/Gitbook.html">
+            
+                    
+                    Gitbook基本使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../gitbook/Jenkins_Github.html">
+            
+                <a href="../gitbook/Jenkins_Github.html">
+            
+                    
+                    Jenkins+Github实现文档持续集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../gitbook/Github-Page-my-domain.html">
+            
+                <a href="../gitbook/Github-Page-my-domain.html">
+            
+                    
+                    Github Page怎么绑定自己的域名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../gitbook/gitbook中使用百度统计查看页面访问情况.html">
+            
+                <a href="../gitbook/gitbook中使用百度统计查看页面访问情况.html">
+            
+                    
+                    gitbook中使用百度统计查看页面访问情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../gitbook/gitbook使用gitalk插件制作留言板.html">
+            
+                <a href="../gitbook/gitbook使用gitalk插件制作留言板.html">
+            
+                    
+                    gitbook使用gitalk插件制作留言板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../android-to-apk/">
+            
+                <a href="../android-to-apk/">
+            
+                    
+                    自动打包安卓APP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../android-to-apk/1.Centos7-Android-software.html">
+            
+                <a href="../android-to-apk/1.Centos7-Android-software.html">
+            
+                    
+                    在CentOS 7下构建安卓Android编译环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../jenkins/CentOS-7-Install-Jenkins.html">
+            
+                <a href="../jenkins/CentOS-7-Install-Jenkins.html">
+            
+                    
+                    CentOS7下安装Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../android-to-apk/3.Centos7-Android-jenkins.html">
+            
+                <a href="../android-to-apk/3.Centos7-Android-jenkins.html">
+            
+                    
+                    基于centos7的jenkins安卓自动打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../safe/readme.html">
+            
+                <a href="../safe/readme.html">
+            
+                    
+                    服务器安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../safe/Web-safe.html">
+            
+                <a href="../safe/Web-safe.html">
+            
+                    
+                    WEB服务器攻击类型和应对方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../safe/why-ssl-safe.html">
+            
+                <a href="../safe/why-ssl-safe.html">
+            
+                    
+                    为什么说HTTPS是安全的
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../software/">
+            
+                <a href="../software/">
+            
+                    
+                    开发常用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../software/Typora_PicGo_Gitee_markdown_pic.html">
+            
+                <a href="../software/Typora_PicGo_Gitee_markdown_pic.html">
+            
+                    
+                    Typora+PicGo+Gitee或github实现markdown自带图床效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../software/Typora_PicGo_aliyun_oss.html">
+            
+                <a href="../software/Typora_PicGo_aliyun_oss.html">
+            
+                    
+                    程序员必备-Typora+PicGo+阿里云oss实现图床
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../software/Typora_PicGo_failedto_Fetch.html">
+            
+                <a href="../software/Typora_PicGo_failedto_Fetch.html">
+            
+                    
+                    PicGo failed to Fetch 出错解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../software/Install-PhpStorm.html">
+            
+                <a href="../software/Install-PhpStorm.html">
+            
+                    
+                    安装PhpStorm、破解、汉化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../software/Xmind2021安装激活破解.html">
+            
+                <a href="../software/Xmind2021安装激活破解.html">
+            
+                    
+                    Xmind2021安装激活破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../software/Windows下VSCode及中文配置.html">
+            
+                <a href="../software/Windows下VSCode及中文配置.html">
+            
+                    
+                    Windows下VSCode及中文配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../internet/">
+            
+                <a href="../internet/">
+            
+                    
+                    互联网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../internet/programmer_position_skills.html">
+            
+                <a href="../internet/programmer_position_skills.html">
+            
+                    
+                    互联网程序员各个职位技能图-多图警告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../internet/qinglong_jingdongdou.html">
+            
+                <a href="../internet/qinglong_jingdongdou.html">
+            
+                    
+                    青龙面板每天自动获取某东豆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../internet/jd_cookie.html">
+            
+                <a href="../internet/jd_cookie.html">
+            
+                    
+                    利用谷歌浏览器获取京东Cookie抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.html">
+            
+                <a href="../internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.html">
+            
+                    
+                    助力居家办公，免费领取语雀 VIP 会员 1-3 年
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Open-Source-Software/">
+            
+                <a href="../Open-Source-Software/">
+            
+                    
+                    开源软件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.html">
+            
+                <a href="../Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.html">
+            
+                    
+                    免费开源iPhone推送消息工具+服务端-Bark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.html">
+            
+                <a href="../Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.html">
+            
+                    
+                    搭建免费开源监控系统uptime-kuma
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Open-Source-Software/免费开源Github Page实现短链接方案.html">
+            
+                <a href="../Open-Source-Software/免费开源Github Page实现短链接方案.html">
+            
+                    
+                    免费开源Github Page实现短链接方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.html">
+            
+                <a href="../Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.html">
+            
+                    
+                    云服务器搭建自己的ngrok服务实现内网穿透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Open-Source-Software/云服务器部署开源短链生成-YOURLS.html">
+            
+                <a href="../Open-Source-Software/云服务器部署开源短链生成-YOURLS.html">
+            
+                    
+                    云服务器部署开源短链生成-YOURLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.html">
+            
+                <a href="../Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.html">
+            
+                    
+                    通过Heimdall开源免费，搭建自己的网络书签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../Open-Source-Software/AdGuard搭建去广告公共DNS.html">
+            
+                <a href="../Open-Source-Software/AdGuard搭建去广告公共DNS.html">
+            
+                    
+                    AdGuard搭建去广告公共DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../Open-Source-Software/开源文档管理系统.html">
+            
+                <a href="../Open-Source-Software/开源文档管理系统.html">
+            
+                    
+                    开源文档管理系统汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Apollo/readme.html">
+            
+                <a href="../Apollo/readme.html">
+            
+                    
+                    开源软件-Apollo
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Apollo/1.基于Linux搭建开源配置管理中心apollo.html">
+            
+                <a href="../Apollo/1.基于Linux搭建开源配置管理中心apollo.html">
+            
+                    
+                    基于Linux搭建开源配置管理中心apollo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Apollo/2.开源配置管理中心apollo使用方法.html">
+            
+                <a href="../Apollo/2.开源配置管理中心apollo使用方法.html">
+            
+                    
+                    开源配置管理中心apollo使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Open-databases/">
+            
+                <a href="../Open-databases/">
+            
+                    
+                    开源软件-数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Open-databases/1_Archery_Install_Docker.html">
+            
+                <a href="../Open-databases/1_Archery_Install_Docker.html">
+            
+                    
+                    Archery-基于docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Open-databases/2_Archery_config.html">
+            
+                <a href="../Open-databases/2_Archery_config.html">
+            
+                    
+                    Archery-后台配置基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Open-databases/3_Archery_online.html">
+            
+                <a href="../Open-databases/3_Archery_online.html">
+            
+                    
+                    Archery-SQL上线流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Open-databases/4.sql-bieming.html">
+            
+                <a href="../Open-databases/4.sql-bieming.html">
+            
+                    
+                    Archery-SQL上线提示库名过长，建议使用别名解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Open-databases/开源的数据同步中间件-DBSyncer.html">
+            
+                <a href="../Open-databases/开源的数据同步中间件-DBSyncer.html">
+            
+                    
+                    开源的数据同步中间件-DBSyncer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../cloud-disk/">
+            
+                <a href="../cloud-disk/">
+            
+                    
+                    网盘系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../cloud-disk/OwnCloud.html">
+            
+                <a href="../cloud-disk/OwnCloud.html">
+            
+                    
+                    OwnCloud搭建自己的私有云盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../blog/">
+            
+                <a href="../blog/">
+            
+                    
+                    博客系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../blog/基于VuePress和github搭建无服务器博客、文档系统.html">
+            
+                <a href="../blog/基于VuePress和github搭建无服务器博客、文档系统.html">
+            
+                    
+                    基于VuePress和github搭建无服务器博客、文档系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../debug/">
+            
+                <a href="../debug/">
+            
+                    
+                    调试Debug
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../debug/innodb_online_alter_log_max_size.html">
+            
+                <a href="../debug/innodb_online_alter_log_max_size.html">
+            
+                    
+                    Mysql数据库在释放一个数亿记录的表报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >资深运维工程师必须了解的操作系统基础</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"><b></b>&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4ECB;&#x7ECD;"><b></b>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BDE;&#x751F;&#x7684;&#x80CC;&#x666F;"><b></b>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BDE;&#x751F;&#x7684;&#x80CC;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6F14;&#x53D8;"><b></b>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6F14;&#x53D8;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x529F;&#x80FD;&#x548C;&#x5206;&#x7C7B;"><b></b>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x529F;&#x80FD;&#x548C;&#x5206;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;"><b></b>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;</a></li><li><span class="title-icon "></span><a href="#&#x63A5;&#x53E3;"><b></b>&#x63A5;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#abi"><b></b>ABI</a></li><li><span class="title-icon "></span><a href="#api"><b></b>API</a></li><li><span class="title-icon "></span><a href="#&#x5E93;&#x51FD;&#x6570;&#x548C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;"><b></b>&#x5E93;&#x51FD;&#x6570;&#x548C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x6001;&#x548C;&#x5185;&#x6838;&#x6001;"><b></b>&#x7528;&#x6237;&#x6001;&#x548C;&#x5185;&#x6838;&#x6001;</a></li><li><span class="title-icon "></span><a href="#&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;"><b></b>&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;</a></li></ul></div><h1 id="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"><a name="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" class="anchor-navigation-ex-anchor" href="#&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" class="plugin-anchor" href="#&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;</h1>
+<p><a href="http://imgoss.xgss.net/picgo/d13583e9888240d5930bcaae98c1b47d?aliyunoss" data-lightbox="2c2a7b81-cc85-4d62-abd5-0c3f26498edc" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/d13583e9888240d5930bcaae98c1b47d?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<h1 id="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4ECB;&#x7ECD;"><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4ECB;&#x7ECD;</h1>
+<h1 id="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BDE;&#x751F;&#x7684;&#x80CC;&#x666F;"><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BDE;&#x751F;&#x7684;&#x80CC;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BDE;&#x751F;&#x7684;&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BDE;&#x751F;&#x7684;&#x80CC;&#x666F;" class="plugin-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BDE;&#x751F;&#x7684;&#x80CC;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8BDE;&#x751F;&#x7684;&#x80CC;&#x666F;</h1>
+<p>&#x5728;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x51FA;&#x73B0;&#x4E4B;&#x524D;&#x8F6F;&#x4EF6;&#x90FD;&#x662F;&#x76F4;&#x63A5;&#x8FD0;&#x884C;&#x5728;&#x786C;&#x4EF6;&#x4E4B;&#x4E0A;&#x7684;,&#x56E0;&#x4E3A;&#x786C;&#x4EF6;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x529F;&#x80FD;(&#x4F8B;&#x5982;&#x5F39;&#x9053;&#x5BFC;&#x5F39;&#x8BA1;&#x7B97;)&#xFF0C;&#x4F46;&#x662F;&#x968F;&#x7740;&#x8BA1;&#x7B97;&#x673A;&#x6027;&#x80FD;&#x7684;&#x4E0D;&#x65AD;&#x63D0;&#x9AD8;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5728;&#x4E00;&#x4E2A;&#x786C;&#x4EF6;&#x4E0A;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x8F6F;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x8F6F;&#x4EF6;&#x90FD;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x786C;&#x4EF6;&#x8D44;&#x6E90;(CPU&#x3001;&#x5185;&#x5B58;&#x3001;&#x78C1;&#x76D8;&#x3001;&#x7F51;&#x5361;)&#xFF0C;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x534F;&#x8C03;&#x8005;&#xFF0C;&#x56E0;&#x6B64;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5C31;&#x8BDE;&#x751F;&#x4E86;&#x3002;</p>
+<h1 id="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6F14;&#x53D8;"><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6F14;&#x53D8;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6F14;&#x53D8;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6F14;&#x53D8;" class="plugin-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6F14;&#x53D8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6F14;&#x53D8;</h1>
+<p>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4ECE;&#x6700;&#x65E9;&#x671F;&#x7684;&#x5355;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x53D1;&#x5C55;&#x6210;&#x73B0;&#x5728;&#x7684;&#x4E2A;&#x4EBA;&#x8BA1;&#x7B97;&#x673A;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x5206;&#x5E03;&#x5F0F;&#x8BA1;&#x7B97;&#x7684;&#x6F14;&#x53D8;&#x8FC7;&#x7A0B;&#x3002;</p>
+<ul>
+<li>&#x5355;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;:&#x4E00;&#x6B21;&#x53EA;&#x80FD;&#x652F;&#x6301;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#xFF0C;&#x5411;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x8054;&#x673A;&#x4EA4;&#x4E92;&#x5F0F;&#x7684;&#x5DE5;&#x4F5C;&#x73AF;&#x5883;&#xFF0C;&#x4F8B;&#x5982;DOS&#x3002;</li>
+<li>&#x6279;&#x5904;&#x7406;&#x7CFB;&#x7EDF;:&#x7528;&#x6237;&#x5C06;&#x4E00;&#x6279;&#x4F5C;&#x4E1A;&#x4EA4;&#x7ED9;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x540E;&#x5C31;&#x4E0D;&#x518D;&#x4EA4;&#x4E92;&#xFF0C;&#x7531;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x8FD0;&#x884C;&#xFF0C;&#x63D0;&#x9AD8;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x6548;&#x7387;&#x3002;</li>
+<li>&#x591A;&#x9053;&#x7A0B;&#x5E8F;&#x7CFB;&#x7EDF;:&#x4E00;&#x53F0;&#x7535;&#x8111;&#x4E0A;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x7A0B;&#x5E8F;&#x63A7;&#x5236;CPU&#x5904;&#x7406;&#x987A;&#x5E8F;&#x3002;</li>
+<li>&#x5206;&#x65F6;&#x7CFB;&#x7EDF;:&#x63D0;&#x9AD8;&#x7CFB;&#x7EDF;&#x5229;&#x7528;&#x7387;&#xFF0C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x63A7;&#x5236;CPU&#x7684;&#x5904;&#x7406;&#x987A;&#x5E8F;</li>
+<li>&#x4E2A;&#x4EBA;&#x8BA1;&#x7B97;&#x673A;:&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#xFF0C;&#x5EC9;&#x4EF7;&#xFF0C;&#x65B9;&#x4FBF;&#xFF0C;&#x6613;&#x7528;</li>
+<li>&#x5206;&#x5E03;&#x5F0F;&#x8BA1;&#x7B97;:&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x5BF9;&#x5E94;&#x591A;&#x4E2A;&#x7CFB;&#x7EDF;&#xFF0C;&#x4E91;&#x8BA1;&#x7B97;&#xFF0C;&#x5927;&#x6570;&#x636E;&#x5904;&#x7406;</li>
+</ul>
+<h1 id="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x529F;&#x80FD;&#x548C;&#x5206;&#x7C7B;"><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x529F;&#x80FD;&#x548C;&#x5206;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x529F;&#x80FD;&#x548C;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x529F;&#x80FD;&#x548C;&#x5206;&#x7C7B;" class="plugin-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x529F;&#x80FD;&#x548C;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x529F;&#x80FD;&#x548C;&#x5206;&#x7C7B;</h1>
+<p>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;(Operating System)&#x662F;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x76EE;&#x7684;&#x7684;&#x8F6F;&#x4EF6;&#x7A0B;&#x5E8F;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x786C;&#x4EF6;&#x9A71;&#x52A8;(CPU&#x3001;&#x5185;&#x5B58;&#x3001;&#x58F0;&#x5361;&#x3001;&#x663E;&#x5361;&#x3001;&#x7F51;&#x5361;)&#x3001;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x3001;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x3001;&#x7F51;&#x7EDC;&#x7BA1;&#x7406;&#x3001;&#x5B89;&#x5168;&#x7BA1;&#x7406;&#x3001;&#x6587;&#x4EF6;&#x7BA1;&#x7406;&#x7B49;&#x901A;&#x7528;&#x529F;&#x80FD;&#x63D0;&#x4F9B;&#x7ED9;&#x7CFB;&#x7EDF;&#x8F6F;&#x4EF6;&#x548C;&#x5E94;&#x7528;&#x8F6F;&#x4EF6;&#x4F7F;&#x7528;&#x3002;
+&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4ECB;&#x4E8E;&#x5E94;&#x7528;&#x8F6F;&#x4EF6;&#x548C;&#x8BA1;&#x7B97;&#x673A;&#x786C;&#x4EF6;&#x4E4B;&#x95F4;&#xFF0C;&#x7ED9;&#x5E94;&#x7528;&#x8F6F;&#x4EF6;&#x63D0;&#x4F9B;&#x5F00;&#x53D1;&#x548C;&#x8FD0;&#x884C;&#x5E73;&#x53F0;&#xFF0C;&#x540C;&#x65F6;&#x7BA1;&#x7406;&#x548C;&#x8C03;&#x5EA6;&#x786C;&#x4EF6;&#x8D44;&#x6E90;&#x3002;</p>
+<p><a href="http://imgoss.xgss.net/picgo/ac0f92513e134890825c98adf7bbc1f2?aliyunoss" data-lightbox="95714969-b10c-4978-a3c6-bbdc75fa727a" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/ac0f92513e134890825c98adf7bbc1f2?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<p>&#x5E73;&#x5E38;&#x4F7F;&#x7528;&#x7684;&#x5E94;&#x7528;&#x8F6F;&#x4EF6;(&#x5FAE;&#x4FE1;&#x3001;&#x652F;&#x4ED8;&#x5B9D;&#x3001;wps)&#x90FD;&#x662F;&#x8FD0;&#x884C;&#x5728;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E4B;&#x4E0A;&#xFF0C;&#x5229;&#x7528;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x901A;&#x7528;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#x542C;&#x97F3;&#x4E50;&#x3001;&#x4E0A;&#x7F51;&#x3001;&#x804A;&#x5929;&#x7B49;&#x7B49;&#x5E94;&#x7528;&#x3002;&#x56E0;&#x4E3A;&#x6709;&#x4E86;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E94;&#x7528;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x53EA;&#x9700;&#x8981;&#x4E13;&#x6CE8;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x786C;&#x4EF6;&#x5DEE;&#x5F02;&#x6027;&#x3002;</p>
+<p>&#x76EE;&#x524D;&#x4E3B;&#x6D41;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5305;&#x542B; &#x670D;&#x52A1;&#x5668;&#x7AEF;&#x7684;RHEL&#x3001;CentOS(RHEL&#x793E;&#x533A;&#x7248;)&#x3001;Ubuntu Server &#x548C;&#x684C;&#x9762;&#x7AEF; Windows10&#x3001; macOS&#x3001;Ubuntu&#x684C;&#x9762;&#x7248;&#x4EE5;&#x53CA;&#x79FB;&#x52A8;&#x7AEF;Android &#x3001;IOS&#x3001;&#x534E;&#x4E3A;&#x9E3F;&#x8499;OS&#x3002;</p>
+<p>Linux&#x8FD0;&#x7EF4;&#x67B6;&#x6784;&#x4E3B;&#x8981;&#x662F;&#x56F4;&#x7ED5;CentOS&#x4E0E;Ubuntu Server&#x4E24;&#x4E2A;&#x7CFB;&#x7EDF;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x7684;&#x751F;&#x6001;&#x5C55;&#x5F00;&#x3002;</p>
+<p><a href="http://imgoss.xgss.net/picgo/8a38b673a52e4b109402b835bb0c074f?aliyunoss" data-lightbox="94279821-0058-4408-b562-ce77c71ee23c" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/8a38b673a52e4b109402b835bb0c074f?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<h1 id="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;"><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;" class="plugin-anchor" href="#&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;</h1>
+<blockquote>
+<p>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x6838;&#x5FC3;&#x6982;&#x5FF5;&#x5BF9;&#x521D;&#x5B66;&#x8005;&#x6765;&#x8BF4;&#x53EF;&#x80FD;&#x96BE;&#x4EE5;&#x7406;&#x89E3;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4F60;&#x5B66;&#x5B8C;Linux&#x7CFB;&#x7EDF;&#x4E4B;&#x540E;&#x4F1A;&#x6709;&#x66F4;&#x52A0;&#x6DF1;&#x5165;&#x7684;&#x7406;&#x89E3;</p>
+</blockquote>
+<h1 id="&#x63A5;&#x53E3;"><a name="&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x63A5;&#x53E3;" class="plugin-anchor" href="#&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;</h1>
+<p>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x901A;&#x8FC7;&#x63A5;&#x53E3;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5EFA;&#x7ACB;&#x4E86;&#x7528;&#x6237;&#x4E0E;&#x8BA1;&#x7B97;&#x673A;&#x786C;&#x4EF6;&#x7684;&#x6C9F;&#x901A;&#x65B9;&#x5F0F;&#x3002;&#x7528;&#x6237;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x63A5;&#x53E3;&#x6765;&#x4F7F;&#x7528;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x5404;&#x79CD;&#x670D;&#x52A1;&#x3002;</p>
+<blockquote>
+<p>&#x63A5;&#x53E3;(interface):&#x6765;&#x6E90;&#x4E8E;&#x7535;&#x6C14;&#x5DE5;&#x7A0B;&#x5B66;&#x79D1;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x63D2;&#x5EA7;&#x4E0E;&#x63D2;&#x5934;&#x7684;&#x8FDE;&#x63A5;&#x53E3;&#xFF0C;&#x8D77;&#x5230;&#x5C06;&#x7535;&#x4E0E;&#x7535;&#x6C14;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x7684;&#x529F;&#x80FD;&#x3002;&#x540E;&#x6765;&#x5EF6;&#x4F38;&#x5230;&#x8F6F;&#x4EF6;&#x5DE5;&#x7A0B;&#x91CC;&#xFF0C;&#x6307;&#x8F6F;&#x4EF6;&#x5305;&#x5411;&#x5916;&#x63D0;&#x4F9B;&#x7684;&#x529F;&#x80FD;&#x6A21;&#x5757;&#x7684;&#x51FD;&#x6570;&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x4EE5;&#x63A5;&#x53E3;&#x662F;&#x7528;&#x6765;&#x8FDE;&#x63A5;&#x4E24;&#x4E2A;&#x4E1C;&#x897F;&#xFF0C;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x548C;&#x5C4F;&#x853D;&#x7EC6;&#x8282;&#x3002;</p>
+</blockquote>
+<p>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E00;&#x822C;&#x4F1A;&#x63D0;&#x4F9B;&#x4E24;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x63A5;&#x53E3;&#x6765;&#x6EE1;&#x8DB3;&#x7528;&#x6237;&#x7684;&#x4E00;&#x4E9B;&#x4E00;&#x822C;&#x6027;&#x7684;&#x4F7F;&#x7528;&#x9700;&#x6C42;:</p>
+<ul>
+<li>&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;(Command Line Interface)
+&#x5728;Linux&#x7CFB;&#x7EDF;&#x4E0A;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x53EB;bash shell&#x7684;&#x7EC8;&#x7AEF;&#x7A0B;&#x5E8F;&#x63D0;&#x4F9B;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8BE5;&#x7A0B;&#x5E8F;&#x5E95;&#x5C42;&#x7684;&#x5B9E;&#x8D28;&#x8FD8;&#x662F;&#x8C03;&#x7528;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;&#x51FD;&#x6570;&#x3002;</li>
+</ul>
+<p><a href="http://imgoss.xgss.net/picgo/4148e9c118ee479a8f5b93c150e427a2?aliyunoss" data-lightbox="bec20429-d145-4fca-8833-4216e5cced55" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/4148e9c118ee479a8f5b93c150e427a2?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<ul>
+<li>&#x56FE;&#x5F62;&#x754C;&#x9762;&#x63A5;&#x53E3;&#xFF08;Graphic User Interface&#xFF09;
+&#x7A97;&#x53E3;&#x754C;&#x9762;&#x901A;&#x8FC7;&#x7F16;&#x5199;&#x7684;&#x7A97;&#x53E3;&#x7A0B;&#x5E8F;&#x6765;&#x63A5;&#x6536;&#x6765;&#x81EA;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x4E00;&#x4E9B;&#x9F20;&#x6807;&#x3001;&#x952E;&#x76D8;&#x52A8;&#x4F5C;&#xFF0C;&#x8FDB;&#x800C;&#x505A;&#x51FA;&#x4E00;&#x4E9B;&#x54CD;&#x5E94;&#x3002;Windows,macOS,Ubuntu Desktop&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x7A97;&#x53E3;&#x754C;&#x9762;&#x5B8C;&#x6210;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x65E5;&#x5E38;&#x4EFB;&#x52A1;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x5E7F;&#x5927;&#x666E;&#x901A;&#x7528;&#x6237;&#x3002;&#x56E0;&#x6B64;&#x5728;&#x684C;&#x9762;&#x7AEF;&#x7684;Windows&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5360;&#x636E;&#x5E7F;&#x5927;&#x5E02;&#x573A;&#x4EFD;&#x989D;&#x3002;</li>
+</ul>
+<p><a href="http://imgoss.xgss.net/picgo/abf34536f7ea45f5ab2c01c5aca2b6db?aliyunoss" data-lightbox="92166d92-595b-4b73-99d8-b56bb6c64779" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/abf34536f7ea45f5ab2c01c5aca2b6db?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<h1 id="abi"><a name="abi" class="anchor-navigation-ex-anchor" href="#abi"><i class="fa fa-link" aria-hidden="true"></i></a><a name="abi" class="plugin-anchor" href="#abi"><i class="fa fa-link" aria-hidden="true"></i></a>ABI</h1>
+<p>ABI(Application Binary Interface) &#x5373;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E8C;&#x8FDB;&#x5236;&#x63A5;&#x53E3;&#xFF0C;&#x63CF;&#x8FF0;&#x4E86;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E4B;&#x95F4;&#x7684;&#x5E95;&#x5C42;&#x63A5;&#x53E3;&#xFF0C;&#x5141;&#x8BB8;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x76EE;&#x6807;&#x4EE3;&#x7801;&#x5728;&#x4F7F;&#x7528;&#x517C;&#x5BB9;ABI&#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#x65E0;&#x9700;&#x6539;&#x52A8;&#x5C31;&#x80FD;&#x8FD0;&#x884C;&#x3002;
+Windows&#x4E2D;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x683C;&#x5F0F;&#x901A;&#x5E38;&#x662F;PE(Protable Executable)&#x683C;&#x5F0F;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x4F9D;&#x8D56;&#x7684;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;(&#x6587;&#x4EF6;&#x540D;&#x540E;&#x7F00;&#x901A;&#x5E38;&#x662F;.dll &#x5373;dynamic link library)&#x4EE5;&#x53CA;&#x5E93;&#x6587;&#x4EF6;(&#x540E;&#x7F00;&#x540D;&#x662F;.lib)</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;Windows&#x4E0A;&#x7684;&#x8BB0;&#x4E8B;&#x672C;&#x7A0B;&#x5E8F;(C:\Windows\notepad.exe)&#x4F7F;&#x7528;Moba xTerm&#x4E0A;&#x4F20;&#x5230;Linux&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;file notepad.exe&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x8BE5;&#x7A0B;&#x5E8F;&#x7684;&#x683C;&#x5F0F;&#x4FE1;&#x606F;</p>
+<p><a href="http://imgoss.xgss.net/picgo/c43b9b602d9f4cbe98942399d717a9bb?aliyunoss" data-lightbox="92df6792-d1fc-4456-b95d-acd7e74e655d" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/c43b9b602d9f4cbe98942399d717a9bb?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<pre class="language-"><code>[root@centos8-1 ~]# file notepad.exe 
+notepad.exe: PE32 executable (GUI) Intel 80386, for MS Windows
+</code></pre><p>Linux&#x4E2D;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x683C;&#x5F0F;&#x901A;&#x5E38;&#x662F;ELF(Executable and Linking Format),&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x4F9D;&#x8D56;&#x7684;&#x5E93;&#x6587;&#x4EF6;(&#x540E;&#x7F00;&#x540D;&#x901A;&#x5E38;&#x662F;.so&#x5373;shared object),Linux&#x4E2D;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x548C;&#x540E;&#x7F00;&#x540D;&#x65E0;&#x5173;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x6CA1;&#x6709;&#x540E;&#x7F00;&#x3002;</p>
+<pre class="language-"><code>[root@centos8-1 ~]# file /bin/ls
+/bin/ls: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=f4154ce8a36c20d9aa270cc21c6b25ec026ac00f, stripped
+</code></pre><p>&#x56E0;&#x4E3A;&#x6BCF;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;ABI&#x4E0D;&#x540C;&#xFF0C;&#x4E5F;&#x5C31;&#x610F;&#x5473;&#x7740;Windows&#x4E0A;&#x8FD0;&#x884C;&#x7684;&#x7A0B;&#x5E8F;(&#x4F8B;&#x5982;notepad.exe)&#x4E0D;&#x80FD;&#x5728;Linux&#x4E0A;&#x8FD0;&#x884C;&#xFF0C;&#x800C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5728;&#x5F00;&#x53D1;&#x5E94;&#x7528;&#x8F6F;&#x4EF6;&#x65F6;&#x901A;&#x5E38;&#x8981;&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5F00;&#x53D1;&#x4E0D;&#x540C;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+<p><a href="http://imgoss.xgss.net/picgo/a54b2666ccb24046baffc4ffd83e87c9?aliyunoss" data-lightbox="d31a64d9-0ba3-4f93-aaf6-3c5fd81dd457" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/a54b2666ccb24046baffc4ffd83e87c9?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<pre class="language-"><code>[root@centos8-1 ~]# ./notepad.exe # &#x8FD0;&#x884C;notepad.exe &#x53D1;&#x73B0;&#x63D0;&#x793A;&#x6CA1;&#x6709;&#x6267;&#x884C;&#x6743;&#x9650;
+-bash: ./notepad.exe: Permission denied
+[root@centos8-1 ~]# chmod +x notepad.exe # &#x7ED9;&#x8BB0;&#x4E8B;&#x672C;&#x6DFB;&#x52A0;&#x6267;&#x884C;&#x6743;&#x9650;
+[root@centos8-1 ~]# ./notepad.exe # &#x518D;&#x6B21;&#x8FD0;&#x884C;&#x53D1;&#x73B0;&#x63D0;&#x793A;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x683C;&#x5F0F;&#x9519;&#x8BEF;
+-bash: ./notepad.exe: cannot execute binary file: Exec format error
+</code></pre><h1 id="api"><a name="api" class="anchor-navigation-ex-anchor" href="#api"><i class="fa fa-link" aria-hidden="true"></i></a><a name="api" class="plugin-anchor" href="#api"><i class="fa fa-link" aria-hidden="true"></i></a>API</h1>
+<p>API(Application Programming Interface) &#x5373;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7F16;&#x7A0B;&#x63A5;&#x53E3;&#xFF0C;API&#x5B9A;&#x4E49;&#x4E86;&#x6E90;&#x4EE3;&#x7801;&#x548C;&#x5E93;&#x51FD;&#x6570;&#x4E4B;&#x95F4;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5728;&#x5F00;&#x53D1;&#x7A0B;&#x5E8F;&#x65F6;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x7684;API&#x6765;&#x5B8C;&#x6210;&#x67D0;&#x4E9B;&#x529F;&#x80FD;&#xFF0C;&#x56E0;&#x6B64;&#x540C;&#x6837;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x5728;&#x8FD9;&#x4E2A;API&#x7684;&#x4EFB;&#x4F55;&#x7CFB;&#x7EDF;&#x7F16;&#x8BD1;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x7EDF;&#x4E00;&#x89C4;&#x8303;&#xFF0C;IEEE&#x5728;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;API&#x6807;&#x51C6;:POSIX&#xFF08;Portable Operating System Interface&#xFF09;&#x5373;&#x53EF;&#x79FB;&#x690D;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x63A5;&#x53E3;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;POSIX&#x6807;&#x51C6;&#x517C;&#x5BB9;&#x7684;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x4ED6;POSIX&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7F16;&#x8BD1;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x7684;&#x9AD8;&#x7EA7;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;(Java,Go,Python)&#x5DF2;&#x7ECF;&#x5B9E;&#x73B0;&#x4E86;&#x5B8C;&#x5168;&#x7684;&#x8DE8;&#x5E73;&#x53F0;&#xFF0C;&#x5C4F;&#x853D;&#x4E86;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x5DEE;&#x5F02;,&#x5B9E;&#x73B0;&#x4E00;&#x6B21;&#x7F16;&#x5199;&#xFF0C;&#x5230;&#x5904;&#x7F16;&#x8BD1;\&#x89E3;&#x91CA;&#x8FD0;&#x884C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x5728;Linux&#x4E0B;&#x5F00;&#x53D1;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x638C;&#x63E1;&#x67D0;&#x79CD;&#x9AD8;&#x7EA7;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;&#x4F8B;&#x5982;C/C++/Java/Python/Go/Ruby&#x7B49;&#x7B49;&#x3002;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#x90FD;&#x9700;&#x8981;&#x7ECF;&#x8FC7;&#x7F16;&#x8BD1;&#x5668;/&#x89E3;&#x91CA;&#x5668;&#x6765;&#x5C06;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#x6E90;&#x7A0B;&#x5E8F;&#x7F16;&#x8BD1;/&#x89E3;&#x91CA;&#x6210;&#x8BA1;&#x7B97;&#x673A;&#x80FD;&#x8BC6;&#x522B;&#x7684;&#x673A;&#x5668;&#x8BED;&#x8A00;&#x540E;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5176;&#x4E2D;Linux&#x5185;&#x6838;&#x548C;&#x786C;&#x4EF6;&#x9A71;&#x52A8;&#x4F7F;&#x7528;C&#x8BED;&#x8A00;&#x548C;&#x5C11;&#x6570;&#x6C47;&#x7F16;&#x8BED;&#x8A00;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x6C47;&#x7F16;&#x8BED;&#x8A00;&#x5C06;&#x673A;&#x5668;&#x6307;&#x4EE4;&#x4F7F;&#x7528;&#x82F1;&#x6587;&#x4EE3;&#x66FF;&#xFF0C;&#x65E0;&#x6CD5;&#x79FB;&#x690D;&#x3002;&#x800C;Linux&#x7CFB;&#x7EDF;&#x7684;&#x5E94;&#x7528;&#x662F;&#x4F7F;&#x7528;C/C++/Java/Python/Go/Ruby&#x8BED;&#x8A00;&#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x4F8B;&#x5982;RocketMQ&#x662F;Java&#x5F00;&#x53D1;&#x7684;&#xFF0C;Docker&#x662F;Go&#x8BED;&#x8A00;&#x5F00;&#x53D1;&#x7684;&#xFF0C;JumpServer&#x3001;Ansible&#x662F;Python&#x5F00;&#x53D1;&#x7684;&#x3002;</p>
+<p>&#x60F3;&#x8981;&#x9AD8;&#x85AA;&#x5C31;&#x4E1A;&#x3001;&#x5728;IT&#x884C;&#x4E1A;&#x957F;&#x4E45;&#x53D1;&#x5C55;&#xFF0C;&#x5FC5;&#x987B;&#x638C;&#x63E1;&#x7CFB;&#x7EDF;&#x8FD0;&#x7EF4;&#x67B6;&#x6784;&#x4E0E;&#x5E94;&#x7528;&#x5F00;&#x53D1;&#x3002;&#x8FD0;&#x7EF4;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&#x9996;&#x63A8;Python,Go&#xFF0C;&#x800C;&#x5927;&#x578B;&#x5206;&#x5E03;&#x5F0F;&#x4E92;&#x8054;&#x7F51;&#x5E94;&#x7528;(&#x7535;&#x5546;&#x3001;&#x91D1;&#x878D;&#x3001;&#x652F;&#x4ED8;&#x3001;&#x7269;&#x6D41;)&#x9996;&#x9009;&#x8BED;&#x8A00;&#x662F;Java&#x3002;</p>
+<p>&#x76EE;&#x524D;&#x6BD4;&#x8F83;&#x706B;&#x7684;SRE&#x5DE5;&#x7A0B;&#x5E08;&#x5C97;&#x4F4D;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x8FD0;&#x7EF4;+&#x67B6;&#x6784;+&#x5F00;&#x53D1;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x800C;&#x4E14;&#x85AA;&#x6C34;&#x4E5F;&#x6BD4;&#x8F83;&#x9AD8;,&#x5982;&#x679C;&#x5927;&#x5BB6;&#x7684;&#x5B66;&#x4E60;&#x80FD;&#x529B;OK&#xFF0C;&#x5EFA;&#x8BAE;&#x5F80;SRE&#x65B9;&#x5411;&#x53D1;&#x5C55;&#x3002;</p>
+<p><a href="http://imgoss.xgss.net/picgo/8a37b31661734c19b89fc3adb1861e20?aliyunoss" data-lightbox="e2971d48-d6ba-46dc-93a8-41b3cf2a9641" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/8a37b31661734c19b89fc3adb1861e20?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<h1 id="&#x5E93;&#x51FD;&#x6570;&#x548C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;"><a name="&#x5E93;&#x51FD;&#x6570;&#x548C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5E93;&#x51FD;&#x6570;&#x548C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E93;&#x51FD;&#x6570;&#x548C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;" class="plugin-anchor" href="#&#x5E93;&#x51FD;&#x6570;&#x548C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E93;&#x51FD;&#x6570;&#x548C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</h1>
+<p>&#x5BF9;&#x4E8E;&#x975E;&#x4E00;&#x822C;&#x6027;&#x4F7F;&#x7528;&#x9700;&#x6C42;&#xFF0C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7ED9;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x7531;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x8005;&#x6765;&#x5B9E;&#x73B0;&#x4E00;&#x4E9B;&#x7528;&#x6237;&#x9700;&#x8981;&#x7684;&#x529F;&#x80FD;&#x3002;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7531;&#x4E8E;&#x662F;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x4E3A;&#x4E86;&#x533A;&#x522B;&#x4E8E;&#x4E00;&#x822C;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;&#x88AB;&#x79F0;&#x4E3A;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x3002;</p>
+<p><a href="http://imgoss.xgss.net/picgo/26418b883a7b456ea9d126cf1baa323e?aliyunoss" data-lightbox="14b5431f-0d48-4d53-80de-77f4662a420c" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/26418b883a7b456ea9d126cf1baa323e?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<p>&#x6BD4;&#x5982;&#x4F7F;&#x7528;C&#x8BED;&#x8A00;&#x8FDB;&#x884C;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x65F6;&#xFF0C;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x7684;printf()&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x7684;&#x5185;&#x90E8;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x901A;&#x8FC7;write&#x8FD9;&#x4E2A;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x8BA9;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x628A;&#x5B57;&#x7B26;&#x6253;&#x5370;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x3002;</p>
+<p><a href="http://imgoss.xgss.net/picgo/e2bf3b510def443bbfa74f67dd57d58c?aliyunoss" data-lightbox="9e5ba2ba-7968-40cd-bf7e-d4e1e1eefbb0" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/e2bf3b510def443bbfa74f67dd57d58c?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<p>&#x5E93;&#x51FD;&#x6570;&#x548C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;</p>
+<p><a href="http://imgoss.xgss.net/picgo/7d35d6c3b17843d5817f2156bf55c458?aliyunoss" data-lightbox="85ed3841-cf3f-4757-90b7-c59b9ecab079" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/7d35d6c3b17843d5817f2156bf55c458?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<h1 id="&#x7528;&#x6237;&#x6001;&#x548C;&#x5185;&#x6838;&#x6001;"><a name="&#x7528;&#x6237;&#x6001;&#x548C;&#x5185;&#x6838;&#x6001;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x6001;&#x548C;&#x5185;&#x6838;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7528;&#x6237;&#x6001;&#x548C;&#x5185;&#x6838;&#x6001;" class="plugin-anchor" href="#&#x7528;&#x6237;&#x6001;&#x548C;&#x5185;&#x6838;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x6001;&#x548C;&#x5185;&#x6838;&#x6001;</h1>
+<p>&#x8BA1;&#x7B97;&#x673A;&#x786C;&#x4EF6;&#x8D44;&#x6E90;&#x90FD;&#x662F;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;&#x76EE;&#x524D;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x90FD;&#x662F;&#x57FA;&#x4E8E;&#x591A;&#x4EFB;&#x52A1;&#xFF0C;&#x591A;&#x7528;&#x6237;&#x7684;&#x3002;&#x5982;&#x679C;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x8FDB;&#x7A0B;&#x90FD;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x8BBF;&#x95EE;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x5185;&#x6838;&#x6A21;&#x5757;&#xFF0C;&#x6539;&#x53D8;&#x72B6;&#x6001;&#xFF0C;&#x90A3;&#x4E48;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x7A33;&#x5B9A;&#x6027;&#x3001;&#x5B89;&#x5168;&#x6027;&#x90FD;&#x5927;&#x5927;&#x964D;&#x4F4E;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8BA9;&#x5185;&#x6838;&#x7A0B;&#x5E8F;&#x4E0E;&#x7528;&#x6237;&#x7A0B;&#x5E8F;&#x9694;&#x79BB;&#x5F00;&#xFF0C;&#x5728;&#x786C;&#x4EF6;&#x5C42;&#x9762;&#x4E0A;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x673A;&#x5236;&#xFF0C;&#x5C06;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x7684;&#x72B6;&#x6001;&#x5206;&#x6210;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x7EA7;&#x522B;&#xFF0C;&#x4ECE;Ring 0&#x5230;Ring 3&#xFF0C;&#x6570;&#x5B57;&#x8D8A;&#x5C0F;&#xFF0C;&#x8BBF;&#x95EE;&#x7EA7;&#x522B;&#x8D8A;&#x9AD8;&#x3002;0&#x4EE3;&#x8868;&#x5185;&#x6838;&#x6001;&#xFF0C;&#x5728;&#x8BE5;&#x7279;&#x6743;&#x7EA7;&#x522B;&#x4E0B;&#xFF0C;&#x6240;&#x6709;&#x5185;&#x5B58;&#x4E0A;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;&#x53EF;&#x89C1;&#x7684;&#xFF0C;&#x53EF;&#x8BBF;&#x95EE;&#x7684;&#x3002;3&#x4EE3;&#x8868;&#x7528;&#x6237;&#x6001;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x7279;&#x6743;&#x7EA7;&#x4E0B;&#xFF0C;&#x7A0B;&#x5E8F;&#x53EA;&#x80FD;&#x8BBF;&#x95EE;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x5185;&#x5B58;&#x533A;&#x57DF;&#xFF0C;&#x53EA;&#x80FD;&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x7279;&#x5B9A;&#x7684;&#x6307;&#x4EE4;&#x3002;</p>
+<p><a href="http://imgoss.xgss.net/picgo/3ad8146156684032a08082fa515dd82d?aliyunoss" data-lightbox="9e091373-d9b6-4ef9-9000-d3cb77c1b7e9" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/3ad8146156684032a08082fa515dd82d?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<p>&#x7528;&#x6237;&#x6001;&#x548C;&#x5185;&#x6838;&#x6001;</p>
+<p>&#x5982;&#x679C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x60F3;&#x8981;&#x8BBF;&#x95EE;&#x786C;&#x4EF6;&#x8D44;&#x6E90;,&#x6B64;&#x65F6;&#x9700;&#x8981;&#x53D1;&#x9001;&#x8BF7;&#x6C42;&#x7ED9;&#x5185;&#x6838;&#xFF0C;&#x7531;&#x5185;&#x6838;&#x548C;&#x786C;&#x4EF6;&#x7684;&#x4EA4;&#x4E92;&#x3002;</p>
+<p><a href="http://imgoss.xgss.net/picgo/c75e2b973e99403fa68c8e05e936d55f?aliyunoss" data-lightbox="826150d3-9655-4020-a0de-754a9aa52775" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/c75e2b973e99403fa68c8e05e936d55f?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<p>&#x7528;&#x6237;&#x6001;&#x548C;&#x5185;&#x6838;&#x6001;</p>
+<h1 id="&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;"><a name="&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;" class="anchor-navigation-ex-anchor" href="#&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;" class="plugin-anchor" href="#&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;</h1>
+<ul>
+<li>&#x7528;&#x6237;&#x7A7A;&#x95F4;(User Space) &#x8868;&#x793A;&#x7528;&#x6237;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x7A7A;&#x95F4;&#xFF0C;&#x4E3A;&#x4E86;&#x5B89;&#x5168;&#xFF0C;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x662F;&#x9694;&#x79BB;&#x7684;&#xFF0C;&#x5373;&#x4F7F;&#x7528;&#x6237;&#x7684;&#x7A0B;&#x5E8F;&#x5D29;&#x6E83;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5185;&#x6838;&#x3002;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x53EA;&#x80FD;&#x6267;&#x884C;&#x7B80;&#x5355;&#x7684;&#x8FD0;&#x7B97;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#xFF0C;&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;&#x63A5;&#x53E3;(system call) &#x624D;&#x80FD;&#x5411;&#x5185;&#x6838;&#x53D1;&#x51FA;&#x6307;&#x4EE4;&#x3002;</li>
+<li>&#x5185;&#x6838;&#x7A7A;&#x95F4;&#xFF08;Kernel Space) &#x8868;&#x793A;&#x5185;&#x6838;&#x7684;&#x8FD0;&#x884C;&#x7A7A;&#x95F4;&#xFF0C;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x4EFB;&#x610F;&#x6307;&#x4EE4;&#xFF0C;&#x8C03;&#x7528;&#x7CFB;&#x7EDF;&#x7684;&#x4E00;&#x5207;&#x8D44;&#x6E90;&#x3002;</li>
+</ul>
+<p><a href="http://imgoss.xgss.net/picgo/b22168f9acfe49e6be926536f6e7789a?aliyunoss" data-lightbox="78c8bd24-ef25-4d89-a4df-abf2bd8a8d02" data-title="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;" target="_blank"><img src="http://imgoss.xgss.net/picgo/b22168f9acfe49e6be926536f6e7789a?aliyunoss" alt="&#x8D44;&#x6DF1;&#x8FD0;&#x7EF4;&#x5DE5;&#x7A0B;&#x5E08;&#x5FC5;&#x987B;&#x4E86;&#x89E3;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;"></a></p>
+<p>&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;</p>
+<p>&#x4E0B;&#x9762;&#x4EE5;&#x4E00;&#x6BB5;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x6765;&#x8BF4;&#x660E;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x548C;&#x5185;&#x6838;&#x7A7A;&#x95F4;</p>
+<pre class="language-"><code>str =&quot;www.ittimeline.net&quot;;   //&#x7528;&#x6237;&#x7A7A;&#x95F4;
+x=100;    //&#x7528;&#x6237;&#x7A7A;&#x95F4;
+x=x+100; //&#x7528;&#x6237;&#x7A7A;&#x95F4;
+file.write(str);   //&#x5207;&#x6362;&#x5230;&#x5185;&#x6838;&#x7A7A;&#x95F4;
+y=x+200    //&#x5207;&#x6362;&#x5230;&#x5185;&#x6838;&#x7A7A;&#x95F4;
+</code></pre><p>&#x7B2C;1,2,3&#x884C;&#x90FD;&#x662F;&#x7B80;&#x5355;&#x7684;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#xFF0C;&#x76F4;&#x63A5;&#x5728;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x6267;&#x884C;&#xFF0C;&#x7B2C;&#x56DB;&#x884C;&#x9700;&#x8981;&#x5199;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5207;&#x6362;&#x5230;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#xFF0C;&#x56E0;&#x4E3A;&#x7528;&#x6237;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5199;&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x5185;&#x6838;&#x6765;&#x6267;&#x884C;&#x3002;&#x7B2C;&#x4E94;&#x884C;&#x53C8;&#x662F;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#xFF0C;&#x9700;&#x8981;&#x4ECE;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x5207;&#x6362;&#x56DE;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x3002;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x548C;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x5207;&#x6362;&#x9700;&#x8981;&#x6D88;&#x8017;&#x8D44;&#x6E90;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; g.xgss.net all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-04-27 11:08:47
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="负载均衡和CDN技术.html" class="navigation navigation-prev " aria-label="Previous page: 负载均衡和CDN技术">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Linux服务器配置SSH免密码登陆.html" class="navigation navigation-next " aria-label="Next page: Linux服务器配置SSH免密码登陆">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"资深运维工程师必须了解的操作系统基础","level":"1.2.8","depth":2,"next":{"title":"Linux服务器配置SSH免密码登陆","level":"1.2.9","depth":2,"path":"doc/linux-basis/Linux服务器配置SSH免密码登陆.md","ref":"doc/linux-basis/Linux服务器配置SSH免密码登陆.md","articles":[]},"previous":{"title":"负载均衡和CDN技术","level":"1.2.7","depth":2,"path":"doc/linux-basis/负载均衡和CDN技术.md","ref":"doc/linux-basis/负载均衡和CDN技术.md","articles":[]},"dir":"ltr"},"config":{"plugins":["search-pro","back-to-top-button","splitter","anchors","github","donate","sharing-plus","anchor-navigation-ex","favicon","tbfed-pagefooter","-pageview-count","lightbox","-page-treeview","-page-toc-button","expandable-chapters","chapter-fold","code","theme-comscore","prism"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy g.xgss.net","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/funet8/g.xgss.net?g.xgss.net"},"baidu-tongji":{"token":"559562c6410b9fd49a0afe52650d40bd"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"alipay":"https://img.funet8.com/images/alipay_donate.jpg","alipayText":"支付宝打赏","button":"打赏","title":"请俺喝一杯茶","wechat":"https://img.funet8.com/images/wechat_donate.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":false,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"sharing":{"qq":true,"all":["weibo","douban","qq","qzone","facebook","google","instapaper","linkedin","twitter","messenger","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"twitter":true,"vk":false,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"星哥的书籍","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"github-buttons":{"buttons":[{"user":"Blankj","repo":"glory","type":"star","size":"small","count":true}]},"title":"Linux私有教程","language":"zh-hans","links":{"sidebar":{"星哥说事":"https://www.xgss.net","阿里云优惠":"http://y.xgss.net/aliyun","腾讯云优惠":"http://y.xgss.net/tx"}},"gitbook":"*","description":"Linux教程工作中总结的教程"},"file":{"path":"doc/linux-basis/operating-system-based.md","mtime":"2022-04-27T03:08:47.319Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-16T03:20:52.903Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

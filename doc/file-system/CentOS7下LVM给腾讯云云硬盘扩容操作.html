@@ -1,0 +1,1445 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CentOS7下LVM给腾讯云云硬盘扩容操作 · Linux私有教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="星哥的书籍">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Linux安装samba与windows实现共享文件夹.html" />
+    
+    
+    <link rel="prev" href="CentOS7下LVM给硬盘扩容操作.html" />
+    
+
+    
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.xgss.net" target="_blank" class="custom-link">星哥说事</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://y.xgss.net/aliyun" target="_blank" class="custom-link">阿里云优惠</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://y.xgss.net/tx" target="_blank" class="custom-link">腾讯云优惠</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    项目介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linux-basis/">
+            
+                <a href="../linux-basis/">
+            
+                    
+                    Linux基础教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux-basis/Linux.html">
+            
+                <a href="../linux-basis/Linux.html">
+            
+                    
+                    Linux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../linux-basis/CentOS-7-Install.html">
+            
+                <a href="../linux-basis/CentOS-7-Install.html">
+            
+                    
+                    CentOS 7 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../linux-basis/CentOS6-and-CentOS7.html">
+            
+                <a href="../linux-basis/CentOS6-and-CentOS7.html">
+            
+                    
+                    CentOS 6 和 CentOS 7 差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../linux-basis/Linux常用命令及其使用详解.html">
+            
+                <a href="../linux-basis/Linux常用命令及其使用详解.html">
+            
+                    
+                    Linux常用命令及其使用详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../linux-basis/Cloud-Server-What-todo.html">
+            
+                <a href="../linux-basis/Cloud-Server-What-todo.html">
+            
+                    
+                    拥有一台云服务器能干嘛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../linux-basis/cdn.html">
+            
+                <a href="../linux-basis/cdn.html">
+            
+                    
+                    一文读懂CDN和CDN实现的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../linux-basis/负载均衡和CDN技术.html">
+            
+                <a href="../linux-basis/负载均衡和CDN技术.html">
+            
+                    
+                    负载均衡和CDN技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../linux-basis/operating-system-based.html">
+            
+                <a href="../linux-basis/operating-system-based.html">
+            
+                    
+                    资深运维工程师必须了解的操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../linux-basis/Linux服务器配置SSH免密码登陆.html">
+            
+                <a href="../linux-basis/Linux服务器配置SSH免密码登陆.html">
+            
+                    
+                    Linux服务器配置SSH免密码登陆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../linux-basis/一张图学会Git.html">
+            
+                <a href="../linux-basis/一张图学会Git.html">
+            
+                    
+                    一张图学会Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basis-tools/">
+            
+                <a href="../basis-tools/">
+            
+                    
+                    服务器基础工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basis-tools/Linux使用mail配合smtp发送邮件.html">
+            
+                <a href="../basis-tools/Linux使用mail配合smtp发送邮件.html">
+            
+                    
+                    Linux使用mail配合smtp发送邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basis-tools/GoAccess轻量nginx日志分析工具.html">
+            
+                <a href="../basis-tools/GoAccess轻量nginx日志分析工具.html">
+            
+                    
+                    GoAccess轻量nginx日志分析工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../web/">
+            
+                <a href="../web/">
+            
+                    
+                    WEB服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../web/Centos7-install-openresty-waf.html">
+            
+                <a href="../web/Centos7-install-openresty-waf.html">
+            
+                    
+                    Centos7安装openresty实现WAF防火墙功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../web/Linux服务器故障排查基本方案.html">
+            
+                <a href="../web/Linux服务器故障排查基本方案.html">
+            
+                    
+                    Linux服务器故障排查基本方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="CentOS7下LVM给硬盘扩容操作.html">
+            
+                <a href="CentOS7下LVM给硬盘扩容操作.html">
+            
+                    
+                    CentOS7下LVM给硬盘扩容操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="CentOS7下LVM给腾讯云云硬盘扩容操作.html">
+            
+                <a href="CentOS7下LVM给腾讯云云硬盘扩容操作.html">
+            
+                    
+                    CentOS7下LVM给腾讯云云硬盘扩容操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="Linux安装samba与windows实现共享文件夹.html">
+            
+                <a href="Linux安装samba与windows实现共享文件夹.html">
+            
+                    
+                    Linux安装samba与windows实现共享文件夹
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../gitbook/Gitbook.html">
+            
+                <a href="../gitbook/Gitbook.html">
+            
+                    
+                    Gitbook基本使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../gitbook/Jenkins_Github.html">
+            
+                <a href="../gitbook/Jenkins_Github.html">
+            
+                    
+                    Jenkins+Github实现文档持续集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../gitbook/Github-Page-my-domain.html">
+            
+                <a href="../gitbook/Github-Page-my-domain.html">
+            
+                    
+                    Github Page怎么绑定自己的域名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../gitbook/gitbook中使用百度统计查看页面访问情况.html">
+            
+                <a href="../gitbook/gitbook中使用百度统计查看页面访问情况.html">
+            
+                    
+                    gitbook中使用百度统计查看页面访问情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../gitbook/gitbook使用gitalk插件制作留言板.html">
+            
+                <a href="../gitbook/gitbook使用gitalk插件制作留言板.html">
+            
+                    
+                    gitbook使用gitalk插件制作留言板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../android-to-apk/">
+            
+                <a href="../android-to-apk/">
+            
+                    
+                    自动打包安卓APP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../android-to-apk/1.Centos7-Android-software.html">
+            
+                <a href="../android-to-apk/1.Centos7-Android-software.html">
+            
+                    
+                    在CentOS 7下构建安卓Android编译环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../jenkins/CentOS-7-Install-Jenkins.html">
+            
+                <a href="../jenkins/CentOS-7-Install-Jenkins.html">
+            
+                    
+                    CentOS7下安装Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../android-to-apk/3.Centos7-Android-jenkins.html">
+            
+                <a href="../android-to-apk/3.Centos7-Android-jenkins.html">
+            
+                    
+                    基于centos7的jenkins安卓自动打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../safe/readme.html">
+            
+                <a href="../safe/readme.html">
+            
+                    
+                    服务器安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../safe/Web-safe.html">
+            
+                <a href="../safe/Web-safe.html">
+            
+                    
+                    WEB服务器攻击类型和应对方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../safe/why-ssl-safe.html">
+            
+                <a href="../safe/why-ssl-safe.html">
+            
+                    
+                    为什么说HTTPS是安全的
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../software/">
+            
+                <a href="../software/">
+            
+                    
+                    开发常用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../software/Typora_PicGo_Gitee_markdown_pic.html">
+            
+                <a href="../software/Typora_PicGo_Gitee_markdown_pic.html">
+            
+                    
+                    Typora+PicGo+Gitee或github实现markdown自带图床效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../software/Typora_PicGo_aliyun_oss.html">
+            
+                <a href="../software/Typora_PicGo_aliyun_oss.html">
+            
+                    
+                    程序员必备-Typora+PicGo+阿里云oss实现图床
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../software/Typora_PicGo_failedto_Fetch.html">
+            
+                <a href="../software/Typora_PicGo_failedto_Fetch.html">
+            
+                    
+                    PicGo failed to Fetch 出错解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../software/Install-PhpStorm.html">
+            
+                <a href="../software/Install-PhpStorm.html">
+            
+                    
+                    安装PhpStorm、破解、汉化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../software/Xmind2021安装激活破解.html">
+            
+                <a href="../software/Xmind2021安装激活破解.html">
+            
+                    
+                    Xmind2021安装激活破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../software/Windows下VSCode及中文配置.html">
+            
+                <a href="../software/Windows下VSCode及中文配置.html">
+            
+                    
+                    Windows下VSCode及中文配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../internet/">
+            
+                <a href="../internet/">
+            
+                    
+                    互联网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../internet/programmer_position_skills.html">
+            
+                <a href="../internet/programmer_position_skills.html">
+            
+                    
+                    互联网程序员各个职位技能图-多图警告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../internet/qinglong_jingdongdou.html">
+            
+                <a href="../internet/qinglong_jingdongdou.html">
+            
+                    
+                    青龙面板每天自动获取某东豆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../internet/jd_cookie.html">
+            
+                <a href="../internet/jd_cookie.html">
+            
+                    
+                    利用谷歌浏览器获取京东Cookie抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.html">
+            
+                <a href="../internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.html">
+            
+                    
+                    助力居家办公，免费领取语雀 VIP 会员 1-3 年
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Open-Source-Software/">
+            
+                <a href="../Open-Source-Software/">
+            
+                    
+                    开源软件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.html">
+            
+                <a href="../Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.html">
+            
+                    
+                    免费开源iPhone推送消息工具+服务端-Bark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.html">
+            
+                <a href="../Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.html">
+            
+                    
+                    搭建免费开源监控系统uptime-kuma
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Open-Source-Software/免费开源Github Page实现短链接方案.html">
+            
+                <a href="../Open-Source-Software/免费开源Github Page实现短链接方案.html">
+            
+                    
+                    免费开源Github Page实现短链接方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.html">
+            
+                <a href="../Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.html">
+            
+                    
+                    云服务器搭建自己的ngrok服务实现内网穿透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Open-Source-Software/云服务器部署开源短链生成-YOURLS.html">
+            
+                <a href="../Open-Source-Software/云服务器部署开源短链生成-YOURLS.html">
+            
+                    
+                    云服务器部署开源短链生成-YOURLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.html">
+            
+                <a href="../Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.html">
+            
+                    
+                    通过Heimdall开源免费，搭建自己的网络书签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../Open-Source-Software/AdGuard搭建去广告公共DNS.html">
+            
+                <a href="../Open-Source-Software/AdGuard搭建去广告公共DNS.html">
+            
+                    
+                    AdGuard搭建去广告公共DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../Open-Source-Software/开源文档管理系统.html">
+            
+                <a href="../Open-Source-Software/开源文档管理系统.html">
+            
+                    
+                    开源文档管理系统汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Apollo/readme.html">
+            
+                <a href="../Apollo/readme.html">
+            
+                    
+                    开源软件-Apollo
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Apollo/1.基于Linux搭建开源配置管理中心apollo.html">
+            
+                <a href="../Apollo/1.基于Linux搭建开源配置管理中心apollo.html">
+            
+                    
+                    基于Linux搭建开源配置管理中心apollo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Apollo/2.开源配置管理中心apollo使用方法.html">
+            
+                <a href="../Apollo/2.开源配置管理中心apollo使用方法.html">
+            
+                    
+                    开源配置管理中心apollo使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Open-databases/">
+            
+                <a href="../Open-databases/">
+            
+                    
+                    开源软件-数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Open-databases/1_Archery_Install_Docker.html">
+            
+                <a href="../Open-databases/1_Archery_Install_Docker.html">
+            
+                    
+                    Archery-基于docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Open-databases/2_Archery_config.html">
+            
+                <a href="../Open-databases/2_Archery_config.html">
+            
+                    
+                    Archery-后台配置基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Open-databases/3_Archery_online.html">
+            
+                <a href="../Open-databases/3_Archery_online.html">
+            
+                    
+                    Archery-SQL上线流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Open-databases/4.sql-bieming.html">
+            
+                <a href="../Open-databases/4.sql-bieming.html">
+            
+                    
+                    Archery-SQL上线提示库名过长，建议使用别名解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Open-databases/开源的数据同步中间件-DBSyncer.html">
+            
+                <a href="../Open-databases/开源的数据同步中间件-DBSyncer.html">
+            
+                    
+                    开源的数据同步中间件-DBSyncer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../cloud-disk/">
+            
+                <a href="../cloud-disk/">
+            
+                    
+                    网盘系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../cloud-disk/OwnCloud.html">
+            
+                <a href="../cloud-disk/OwnCloud.html">
+            
+                    
+                    OwnCloud搭建自己的私有云盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../blog/">
+            
+                <a href="../blog/">
+            
+                    
+                    博客系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../blog/基于VuePress和github搭建无服务器博客、文档系统.html">
+            
+                <a href="../blog/基于VuePress和github搭建无服务器博客、文档系统.html">
+            
+                    
+                    基于VuePress和github搭建无服务器博客、文档系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../debug/">
+            
+                <a href="../debug/">
+            
+                    
+                    调试Debug
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../debug/innodb_online_alter_log_max_size.html">
+            
+                <a href="../debug/innodb_online_alter_log_max_size.html">
+            
+                    
+                    Mysql数据库在释放一个数亿记录的表报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >CentOS7下LVM给腾讯云云硬盘扩容操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#centos7&#x4E0B;lvm&#x7ED9;&#x817E;&#x8BAF;&#x4E91;&#x4E91;&#x786C;&#x76D8;&#x6269;&#x5BB9;&#x64CD;&#x4F5C;"><b></b>CentOS7&#x4E0B;LVM&#x7ED9;&#x817E;&#x8BAF;&#x4E91;&#x4E91;&#x786C;&#x76D8;&#x6269;&#x5BB9;&#x64CD;&#x4F5C;</a></li><ul><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x786C;&#x76D8;&#x662F;&#x5426;&#x8D2D;&#x4E70;"><b></b>&#x67E5;&#x770B;&#x786C;&#x76D8;&#x662F;&#x5426;&#x8D2D;&#x4E70;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x7269;&#x7406;&#x5377;"><b></b>&#x521B;&#x5EFA;&#x7269;&#x7406;&#x5377;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x5377;&#x7EC4;"><b></b>&#x521B;&#x5EFA;&#x5377;&#x7EC4;</a></li></ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x5377;"><b></b>&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x5377;</a></li><ul><li><span class="title-icon "></span><a href="#&#x683C;&#x5F0F;&#x5316;&#x548C;&#x6302;&#x8F7D;"><b></b>&#x683C;&#x5F0F;&#x5316;&#x548C;&#x6302;&#x8F7D;</a></li></ul></ul></div><h1 id="centos7&#x4E0B;lvm&#x7ED9;&#x817E;&#x8BAF;&#x4E91;&#x4E91;&#x786C;&#x76D8;&#x6269;&#x5BB9;&#x64CD;&#x4F5C;"><a name="centos7&#x4E0B;lvm&#x7ED9;&#x817E;&#x8BAF;&#x4E91;&#x4E91;&#x786C;&#x76D8;&#x6269;&#x5BB9;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#centos7&#x4E0B;lvm&#x7ED9;&#x817E;&#x8BAF;&#x4E91;&#x4E91;&#x786C;&#x76D8;&#x6269;&#x5BB9;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="centos7&#x4E0B;lvm&#x7ED9;&#x817E;&#x8BAF;&#x4E91;&#x4E91;&#x786C;&#x76D8;&#x6269;&#x5BB9;&#x64CD;&#x4F5C;" class="plugin-anchor" href="#centos7&#x4E0B;lvm&#x7ED9;&#x817E;&#x8BAF;&#x4E91;&#x4E91;&#x786C;&#x76D8;&#x6269;&#x5BB9;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>CentOS7&#x4E0B;LVM&#x7ED9;&#x817E;&#x8BAF;&#x4E91;&#x4E91;&#x786C;&#x76D8;&#x6269;&#x5BB9;&#x64CD;&#x4F5C;</h1>
+<p>&#x817E;&#x8BAF;&#x4E91;&#x5B89;&#x88C5;ELK&#x540E;&#xFF0C;100G&#x7684;&#x786C;&#x76D8;&#x4E0D;&#x591F;&#x7528;&#x4E86;&#xFF0C;&#x518D;&#x8D2D;&#x4E70;&#x4E86;500G&#x7684;&#x786C;&#x76D8;&#x60F3;&#x7EC4;&#x6210;600G&#xFF0C;&#x5BA2;&#x670D;&#x5C45;&#x7136;&#x8BF4;&#x4E0D;&#x53EF;&#x4EE5;&#xFF0C;&#x96BE;&#x9053;&#x817E;&#x8BAF;&#x4E91;&#x505A;&#x4E86;&#x9650;&#x5236;&#x4E86;&#xFF1F;&#x8BD5;&#x8BD5;&#x7528;lvm&#x6765;&#x7ED9;100G&#x7684;&#x786C;&#x76D8;&#x6269;&#x5BB9;&#x5230;600G</p>
+<p><a href="https://imgoss.xgss.net/picgo/image-20211202093956343.png?aliyun" data-lightbox="95fd474b-ca1a-4137-9e20-c71b7dedc12b" data-title="" target="_blank"><img src="https://imgoss.xgss.net/picgo/image-20211202093956343.png?aliyun" alt=""></a></p>
+<p>&#x5B9E;&#x6D4B;&#x6269;&#x5BB9;&#x662F;&#x53EF;&#x4EE5;&#x7684;</p>
+<p><a href="https://imgoss.xgss.net/picgo/image-20211202160901943.png?aliyun" data-lightbox="24a3803f-63d5-479b-9a13-fd39b570e987" data-title="image-20211202160901943" target="_blank"><img src="https://imgoss.xgss.net/picgo/image-20211202160901943.png?aliyun" alt="image-20211202160901943"></a></p>
+<h2 id="&#x67E5;&#x770B;&#x786C;&#x76D8;&#x662F;&#x5426;&#x8D2D;&#x4E70;"><a name="&#x67E5;&#x770B;&#x786C;&#x76D8;&#x662F;&#x5426;&#x8D2D;&#x4E70;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x786C;&#x76D8;&#x662F;&#x5426;&#x8D2D;&#x4E70;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x67E5;&#x770B;&#x786C;&#x76D8;&#x662F;&#x5426;&#x8D2D;&#x4E70;" class="plugin-anchor" href="#&#x67E5;&#x770B;&#x786C;&#x76D8;&#x662F;&#x5426;&#x8D2D;&#x4E70;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x786C;&#x76D8;&#x662F;&#x5426;&#x8D2D;&#x4E70;</h2>
+<pre class="language-"><code># fdisk -l
+
+Disk /dev/vda: 53.7 GB, 53687091200 bytes, 104857600 sectors
+..
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/vda1   *        2048   104857566    52427759+  83  Linux
+
+Disk /dev/vdb: 107.4 GB, 107374182400 bytes, 209715200 sectors
+...
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/vdb1            2048   209715199   104856576   83  Linux
+
+Disk /dev/vdc: 536.9 GB, 536870912000 bytes, 1048576000 sectors
+...
+</code></pre><h2 id="&#x521B;&#x5EFA;&#x7269;&#x7406;&#x5377;"><a name="&#x521B;&#x5EFA;&#x7269;&#x7406;&#x5377;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x7269;&#x7406;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x521B;&#x5EFA;&#x7269;&#x7406;&#x5377;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x7269;&#x7406;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x7269;&#x7406;&#x5377;</h2>
+<pre class="language-"><code># pvcreate /dev/vdb /dev/vdc
+
+  Device /dev/vdb excluded by a filter.
+  Physical volume &quot;/dev/vdc&quot; successfully created.
+  &#x62A5;&#x9519;&#xFF0C;&#x7531;&#x4E8E; /dev/vdb &#x4EE5;&#x524D;&#x7528;&#x8FC7;&#x3002; &#x4F7F;&#x7528; parted &#x4FEE;&#x590D;
+</code></pre><p>&#x5BFC;&#x81F4;&#x95EE;&#x9898;&#x7684;&#x539F;&#x56E0;&#x662F;&#x6DFB;&#x52A0;&#x7684;&#x78C1;&#x76D8;&#x662F;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x673A;&#x4E2D;&#x65B0;&#x5EFA;&#x7684;&#xFF0C;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x5206;&#x533A;&#x8868;&#xFF0C;&#x73B0;&#x5728;&#x7684;&#x865A;&#x62DF;&#x673A;&#x5E76;&#x4E0D;&#x80FD;&#x8BC6;&#x522B;&#x78C1;&#x76D8;&#x7684;&#x5206;&#x533A;&#x8868;&#xFF0C;&#x8FD0;&#x884C;parted&#x547D;&#x4EE4;&#x91CD;&#x505A;&#x5206;&#x533A;&#x8868;&#xFF0C;&#x4E2D;&#x9014;&#x9700;&#x8981;&#x8F93;&#x5165;&#x4E09;&#x6B21;&#x547D;&#x4EE4;&#x3002;  </p>
+<pre class="language-"><code># parted /dev/vdb
+
+GNU Parted 3.1
+Using /dev/vdb
+Welcome to GNU Parted! Type &apos;help&apos; to view a list of commands.
+(parted)                                                                  
+(parted) mklabel msdos
+Warning: The existing disk label on /dev/vdb will be destroyed and all data on this disk will be lost. Do
+you want to continue?
+Yes/No? yes                                                               
+(parted) quit                                                             
+Information: You may need to update /etc/fstab.
+</code></pre><p>&#x518D;&#x6B21;&#x8FD0;&#x884C;pvcreate&#xFF0C;&#x95EE;&#x662F;&#x5426;&#x64E6;&#x9664;dos&#x7B7E;&#x540D;&#xFF0C;&#x8F93;&#x5165;y&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x78C1;&#x76D8;&#x521B;&#x5EFA;&#x4E3A;PV&#x4E86;&#x3002;</p>
+<pre class="language-"><code># pvcreate /dev/vdb /dev/vdc                     
+WARNING: dos signature detected on /dev/vdb at offset 510. Wipe it? [y/n]: y
+  Wiping dos signature on /dev/vdb.
+  Physical volume &quot;/dev/vdb&quot; successfully created.
+  Physical volume &quot;/dev/vdc&quot; successfully created.
+</code></pre><h2 id="&#x521B;&#x5EFA;&#x5377;&#x7EC4;"><a name="&#x521B;&#x5EFA;&#x5377;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x5377;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x521B;&#x5EFA;&#x5377;&#x7EC4;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x5377;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x5377;&#x7EC4;</h2>
+<pre class="language-"><code># vgcreate vg /dev/vdb /dev/vdc
+
+  Volume group &quot;vg&quot; successfully created
+
+# vgs
+
+  VG #PV #LV #SN Attr   VSize   VFree  
+  vg   2   0   0 wz--n- 599.99g 599.99g
+</code></pre><h1 id="&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x5377;"><a name="&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x5377;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x5377;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x5377;</h1>
+<p>&#x57FA;&#x4E8E;vg&#x521B;&#x5EFA;&#x903B;&#x8F91;&#x5377;lv,&#x540D;&#x5B57;&#x4E3A;app</p>
+<pre class="language-"><code># lvcreate -n app -L 599.99G vg
+  Rounding up size to full physical extent 599.99 GiB
+  Logical volume &quot;app&quot; created.
+</code></pre><h2 id="&#x683C;&#x5F0F;&#x5316;&#x548C;&#x6302;&#x8F7D;"><a name="&#x683C;&#x5F0F;&#x5316;&#x548C;&#x6302;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#&#x683C;&#x5F0F;&#x5316;&#x548C;&#x6302;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x683C;&#x5F0F;&#x5316;&#x548C;&#x6302;&#x8F7D;" class="plugin-anchor" href="#&#x683C;&#x5F0F;&#x5316;&#x548C;&#x6302;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x683C;&#x5F0F;&#x5316;&#x548C;&#x6302;&#x8F7D;</h2>
+<pre class="language-"><code>&#x7528;ext4&#x7684;&#x683C;&#x5F0F;&#x683C;&#x5F0F;&#x5316;/dev/vg/app
+mkfs -t ext4 /dev/vg/app
+
+mount /dev/vg/app /home
+
+echo &quot;/dev/vg/app /data ext4 defaults 0 0&quot; &gt;&gt;/etc/fstab
+mount -a
+
+df -h |grep vg
+/dev/mapper/vg-app  591G  6.1G  555G   2% /home/data
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; g.xgss.net all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-16 10:42:53
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="CentOS7下LVM给硬盘扩容操作.html" class="navigation navigation-prev " aria-label="Previous page: CentOS7下LVM给硬盘扩容操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Linux安装samba与windows实现共享文件夹.html" class="navigation navigation-next " aria-label="Next page: Linux安装samba与windows实现共享文件夹">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CentOS7下LVM给腾讯云云硬盘扩容操作","level":"1.5.2","depth":2,"next":{"title":"Linux安装samba与windows实现共享文件夹","level":"1.5.3","depth":2,"path":"doc/file-system/Linux安装samba与windows实现共享文件夹.md","ref":"doc/file-system/Linux安装samba与windows实现共享文件夹.md","articles":[]},"previous":{"title":"CentOS7下LVM给硬盘扩容操作","level":"1.5.1","depth":2,"path":"doc/file-system/CentOS7下LVM给硬盘扩容操作.md","ref":"doc/file-system/CentOS7下LVM给硬盘扩容操作.md","articles":[]},"dir":"ltr"},"config":{"plugins":["search-pro","back-to-top-button","splitter","anchors","github","donate","sharing-plus","anchor-navigation-ex","favicon","tbfed-pagefooter","-pageview-count","lightbox","-page-treeview","-page-toc-button","expandable-chapters","chapter-fold","code","theme-comscore","prism"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy g.xgss.net","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/funet8/g.xgss.net?g.xgss.net"},"baidu-tongji":{"token":"559562c6410b9fd49a0afe52650d40bd"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"alipay":"https://img.funet8.com/images/alipay_donate.jpg","alipayText":"支付宝打赏","button":"打赏","title":"请俺喝一杯茶","wechat":"https://img.funet8.com/images/wechat_donate.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":false,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"sharing":{"qq":true,"all":["weibo","douban","qq","qzone","facebook","google","instapaper","linkedin","twitter","messenger","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"twitter":true,"vk":false,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"星哥的书籍","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"github-buttons":{"buttons":[{"user":"Blankj","repo":"glory","type":"star","size":"small","count":true}]},"title":"Linux私有教程","language":"zh-hans","links":{"sidebar":{"星哥说事":"https://www.xgss.net","阿里云优惠":"http://y.xgss.net/aliyun","腾讯云优惠":"http://y.xgss.net/tx"}},"gitbook":"*","description":"Linux教程工作中总结的教程"},"file":{"path":"doc/file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.md","mtime":"2022-05-16T02:42:53.272Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-16T03:20:52.903Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

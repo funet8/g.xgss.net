@@ -1,0 +1,2119 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>开源配置管理中心apollo使用方法 · Linux私有教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="星哥的书籍">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Open-databases/" />
+    
+    
+    <link rel="prev" href="1.基于Linux搭建开源配置管理中心apollo.html" />
+    
+
+    
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.xgss.net" target="_blank" class="custom-link">星哥说事</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://y.xgss.net/aliyun" target="_blank" class="custom-link">阿里云优惠</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://y.xgss.net/tx" target="_blank" class="custom-link">腾讯云优惠</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    项目介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linux-basis/">
+            
+                <a href="../linux-basis/">
+            
+                    
+                    Linux基础教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux-basis/Linux.html">
+            
+                <a href="../linux-basis/Linux.html">
+            
+                    
+                    Linux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../linux-basis/CentOS-7-Install.html">
+            
+                <a href="../linux-basis/CentOS-7-Install.html">
+            
+                    
+                    CentOS 7 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../linux-basis/CentOS6-and-CentOS7.html">
+            
+                <a href="../linux-basis/CentOS6-and-CentOS7.html">
+            
+                    
+                    CentOS 6 和 CentOS 7 差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../linux-basis/Linux常用命令及其使用详解.html">
+            
+                <a href="../linux-basis/Linux常用命令及其使用详解.html">
+            
+                    
+                    Linux常用命令及其使用详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../linux-basis/Cloud-Server-What-todo.html">
+            
+                <a href="../linux-basis/Cloud-Server-What-todo.html">
+            
+                    
+                    拥有一台云服务器能干嘛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../linux-basis/cdn.html">
+            
+                <a href="../linux-basis/cdn.html">
+            
+                    
+                    一文读懂CDN和CDN实现的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../linux-basis/负载均衡和CDN技术.html">
+            
+                <a href="../linux-basis/负载均衡和CDN技术.html">
+            
+                    
+                    负载均衡和CDN技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../linux-basis/operating-system-based.html">
+            
+                <a href="../linux-basis/operating-system-based.html">
+            
+                    
+                    资深运维工程师必须了解的操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../linux-basis/Linux服务器配置SSH免密码登陆.html">
+            
+                <a href="../linux-basis/Linux服务器配置SSH免密码登陆.html">
+            
+                    
+                    Linux服务器配置SSH免密码登陆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../linux-basis/一张图学会Git.html">
+            
+                <a href="../linux-basis/一张图学会Git.html">
+            
+                    
+                    一张图学会Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basis-tools/">
+            
+                <a href="../basis-tools/">
+            
+                    
+                    服务器基础工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basis-tools/Linux使用mail配合smtp发送邮件.html">
+            
+                <a href="../basis-tools/Linux使用mail配合smtp发送邮件.html">
+            
+                    
+                    Linux使用mail配合smtp发送邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basis-tools/GoAccess轻量nginx日志分析工具.html">
+            
+                <a href="../basis-tools/GoAccess轻量nginx日志分析工具.html">
+            
+                    
+                    GoAccess轻量nginx日志分析工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../web/">
+            
+                <a href="../web/">
+            
+                    
+                    WEB服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../web/Centos7-install-openresty-waf.html">
+            
+                <a href="../web/Centos7-install-openresty-waf.html">
+            
+                    
+                    Centos7安装openresty实现WAF防火墙功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../web/Linux服务器故障排查基本方案.html">
+            
+                <a href="../web/Linux服务器故障排查基本方案.html">
+            
+                    
+                    Linux服务器故障排查基本方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../file-system/">
+            
+                <a href="../file-system/">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../file-system/CentOS7下LVM给硬盘扩容操作.html">
+            
+                <a href="../file-system/CentOS7下LVM给硬盘扩容操作.html">
+            
+                    
+                    CentOS7下LVM给硬盘扩容操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.html">
+            
+                <a href="../file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.html">
+            
+                    
+                    CentOS7下LVM给腾讯云云硬盘扩容操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../file-system/Linux安装samba与windows实现共享文件夹.html">
+            
+                <a href="../file-system/Linux安装samba与windows实现共享文件夹.html">
+            
+                    
+                    Linux安装samba与windows实现共享文件夹
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../gitbook/Gitbook.html">
+            
+                <a href="../gitbook/Gitbook.html">
+            
+                    
+                    Gitbook基本使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../gitbook/Jenkins_Github.html">
+            
+                <a href="../gitbook/Jenkins_Github.html">
+            
+                    
+                    Jenkins+Github实现文档持续集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../gitbook/Github-Page-my-domain.html">
+            
+                <a href="../gitbook/Github-Page-my-domain.html">
+            
+                    
+                    Github Page怎么绑定自己的域名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../gitbook/gitbook中使用百度统计查看页面访问情况.html">
+            
+                <a href="../gitbook/gitbook中使用百度统计查看页面访问情况.html">
+            
+                    
+                    gitbook中使用百度统计查看页面访问情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../gitbook/gitbook使用gitalk插件制作留言板.html">
+            
+                <a href="../gitbook/gitbook使用gitalk插件制作留言板.html">
+            
+                    
+                    gitbook使用gitalk插件制作留言板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../android-to-apk/">
+            
+                <a href="../android-to-apk/">
+            
+                    
+                    自动打包安卓APP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../android-to-apk/1.Centos7-Android-software.html">
+            
+                <a href="../android-to-apk/1.Centos7-Android-software.html">
+            
+                    
+                    在CentOS 7下构建安卓Android编译环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../jenkins/CentOS-7-Install-Jenkins.html">
+            
+                <a href="../jenkins/CentOS-7-Install-Jenkins.html">
+            
+                    
+                    CentOS7下安装Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../android-to-apk/3.Centos7-Android-jenkins.html">
+            
+                <a href="../android-to-apk/3.Centos7-Android-jenkins.html">
+            
+                    
+                    基于centos7的jenkins安卓自动打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../safe/readme.html">
+            
+                <a href="../safe/readme.html">
+            
+                    
+                    服务器安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../safe/Web-safe.html">
+            
+                <a href="../safe/Web-safe.html">
+            
+                    
+                    WEB服务器攻击类型和应对方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../safe/why-ssl-safe.html">
+            
+                <a href="../safe/why-ssl-safe.html">
+            
+                    
+                    为什么说HTTPS是安全的
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../software/">
+            
+                <a href="../software/">
+            
+                    
+                    开发常用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../software/Typora_PicGo_Gitee_markdown_pic.html">
+            
+                <a href="../software/Typora_PicGo_Gitee_markdown_pic.html">
+            
+                    
+                    Typora+PicGo+Gitee或github实现markdown自带图床效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../software/Typora_PicGo_aliyun_oss.html">
+            
+                <a href="../software/Typora_PicGo_aliyun_oss.html">
+            
+                    
+                    程序员必备-Typora+PicGo+阿里云oss实现图床
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../software/Typora_PicGo_failedto_Fetch.html">
+            
+                <a href="../software/Typora_PicGo_failedto_Fetch.html">
+            
+                    
+                    PicGo failed to Fetch 出错解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../software/Install-PhpStorm.html">
+            
+                <a href="../software/Install-PhpStorm.html">
+            
+                    
+                    安装PhpStorm、破解、汉化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../software/Xmind2021安装激活破解.html">
+            
+                <a href="../software/Xmind2021安装激活破解.html">
+            
+                    
+                    Xmind2021安装激活破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../software/Windows下VSCode及中文配置.html">
+            
+                <a href="../software/Windows下VSCode及中文配置.html">
+            
+                    
+                    Windows下VSCode及中文配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../internet/">
+            
+                <a href="../internet/">
+            
+                    
+                    互联网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../internet/programmer_position_skills.html">
+            
+                <a href="../internet/programmer_position_skills.html">
+            
+                    
+                    互联网程序员各个职位技能图-多图警告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../internet/qinglong_jingdongdou.html">
+            
+                <a href="../internet/qinglong_jingdongdou.html">
+            
+                    
+                    青龙面板每天自动获取某东豆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../internet/jd_cookie.html">
+            
+                <a href="../internet/jd_cookie.html">
+            
+                    
+                    利用谷歌浏览器获取京东Cookie抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.html">
+            
+                <a href="../internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.html">
+            
+                    
+                    助力居家办公，免费领取语雀 VIP 会员 1-3 年
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Open-Source-Software/">
+            
+                <a href="../Open-Source-Software/">
+            
+                    
+                    开源软件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.html">
+            
+                <a href="../Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.html">
+            
+                    
+                    免费开源iPhone推送消息工具+服务端-Bark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.html">
+            
+                <a href="../Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.html">
+            
+                    
+                    搭建免费开源监控系统uptime-kuma
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Open-Source-Software/免费开源Github Page实现短链接方案.html">
+            
+                <a href="../Open-Source-Software/免费开源Github Page实现短链接方案.html">
+            
+                    
+                    免费开源Github Page实现短链接方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.html">
+            
+                <a href="../Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.html">
+            
+                    
+                    云服务器搭建自己的ngrok服务实现内网穿透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Open-Source-Software/云服务器部署开源短链生成-YOURLS.html">
+            
+                <a href="../Open-Source-Software/云服务器部署开源短链生成-YOURLS.html">
+            
+                    
+                    云服务器部署开源短链生成-YOURLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.html">
+            
+                <a href="../Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.html">
+            
+                    
+                    通过Heimdall开源免费，搭建自己的网络书签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../Open-Source-Software/AdGuard搭建去广告公共DNS.html">
+            
+                <a href="../Open-Source-Software/AdGuard搭建去广告公共DNS.html">
+            
+                    
+                    AdGuard搭建去广告公共DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../Open-Source-Software/开源文档管理系统.html">
+            
+                <a href="../Open-Source-Software/开源文档管理系统.html">
+            
+                    
+                    开源文档管理系统汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    开源软件-Apollo
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="1.基于Linux搭建开源配置管理中心apollo.html">
+            
+                <a href="1.基于Linux搭建开源配置管理中心apollo.html">
+            
+                    
+                    基于Linux搭建开源配置管理中心apollo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12.2" data-path="2.开源配置管理中心apollo使用方法.html">
+            
+                <a href="2.开源配置管理中心apollo使用方法.html">
+            
+                    
+                    开源配置管理中心apollo使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Open-databases/">
+            
+                <a href="../Open-databases/">
+            
+                    
+                    开源软件-数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Open-databases/1_Archery_Install_Docker.html">
+            
+                <a href="../Open-databases/1_Archery_Install_Docker.html">
+            
+                    
+                    Archery-基于docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Open-databases/2_Archery_config.html">
+            
+                <a href="../Open-databases/2_Archery_config.html">
+            
+                    
+                    Archery-后台配置基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Open-databases/3_Archery_online.html">
+            
+                <a href="../Open-databases/3_Archery_online.html">
+            
+                    
+                    Archery-SQL上线流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Open-databases/4.sql-bieming.html">
+            
+                <a href="../Open-databases/4.sql-bieming.html">
+            
+                    
+                    Archery-SQL上线提示库名过长，建议使用别名解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Open-databases/开源的数据同步中间件-DBSyncer.html">
+            
+                <a href="../Open-databases/开源的数据同步中间件-DBSyncer.html">
+            
+                    
+                    开源的数据同步中间件-DBSyncer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../cloud-disk/">
+            
+                <a href="../cloud-disk/">
+            
+                    
+                    网盘系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../cloud-disk/OwnCloud.html">
+            
+                <a href="../cloud-disk/OwnCloud.html">
+            
+                    
+                    OwnCloud搭建自己的私有云盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../blog/">
+            
+                <a href="../blog/">
+            
+                    
+                    博客系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../blog/基于VuePress和github搭建无服务器博客、文档系统.html">
+            
+                <a href="../blog/基于VuePress和github搭建无服务器博客、文档系统.html">
+            
+                    
+                    基于VuePress和github搭建无服务器博客、文档系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../debug/">
+            
+                <a href="../debug/">
+            
+                    
+                    调试Debug
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../debug/innodb_online_alter_log_max_size.html">
+            
+                <a href="../debug/innodb_online_alter_log_max_size.html">
+            
+                    
+                    Mysql数据库在释放一个数亿记录的表报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >开源配置管理中心apollo使用方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"><b></b>&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x662F;apollo"><b></b>&#x4EC0;&#x4E48;&#x662F;apollo</a></li><li><span class="title-icon "></span><a href="#&#x5E94;&#x7528;&#x4EC0;&#x4E48;&#x573A;&#x666F;"><b></b>&#x5E94;&#x7528;&#x4EC0;&#x4E48;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x7CFB;&#x7EDF;&#x4ECB;&#x7ECD;"><b></b>&#x7CFB;&#x7EDF;&#x4ECB;&#x7ECD;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x6587;&#x6863;"><b></b>&#x4F7F;&#x7528;&#x6587;&#x6863;</a></li><ul><ul><li><span class="title-icon "></span><a href="#&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><b></b>&#x540D;&#x8BCD;&#x89E3;&#x91CA;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x666E;&#x901A;&#x5E94;&#x7528;&#x63A5;&#x5165;&#x6307;&#x5357;"><b></b>&#x666E;&#x901A;&#x5E94;&#x7528;&#x63A5;&#x5165;&#x6307;&#x5357;</a></li><ul><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x9879;&#x76EE;"><b></b>&#x521B;&#x5EFA;&#x9879;&#x76EE;</a></li><li><span class="title-icon "></span><a href="#&#x9879;&#x76EE;&#x6743;&#x9650;&#x5206;&#x914D;"><b></b>&#x9879;&#x76EE;&#x6743;&#x9650;&#x5206;&#x914D;</a></li><ul><li><span class="title-icon "></span><a href="#&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;"><b></b>&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x7F16;&#x8F91;&#x3001;&#x53D1;&#x5E03;&#x6743;&#x9650;"><b></b>&#x914D;&#x7F6E;&#x7F16;&#x8F91;&#x3001;&#x53D1;&#x5E03;&#x6743;&#x9650;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x9879;"><b></b>&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x9879;</a></li><ul><li><span class="title-icon "></span><a href="#&#x901A;&#x8FC7;&#x8868;&#x683C;&#x6A21;&#x5F0F;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;"><b></b>&#x901A;&#x8FC7;&#x8868;&#x683C;&#x6A21;&#x5F0F;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x901A;&#x8FC7;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x7F16;&#x8F91;"><b></b>&#x901A;&#x8FC7;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x7F16;&#x8F91;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53D1;&#x5E03;&#x914D;&#x7F6E;"><b></b>&#x53D1;&#x5E03;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x5E94;&#x7528;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><b></b>&#x5E94;&#x7528;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x5E94;&#x7528;&#x63A5;&#x5165;apollo"><b></b>&#x5E94;&#x7528;&#x63A5;&#x5165;Apollo</a></li><li><span class="title-icon "></span><a href="#&#x901A;&#x8FC7;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><b></b>&#x901A;&#x8FC7;&#x5E26;&#x7F13;&#x5B58;&#x7684;Http&#x63A5;&#x53E3;&#x4ECE;Apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#http&#x63A5;&#x53E3;&#x8BF4;&#x660E;"><b></b>Http&#x63A5;&#x53E3;&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;"><b></b>Http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;"><b></b>&#x6D4B;&#x8BD5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><b></b>&#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;Http&#x63A5;&#x53E3;&#x4ECE;Apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#http&#x63A5;&#x53E3;&#x8BF4;&#x660E;_1"><b></b>Http&#x63A5;&#x53E3;&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;_1"><b></b>Http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;_1"><b></b>&#x6D4B;&#x8BD5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5E94;&#x7528;&#x611F;&#x77E5;&#x914D;&#x7F6E;&#x66F4;&#x65B0;"><b></b>&#x5E94;&#x7528;&#x611F;&#x77E5;&#x914D;&#x7F6E;&#x66F4;&#x65B0;</a></li><ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;"><b></b>&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#http&#x63A5;&#x53E3;&#x8BF4;&#x660E;_2"><b></b>Http&#x63A5;&#x53E3;&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;_2"><b></b>Http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x6D4B;&#x8BD5;_2"><b></b>&#x6D4B;&#x8BD5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;"><b></b>&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;</a></li><li><span class="title-icon "></span><a href="#&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;"><b></b>&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;</a></li><ul><li><span class="title-icon "></span><a href="#400---bad-request"><b></b>400 - Bad Request</a></li><li><span class="title-icon "></span><a href="#401---unauthorized"><b></b>401 - Unauthorized</a></li><li><span class="title-icon "></span><a href="#404---not-found"><b></b>404 - Not Found</a></li><li><span class="title-icon "></span><a href="#405---method-not-allowed"><b></b>405 - Method Not Allowed</a></li><li><span class="title-icon "></span><a href="#500---internal-server-error"><b></b>500 - Internal Server Error</a></li></ul></ul><li><span class="title-icon "></span><a href="#apollo&#x4F7F;&#x7528;&#x573A;&#x666F;&#x548C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><b></b>Apollo&#x4F7F;&#x7528;&#x573A;&#x666F;&#x548C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</a></li><li><span class="title-icon "></span><a href="#apollo-&#x5B9E;&#x8DF5;&#x6848;&#x4F8B;"><b></b>Apollo &#x5B9E;&#x8DF5;&#x6848;&#x4F8B;</a></li><li><span class="title-icon "></span><a href="#apollo-&#x5B89;&#x5168;&#x76F8;&#x5173;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;"><b></b>Apollo &#x5B89;&#x5168;&#x76F8;&#x5173;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x67E5;&#x770B;&#x6743;&#x9650;"><b></b>&#x914D;&#x7F6E;&#x67E5;&#x770B;&#x6743;&#x9650;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;_1"><b></b>&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;"><b></b>&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;</a></li><li><span class="title-icon "></span><a href="#&#x81EA;&#x5B9A;&#x4E49;serverproperties&#x8DEF;&#x5F84;"><b></b>&#x81EA;&#x5B9A;&#x4E49;server.properties&#x8DEF;&#x5F84;</a></li><li><span class="title-icon "></span><a href="#&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6CD5;"><b></b>&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6CD5;</a></li><ul><li><span class="title-icon "></span><a href="#api&#x4F7F;&#x7528;&#x65B9;&#x5F0F;"><b></b>API&#x4F7F;&#x7528;&#x65B9;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;namespace&#x7684;&#x914D;&#x7F6E;&#xFF08;application&#xFF09;"><b></b>&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;namespace&#x7684;&#x914D;&#x7F6E;&#xFF08;application&#xFF09;</a></li></ul></ul><li><span class="title-icon "></span><a href="#go&#x3001;python&#x3001;nodejs&#x3001;php&#x7B49;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;"><b></b>Go&#x3001;Python&#x3001;Nodejs&#x3001;PHP&#x7B49;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;</a></li><ul><ul><li><span class="title-icon "></span><a href="#apollo-php-&#x5BA2;&#x6237;&#x7AEF;-1"><b></b>Apollo PHP &#x5BA2;&#x6237;&#x7AEF; 1</a></li><li><span class="title-icon "></span><a href="#apollo-php-&#x5BA2;&#x6237;&#x7AEF;-2"><b></b>Apollo PHP &#x5BA2;&#x6237;&#x7AEF; 2</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x662F;namespace"><b></b>&#x4EC0;&#x4E48;&#x662F;Namespace</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EC0;&#x4E48;&#x662F;application&#x7684;namespace"><b></b>&#x4EC0;&#x4E48;&#x662F;&#x201C;application&#x201D;&#x7684;Namespace</a></li><li><span class="title-icon "></span><a href="#namespace&#x7684;&#x683C;&#x5F0F;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;"><b></b>Namespace&#x7684;&#x683C;&#x5F0F;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;</a></li><li><span class="title-icon "></span><a href="#namespace&#x7684;&#x83B7;&#x53D6;&#x6743;&#x9650;&#x5206;&#x7C7B;"><b></b>Namespace&#x7684;&#x83B7;&#x53D6;&#x6743;&#x9650;&#x5206;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#namespace&#x7684;&#x7C7B;&#x578B;"><b></b>Namespace&#x7684;&#x7C7B;&#x578B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x79C1;&#x6709;&#x7C7B;&#x578B;"><b></b>&#x79C1;&#x6709;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x516C;&#x5171;&#x7C7B;&#x578B;"><b></b>&#x516C;&#x5171;&#x7C7B;&#x578B;</a></li><li><span class="title-icon "></span><a href="#&#x5173;&#x8054;&#x7C7B;&#x578B;&#xFF08;&#x7EE7;&#x627F;&#x7C7B;&#x578B;&#xFF09;"><b></b>&#x5173;&#x8054;&#x7C7B;&#x578B;&#xFF08;&#x7EE7;&#x627F;&#x7C7B;&#x578B;&#xFF09;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x8C03;&#x6574;apolloconfigdb&#x914D;&#x7F6E;"><b></b>&#x8C03;&#x6574;ApolloConfigDB&#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#namespacelockswitch---&#x4E00;&#x6B21;&#x53D1;&#x5E03;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EBA;&#x4FEE;&#x6539;&#x5F00;&#x5173;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x5E03;&#x5BA1;&#x6838;"><b></b>namespace.lock.switch - &#x4E00;&#x6B21;&#x53D1;&#x5E03;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EBA;&#x4FEE;&#x6539;&#x5F00;&#x5173;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x5E03;&#x5BA1;&#x6838;</a></li></ul><li><span class="title-icon "></span><a href="#&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x8BF4;&#x660E;"><b></b>&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x8BF4;&#x660E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x8C03;&#x6574;apolloportaldb&#x914D;&#x7F6E;"><b></b>&#x8C03;&#x6574;ApolloPortalDB&#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#apolloportalenvs---&#x53EF;&#x652F;&#x6301;&#x7684;&#x73AF;&#x5883;&#x5217;&#x8868;"><b></b>apollo.portal.envs - &#x53EF;&#x652F;&#x6301;&#x7684;&#x73AF;&#x5883;&#x5217;&#x8868;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x591A;&#x73AF;&#x5883;&#x90E8;&#x7F72;"><b></b>&#x591A;&#x73AF;&#x5883;&#x90E8;&#x7F72;</a></li><ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;apollo-portal&#x7684;meta-service&#x4FE1;&#x606F;"><b></b>&#x914D;&#x7F6E;apollo-portal&#x7684;meta service&#x4FE1;&#x606F;</a></li></ul></ul></div><h1 id="&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"><a name="&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo&#x4F7F;&#x7528;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo&#x4F7F;&#x7528;&#x65B9;&#x6CD5;" class="plugin-anchor" href="#&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo&#x4F7F;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo&#x4F7F;&#x7528;&#x65B9;&#x6CD5;</h1>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;apollo"><a name="&#x4EC0;&#x4E48;&#x662F;apollo" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;apollo"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4EC0;&#x4E48;&#x662F;apollo" class="plugin-anchor" href="#&#x4EC0;&#x4E48;&#x662F;apollo"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EC0;&#x4E48;&#x662F;apollo</h2>
+<p>Apollo&#xFF08;&#x963F;&#x6CE2;&#x7F57;&#xFF09;&#x662F;&#x4E00;&#x6B3E;&#x53EF;&#x9760;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;&#xFF0C;&#x8BDE;&#x751F;&#x4E8E;&#x643A;&#x7A0B;&#x6846;&#x67B6;&#x7814;&#x53D1;&#x90E8;&#xFF0C;&#x80FD;&#x591F;&#x96C6;&#x4E2D;&#x5316;&#x7BA1;&#x7406;&#x5E94;&#x7528;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x3001;&#x4E0D;&#x540C;&#x96C6;&#x7FA4;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x914D;&#x7F6E;&#x4FEE;&#x6539;&#x540E;&#x80FD;&#x591F;&#x5B9E;&#x65F6;&#x63A8;&#x9001;&#x5230;&#x5E94;&#x7528;&#x7AEF;&#xFF0C;&#x5E76;&#x4E14;&#x5177;&#x5907;&#x89C4;&#x8303;&#x7684;&#x6743;&#x9650;&#x3001;&#x6D41;&#x7A0B;&#x6CBB;&#x7406;&#x7B49;&#x7279;&#x6027;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x5FAE;&#x670D;&#x52A1;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x573A;&#x666F;&#x3002;</p>
+<h2 id="&#x5E94;&#x7528;&#x4EC0;&#x4E48;&#x573A;&#x666F;"><a name="&#x5E94;&#x7528;&#x4EC0;&#x4E48;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;&#x4EC0;&#x4E48;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E94;&#x7528;&#x4EC0;&#x4E48;&#x573A;&#x666F;" class="plugin-anchor" href="#&#x5E94;&#x7528;&#x4EC0;&#x4E48;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x4EC0;&#x4E48;&#x573A;&#x666F;</h2>
+<p><strong>&#x9879;&#x76EE;&#x5728;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x5BF9;&#x5E94;&#x7684;&#x4E0D;&#x540C;&#x7684;&#x914D;&#x7F6E;</strong>&#xFF0C;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#x3001;&#x4E0D;&#x540C;&#x96C6;&#x7FA4;&#x7684;&#x914D;&#x7F6E;</p>
+<p>Apollo&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x754C;&#x9762;&#x96C6;&#x4E2D;&#x5F0F;&#x7BA1;&#x7406;&#x4E0D;&#x540C;&#x73AF;&#x5883;&#xFF08;environment&#xFF09;&#x3001;&#x4E0D;&#x540C;&#x96C6;&#x7FA4;&#xFF08;cluster&#xFF09;&#x3001;&#x4E0D;&#x540C;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF08;namespace&#xFF09;&#x7684;&#x914D;&#x7F6E;&#x3002;
+&#x540C;&#x4E00;&#x4EFD;&#x4EE3;&#x7801;&#x90E8;&#x7F72;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x96C6;&#x7FA4;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x6BD4;&#x5982;zk&#x7684;&#x5730;&#x5740;&#x7B49;
+&#x901A;&#x8FC7;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF08;namespace&#xFF09;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x652F;&#x6301;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x5E94;&#x7528;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4EFD;&#x914D;&#x7F6E;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x5141;&#x8BB8;&#x5E94;&#x7528;&#x5BF9;&#x5171;&#x4EAB;&#x7684;&#x914D;&#x7F6E;&#x8FDB;&#x884C;&#x8986;&#x76D6;</p>
+<p><a href="https://imgoss.xgss.net/picgo/&#x57FA;&#x4E8E;Linux&#x642D;&#x5EFA;&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo-16511151656951.jpg?aliyun" data-lightbox="21e4e343-786d-4a25-bd62-61213f82b42e" data-title="&#x57FA;&#x4E8E;Linux&#x642D;&#x5EFA;&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo" target="_blank"><img src="https://imgoss.xgss.net/picgo/&#x57FA;&#x4E8E;Linux&#x642D;&#x5EFA;&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo-16511151656951.jpg?aliyun" alt="&#x57FA;&#x4E8E;Linux&#x642D;&#x5EFA;&#x5F00;&#x6E90;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;apollo"></a></p>
+<h2 id="&#x7CFB;&#x7EDF;&#x4ECB;&#x7ECD;"><a name="&#x7CFB;&#x7EDF;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7CFB;&#x7EDF;&#x4ECB;&#x7ECD;" class="plugin-anchor" href="#&#x7CFB;&#x7EDF;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CFB;&#x7EDF;&#x4ECB;&#x7ECD;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x7CFB;&#x7EDF;</th>
+<th>Centos7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>java&#x73AF;&#x5883;</td>
+<td>java1.8</td>
+</tr>
+<tr>
+<td>&#x6570;&#x636E;&#x5E93;</td>
+<td>MariaDB-10.2.9</td>
+</tr>
+<tr>
+<td>IP</td>
+<td>192.168.1.8</td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x4F7F;&#x7528;&#x6587;&#x6863;"><a name="&#x4F7F;&#x7528;&#x6587;&#x6863;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x6587;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F7F;&#x7528;&#x6587;&#x6863;" class="plugin-anchor" href="#&#x4F7F;&#x7528;&#x6587;&#x6863;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.apolloconfig.com/#/zh/usage/apollo-user-guide" target="_blank">&#x4F7F;&#x7528;&#x6587;&#x6863;</a></h1>
+<h3 id="&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><a name="&#x540D;&#x8BCD;&#x89E3;&#x91CA;" class="anchor-navigation-ex-anchor" href="#&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x540D;&#x8BCD;&#x89E3;&#x91CA;" class="plugin-anchor" href="#&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x540D;&#x8BCD;&#x89E3;&#x91CA;</h3>
+<p><strong>&#x666E;&#x901A;&#x5E94;&#x7528;</strong>
+    &#x666E;&#x901A;&#x5E94;&#x7528;&#x6307;&#x7684;&#x662F;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5982;Web&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3001;&#x5E26;&#x6709;main&#x51FD;&#x6570;&#x7684;&#x7A0B;&#x5E8F;</p>
+<p><strong>&#x516C;&#x5171;&#x7EC4;&#x4EF6;</strong>
+&#x516C;&#x5171;&#x7EC4;&#x4EF6;&#x6307;&#x7684;&#x662F;&#x53D1;&#x5E03;&#x7684;&#x7C7B;&#x5E93;&#x3001;&#x5BA2;&#x6237;&#x7AEF;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E0D;&#x4F1A;&#x81EA;&#x5DF1;&#x72EC;&#x7ACB;&#x8FD0;&#x884C;&#xFF0C;&#x5982;Java&#x7684;jar&#x5305;&#x3001;.Net&#x7684;dll&#x6587;&#x4EF6;</p>
+<h1 id="&#x666E;&#x901A;&#x5E94;&#x7528;&#x63A5;&#x5165;&#x6307;&#x5357;"><a name="&#x666E;&#x901A;&#x5E94;&#x7528;&#x63A5;&#x5165;&#x6307;&#x5357;" class="anchor-navigation-ex-anchor" href="#&#x666E;&#x901A;&#x5E94;&#x7528;&#x63A5;&#x5165;&#x6307;&#x5357;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x666E;&#x901A;&#x5E94;&#x7528;&#x63A5;&#x5165;&#x6307;&#x5357;" class="plugin-anchor" href="#&#x666E;&#x901A;&#x5E94;&#x7528;&#x63A5;&#x5165;&#x6307;&#x5357;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x666E;&#x901A;&#x5E94;&#x7528;&#x63A5;&#x5165;&#x6307;&#x5357;</h1>
+<h2 id="&#x521B;&#x5EFA;&#x9879;&#x76EE;"><a name="&#x521B;&#x5EFA;&#x9879;&#x76EE;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x9879;&#x76EE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x521B;&#x5EFA;&#x9879;&#x76EE;" class="plugin-anchor" href="#&#x521B;&#x5EFA;&#x9879;&#x76EE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x9879;&#x76EE;</h2>
+<p>&#x8981;&#x4F7F;&#x7528;Apollo&#xFF0C;&#x7B2C;&#x4E00;&#x6B65;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x9879;&#x76EE;&#x3002;</p>
+<ol>
+<li>&#x6253;&#x5F00;apollo-portal&#x4E3B;&#x9875;</li>
+<li>&#x70B9;&#x51FB;&#x201C;&#x521B;&#x5EFA;&#x9879;&#x76EE;&#x201D;</li>
+</ol>
+<p><a href="https://imgoss.xgss.net/picgo/create-app-entry.png?aliyun" data-lightbox="9abca8f5-8025-442c-bf04-c2d6b597ab94" data-title="create-app-entry" target="_blank"><img src="https://imgoss.xgss.net/picgo/create-app-entry.png?aliyun" alt="create-app-entry"></a></p>
+<ol>
+<li>&#x8F93;&#x5165;&#x9879;&#x76EE;&#x4FE1;&#x606F;<ul>
+<li>&#x90E8;&#x95E8;&#xFF1A;&#x9009;&#x62E9;&#x5E94;&#x7528;&#x6240;&#x5728;&#x7684;&#x90E8;&#x95E8;</li>
+<li>&#x5E94;&#x7528;AppId&#xFF1A;&#x7528;&#x6765;&#x6807;&#x8BC6;&#x5E94;&#x7528;&#x8EAB;&#x4EFD;&#x7684;&#x552F;&#x4E00;id&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;string&#xFF0C;&#x9700;&#x8981;&#x548C;&#x5BA2;&#x6237;&#x7AEF;app.properties&#x4E2D;&#x914D;&#x7F6E;&#x7684;app.id&#x5BF9;&#x5E94;</li>
+<li>&#x5E94;&#x7528;&#x540D;&#x79F0;&#xFF1A;&#x5E94;&#x7528;&#x540D;&#xFF0C;&#x4EC5;&#x7528;&#x4E8E;&#x754C;&#x9762;&#x5C55;&#x793A;</li>
+<li>&#x5E94;&#x7528;&#x8D1F;&#x8D23;&#x4EBA;&#xFF1A;&#x9009;&#x62E9;&#x7684;&#x4EBA;&#x9ED8;&#x8BA4;&#x4F1A;&#x6210;&#x4E3A;&#x8BE5;&#x9879;&#x76EE;&#x7684;&#x7BA1;&#x7406;&#x5458;&#xFF0C;&#x5177;&#x5907;&#x9879;&#x76EE;&#x6743;&#x9650;&#x7BA1;&#x7406;&#x3001;&#x96C6;&#x7FA4;&#x521B;&#x5EFA;&#x3001;Namespace&#x521B;&#x5EFA;&#x7B49;&#x6743;&#x9650;</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://imgoss.xgss.net/picgo/create-app.png?aliyun" data-lightbox="5a903486-d29c-40e0-bf63-25610cd2fb47" data-title="create-app" target="_blank"><img src="https://imgoss.xgss.net/picgo/create-app.png?aliyun" alt="create-app"></a></p>
+<ol>
+<li><p>&#x70B9;&#x51FB;&#x63D0;&#x4EA4;</p>
+<p>&#x521B;&#x5EFA;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x8DF3;&#x8F6C;&#x5230;&#x9879;&#x76EE;&#x9996;&#x9875;</p>
+</li>
+</ol>
+<p><a href="https://imgoss.xgss.net/picgo/app-created.png?aliyun" data-lightbox="d4d1f592-7b9f-462d-bfcc-81245e0597e9" data-title="app-created" target="_blank"><img src="https://imgoss.xgss.net/picgo/app-created.png?aliyun" alt="app-created"></a></p>
+<h2 id="&#x9879;&#x76EE;&#x6743;&#x9650;&#x5206;&#x914D;"><a name="&#x9879;&#x76EE;&#x6743;&#x9650;&#x5206;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x9879;&#x76EE;&#x6743;&#x9650;&#x5206;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9879;&#x76EE;&#x6743;&#x9650;&#x5206;&#x914D;" class="plugin-anchor" href="#&#x9879;&#x76EE;&#x6743;&#x9650;&#x5206;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9879;&#x76EE;&#x6743;&#x9650;&#x5206;&#x914D;</h2>
+<h3 id="&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;"><a name="&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;" class="anchor-navigation-ex-anchor" href="#&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;" class="plugin-anchor" href="#&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;</h3>
+<p>&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x62E5;&#x6709;&#x4EE5;&#x4E0B;&#x6743;&#x9650;&#xFF1A;</p>
+<ol>
+<li>&#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x9879;&#x76EE;&#x7684;&#x6743;&#x9650;&#x5206;&#x914D;</li>
+<li>&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x96C6;&#x7FA4;</li>
+<li>&#x53EF;&#x4EE5;&#x521B;&#x5EFA;Namespace</li>
+</ol>
+<p>&#x521B;&#x5EFA;&#x9879;&#x76EE;&#x65F6;&#x586B;&#x5199;&#x7684;&#x5E94;&#x7528;&#x8D1F;&#x8D23;&#x4EBA;&#x9ED8;&#x8BA4;&#x4F1A;&#x6210;&#x4E3A;&#x9879;&#x76EE;&#x7684;&#x7BA1;&#x7406;&#x5458;&#x4E4B;&#x4E00;&#xFF0C;&#x5982;&#x679C;&#x8FD8;&#x9700;&#x8981;&#x5176;&#x4ED6;&#x4EBA;&#x4E5F;&#x6210;&#x4E3A;&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#xFF0C;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x4E0B;&#x9762;&#x6B65;&#x9AA4;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<ol>
+<li>&#x70B9;&#x51FB;&#x9875;&#x9762;&#x5DE6;&#x4FA7;&#x7684;&#x201C;&#x7BA1;&#x7406;&#x9879;&#x76EE;&#x201D;</li>
+</ol>
+<ul>
+<li><a href="https://imgoss.xgss.net/picgo/app-permission-entry.png?aliyun" data-lightbox="bb83b4b6-efce-4c79-9f66-2aa4600ba746" data-title="app-permission-entry" target="_blank"><img src="https://imgoss.xgss.net/picgo/app-permission-entry.png?aliyun" alt="app-permission-entry"></a></li>
+</ul>
+<ol>
+<li>&#x641C;&#x7D22;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x7684;&#x6210;&#x5458;&#x5E76;&#x70B9;&#x51FB;&#x6DFB;&#x52A0;<ul>
+<li><a href="https://imgoss.xgss.net/picgo/app-permission-search-user.png?aliyun" data-lightbox="34d21406-54ce-4b5e-ac26-97b215cbcbc0" data-title="app-permission-search-user" target="_blank"><img src="https://imgoss.xgss.net/picgo/app-permission-search-user.png?aliyun" alt="app-permission-search-user"></a></li>
+<li><a href="https://imgoss.xgss.net/picgo/app-permission-user-added.png?aliyun" data-lightbox="5b7762ac-fd48-4dbc-a4bb-2553c0027a43" data-title="app-permission-user-added" target="_blank"><img src="https://imgoss.xgss.net/picgo/app-permission-user-added.png?aliyun" alt="app-permission-user-added"></a></li>
+</ul>
+</li>
+</ol>
+<h3 id="&#x914D;&#x7F6E;&#x7F16;&#x8F91;&#x3001;&#x53D1;&#x5E03;&#x6743;&#x9650;"><a name="&#x914D;&#x7F6E;&#x7F16;&#x8F91;&#x3001;&#x53D1;&#x5E03;&#x6743;&#x9650;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x7F16;&#x8F91;&#x3001;&#x53D1;&#x5E03;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;&#x7F16;&#x8F91;&#x3001;&#x53D1;&#x5E03;&#x6743;&#x9650;" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x7F16;&#x8F91;&#x3001;&#x53D1;&#x5E03;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x7F16;&#x8F91;&#x3001;&#x53D1;&#x5E03;&#x6743;&#x9650;</h3>
+<p>&#x914D;&#x7F6E;&#x6743;&#x9650;&#x5206;&#x4E3A;&#x7F16;&#x8F91;&#x548C;&#x53D1;&#x5E03;&#xFF1A;</p>
+<ul>
+<li>&#x7F16;&#x8F91;&#x6743;&#x9650;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x5728;Apollo&#x754C;&#x9762;&#x4E0A;&#x521B;&#x5EFA;&#x3001;&#x4FEE;&#x6539;&#x3001;&#x5220;&#x9664;&#x914D;&#x7F6E;<ul>
+<li>&#x914D;&#x7F6E;&#x4FEE;&#x6539;&#x540E;&#x53EA;&#x5728;Apollo&#x754C;&#x9762;&#x4E0A;&#x53D8;&#x5316;&#xFF0C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x5E94;&#x7528;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x7684;&#x914D;&#x7F6E;</li>
+</ul>
+</li>
+<li>&#x53D1;&#x5E03;&#x6743;&#x9650;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x5728;Apollo&#x754C;&#x9762;&#x4E0A;&#x53D1;&#x5E03;&#x3001;&#x56DE;&#x6EDA;&#x914D;&#x7F6E;<ul>
+<li>&#x914D;&#x7F6E;&#x53EA;&#x6709;&#x5728;&#x53D1;&#x5E03;&#x3001;&#x56DE;&#x6EDA;&#x52A8;&#x4F5C;&#x540E;&#x624D;&#x4F1A;&#x88AB;&#x5E94;&#x7528;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x5230;</li>
+<li>Apollo&#x5728;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x53D1;&#x5E03;&#x3001;&#x56DE;&#x6EDA;&#x52A8;&#x4F5C;&#x540E;&#x5B9E;&#x65F6;&#x901A;&#x77E5;&#x5230;&#x5E94;&#x7528;&#xFF0C;&#x5E76;&#x4F7F;&#x6700;&#x65B0;&#x914D;&#x7F6E;&#x751F;&#x6548;</li>
+</ul>
+</li>
+</ul>
+<p>&#x9879;&#x76EE;&#x521B;&#x5EFA;&#x5B8C;&#xFF0C;&#x9ED8;&#x8BA4;&#x6CA1;&#x6709;&#x5206;&#x914D;&#x914D;&#x7F6E;&#x7684;&#x7F16;&#x8F91;&#x548C;&#x53D1;&#x5E03;&#x6743;&#x9650;&#xFF0C;&#x9700;&#x8981;&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x8FDB;&#x884C;&#x6388;&#x6743;&#x3002;</p>
+<ol>
+<li>&#x70B9;&#x51FB;application&#x8FD9;&#x4E2A;namespace&#x7684;&#x6388;&#x6743;&#x6309;&#x94AE;<ul>
+<li><a href="https://imgoss.xgss.net/picgo/namespace-permission-entry.png?aliyun" data-lightbox="d2cae57b-b806-4fa9-9b80-3a9a2c114686" data-title="namespace-permission-entry" target="_blank"><img src="https://imgoss.xgss.net/picgo/namespace-permission-entry.png?aliyun" alt="namespace-permission-entry"></a></li>
+</ul>
+</li>
+<li>&#x5206;&#x914D;&#x4FEE;&#x6539;&#x6743;&#x9650;<ul>
+<li><a href="https://imgoss.xgss.net/picgo/namespace-permission-edit.png?aliyun" data-lightbox="9b37fcad-f182-4e08-8a39-41517fdbf710" data-title="namespace-permission-edit" target="_blank"><img src="https://imgoss.xgss.net/picgo/namespace-permission-edit.png?aliyun" alt="namespace-permission-edit"></a></li>
+</ul>
+</li>
+<li>&#x5206;&#x914D;&#x53D1;&#x5E03;&#x6743;&#x9650;<ul>
+<li><a href="https://imgoss.xgss.net/picgo/namespace-publish-permission.png?aliyun" data-lightbox="187b4c8a-380d-4d43-a64a-1b578858b487" data-title="namespace-publish-permission" target="_blank"><img src="https://imgoss.xgss.net/picgo/namespace-publish-permission.png?aliyun" alt="namespace-publish-permission"></a></li>
+</ul>
+</li>
+</ol>
+<h2 id="&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x9879;"><a name="&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x9879;" class="plugin-anchor" href="#&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x9879;</h2>
+<p>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x9700;&#x8981;&#x62E5;&#x6709;&#x8FD9;&#x4E2A;Namespace&#x7684;&#x7F16;&#x8F91;&#x6743;&#x9650;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x6CA1;&#x6709;&#x65B0;&#x589E;&#x914D;&#x7F6E;&#x6309;&#x94AE;&#xFF0C;&#x53EF;&#x4EE5;&#x627E;&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6388;&#x6743;&#x3002;</p>
+<h3 id="&#x901A;&#x8FC7;&#x8868;&#x683C;&#x6A21;&#x5F0F;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;"><a name="&#x901A;&#x8FC7;&#x8868;&#x683C;&#x6A21;&#x5F0F;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x8FC7;&#x8868;&#x683C;&#x6A21;&#x5F0F;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x901A;&#x8FC7;&#x8868;&#x683C;&#x6A21;&#x5F0F;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x901A;&#x8FC7;&#x8868;&#x683C;&#x6A21;&#x5F0F;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x8FC7;&#x8868;&#x683C;&#x6A21;&#x5F0F;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;</h3>
+<ol>
+<li>&#x70B9;&#x51FB;&#x65B0;&#x589E;&#x914D;&#x7F6E;<ul>
+<li><a href="https://imgoss.xgss.net/picgo/create-item-entry.png?aliyun" data-lightbox="bb420d2c-15ce-41e3-8d55-9873f306da15" data-title="create-item-entry" target="_blank"><img src="https://imgoss.xgss.net/picgo/create-item-entry.png?aliyun" alt="create-item-entry"></a></li>
+</ul>
+</li>
+<li>&#x8F93;&#x5165;&#x914D;&#x7F6E;&#x9879;<ul>
+<li><a href="https://imgoss.xgss.net/picgo/create-item-detail.png?aliyun" data-lightbox="cb2674fa-0f7b-4eca-8800-8c6bcb3c043f" data-title="create-item-detail" target="_blank"><img src="https://imgoss.xgss.net/picgo/create-item-detail.png?aliyun" alt="create-item-detail"></a></li>
+</ul>
+</li>
+<li>&#x70B9;&#x51FB;&#x63D0;&#x4EA4;<ul>
+<li><a href="https://imgoss.xgss.net/picgo/item-created.png?aliyun" data-lightbox="c484bd7a-8bcb-4ccf-b152-d81e31b4b5e3" data-title="item-created" target="_blank"><img src="https://imgoss.xgss.net/picgo/item-created.png?aliyun" alt="item-created"></a></li>
+</ul>
+</li>
+</ol>
+<h3 id="&#x901A;&#x8FC7;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x7F16;&#x8F91;"><a name="&#x901A;&#x8FC7;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x7F16;&#x8F91;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x8FC7;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x7F16;&#x8F91;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x901A;&#x8FC7;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x7F16;&#x8F91;" class="plugin-anchor" href="#&#x901A;&#x8FC7;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x7F16;&#x8F91;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x8FC7;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x7F16;&#x8F91;</h3>
+<p>Apollo&#x9664;&#x4E86;&#x652F;&#x6301;&#x8868;&#x683C;&#x6A21;&#x5F0F;&#xFF0C;&#x9010;&#x4E2A;&#x6DFB;&#x52A0;&#x3001;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x5916;&#xFF0C;&#x8FD8;&#x63D0;&#x4F9B;&#x6587;&#x672C;&#x6A21;&#x5F0F;&#x6279;&#x91CF;&#x6DFB;&#x52A0;&#x3001;&#x4FEE;&#x6539;&#x3002; &#x8FD9;&#x4E2A;&#x5BF9;&#x4E8E;&#x4ECE;&#x5DF2;&#x6709;&#x7684;properties&#x6587;&#x4EF6;&#x8FC1;&#x79FB;&#x5C24;&#x5176;&#x6709;&#x7528;&#x3002;</p>
+<ol>
+<li><p>&#x5207;&#x6362;&#x5230;&#x6587;&#x672C;&#x7F16;&#x8F91;&#x6A21;&#x5F0F;</p>
+<p> <a href="https://imgoss.xgss.net/picgo/text-mode-config-overview.png?aliyun" data-lightbox="022d7aea-4b08-4860-993e-f2315733d43a" data-title="text-mode-config-overview" target="_blank"><img src="https://imgoss.xgss.net/picgo/text-mode-config-overview.png?aliyun" alt="text-mode-config-overview"></a></p>
+</li>
+</ol>
+<ol>
+<li><p>&#x70B9;&#x51FB;&#x53F3;&#x4FA7;&#x7684;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6309;&#x94AE;</p>
+<p> <a href="https://imgoss.xgss.net/picgo/text-mode-config-entry.png?aliyun" data-lightbox="2e43d73d-7810-4922-8005-fcc40e688e97" data-title="text-mode-config-entry" target="_blank"><img src="https://imgoss.xgss.net/picgo/text-mode-config-entry.png?aliyun" alt="text-mode-config-entry"></a></p>
+</li>
+<li><p>&#x8F93;&#x5165;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x5E76;&#x70B9;&#x51FB;&#x63D0;&#x4EA4;&#x4FEE;&#x6539;</p>
+<p> <a href="https://imgoss.xgss.net/picgo/text-mode-config-submit.png?aliyun" data-lightbox="6682052b-8436-4ccc-88c0-d6028d1e6b22" data-title="text-mode-config-submit" target="_blank"><img src="https://imgoss.xgss.net/picgo/text-mode-config-submit.png?aliyun" alt="text-mode-config-submit"></a></p>
+</li>
+</ol>
+<h2 id="&#x53D1;&#x5E03;&#x914D;&#x7F6E;"><a name="&#x53D1;&#x5E03;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x53D1;&#x5E03;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x53D1;&#x5E03;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x53D1;&#x5E03;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53D1;&#x5E03;&#x914D;&#x7F6E;</h2>
+<p>&#x914D;&#x7F6E;&#x53EA;&#x6709;&#x5728;&#x53D1;&#x5E03;&#x540E;&#x624D;&#x4F1A;&#x771F;&#x7684;&#x88AB;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x5230;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x7F16;&#x8F91;&#x5B8C;&#x914D;&#x7F6E;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x53D1;&#x5E03;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x53D1;&#x5E03;&#x914D;&#x7F6E;&#x9700;&#x8981;&#x62E5;&#x6709;&#x8FD9;&#x4E2A;Namespace&#x7684;&#x53D1;&#x5E03;&#x6743;&#x9650;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x6CA1;&#x6709;&#x53D1;&#x5E03;&#x6309;&#x94AE;&#xFF0C;&#x53EF;&#x4EE5;&#x627E;&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6388;&#x6743;&#x3002;</p>
+<ol>
+<li><p>&#x70B9;&#x51FB;&#x201C;&#x53D1;&#x5E03;&#x6309;&#x94AE;&#x201D; <a href="https://imgoss.xgss.net/picgo/hermes-portal-publish-entry.png?aliyun" data-lightbox="7a8f2418-21de-44b5-bf6f-363d756520d7" data-title="publish-entry" target="_blank"><img src="https://imgoss.xgss.net/picgo/hermes-portal-publish-entry.png?aliyun" alt="publish-entry"></a></p>
+</li>
+<li><p>&#x586B;&#x5199;&#x53D1;&#x5E03;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x70B9;&#x51FB;&#x53D1;&#x5E03;</p>
+<p> <a href="https://imgoss.xgss.net/picgo/hermes-portal-publish-detail.png?aliyun" data-lightbox="47e977c0-aafc-4fae-b87b-60829749ad4b" data-title="publish-detail" target="_blank"><img src="https://imgoss.xgss.net/picgo/hermes-portal-publish-detail.png?aliyun" alt="publish-detail"></a></p>
+</li>
+</ol>
+<h2 id="&#x5E94;&#x7528;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><a name="&#x5E94;&#x7528;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E94;&#x7528;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x5E94;&#x7528;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;</h2>
+<p>&#x914D;&#x7F6E;&#x53D1;&#x5E03;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5E94;&#x7528;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Apollo&#x5BA2;&#x6237;&#x7AEF;&#x8BFB;&#x53D6;&#x5230;&#x914D;&#x7F6E;&#x4E86;&#x3002;</p>
+<p>Apollo&#x76EE;&#x524D;&#x63D0;&#x4F9B;Java&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5177;&#x4F53;&#x4FE1;&#x606F;&#x8BF7;&#x70B9;&#x51FB;<a href="https://www.apolloconfig.com/#/zh/usage/java-sdk-user-guide" target="_blank">Java&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;&#x6587;&#x6863;</a>&#xFF1A;</p>
+<p>&#x5982;&#x679C;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x4E86;&#x5176;&#x5B83;&#x8BED;&#x8A00;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;Http&#x63A5;&#x53E3;&#x83B7;&#x53D6;&#x914D;&#x7F6E;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://www.apolloconfig.com/#/zh/usage/other-language-client-user-guide" target="_blank">&#x5176;&#x5B83;&#x8BED;&#x8A00;&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x5165;&#x6307;&#x5357;</a></p>
+<h2 id="&#x5E94;&#x7528;&#x63A5;&#x5165;apollo"><a name="&#x5E94;&#x7528;&#x63A5;&#x5165;apollo" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;&#x63A5;&#x5165;apollo"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E94;&#x7528;&#x63A5;&#x5165;apollo" class="plugin-anchor" href="#&#x5E94;&#x7528;&#x63A5;&#x5165;apollo"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x63A5;&#x5165;Apollo</h2>
+<p>&#x9996;&#x5148;&#x9700;&#x8981;&#x5728;Apollo&#x4E2D;&#x63A5;&#x5165;&#x4F60;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://www.apolloconfig.com/#/zh/usage/apollo-user-guide?id=&#x4E00;&#x3001;&#x666E;&#x901A;&#x5E94;&#x7528;&#x63A5;&#x5165;&#x6307;&#x5357;" target="_blank">&#x5E94;&#x7528;&#x63A5;&#x5165;&#x6587;&#x6863;</a>&#x3002;</p>
+<h2 id="&#x901A;&#x8FC7;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><a name="&#x901A;&#x8FC7;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x8FC7;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x901A;&#x8FC7;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x901A;&#x8FC7;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x8FC7;&#x5E26;&#x7F13;&#x5B58;&#x7684;Http&#x63A5;&#x53E3;&#x4ECE;Apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;</h2>
+<p>&#x8BE5;&#x63A5;&#x53E3;&#x4F1A;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x83B7;&#x53D6;&#x914D;&#x7F6E;&#xFF0C;&#x9002;&#x5408;&#x9891;&#x7387;&#x8F83;&#x9AD8;&#x7684;&#x914D;&#x7F6E;&#x62C9;&#x53D6;&#x8BF7;&#x6C42;&#xFF0C;&#x5982;&#x7B80;&#x5355;&#x7684;&#x6BCF;30&#x79D2;&#x8F6E;&#x8BE2;&#x4E00;&#x6B21;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x7F13;&#x5B58;&#x6700;&#x591A;&#x4F1A;&#x6709;&#x4E00;&#x79D2;&#x7684;&#x5EF6;&#x65F6;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x9700;&#x8981;&#x914D;&#x5408;&#x914D;&#x7F6E;&#x63A8;&#x9001;&#x901A;&#x77E5;&#x5B9E;&#x73B0;&#x5B9E;&#x65F6;&#x66F4;&#x65B0;&#x914D;&#x7F6E;&#x7684;&#x8BDD;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;&#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;Http&#x63A5;&#x53E3;&#x4ECE;Apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;</p>
+<h3 id="http&#x63A5;&#x53E3;&#x8BF4;&#x660E;"><a name="http&#x63A5;&#x53E3;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#http&#x63A5;&#x53E3;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="http&#x63A5;&#x53E3;&#x8BF4;&#x660E;" class="plugin-anchor" href="#http&#x63A5;&#x53E3;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>Http&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h3>
+<p><strong>URL</strong>: {config_server_url}/configfiles/json/{appId}/{clusterName}/{namespaceName}?ip={clientIp}</p>
+<p><strong>Method</strong>: GET</p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong>&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
+<th>&#x53C2;&#x6570;&#x503C;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>config_server_url</td>
+<td>&#x662F;</td>
+<td>Apollo&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x7684;&#x5730;&#x5740;</td>
+<td></td>
+</tr>
+<tr>
+<td>appId</td>
+<td>&#x662F;</td>
+<td>&#x5E94;&#x7528;&#x7684;appId</td>
+<td></td>
+</tr>
+<tr>
+<td>clusterName</td>
+<td>&#x662F;</td>
+<td>&#x96C6;&#x7FA4;&#x540D;</td>
+<td>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x4F20;&#x5165; default &#x5373;&#x53EF;&#x3002; &#x5982;&#x679C;&#x5E0C;&#x671B;&#x914D;&#x7F6E;&#x6309;&#x96C6;&#x7FA4;&#x5212;&#x5206;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://www.apolloconfig.com/#/zh/usage/apollo-user-guide?id=&#x4E09;&#x3001;&#x96C6;&#x7FA4;&#x72EC;&#x7ACB;&#x914D;&#x7F6E;&#x8BF4;&#x660E;" target="_blank">&#x96C6;&#x7FA4;&#x72EC;&#x7ACB;&#x914D;&#x7F6E;&#x8BF4;&#x660E;</a>&#x505A;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8FD9;&#x91CC;&#x586B;&#x5165;&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x7FA4;&#x540D;&#x3002;</td>
+</tr>
+<tr>
+<td>namespaceName</td>
+<td>&#x662F;</td>
+<td>Namespace&#x7684;&#x540D;&#x5B57;</td>
+<td>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x65B0;&#x5EFA;&#x8FC7;Namespace&#x7684;&#x8BDD;&#xFF0C;&#x4F20;&#x5165;application&#x5373;&#x53EF;&#x3002; &#x5982;&#x679C;&#x521B;&#x5EFA;&#x4E86;Namespace&#xFF0C;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8BE5;Namespace&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5219;&#x4F20;&#x5165;&#x5BF9;&#x5E94;&#x7684;Namespace&#x540D;&#x5B57;&#x3002;<strong>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5BF9;&#x4E8E;properties&#x7C7B;&#x578B;&#x7684;namespace&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x5165;namespace&#x7684;&#x540D;&#x5B57;&#x5373;&#x53EF;&#xFF0C;&#x5982;application&#x3002;&#x5BF9;&#x4E8E;&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x7684;namespace&#xFF0C;&#x9700;&#x8981;&#x4F20;&#x5165;namespace&#x7684;&#x540D;&#x5B57;&#x52A0;&#x4E0A;&#x540E;&#x7F00;&#x540D;&#xFF0C;&#x5982;datasources.json</strong></td>
+</tr>
+<tr>
+<td>ip</td>
+<td>&#x5426;</td>
+<td>&#x5E94;&#x7528;&#x90E8;&#x7F72;&#x7684;&#x673A;&#x5668;ip</td>
+<td>&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x7070;&#x5EA6;&#x53D1;&#x5E03;&#x3002; &#x5982;&#x679C;&#x4E0D;&#x60F3;&#x4F20;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8BF7;&#x6CE8;&#x610F;URL&#x4E2D;&#x4ECE;?&#x53F7;&#x5F00;&#x59CB;&#x7684;query parameters&#x6574;&#x4E2A;&#x90FD;&#x4E0D;&#x8981;&#x51FA;&#x73B0;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;"><a name="http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;" class="plugin-anchor" href="#http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>Http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;</h3>
+<p>&#x8BE5;Http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x662F;JSON&#x683C;&#x5F0F;&#x3001;UTF-8&#x7F16;&#x7801;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x5BF9;&#x5E94;namespace&#x4E2D;&#x6240;&#x6709;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x5185;&#x5BB9;Sample&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+    <span class="token property">&quot;portal.elastic.document.type&quot;</span><span class="token operator">:</span><span class="token string">&quot;biz&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;portal.elastic.cluster.name&quot;</span><span class="token operator">:</span><span class="token string">&quot;hermes-es-fws&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>&#x901A;&#x8FC7;<code>{config_server_url}/configfiles/{appId}/{clusterName}/{namespaceName}?ip={clientIp}</code>&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;properties&#x5F62;&#x5F0F;&#x7684;&#x914D;&#x7F6E;</p>
+</blockquote>
+<h3 id="&#x6D4B;&#x8BD5;"><a name="&#x6D4B;&#x8BD5;" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6D4B;&#x8BD5;" class="plugin-anchor" href="#&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;</h3>
+<p>&#x7531;&#x4E8E;&#x662F;Http&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x4EE5;&#x5728;URL&#x7EC4;&#x88C5;OK&#x4E4B;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x3001;&#x6216;&#x8005;&#x76F8;&#x5173;&#x7684;http&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#x8BBF;&#x95EE;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x672C;&#x5730;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<pre class="language-"><code># curl http://192.168.1.5:8080/configfiles/json/1001/default/application
+
+{&quot;redis_ip&quot;:&quot;192.168.1.12&quot;,&quot;redis_passwd&quot;:&quot;123456&quot;,&quot;redis_port&quot;:&quot;6379&quot;}
+</code></pre><h2 id="&#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><a name="&#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;Http&#x63A5;&#x53E3;&#x4ECE;Apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;</h2>
+<p>&#x8BE5;&#x63A5;&#x53E3;&#x4F1A;&#x76F4;&#x63A5;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x83B7;&#x53D6;&#x914D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x914D;&#x5408;&#x914D;&#x7F6E;&#x63A8;&#x9001;&#x901A;&#x77E5;&#x5B9E;&#x73B0;&#x5B9E;&#x65F6;&#x66F4;&#x65B0;&#x914D;&#x7F6E;&#x3002;</p>
+<h3 id="http&#x63A5;&#x53E3;&#x8BF4;&#x660E;_1"><a name="http&#x63A5;&#x53E3;&#x8BF4;&#x660E;_1" class="anchor-navigation-ex-anchor" href="#http&#x63A5;&#x53E3;&#x8BF4;&#x660E;_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="http&#x63A5;&#x53E3;&#x8BF4;&#x660E;" class="plugin-anchor" href="#http&#x63A5;&#x53E3;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>Http&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h3>
+<p><strong>URL</strong>: {config_server_url}/configs/{appId}/{clusterName}/{namespaceName}?releaseKey={releaseKey}&amp;ip={clientIp}</p>
+<p><strong>Method</strong>: GET</p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong>&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
+<th>&#x53C2;&#x6570;&#x503C;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>config_server_url</td>
+<td>&#x662F;</td>
+<td>Apollo&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x7684;&#x5730;&#x5740;</td>
+<td></td>
+</tr>
+<tr>
+<td>appId</td>
+<td>&#x662F;</td>
+<td>&#x5E94;&#x7528;&#x7684;appId</td>
+<td></td>
+</tr>
+<tr>
+<td>clusterName</td>
+<td>&#x662F;</td>
+<td>&#x96C6;&#x7FA4;&#x540D;</td>
+<td>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x4F20;&#x5165; default &#x5373;&#x53EF;&#x3002; &#x5982;&#x679C;&#x5E0C;&#x671B;&#x914D;&#x7F6E;&#x6309;&#x96C6;&#x7FA4;&#x5212;&#x5206;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://www.apolloconfig.com/#/zh/usage/apollo-user-guide?id=&#x4E09;&#x3001;&#x96C6;&#x7FA4;&#x72EC;&#x7ACB;&#x914D;&#x7F6E;&#x8BF4;&#x660E;" target="_blank">&#x96C6;&#x7FA4;&#x72EC;&#x7ACB;&#x914D;&#x7F6E;&#x8BF4;&#x660E;</a>&#x505A;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8FD9;&#x91CC;&#x586B;&#x5165;&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x7FA4;&#x540D;&#x3002;</td>
+</tr>
+<tr>
+<td>namespaceName</td>
+<td>&#x662F;</td>
+<td>Namespace&#x7684;&#x540D;&#x5B57;</td>
+<td>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x65B0;&#x5EFA;&#x8FC7;Namespace&#x7684;&#x8BDD;&#xFF0C;&#x4F20;&#x5165;application&#x5373;&#x53EF;&#x3002; &#x5982;&#x679C;&#x521B;&#x5EFA;&#x4E86;Namespace&#xFF0C;&#x5E76;&#x4E14;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8BE5;Namespace&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5219;&#x4F20;&#x5165;&#x5BF9;&#x5E94;&#x7684;Namespace&#x540D;&#x5B57;&#x3002;<strong>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5BF9;&#x4E8E;properties&#x7C7B;&#x578B;&#x7684;namespace&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x5165;namespace&#x7684;&#x540D;&#x5B57;&#x5373;&#x53EF;&#xFF0C;&#x5982;application&#x3002;&#x5BF9;&#x4E8E;&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x7684;namespace&#xFF0C;&#x9700;&#x8981;&#x4F20;&#x5165;namespace&#x7684;&#x540D;&#x5B57;&#x52A0;&#x4E0A;&#x540E;&#x7F00;&#x540D;&#xFF0C;&#x5982;datasources.json</strong></td>
+</tr>
+<tr>
+<td>releaseKey</td>
+<td>&#x5426;</td>
+<td>&#x4E0A;&#x4E00;&#x6B21;&#x7684;releaseKey</td>
+<td>&#x5C06;&#x4E0A;&#x4E00;&#x6B21;&#x8FD4;&#x56DE;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;releaseKey&#x4F20;&#x5165;&#x5373;&#x53EF;&#xFF0C;&#x7528;&#x6765;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#x6BD4;&#x8F83;&#x7248;&#x672C;&#xFF0C;&#x5982;&#x679C;&#x7248;&#x672C;&#x6BD4;&#x4E0B;&#x6765;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x5219;&#x670D;&#x52A1;&#x7AEF;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;304&#x4EE5;&#x8282;&#x7701;&#x6D41;&#x91CF;&#x548C;&#x8FD0;&#x7B97;</td>
+</tr>
+<tr>
+<td>ip</td>
+<td>&#x5426;</td>
+<td>&#x5E94;&#x7528;&#x90E8;&#x7F72;&#x7684;&#x673A;&#x5668;ip</td>
+<td>&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x7070;&#x5EA6;&#x53D1;&#x5E03;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;_1"><a name="http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;_1" class="anchor-navigation-ex-anchor" href="#http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;" class="plugin-anchor" href="#http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>Http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;</h3>
+<p>&#x8BE5;Http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x662F;JSON&#x683C;&#x5F0F;&#x3001;UTF-8&#x7F16;&#x7801;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x914D;&#x7F6E;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF08;&#x4F20;&#x5165;&#x7684;releaseKey&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x76F8;&#x7B49;&#xFF09;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;HttpStatus 304&#xFF0C;response body&#x4E3A;&#x7A7A;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x914D;&#x7F6E;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x5219;&#x4F1A;&#x8FD4;&#x56DE;HttpStatus 200&#xFF0C;response body&#x4E3A;&#x5BF9;&#x5E94;namespace&#x7684;meta&#x4FE1;&#x606F;&#x4EE5;&#x53CA;&#x5176;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x5185;&#x5BB9;Sample&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;appId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;100004458&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;cluster&quot;</span><span class="token operator">:</span> <span class="token string">&quot;default&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;namespaceName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;configurations&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;portal.elastic.document.type&quot;</span><span class="token operator">:</span><span class="token string">&quot;biz&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;portal.elastic.cluster.name&quot;</span><span class="token operator">:</span><span class="token string">&quot;hermes-es-fws&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;releaseKey&quot;</span><span class="token operator">:</span> <span class="token string">&quot;20170430092936-dee2d58e74515ff3&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;_1"><a name="&#x6D4B;&#x8BD5;_1" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6D4B;&#x8BD5;" class="plugin-anchor" href="#&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;</h3>
+<p>&#x7531;&#x4E8E;&#x662F;Http&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x4EE5;&#x5728;URL&#x7EC4;&#x88C5;OK&#x4E4B;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x3001;&#x6216;&#x8005;&#x76F8;&#x5173;&#x7684;http&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#x8BBF;&#x95EE;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x672C;&#x5730;&#x6D4B;&#x8BD5;</p>
+<pre class="language-"><code># curl http://192.168.1.5:8080/configs/1001/default/application
+{&quot;appId&quot;:&quot;1001&quot;,&quot;cluster&quot;:&quot;default&quot;,&quot;namespaceName&quot;:&quot;application&quot;,&quot;configurations&quot;:{&quot;redis_ip&quot;:&quot;192.168.1.12&quot;,&quot;redis_passwd&quot;:&quot;123456&quot;,&quot;redis_port&quot;:&quot;6379&quot;},&quot;releaseKey&quot;:&quot;20220330100056-d3ee492df675126d&quot;}
+
+# curl http://192.168.1.5:8080/configs/1001/default/application?releaseKey=20220330100056-d3ee492df675126d
+</code></pre><h2 id="&#x5E94;&#x7528;&#x611F;&#x77E5;&#x914D;&#x7F6E;&#x66F4;&#x65B0;"><a name="&#x5E94;&#x7528;&#x611F;&#x77E5;&#x914D;&#x7F6E;&#x66F4;&#x65B0;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;&#x611F;&#x77E5;&#x914D;&#x7F6E;&#x66F4;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E94;&#x7528;&#x611F;&#x77E5;&#x914D;&#x7F6E;&#x66F4;&#x65B0;" class="plugin-anchor" href="#&#x5E94;&#x7528;&#x611F;&#x77E5;&#x914D;&#x7F6E;&#x66F4;&#x65B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;&#x611F;&#x77E5;&#x914D;&#x7F6E;&#x66F4;&#x65B0;</h2>
+<p>Apollo&#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x4E8E;Http long polling&#x7684;&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x901A;&#x77E5;&#xFF0C;&#x7B2C;&#x4E09;&#x65B9;&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x4EE5;&#x770B;&#x81EA;&#x5DF1;&#x5B9E;&#x9645;&#x7684;&#x9700;&#x6C42;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5BF9;&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x654F;&#x611F;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B9A;&#x65F6;&#x5237;&#x65B0;&#x6765;&#x611F;&#x77E5;&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#xFF0C;&#x5237;&#x65B0;&#x9891;&#x7387;&#x53EF;&#x4EE5;&#x89C6;&#x5E94;&#x7528;&#x81EA;&#x8EAB;&#x60C5;&#x51B5;&#x6765;&#x5B9A;&#xFF0C;&#x5EFA;&#x8BAE;&#x5728;30&#x79D2;&#x4EE5;&#x4E0A;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x505A;&#x5230;&#x5B9E;&#x65F6;&#x611F;&#x77E5;&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#xFF08;1&#x79D2;&#xFF09;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x7684;&#x6587;&#x6863;&#x5B9E;&#x73B0;&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<h3 id="&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;"><a name="&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x5B9E;&#x73B0;&#x601D;&#x8DEF;</h3>
+<p>&#x8FD9;&#x91CC;&#x5EFA;&#x8BAE;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x53C2;&#x8003;Apollo&#x7684;Java&#x5B9E;&#x73B0;&#xFF1A;<a href="https://github.com/apolloconfig/apollo/blob/master/apollo-client/src/main/java/com/ctrip/framework/apollo/internals/RemoteConfigLongPollService.java" target="_blank">RemoteConfigLongPollService.java</a>&#xFF0C;&#x4EE3;&#x7801;&#x91CF;200&#x591A;&#x884C;&#xFF0C;&#x603B;&#x4F53;&#x4E0A;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x7684;&#x3002;</p>
+<h4 id="&#x521D;&#x59CB;&#x5316;"><a name="&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x521D;&#x59CB;&#x5316;" class="plugin-anchor" href="#&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521D;&#x59CB;&#x5316;</h4>
+<p>&#x9996;&#x5148;&#x9700;&#x8981;&#x786E;&#x5B9A;&#x54EA;&#x4E9B;namespace&#x9700;&#x8981;&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#xFF0C;Apollo&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x662F;&#x7A0B;&#x5E8F;&#x7B2C;&#x4E00;&#x6B21;&#x83B7;&#x53D6;&#x67D0;&#x4E2A;namespace&#x7684;&#x914D;&#x7F6E;&#x65F6;&#x5C31;&#x4F1A;&#x6765;&#x6CE8;&#x518C;&#x4E00;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x77E5;&#x9053;&#x6709;&#x54EA;&#x4E9B;namespace&#x9700;&#x8981;&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#x4E86;&#x3002;</p>
+<p>&#x521D;&#x59CB;&#x5316;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x662F;&#x5F97;&#x5230;&#x4E00;&#x4E2A;notifications&#x7684;Map&#xFF0C;&#x5185;&#x5BB9;&#x662F;namespaceName -&gt; notificationId&#xFF08;&#x521D;&#x59CB;&#x503C;&#x4E3A;-1&#xFF09;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x6709;&#x65B0;&#x7684;namespace&#x9700;&#x8981;&#x914D;&#x7F6E;&#x66F4;&#x65B0;&#x63A8;&#x9001;&#xFF0C;&#x76F4;&#x63A5;&#x585E;&#x5230;notifications&#x8FD9;&#x4E2A;Map&#x91CC;&#x9762;&#x5373;&#x53EF;&#x3002;</p>
+<h4 id="&#x8BF7;&#x6C42;&#x670D;&#x52A1;"><a name="&#x8BF7;&#x6C42;&#x670D;&#x52A1;" class="anchor-navigation-ex-anchor" href="#&#x8BF7;&#x6C42;&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BF7;&#x6C42;&#x670D;&#x52A1;" class="plugin-anchor" href="#&#x8BF7;&#x6C42;&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BF7;&#x6C42;&#x670D;&#x52A1;</h4>
+<p>&#x6709;&#x4E86;notifications&#x8FD9;&#x4E2A;Map&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x4E86;&#x3002;&#x8FD9;&#x91CC;&#x5148;&#x63CF;&#x8FF0;&#x4E00;&#x4E0B;&#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5177;&#x4F53;&#x7684;URL&#x53C2;&#x6570;&#x548C;&#x8BF4;&#x660E;&#x8BF7;&#x53C2;&#x89C1;&#x540E;&#x9762;&#x7684;&#x63A5;&#x53E3;&#x8BF4;&#x660E;&#x3002;</p>
+<ol>
+<li>&#x8BF7;&#x6C42;&#x8FDC;&#x7AEF;&#x670D;&#x52A1;&#xFF0C;&#x5E26;&#x4E0A;&#x81EA;&#x5DF1;&#x7684;&#x5E94;&#x7528;&#x4FE1;&#x606F;&#x4EE5;&#x53CA;notifications&#x4FE1;&#x606F;</li>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x9488;&#x5BF9;&#x4F20;&#x8FC7;&#x6765;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;namespace&#x548C;&#x5BF9;&#x5E94;&#x7684;notificationId&#xFF0C;&#x68C0;&#x67E5;notificationId&#x662F;&#x5426;&#x662F;&#x6700;&#x65B0;&#x7684;</li>
+<li>&#x5982;&#x679C;&#x90FD;&#x662F;&#x6700;&#x65B0;&#x7684;&#xFF0C;&#x5219;&#x4FDD;&#x6301;&#x4F4F;&#x8BF7;&#x6C42;60&#x79D2;&#xFF0C;&#x5982;&#x679C;60&#x79D2;&#x5185;&#x6CA1;&#x6709;&#x914D;&#x7F6E;&#x53D8;&#x5316;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;HttpStatus 304&#x3002;&#x5982;&#x679C;60&#x79D2;&#x5185;&#x6709;&#x914D;&#x7F6E;&#x53D8;&#x5316;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;namespace&#x7684;&#x6700;&#x65B0;notificationId, HttpStatus 200&#x3002;</li>
+<li>&#x5982;&#x679C;&#x4F20;&#x8FC7;&#x6765;&#x7684;notifications&#x4FE1;&#x606F;&#x4E2D;&#x53D1;&#x73B0;&#x6709;notificationId&#x6BD4;&#x670D;&#x52A1;&#x7AEF;&#x8001;&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5BF9;&#x5E94;namespace&#x7684;&#x6700;&#x65B0;notificationId, HttpStatus 200&#x3002;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x62FF;&#x5230;&#x670D;&#x52A1;&#x7AEF;&#x8FD4;&#x56DE;&#x540E;&#xFF0C;&#x5224;&#x65AD;&#x8FD4;&#x56DE;&#x7684;HttpStatus</li>
+<li>&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x7684;HttpStatus&#x662F;304&#xFF0C;&#x8BF4;&#x660E;&#x914D;&#x7F6E;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x7B2C;1&#x6B65;</li>
+<li>&#x5982;&#x679C;&#x8FD4;&#x56DE;&#x7684;HttpStauts&#x662F;200&#xFF0C;&#x8BF4;&#x660E;&#x914D;&#x7F6E;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x9488;&#x5BF9;&#x53D8;&#x5316;&#x7684;namespace&#x91CD;&#x65B0;&#x53BB;&#x670D;&#x52A1;&#x7AEF;&#x62C9;&#x53D6;&#x914D;&#x7F6E;&#xFF0C;&#x53C2;&#x89C1;<a href="https://www.apolloconfig.com/#/zh/usage/other-language-client-user-guide?id=_13-&#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;" target="_blank">1.3 &#x901A;&#x8FC7;&#x4E0D;&#x5E26;&#x7F13;&#x5B58;&#x7684;Http&#x63A5;&#x53E3;&#x4ECE;Apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;</a>&#x3002;&#x540C;&#x65F6;&#x66F4;&#x65B0;notifications map&#x4E2D;&#x7684;notificationId&#x3002;&#x91CD;&#x65B0;&#x6267;&#x884C;&#x7B2C;1&#x6B65;&#x3002;</li>
+</ol>
+<h3 id="http&#x63A5;&#x53E3;&#x8BF4;&#x660E;_2"><a name="http&#x63A5;&#x53E3;&#x8BF4;&#x660E;_2" class="anchor-navigation-ex-anchor" href="#http&#x63A5;&#x53E3;&#x8BF4;&#x660E;_2"><i class="fa fa-link" aria-hidden="true"></i></a><a name="http&#x63A5;&#x53E3;&#x8BF4;&#x660E;" class="plugin-anchor" href="#http&#x63A5;&#x53E3;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>Http&#x63A5;&#x53E3;&#x8BF4;&#x660E;</h3>
+<p><strong>URL</strong>: {config_server_url}/notifications/v2?appId={appId}&amp;cluster={clusterName}&amp;notifications={notifications}</p>
+<p><strong>Method</strong>: GET</p>
+<p><strong>&#x53C2;&#x6570;&#x8BF4;&#x660E;</strong>&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;&#x540D;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
+<th>&#x53C2;&#x6570;&#x503C;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>config_server_url</td>
+<td>&#x662F;</td>
+<td>Apollo&#x914D;&#x7F6E;&#x670D;&#x52A1;&#x7684;&#x5730;&#x5740;</td>
+<td></td>
+</tr>
+<tr>
+<td>appId</td>
+<td>&#x662F;</td>
+<td>&#x5E94;&#x7528;&#x7684;appId</td>
+<td></td>
+</tr>
+<tr>
+<td>clusterName</td>
+<td>&#x662F;</td>
+<td>&#x96C6;&#x7FA4;&#x540D;</td>
+<td>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x4F20;&#x5165; default &#x5373;&#x53EF;&#x3002; &#x5982;&#x679C;&#x5E0C;&#x671B;&#x914D;&#x7F6E;&#x6309;&#x96C6;&#x7FA4;&#x5212;&#x5206;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://www.apolloconfig.com/#/zh/usage/apollo-user-guide?id=&#x4E09;&#x3001;&#x96C6;&#x7FA4;&#x72EC;&#x7ACB;&#x914D;&#x7F6E;&#x8BF4;&#x660E;" target="_blank">&#x96C6;&#x7FA4;&#x72EC;&#x7ACB;&#x914D;&#x7F6E;&#x8BF4;&#x660E;</a>&#x505A;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8FD9;&#x91CC;&#x586B;&#x5165;&#x5BF9;&#x5E94;&#x7684;&#x96C6;&#x7FA4;&#x540D;&#x3002;</td>
+</tr>
+<tr>
+<td>notifications</td>
+<td>&#x662F;</td>
+<td>notifications&#x4FE1;&#x606F;</td>
+<td>&#x4F20;&#x5165;&#x672C;&#x5730;&#x7684;notifications&#x4FE1;&#x606F;&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x4EE5;array&#x5F62;&#x5F0F;&#x8F6C;&#x4E3A;json&#x4F20;&#x5165;&#xFF0C;&#x5982;&#xFF1A;[{&quot;namespaceName&quot;: &quot;application&quot;, &quot;notificationId&quot;: 100}, {&quot;namespaceName&quot;: &quot;FX.apollo&quot;, &quot;notificationId&quot;: 200}]&#x3002;<strong>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5BF9;&#x4E8E;properties&#x7C7B;&#x578B;&#x7684;namespace&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x5165;namespace&#x7684;&#x540D;&#x5B57;&#x5373;&#x53EF;&#xFF0C;&#x5982;application&#x3002;&#x5BF9;&#x4E8E;&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x7684;namespace&#xFF0C;&#x9700;&#x8981;&#x4F20;&#x5165;namespace&#x7684;&#x540D;&#x5B57;&#x52A0;&#x4E0A;&#x540E;&#x7F00;&#x540D;&#xFF0C;&#x5982;datasources.json</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>&#x6CE8;1&#xFF1A;&#x7531;&#x4E8E;&#x670D;&#x52A1;&#x7AEF;&#x4F1A;hold&#x4F4F;&#x8BF7;&#x6C42;60&#x79D2;&#xFF0C;&#x6240;&#x4EE5;&#x8BF7;&#x786E;&#x4FDD;&#x5BA2;&#x6237;&#x7AEF;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x8981;&#x5927;&#x4E8E;60&#x79D2;&#x3002;</p>
+<p>&#x6CE8;2&#xFF1A;&#x522B;&#x5FD8;&#x4E86;&#x5BF9;&#x53C2;&#x6570;&#x8FDB;&#x884C;<a href="https://en.wikipedia.org/wiki/Percent-encoding" target="_blank">url encode</a></p>
+</blockquote>
+<h3 id="http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;_2"><a name="http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;_2" class="anchor-navigation-ex-anchor" href="#http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;_2"><i class="fa fa-link" aria-hidden="true"></i></a><a name="http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;" class="plugin-anchor" href="#http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>Http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x683C;&#x5F0F;</h3>
+<p>&#x8BE5;Http&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;&#x662F;JSON&#x683C;&#x5F0F;&#x3001;UTF-8&#x7F16;&#x7801;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x6709;&#x53D8;&#x5316;&#x7684;namespace&#x548C;&#x6700;&#x65B0;&#x7684;notificationId&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x5185;&#x5BB9;Sample&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;namespaceName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;application&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;notificationId&quot;</span><span class="token operator">:</span> <span class="token number">101</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre>
+<h3 id="&#x6D4B;&#x8BD5;_2"><a name="&#x6D4B;&#x8BD5;_2" class="anchor-navigation-ex-anchor" href="#&#x6D4B;&#x8BD5;_2"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6D4B;&#x8BD5;" class="plugin-anchor" href="#&#x6D4B;&#x8BD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D4B;&#x8BD5;</h3>
+<p>&#x7531;&#x4E8E;&#x662F;Http&#x63A5;&#x53E3;&#xFF0C;&#x6240;&#x4EE5;&#x5728;URL&#x7EC4;&#x88C5;OK&#x4E4B;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x3001;&#x6216;&#x8005;&#x76F8;&#x5173;&#x7684;http&#x63A5;&#x53E3;&#x6D4B;&#x8BD5;&#x5DE5;&#x5177;&#x8BBF;&#x95EE;&#x5373;&#x53EF;&#x3002;</p>
+<h2 id="&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;"><a name="&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;</h2>
+<p>Apollo&#x4ECE;1.6.0&#x7248;&#x672C;&#x5F00;&#x59CB;&#x589E;&#x52A0;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;&#x673A;&#x5236;&#xFF0C;&#x4ECE;&#x800C;&#x53EA;&#x6709;&#x7ECF;&#x8FC7;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x654F;&#x611F;&#x914D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x5E94;&#x7528;&#x5F00;&#x542F;&#x4E86;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#x65F6;&#x9700;&#x8981;&#x589E;&#x52A0;&#x7B7E;&#x540D;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x7684;Header&#x4FE1;&#x606F;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>Value</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>Apollo ${appId}:${signature}</td>
+<td>appId: &#x5E94;&#x7528;&#x7684;appId&#xFF0C;signature&#xFF1A;&#x4F7F;&#x7528;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;&#x5BF9;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x4EE5;&#x53CA;&#x6240;&#x8BBF;&#x95EE;&#x7684;URL&#x52A0;&#x7B7E;&#x540E;&#x7684;&#x503C;&#xFF0C;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://github.com/apolloconfig/apollo/blob/aa184a2e11d6e7e3f519d860d69f3cf30ccfcf9c/apollo-core/src/main/java/com/ctrip/framework/apollo/core/signature/Signature.java#L22" target="_blank">Signature.signature</a></td>
+</tr>
+<tr>
+<td>Timestamp</td>
+<td>&#x4ECE;<code>1970-1-1 00:00:00 UTC+0</code>&#x5230;&#x73B0;&#x5728;&#x6240;&#x7ECF;&#x8FC7;&#x7684;&#x6BEB;&#x79D2;&#x6570;</td>
+<td>&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/System.html#currentTimeMillis(" target="_blank">System.currentTimeMillis</a>)</td>
+</tr>
+</tbody>
+</table>
+<p>&#x672C;&#x5730;&#x6D4B;&#x8BD5;</p>
+<pre class="language-"><code># curl
+http://192.168.1.5:8080/configfiles/json/1001/default/application
+{&quot;timestamp&quot;:&quot;2022-03-30T16:39:11.912+0800&quot;,&quot;status&quot;:401,&quot;error&quot;:&quot;Unauthorized&quot;,&quot;message&quot;:&quot;&quot;,&quot;path&quot;:&quot;/configfiles/json/1001/default/application&quot;}
+&#x62A5;&#x9519; 401
+
+&#x5BC6;&#x94A5;&#xFF1A; da01f4aab45d4e3c8b8764d99f9a31f5
+
+
+
+
+&#x83B7;&#x53D6;&#x65F6;&#x95F4;&#x6233;&#xFF1A; Timestamp=`date +%s`
+
+curl http://192.168.1.5:8080/configfiles/json/1001/default/application -X POST -H &quot;Content-type:application/json&quot; -d &apos;{&quot;Authorization&quot;:&quot;Apollo 1001:da01f4aab45d4e3c8b8764d99f9a31f5&quot;,&quot;Timestamp&quot;:&quot;1648630422&quot;}&apos;
+</code></pre><h2 id="&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;"><a name="&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;" class="plugin-anchor" href="#&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;</h2>
+<p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x63A5;&#x53E3;&#x8FD4;&#x56DE;&#x7684;Http&#x72B6;&#x6001;&#x7801;&#x662F;200&#xFF0C;&#x4E0B;&#x9762;&#x5217;&#x4E3E;&#x4E86;Apollo&#x4F1A;&#x8FD4;&#x56DE;&#x7684;&#x975E;200&#x9519;&#x8BEF;&#x7801;&#x8BF4;&#x660E;&#x3002;</p>
+<h3 id="400---bad-request"><a name="400---bad-request" class="anchor-navigation-ex-anchor" href="#400---bad-request"><i class="fa fa-link" aria-hidden="true"></i></a><a name="400---bad-request" class="plugin-anchor" href="#400---bad-request"><i class="fa fa-link" aria-hidden="true"></i></a>400 - Bad Request</h3>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x5982;&#x5FC5;&#x9009;&#x53C2;&#x6570;&#x6CA1;&#x6709;&#x4F20;&#x5165;&#x7B49;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x6839;&#x636E;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x68C0;&#x67E5;&#x5BF9;&#x5E94;&#x7684;&#x53C2;&#x6570;&#x662F;&#x5426;&#x6B63;&#x786E;&#x3002;</p>
+<h3 id="401---unauthorized"><a name="401---unauthorized" class="anchor-navigation-ex-anchor" href="#401---unauthorized"><i class="fa fa-link" aria-hidden="true"></i></a><a name="401---unauthorized" class="plugin-anchor" href="#401---unauthorized"><i class="fa fa-link" aria-hidden="true"></i></a>401 - Unauthorized</h3>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x672A;&#x6388;&#x6743;&#xFF0C;&#x5982;&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x4E86;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x672A;&#x914D;&#x7F6E;&#x6216;&#x914D;&#x7F6E;&#x9519;&#x8BEF;&#x3002;</p>
+<h3 id="404---not-found"><a name="404---not-found" class="anchor-navigation-ex-anchor" href="#404---not-found"><i class="fa fa-link" aria-hidden="true"></i></a><a name="404---not-found" class="plugin-anchor" href="#404---not-found"><i class="fa fa-link" aria-hidden="true"></i></a>404 - Not Found</h3>
+<p>&#x63A5;&#x53E3;&#x8981;&#x8BBF;&#x95EE;&#x7684;&#x8D44;&#x6E90;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x4E00;&#x822C;&#x662F;URL&#x6216;URL&#x7684;&#x53C2;&#x6570;&#x9519;&#x8BEF;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x5BF9;&#x5E94;&#x7684;namespace&#x8FD8;&#x6CA1;&#x6709;&#x53D1;&#x5E03;&#x8FC7;&#x914D;&#x7F6E;&#x3002;</p>
+<h3 id="405---method-not-allowed"><a name="405---method-not-allowed" class="anchor-navigation-ex-anchor" href="#405---method-not-allowed"><i class="fa fa-link" aria-hidden="true"></i></a><a name="405---method-not-allowed" class="plugin-anchor" href="#405---method-not-allowed"><i class="fa fa-link" aria-hidden="true"></i></a>405 - Method Not Allowed</h3>
+<p>&#x63A5;&#x53E3;&#x8BBF;&#x95EE;&#x7684;Method&#x4E0D;&#x6B63;&#x786E;&#xFF0C;&#x6BD4;&#x5982;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;GET&#x7684;&#x63A5;&#x53E3;&#x4F7F;&#x7528;&#x4E86;POST&#x8BBF;&#x95EE;&#x7B49;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x63A5;&#x53E3;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#x662F;&#x5426;&#x6B63;&#x786E;&#x3002;</p>
+<h3 id="500---internal-server-error"><a name="500---internal-server-error" class="anchor-navigation-ex-anchor" href="#500---internal-server-error"><i class="fa fa-link" aria-hidden="true"></i></a><a name="500---internal-server-error" class="plugin-anchor" href="#500---internal-server-error"><i class="fa fa-link" aria-hidden="true"></i></a>500 - Internal Server Error</h3>
+<p>&#x5176;&#x5B83;&#x7C7B;&#x578B;&#x7684;&#x9519;&#x8BEF;&#x9ED8;&#x8BA4;&#x90FD;&#x4F1A;&#x8FD4;&#x56DE;500&#xFF0C;&#x5BF9;&#x8FD9;&#x7C7B;&#x9519;&#x8BEF;&#x5982;&#x679C;&#x5E94;&#x7528;&#x65E0;&#x6CD5;&#x6839;&#x636E;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x627E;&#x5230;&#x539F;&#x56E0;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x67E5;&#x770B;&#x670D;&#x52A1;&#x7AEF;&#x65E5;&#x5FD7;&#x6765;&#x6392;&#x67E5;&#x95EE;&#x9898;&#x3002;</p>
+<h1 id="apollo&#x4F7F;&#x7528;&#x573A;&#x666F;&#x548C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><a name="apollo&#x4F7F;&#x7528;&#x573A;&#x666F;&#x548C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#apollo&#x4F7F;&#x7528;&#x573A;&#x666F;&#x548C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="apollo&#x4F7F;&#x7528;&#x573A;&#x666F;&#x548C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;" class="plugin-anchor" href="#apollo&#x4F7F;&#x7528;&#x573A;&#x666F;&#x548C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>Apollo&#x4F7F;&#x7528;&#x573A;&#x666F;&#x548C;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h1>
+<p><a href="https://github.com/ctripcorp/apollo-use-cases" target="_blank">https://github.com/ctripcorp/apollo-use-cases</a></p>
+<h1 id="apollo-&#x5B9E;&#x8DF5;&#x6848;&#x4F8B;"><a name="apollo-&#x5B9E;&#x8DF5;&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#apollo-&#x5B9E;&#x8DF5;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="apollo-&#x5B9E;&#x8DF5;&#x6848;&#x4F8B;" class="plugin-anchor" href="#apollo-&#x5B9E;&#x8DF5;&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>Apollo &#x5B9E;&#x8DF5;&#x6848;&#x4F8B;</h1>
+<ul>
+<li><p><a href="https://mp.weixin.qq.com/s/VHugn0vgNu4m56V49geC4w" target="_blank">Apollo+ES&#x6E90;&#x7801;&#x6539;&#x9020;&#xFF0C;&#x6784;&#x5EFA;&#x6C11;&#x751F;&#x94F6;&#x884C;&#x7684;ELK&#x65E5;&#x5FD7;&#x5E73;&#x53F0;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;</a></p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/Ge14UeY9Gm2Hrk--E47eJQ" target="_blank">Apollo&#x5728;&#x6709;&#x8D5E;&#x7684;&#x5B9E;&#x8DF5;</a></p>
+</li>
+<li><p><a href="https://blog.llyweb.com/articles/2020/08/11/1597149013480.html" target="_blank">&#x5FAE;&#x670D;&#x52A1;&#x7248;&#x672C;&#x5207;&#x6362;&#x521D;&#x59CB;&#x8BBE;&#x8BA1;&#x601D;&#x8DEF;</a></p>
+</li>
+<li><p><a href="https://anilople.github.io/Sentinel" target="_blank">Alibaba Sentinel Push&#x6A21;&#x5F0F; &#x89C4;&#x5219;&#x63A8;&#x9001;&#x81F3;Apollo&#x914D;&#x7F6E;&#x4E2D;&#x5FC3;</a></p>
+</li>
+</ul>
+<h1 id="apollo-&#x5B89;&#x5168;&#x76F8;&#x5173;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;"><a name="apollo-&#x5B89;&#x5168;&#x76F8;&#x5173;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;" class="anchor-navigation-ex-anchor" href="#apollo-&#x5B89;&#x5168;&#x76F8;&#x5173;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="apollo-&#x5B89;&#x5168;&#x76F8;&#x5173;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;" class="plugin-anchor" href="#apollo-&#x5B89;&#x5168;&#x76F8;&#x5173;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;"><i class="fa fa-link" aria-hidden="true"></i></a>Apollo &#x5B89;&#x5168;&#x76F8;&#x5173;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</h1>
+<h2 id="&#x914D;&#x7F6E;&#x67E5;&#x770B;&#x6743;&#x9650;"><a name="&#x914D;&#x7F6E;&#x67E5;&#x770B;&#x6743;&#x9650;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x67E5;&#x770B;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;&#x67E5;&#x770B;&#x6743;&#x9650;" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x67E5;&#x770B;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x67E5;&#x770B;&#x6743;&#x9650;</h2>
+<p>&#x4ECE;1.1.0&#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;apollo-portal&#x589E;&#x52A0;&#x4E86;&#x67E5;&#x770B;&#x6743;&#x9650;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x914D;&#x7F6E;&#x67D0;&#x4E2A;&#x73AF;&#x5883;&#x53EA;&#x5141;&#x8BB8;&#x9879;&#x76EE;&#x6210;&#x5458;&#x67E5;&#x770B;&#x79C1;&#x6709;Namespace&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x9879;&#x76EE;&#x6210;&#x5458;&#x662F;&#x6307;&#xFF1A;</p>
+<ol>
+<li>&#x9879;&#x76EE;&#x7684;&#x7BA1;&#x7406;&#x5458;</li>
+<li>&#x5177;&#x5907;&#x8BE5;&#x79C1;&#x6709;Namespace&#x5728;&#x8BE5;&#x73AF;&#x5883;&#x4E0B;&#x7684;&#x4FEE;&#x6539;&#x6216;&#x53D1;&#x5E03;&#x6743;&#x9650;</li>
+</ol>
+<p>&#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x7528;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;&#x767B;&#x5F55;&#x540E;&#xFF0C;&#x8FDB;&#x5165;<code>&#x7BA1;&#x7406;&#x5458;&#x5DE5;&#x5177; - &#x7CFB;&#x7EDF;&#x53C2;&#x6570;</code>&#x9875;&#x9762;&#x65B0;&#x589E;&#x6216;&#x4FEE;&#x6539;<code>configView.memberOnly.envs</code>&#x914D;&#x7F6E;&#x9879;&#x5373;&#x53EF;&#x3002;</p>
+<p><a href="https://imgoss.xgss.net/picgo/46456519-c155e100-c7e1-11e8-969b-8f332379fa29.png?aliyun" data-lightbox="e4ab1e0d-f198-4c59-8977-2b3629022979" data-title="configView.memberOnly.envs" target="_blank"><img src="https://imgoss.xgss.net/picgo/46456519-c155e100-c7e1-11e8-969b-8f332379fa29.png?aliyun" alt="configView.memberOnly.envs"></a></p>
+<h2 id="&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;_1"><a name="&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;_1" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;_1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;</h2>
+<p>Apollo&#x4ECE;1.6.0&#x7248;&#x672C;&#x5F00;&#x59CB;&#x589E;&#x52A0;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;&#x673A;&#x5236;&#xFF0C;&#x4ECE;&#x800C;&#x53EA;&#x6709;&#x7ECF;&#x8FC7;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x654F;&#x611F;&#x914D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x5E94;&#x7528;&#x5F00;&#x542F;&#x4E86;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x5BC6;&#x94A5;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x914D;&#x7F6E;&#x3002;</p>
+<ol>
+<li><p>&#x9879;&#x76EE;&#x7BA1;&#x7406;&#x5458;&#x6253;&#x5F00;&#x7BA1;&#x7406;&#x5BC6;&#x94A5;&#x9875;&#x9762;</p>
+<p><a href="https://imgoss.xgss.net/picgo/94990081-f4d3cd80-05ab-11eb-9470-fed5ec6de92e-164861936808620.png?aliyun" data-lightbox="4aadadc8-1b1d-415e-97a5-df33eb8f988e" data-title="94990081-f4d3cd80-05ab-11eb-9470-fed5ec6de92e-164861936808620" target="_blank"><img src="https://imgoss.xgss.net/picgo/94990081-f4d3cd80-05ab-11eb-9470-fed5ec6de92e-164861936808620.png?aliyun" alt="94990081-f4d3cd80-05ab-11eb-9470-fed5ec6de92e-164861936808620"></a></p>
+</li>
+<li><p>&#x4E3A;&#x9879;&#x76EE;&#x7684;&#x6BCF;&#x4E2A;&#x73AF;&#x5883;&#x751F;&#x6210;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;&#xFF0C;&#x6CE8;&#x610F;&#x9ED8;&#x8BA4;&#x662F;&#x7981;&#x7528;&#x7684;&#xFF0C;&#x5EFA;&#x8BAE;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x90FD;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#x518D;&#x5F00;&#x542F;</p>
+</li>
+</ol>
+<p>   <a href="https://imgoss.xgss.net/picgo/94990150-788dba00-05ac-11eb-9a12-727fdb872e42-164861936808621.png?aliyun" data-lightbox="856faa7c-599e-49ad-a20c-f2cc156b0888" data-title="94990150-788dba00-05ac-11eb-9a12-727fdb872e42-164861936808621" target="_blank"><img src="https://imgoss.xgss.net/picgo/94990150-788dba00-05ac-11eb-9a12-727fdb872e42-164861936808621.png?aliyun" alt="94990150-788dba00-05ac-11eb-9a12-727fdb872e42-164861936808621"></a></p>
+<h1 id="&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;"><a name="&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;" class="anchor-navigation-ex-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;" class="plugin-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;</h1>
+<blockquote>
+<p>&#x9002;&#x7528;&#x4E8E;1.6.0&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;</p>
+</blockquote>
+<p>   Apollo&#x4ECE;1.6.0&#x7248;&#x672C;&#x5F00;&#x59CB;&#x589E;&#x52A0;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;&#x673A;&#x5236;&#xFF0C;&#x4ECE;&#x800C;&#x53EA;&#x6709;&#x7ECF;&#x8FC7;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x654F;&#x611F;&#x914D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x5E94;&#x7528;&#x5F00;&#x542F;&#x4E86;&#x8BBF;&#x95EE;&#x5BC6;&#x94A5;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x5BC6;&#x94A5;&#xFF0C;&#x5426;&#x5219;&#x65E0;&#x6CD5;&#x83B7;&#x53D6;&#x914D;&#x7F6E;&#x3002;</p>
+<p>   &#x914D;&#x7F6E;&#x65B9;&#x5F0F;&#x6309;&#x7167;&#x4F18;&#x5148;&#x7EA7;&#x4ECE;&#x9AD8;&#x5230;&#x4F4E;&#x5206;&#x522B;&#x4E3A;&#xFF1A;</p>
+<p>   1.&#x901A;&#x8FC7;Java System Property</p>
+<pre class="language-"><code>   &#x901A;&#x8FC7;Java System Propertyapollo.access-key.secret(1.9.0+) &#x6216;&#x8005; apollo.accesskey.secret(1.9.0&#x4E4B;&#x524D;)
+   &#x53EF;&#x4EE5;&#x901A;&#x8FC7;Java&#x7684;System Property apollo.access-key.secret(1.9.0+) &#x6216;&#x8005; apollo.accesskey.secret(1.9.0&#x4E4B;&#x524D;)&#x6765;&#x6307;&#x5B9A;
+   &#x5728;Java&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x811A;&#x672C;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;-Dapollo.access-key.secret=1cf998c4e2ad4704b45a98a509d15719(1.9.0+) &#x6216;&#x8005; -Dapollo.accesskey.secret=1cf998c4e2ad4704b45a98a509d15719(1.9.0&#x4E4B;&#x524D;)
+   &#x5982;&#x679C;&#x662F;&#x8FD0;&#x884C;jar&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x683C;&#x5F0F;&#x662F;java -Dapollo.access-key.secret=1cf998c4e2ad4704b45a98a509d15719 -jar xxx.jar(1.9.0+) &#x6216;&#x8005; java -Dapollo.accesskey.secret=1cf998c4e2ad4704b45a98a509d15719 -jar xxx.jar(1.9.0&#x4E4B;&#x524D;)
+
+   &#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7A0B;&#x5E8F;&#x6307;&#x5B9A;&#xFF0C;&#x5982;System.setProperty(&quot;apollo.access-key.secret&quot;, &quot;1cf998c4e2ad4704b45a98a509d15719&quot;);(1.9.0+) &#x6216;&#x8005; System.setProperty(&quot;apollo.accesskey.secret&quot;, &quot;1cf998c4e2ad4704b45a98a509d15719&quot;);(1.9.0&#x4E4B;&#x524D;)
+</code></pre><p>   2.&#x901A;&#x8FC7;Spring Boot&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code>   &#x53EF;&#x4EE5;&#x5728;Spring Boot&#x7684;application.properties&#x6216;bootstrap.properties&#x4E2D;&#x6307;&#x5B9A;apollo.access-key.secret=1cf998c4e2ad4704b45a98a509d15719(1.9.0+) &#x6216;&#x8005; apollo.accesskey.secret=1cf998c4e2ad4704b45a98a509d15719(1.9.0&#x4E4B;&#x524D;)
+</code></pre><p>   3.&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;System Environment</p>
+<pre class="language-"><code>&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;System Environment APOLLO_ACCESS_KEY_SECRET(1.9.0+) &#x6216;&#x8005; APOLLO_ACCESSKEY_SECRET(1.9.0&#x4E4B;&#x524D;)&#x6765;&#x6307;&#x5B9A;
+&#x6CE8;&#x610F;key&#x4E3A;&#x5168;&#x5927;&#x5199;
+</code></pre><p>   4.&#x901A;&#x8FC7;app.properties&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code>   &#x53EF;&#x4EE5;&#x5728;classpath:/META-INF/app.properties&#x6307;&#x5B9A;apollo.access-key.secret=1cf998c4e2ad4704b45a98a509d15719(1.9.0+) &#x6216;&#x8005; apollo.accesskey.secret=1cf998c4e2ad4704b45a98a509d15719(1.9.0&#x4E4B;&#x524D;)
+</code></pre><h1 id="&#x81EA;&#x5B9A;&#x4E49;serverproperties&#x8DEF;&#x5F84;"><a name="&#x81EA;&#x5B9A;&#x4E49;serverproperties&#x8DEF;&#x5F84;" class="anchor-navigation-ex-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;serverproperties&#x8DEF;&#x5F84;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x81EA;&#x5B9A;&#x4E49;serverproperties&#x8DEF;&#x5F84;" class="plugin-anchor" href="#&#x81EA;&#x5B9A;&#x4E49;serverproperties&#x8DEF;&#x5F84;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x5B9A;&#x4E49;server.properties&#x8DEF;&#x5F84;</h1>
+<blockquote>
+<p>&#x9002;&#x7528;&#x4E8E;1.8.0&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;</p>
+</blockquote>
+<p>1.8.0&#x7248;&#x672C;&#x5F00;&#x59CB;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x81EA;&#x5B9A;&#x4E49;server.properties&#x8DEF;&#x5F84;&#xFF0C;&#x6309;&#x7167;&#x4F18;&#x5148;&#x7EA7;&#x4ECE;&#x9AD8;&#x5230;&#x4F4E;&#x5206;&#x522B;&#x4E3A;&#xFF1A;</p>
+<p>&#x4E00;.&#x901A;&#x8FC7;Java System Property apollo.path.server.properties</p>
+<pre class="language-"><code>1.&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Java&#x7684;System Property apollo.path.server.properties&#x6765;&#x6307;&#x5B9A;
+
+2.&#x5728;Java&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x811A;&#x672C;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;-Dapollo.path.server.properties=/some-dir/some-file.properties
+&#x5982;&#x679C;&#x662F;&#x8FD0;&#x884C;jar&#x6587;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x683C;&#x5F0F;&#x662F;java -Dapollo.path.server.properties=/some-dir/some-file.properties -jar xxx.jar
+
+3.&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7A0B;&#x5E8F;&#x6307;&#x5B9A;&#xFF0C;&#x5982;System.setProperty(&quot;apollo.path.server.properties&quot;, &quot;/some-dir/some-file.properties&quot;);
+</code></pre><p>&#x4E8C;&#x3001;&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;System EnvironmentAPOLLO_PATH_SERVER_PROPERTIES</p>
+<pre class="language-"><code>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;System Environment APOLLO_PATH_SERVER_PROPERTIES&#x6765;&#x6307;&#x5B9A;
+&#x6CE8;&#x610F;key&#x4E3A;&#x5168;&#x5927;&#x5199;&#xFF0C;&#x4E14;&#x4E2D;&#x95F4;&#x662F;_&#x5206;&#x9694;
+</code></pre><h1 id="&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6CD5;"><a name="&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6CD5;" class="plugin-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.apolloconfig.com/#/zh/usage/java-sdk-user-guide?id=&#x4E09;&#x3001;&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6CD5;" target="_blank">&#x5BA2;&#x6237;&#x7AEF;&#x7528;&#x6CD5;</a></h1>
+<p>Apollo&#x652F;&#x6301;API&#x65B9;&#x5F0F;&#x548C;Spring&#x6574;&#x5408;&#x65B9;&#x5F0F;&#xFF0C;&#x8BE5;&#x600E;&#x4E48;&#x9009;&#x62E9;&#x7528;&#x54EA;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#xFF1F;</p>
+<ul>
+<li><p>API&#x65B9;&#x5F0F;&#x7075;&#x6D3B;&#xFF0C;&#x529F;&#x80FD;&#x5B8C;&#x5907;&#xFF0C;&#x914D;&#x7F6E;&#x503C;&#x5B9E;&#x65F6;&#x66F4;&#x65B0;&#xFF08;&#x70ED;&#x53D1;&#x5E03;&#xFF09;&#xFF0C;&#x652F;&#x6301;&#x6240;&#x6709;Java&#x73AF;&#x5883;&#x3002;</p>
+</li>
+<li><p>Spring&#x65B9;&#x5F0F;&#x63A5;&#x5165;&#x7B80;&#x5355;&#xFF0C;&#x7ED3;&#x5408;Spring&#x6709;N&#x79CD;&#x9177;&#x70AB;&#x7684;&#x73A9;&#x6CD5;&#xFF0C;&#x5982;</p>
+<ul>
+<li>Placeholder&#x65B9;&#x5F0F;&#xFF1A;<ul>
+<li>&#x4EE3;&#x7801;&#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#xFF1A;<code>@Value(&quot;${someKeyFromApollo:someDefaultValue}&quot;)</code></li>
+<li>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x66FF;&#x6362;placeholder&#xFF0C;&#x5982;&#xFF1A;<code>spring.datasource.url: ${someKeyFromApollo:someDefaultValue}</code></li>
+<li>&#x76F4;&#x63A5;&#x6258;&#x7BA1;spring&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5982;&#x5728;apollo&#x4E2D;&#x76F4;&#x63A5;&#x914D;&#x7F6E;<code>spring.datasource.url=jdbc:mysql://localhost:3306/somedb?characterEncoding=utf8</code></li>
+</ul>
+</li>
+<li>Spring boot&#x7684;<a href="http://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/context/properties/ConfigurationProperties.html" target="_blank">@ConfigurationProperties</a>&#x65B9;&#x5F0F;</li>
+<li>&#x4ECE;v0.10.0&#x5F00;&#x59CB;&#x7684;&#x7248;&#x672C;&#x652F;&#x6301;placeholder&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x89C1;<a href="https://github.com/apolloconfig/apollo/pull/972" target="_blank">PR #972</a>&#x3002;&#xFF08;v0.10.0&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#x5728;&#x914D;&#x7F6E;&#x53D8;&#x5316;&#x540E;&#x4E0D;&#x4F1A;&#x91CD;&#x65B0;&#x6CE8;&#x5165;&#xFF0C;&#x9700;&#x8981;&#x91CD;&#x542F;&#x624D;&#x4F1A;&#x66F4;&#x65B0;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x503C;&#x5B9E;&#x65F6;&#x66F4;&#x65B0;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x540E;&#x7EED;<a href="https://www.apolloconfig.com/#/zh/usage/java-sdk-user-guide?id=_322-spring-placeholder&#x7684;&#x4F7F;&#x7528;" target="_blank">3.2.2 Spring Placeholder&#x7684;&#x4F7F;&#x7528;</a>&#x7684;&#x8BF4;&#x660E;&#xFF09;</li>
+</ul>
+</li>
+<li><p>Spring&#x65B9;&#x5F0F;&#x4E5F;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;API&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x6CE8;&#x5165;Apollo&#x7684;Config&#x5BF9;&#x8C61;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7167;&#x5E38;&#x901A;&#x8FC7;API&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x914D;&#x7F6E;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token annotation punctuation">@ApolloConfig</span>
+<span class="token keyword">private</span> <span class="token class-name">Config</span> config<span class="token punctuation">;</span> <span class="token comment">//inject config for namespace application&#x70B9;&#x51FB;&#x590D;&#x5236;&#x9519;&#x8BEF;&#x590D;&#x5236;&#x6210;&#x529F;</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="api&#x4F7F;&#x7528;&#x65B9;&#x5F0F;"><a name="api&#x4F7F;&#x7528;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#api&#x4F7F;&#x7528;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="api&#x4F7F;&#x7528;&#x65B9;&#x5F0F;" class="plugin-anchor" href="#api&#x4F7F;&#x7528;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>API&#x4F7F;&#x7528;&#x65B9;&#x5F0F;</h2>
+<p>API&#x65B9;&#x5F0F;&#x662F;&#x6700;&#x7B80;&#x5355;&#x3001;&#x9AD8;&#x6548;&#x4F7F;&#x7528;Apollo&#x914D;&#x7F6E;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0D;&#x4F9D;&#x8D56;Spring&#x6846;&#x67B6;&#x5373;&#x53EF;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;namespace&#x7684;&#x914D;&#x7F6E;&#xFF08;application&#xFF09;"><a name="&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;namespace&#x7684;&#x914D;&#x7F6E;&#xFF08;application&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;namespace&#x7684;&#x914D;&#x7F6E;&#xFF08;application&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;namespace&#x7684;&#x914D;&#x7F6E;&#xFF08;application&#xFF09;" class="plugin-anchor" href="#&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;namespace&#x7684;&#x914D;&#x7F6E;&#xFF08;application&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x9ED8;&#x8BA4;namespace&#x7684;&#x914D;&#x7F6E;&#xFF08;application&#xFF09;</h3>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Config</span> config <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getAppConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//config instance is singleton for each namespace and is never null</span>
+<span class="token class-name">String</span> someKey <span class="token operator">=</span> <span class="token string">&quot;someKeyFromDefaultNamespace&quot;</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> someDefaultValue <span class="token operator">=</span> <span class="token string">&quot;someDefaultValueForTheKey&quot;</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> value <span class="token operator">=</span> config<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span>someKey<span class="token punctuation">,</span> someDefaultValue<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x7684;<strong>config.getProperty</strong>&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;someKey&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x65F6;&#x6700;&#x65B0;&#x7684;&#x914D;&#x7F6E;&#x503C;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x914D;&#x7F6E;&#x503C;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x83B7;&#x53D6;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x5E94;&#x7528;&#x81EA;&#x5DF1;&#x505A;&#x7F13;&#x5B58;&#x3002;</p>
+<h1 id="go&#x3001;python&#x3001;nodejs&#x3001;php&#x7B49;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;"><a name="go&#x3001;python&#x3001;nodejs&#x3001;php&#x7B49;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#go&#x3001;python&#x3001;nodejs&#x3001;php&#x7B49;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="go&#x3001;python&#x3001;nodejs&#x3001;php&#x7B49;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;" class="plugin-anchor" href="#go&#x3001;python&#x3001;nodejs&#x3001;php&#x7B49;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>Go&#x3001;Python&#x3001;Nodejs&#x3001;PHP&#x7B49;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;</h1>
+<p>&#x5BF9;&#x5E94;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&#x652F;&#x6301;&#xFF1A;<a href="https://www.apolloconfig.com/#/zh/usage/third-party-sdks-user-guide" target="_blank">https://www.apolloconfig.com/#/zh/usage/third-party-sdks-user-guide</a></p>
+<h3 id="apollo-php-&#x5BA2;&#x6237;&#x7AEF;-1"><a name="apollo-php-&#x5BA2;&#x6237;&#x7AEF;-1" class="anchor-navigation-ex-anchor" href="#apollo-php-&#x5BA2;&#x6237;&#x7AEF;-1"><i class="fa fa-link" aria-hidden="true"></i></a><a name="apollo-php-&#x5BA2;&#x6237;&#x7AEF;-1" class="plugin-anchor" href="#apollo-php-&#x5BA2;&#x6237;&#x7AEF;-1"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.apolloconfig.com/#/zh/usage/third-party-sdks-user-guide?id=apollo-php-&#x5BA2;&#x6237;&#x7AEF;-1" target="_blank">Apollo PHP &#x5BA2;&#x6237;&#x7AEF; 1</a></h3>
+<p>&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/multilinguals/apollo-php-client" target="_blank">apollo-php-client</a></p>
+<h3 id="apollo-php-&#x5BA2;&#x6237;&#x7AEF;-2"><a name="apollo-php-&#x5BA2;&#x6237;&#x7AEF;-2" class="anchor-navigation-ex-anchor" href="#apollo-php-&#x5BA2;&#x6237;&#x7AEF;-2"><i class="fa fa-link" aria-hidden="true"></i></a><a name="apollo-php-&#x5BA2;&#x6237;&#x7AEF;-2" class="plugin-anchor" href="#apollo-php-&#x5BA2;&#x6237;&#x7AEF;-2"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.apolloconfig.com/#/zh/usage/third-party-sdks-user-guide?id=apollo-php-&#x5BA2;&#x6237;&#x7AEF;-2" target="_blank">Apollo PHP &#x5BA2;&#x6237;&#x7AEF; 2</a></h3>
+<p>&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/fengzhibin/apollo-sdk-config" target="_blank">apollo-sdk-config</a></p>
+<p>&#x9879;&#x76EE;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/fengzhibin/apollo-sdk-clientd" target="_blank">apollo-sdk-clientd</a></p>
+<h1 id="&#x4EC0;&#x4E48;&#x662F;namespace"><a name="&#x4EC0;&#x4E48;&#x662F;namespace" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;namespace"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4EC0;&#x4E48;&#x662F;namespace" class="plugin-anchor" href="#&#x4EC0;&#x4E48;&#x662F;namespace"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.apolloconfig.com/#/zh/design/apollo-core-concept-namespace?id=_1-%e4%bb%80%e4%b9%88%e6%98%afnamespace" target="_blank">&#x4EC0;&#x4E48;&#x662F;Namespace</a></h1>
+<p>Namespace&#x662F;&#x914D;&#x7F6E;&#x9879;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<p>&#x4E2A;&#x4EBA;&#x89C9;&#x5F97;&#x4E5F;&#x662F;Apollo&#x7684;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x548C;&#x6838;&#x5FC3;&#x7684;&#x77E5;&#x8BC6;&#x70B9;&#xFF01;</p>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;application&#x7684;namespace"><a name="&#x4EC0;&#x4E48;&#x662F;application&#x7684;namespace" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x662F;application&#x7684;namespace"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4EC0;&#x4E48;&#x662F;application&#x7684;namespace" class="plugin-anchor" href="#&#x4EC0;&#x4E48;&#x662F;application&#x7684;namespace"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EC0;&#x4E48;&#x662F;&#x201C;application&#x201D;&#x7684;Namespace</h2>
+<p>Apollo&#x5728;&#x521B;&#x5EFA;&#x9879;&#x76EE;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4F1A;&#x9ED8;&#x8BA4;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x201C;application&#x201D;&#x7684;Namespace&#x3002;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x201C;application&#x201D;&#x662F;&#x7ED9;&#x5E94;&#x7528;&#x81EA;&#x8EAB;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x719F;&#x6089;Spring Boot&#x7684;&#x540C;&#x5B66;&#x90FD;&#x77E5;&#x9053;&#xFF0C;Spring Boot&#x9879;&#x76EE;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;application.yml&#x3002;&#x5728;&#x8FD9;&#x91CC;application.yml&#x5C31;&#x7B49;&#x540C;&#x4E8E;&#x201C;application&#x201D;&#x7684;Namespace&#x3002;&#x5BF9;&#x4E8E;90%&#x7684;&#x5E94;&#x7528;&#x6765;&#x8BF4;&#xFF0C;&#x201C;application&#x201D;&#x7684;Namespace&#x5DF2;&#x7ECF;&#x6EE1;&#x8DB3;&#x65E5;&#x5E38;&#x914D;&#x7F6E;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E86;&#x3002;</p>
+<h4 id="&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;application-namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;"><a name="&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;application-namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;application-namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;application-namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;" class="plugin-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;application-namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;&#x201C;application&#x201D; Namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</h4>
+<pre class="language-"><code class="lang-java">  <span class="token class-name">Config</span> config <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getAppConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h4 id="&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;&#x975E;application-namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;"><a name="&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;&#x975E;application-namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;&#x975E;application-namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;&#x975E;application-namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;" class="plugin-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;&#x975E;application-namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BA2;&#x6237;&#x7AEF;&#x83B7;&#x53D6;&#x975E;&#x201C;application&#x201D; Namespace&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</h4>
+<pre class="language-"><code class="lang-java">  <span class="token class-name">Config</span> config <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span>namespaceName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2 id="namespace&#x7684;&#x683C;&#x5F0F;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;"><a name="namespace&#x7684;&#x683C;&#x5F0F;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#namespace&#x7684;&#x683C;&#x5F0F;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="namespace&#x7684;&#x683C;&#x5F0F;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;" class="plugin-anchor" href="#namespace&#x7684;&#x683C;&#x5F0F;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>Namespace&#x7684;&#x683C;&#x5F0F;&#x6709;&#x54EA;&#x4E9B;&#xFF1F;</h2>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6709;&#x591A;&#x79CD;&#x683C;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;properties&#x3001;xml&#x3001;yml&#x3001;yaml&#x3001;json&#x7B49;&#x3002;&#x540C;&#x6837;Namespace&#x4E5F;&#x5177;&#x6709;&#x8FD9;&#x4E9B;&#x683C;&#x5F0F;&#x3002;&#x5728;Portal UI&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x201C;application&#x201D;&#x7684;Namespace&#x4E0A;&#x6709;&#x4E00;&#x4E2A;&#x201C;properties&#x201D;&#x6807;&#x7B7E;&#xFF0C;&#x8868;&#x660E;&#x201C;application&#x201D;&#x662F;properties&#x683C;&#x5F0F;&#x7684;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;1&#xFF1A;&#x975E;properties&#x683C;&#x5F0F;&#x7684;namespace&#xFF0C;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;&#x65F6;&#x9700;&#x8981;&#x8C03;&#x7528;<code>ConfigService.getConfigFile(String namespace, ConfigFileFormat configFileFormat)</code>&#x6765;&#x83B7;&#x53D6;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;<a href="https://www.apolloconfig.com/#/zh/usage/other-language-client-user-guide?id=_12-&#x901A;&#x8FC7;&#x5E26;&#x7F13;&#x5B58;&#x7684;http&#x63A5;&#x53E3;&#x4ECE;apollo&#x8BFB;&#x53D6;&#x914D;&#x7F6E;" target="_blank">Http&#x63A5;&#x53E3;&#x76F4;&#x63A5;&#x8C03;&#x7528;</a>&#x65F6;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;namespace&#x53C2;&#x6570;&#x9700;&#x8981;&#x4F20;&#x5165;namespace&#x7684;&#x540D;&#x5B57;&#x52A0;&#x4E0A;&#x540E;&#x7F00;&#x540D;&#xFF0C;&#x5982;datasources.json&#x3002;</p>
+<p>&#x6CE8;2&#xFF1A;apollo-client 1.3.0&#x7248;&#x672C;&#x5F00;&#x59CB;&#x5BF9;yaml/yml&#x505A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x548C;properties&#x683C;&#x5F0F;&#x4E00;&#x81F4;&#xFF1A;<code>Config config = ConfigService.getConfig(&quot;application.yml&quot;);</code>&#xFF0C;Spring&#x7684;&#x6CE8;&#x5165;&#x65B9;&#x5F0F;&#x4E5F;&#x548C;properties&#x4E00;&#x81F4;&#x3002;</p>
+</blockquote>
+<h2 id="namespace&#x7684;&#x83B7;&#x53D6;&#x6743;&#x9650;&#x5206;&#x7C7B;"><a name="namespace&#x7684;&#x83B7;&#x53D6;&#x6743;&#x9650;&#x5206;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#namespace&#x7684;&#x83B7;&#x53D6;&#x6743;&#x9650;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="namespace&#x7684;&#x83B7;&#x53D6;&#x6743;&#x9650;&#x5206;&#x7C7B;" class="plugin-anchor" href="#namespace&#x7684;&#x83B7;&#x53D6;&#x6743;&#x9650;&#x5206;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>Namespace&#x7684;&#x83B7;&#x53D6;&#x6743;&#x9650;&#x5206;&#x7C7B;</h2>
+<p><strong>private &#xFF08;&#x79C1;&#x6709;&#x7684;&#xFF09;</strong></p>
+<p><strong>public &#xFF08;&#x516C;&#x5171;&#x7684;&#xFF09;</strong></p>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x83B7;&#x53D6;&#x6743;&#x9650;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;Apollo&#x5BA2;&#x6237;&#x7AEF;&#x6765;&#x8BF4;&#x7684;&#x3002;</p>
+<p>private&#x6743;&#x9650;&#x7684;Namespace&#xFF1A;<strong>&#x53EA;&#x80FD;&#x88AB;&#x6240;&#x5C5E;&#x7684;&#x5E94;&#x7528;&#x83B7;&#x53D6;&#x5230;&#x3002;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x5C1D;&#x8BD5;&#x83B7;&#x53D6;&#x5176;&#x5B83;&#x5E94;&#x7528;private&#x7684;Namespace&#xFF0C;Apollo&#x4F1A;&#x62A5;&#x201C;404&#x201D;&#x5F02;&#x5E38;&#x3002;</strong></p>
+<p>public&#x6743;&#x9650;&#x7684;Namespace&#xFF1A; <strong>&#x80FD;&#x88AB;&#x4EFB;&#x4F55;&#x5E94;&#x7528;&#x83B7;&#x53D6;&#x3002;</strong></p>
+<h2 id="namespace&#x7684;&#x7C7B;&#x578B;"><a name="namespace&#x7684;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#namespace&#x7684;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="namespace&#x7684;&#x7C7B;&#x578B;" class="plugin-anchor" href="#namespace&#x7684;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>Namespace&#x7684;&#x7C7B;&#x578B;</h2>
+<p>Namespace&#x7C7B;&#x578B;&#x6709;&#x4E09;&#x79CD;&#xFF1A;</p>
+<h3 id="&#x79C1;&#x6709;&#x7C7B;&#x578B;"><a name="&#x79C1;&#x6709;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x79C1;&#x6709;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x79C1;&#x6709;&#x7C7B;&#x578B;" class="plugin-anchor" href="#&#x79C1;&#x6709;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79C1;&#x6709;&#x7C7B;&#x578B;</h3>
+<p><strong>&#x5177;&#x6709;private&#x6743;&#x9650;&#x3002;&#x4F8B;&#x5982;&#x4E0A;&#x6587;&#x63D0;&#x5230;&#x7684;&#x201C;application&#x201D; Namespace&#x5C31;&#x662F;&#x79C1;&#x6709;&#x7C7B;&#x578B;&#x3002;</strong></p>
+<h3 id="&#x516C;&#x5171;&#x7C7B;&#x578B;"><a name="&#x516C;&#x5171;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x516C;&#x5171;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x516C;&#x5171;&#x7C7B;&#x578B;" class="plugin-anchor" href="#&#x516C;&#x5171;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516C;&#x5171;&#x7C7B;&#x578B;</h3>
+<p><strong>&#x5177;&#x6709;public&#x6743;&#x9650;&#x3002;&#x516C;&#x5171;&#x7C7B;&#x578B;&#x7684;Namespace&#x76F8;&#x5F53;&#x4E8E;&#x6E38;&#x79BB;&#x4E8E;&#x5E94;&#x7528;&#x4E4B;&#x5916;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x4E14;&#x901A;&#x8FC7;Namespace&#x7684;&#x540D;&#x79F0;&#x53BB;&#x6807;&#x8BC6;&#x516C;&#x5171;Namespace&#xFF0C;&#x6240;&#x4EE5;&#x516C;&#x5171;&#x7684;Namespace&#x7684;&#x540D;&#x79F0;&#x5FC5;&#x987B;&#x5168;&#x5C40;&#x552F;&#x4E00;&#x3002;</strong></p>
+<p>&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x90E8;&#x95E8;&#x7EA7;&#x522B;&#x5171;&#x4EAB;&#x7684;&#x914D;&#x7F6E;&#x3001;&#x5C0F;&#x7EC4;&#x7EA7;&#x522B;&#x5171;&#x4EAB;&#x7684;&#x914D;&#x7F6E;&#x3001;&#x51E0;&#x4E2A;&#x9879;&#x76EE;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x7684;&#x914D;&#x7F6E;&#x3001;&#x4E2D;&#x95F4;&#x4EF6;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
+<h3 id="&#x5173;&#x8054;&#x7C7B;&#x578B;&#xFF08;&#x7EE7;&#x627F;&#x7C7B;&#x578B;&#xFF09;"><a name="&#x5173;&#x8054;&#x7C7B;&#x578B;&#xFF08;&#x7EE7;&#x627F;&#x7C7B;&#x578B;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x8054;&#x7C7B;&#x578B;&#xFF08;&#x7EE7;&#x627F;&#x7C7B;&#x578B;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5173;&#x8054;&#x7C7B;&#x578B;&#xFF08;&#x7EE7;&#x627F;&#x7C7B;&#x578B;&#xFF09;" class="plugin-anchor" href="#&#x5173;&#x8054;&#x7C7B;&#x578B;&#xFF08;&#x7EE7;&#x627F;&#x7C7B;&#x578B;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x8054;&#x7C7B;&#x578B;&#xFF08;&#x7EE7;&#x627F;&#x7C7B;&#x578B;&#xFF09;</h3>
+<p>&#x5173;&#x8054;&#x7C7B;&#x578B;&#x53C8;&#x53EF;&#x79F0;&#x4E3A;&#x7EE7;&#x627F;&#x7C7B;&#x578B;&#xFF0C;&#x5173;&#x8054;&#x7C7B;&#x578B;&#x5177;&#x6709;private&#x6743;&#x9650;&#x3002;&#x5173;&#x8054;&#x7C7B;&#x578B;&#x7684;Namespace&#x7EE7;&#x627F;&#x4E8E;&#x516C;&#x5171;&#x7C7B;&#x578B;&#x7684;Namespace&#xFF0C;&#x7528;&#x4E8E;&#x8986;&#x76D6;&#x516C;&#x5171;Namespace&#x7684;&#x67D0;&#x4E9B;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x516C;&#x5171;&#x7684;Namespace&#x6709;&#x4E24;&#x4E2A;&#x914D;&#x7F6E;&#x9879;</p>
+<pre class="language-"><code>k1 = v1
+k2 = v2
+</code></pre><p>&#x7136;&#x540E;&#x5E94;&#x7528;A&#x6709;&#x4E00;&#x4E2A;&#x5173;&#x8054;&#x7C7B;&#x578B;&#x7684;Namespace&#x5173;&#x8054;&#x4E86;&#x6B64;&#x516C;&#x5171;Namespace&#xFF0C;&#x4E14;&#x8986;&#x76D6;&#x4E86;&#x914D;&#x7F6E;&#x9879;k1&#xFF0C;&#x65B0;&#x503C;&#x4E3A;v3&#x3002;&#x90A3;&#x4E48;&#x5728;&#x5E94;&#x7528;A&#x5B9E;&#x9645;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x516C;&#x5171;Namespace&#x7684;&#x914D;&#x7F6E;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code>k1 = v3
+k2 = v2
+</code></pre><p>&#x5173;&#x8054;&#x7C7B;&#x578B;&#x4F7F;&#x7528;&#x573A;&#x666F;&#xFF1A;</p>
+<p>&#x4E3E;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x7684;&#x573A;&#x666F;&#x3002;&#x5047;&#x8BBE;RPC&#x6846;&#x67B6;&#x7684;&#x914D;&#x7F6E;&#xFF08;&#x5982;&#xFF1A;timeout&#xFF09;&#x6709;&#x4EE5;&#x4E0B;&#x8981;&#x6C42;&#xFF1A;</p>
+<ul>
+<li>&#x63D0;&#x4F9B;&#x4E00;&#x4EFD;&#x5168;&#x516C;&#x53F8;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#x4E14;&#x53EF;&#x52A8;&#x6001;&#x8C03;&#x6574;</li>
+<li><p>RPC&#x5BA2;&#x6237;&#x7AEF;&#x9879;&#x76EE;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x67D0;&#x4E9B;&#x914D;&#x7F6E;&#x9879;&#x4E14;&#x53EF;&#x52A8;&#x6001;&#x8C03;&#x6574;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x628A;&#x4EE5;&#x4E0A;&#x4E24;&#x70B9;&#x8981;&#x6C42;&#x53BB;&#x6389;&#x201C;&#x52A8;&#x6001;&#x8C03;&#x6574;&#x201D;&#xFF0C;&#x90A3;&#x4E48;&#x505A;&#x6CD5;&#x5F88;&#x7B80;&#x5355;&#x3002;&#x5728;rpc-client.jar&#x5305;&#x91CC;&#x6709;&#x4E00;&#x4EFD;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6BCF;&#x6B21;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7136;&#x540E;&#x91CD;&#x65B0;&#x53D1;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x7684;jar&#x5305;&#x5373;&#x53EF;&#x3002;&#x540C;&#x7406;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x9879;&#x76EE;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#x3002;</p>
+</li>
+<li>&#x5982;&#x679C;&#x53EA;&#x652F;&#x6301;&#x5BA2;&#x6237;&#x7AEF;&#x9879;&#x76EE;&#x53EF;&#x52A8;&#x6001;&#x8C03;&#x6574;&#x914D;&#x7F6E;&#x3002;&#x5BA2;&#x6237;&#x7AEF;&#x9879;&#x76EE;&#x53EF;&#x4EE5;&#x5728;Apollo &#x201C;application&#x201D; Namespace&#x4E0A;&#x914D;&#x7F6E;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x9879;&#x3002;&#x5728;&#x521D;&#x59CB;&#x5316;service&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4ECE;Apollo&#x4E0A;&#x8BFB;&#x53D6;&#x914D;&#x7F6E;&#x5373;&#x53EF;&#x3002;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x574F;&#x5904;&#x5C31;&#x662F;&#xFF0C;&#x6BCF;&#x4E2A;&#x9879;&#x76EE;&#x90FD;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;key&#xFF0C;&#x4E0D;&#x7EDF;&#x4E00;&#x3002;</li>
+<li>&#x90A3;&#x4E48;&#x5982;&#x4F55;&#x5B8C;&#x7F8E;&#x652F;&#x6301;&#x4EE5;&#x4E0A;&#x9700;&#x6C42;&#x5462;&#xFF1F;&#x7B54;&#x6848;&#x5C31;&#x662F;&#x7ED3;&#x5408;&#x4F7F;&#x7528;Apollo&#x7684;&#x516C;&#x5171;&#x7C7B;&#x578B;&#x7684;Namespace&#x548C;&#x5173;&#x8054;&#x7C7B;&#x578B;&#x7684;Namespace&#x3002;RPC&#x56E2;&#x961F;&#x5728;Apollo&#x4E0A;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x53EB;&#x201C;rpc-client&#x201D;&#x7684;&#x516C;&#x5171;Namespace&#xFF0C;&#x5728;&#x201C;rpc-client&#x201D; Namespace&#x4E0A;&#x914D;&#x7F6E;&#x9ED8;&#x8BA4;&#x7684;&#x53C2;&#x6570;&#x503C;&#x3002;rpc-client.jar&#x91CC;&#x7684;&#x4EE3;&#x7801;&#x8BFB;&#x53D6;&#x201C;rpc-client&#x201D;Namespace&#x7684;&#x914D;&#x7F6E;&#x5373;&#x53EF;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x8C03;&#x6574;&#x9ED8;&#x8BA4;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x516C;&#x5171;&#x7C7B;&#x578B;&#x201C;rpc-client&#x201D; Namespace&#x7684;&#x914D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x9879;&#x76EE;&#x60F3;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x6216;&#x52A8;&#x6001;&#x4FEE;&#x6539;&#x67D0;&#x4E9B;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;Apollo &#x81EA;&#x5DF1;&#x9879;&#x76EE;&#x4E0B;&#x5173;&#x8054;&#x201C;rpc-client&#x201D;&#xFF0C;&#x5C31;&#x80FD;&#x521B;&#x5EFA;&#x5173;&#x8054;&#x7C7B;&#x578B;&#x201C;rpc-client&#x201D;&#x7684;Namespace&#x3002;&#x7136;&#x540E;&#x5728;&#x5173;&#x8054;&#x7C7B;&#x578B;&#x201C;rpc-client&#x201D;&#x7684;Namespace&#x4E0B;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x9879;&#x5373;&#x53EF;&#x3002;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x70B9;&#x9700;&#x8981;&#x6307;&#x51FA;&#x7684;&#xFF0C;&#x90A3;&#x5C31;&#x662F;rpc-client.jar&#x662F;&#x5728;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x91CC;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;rpc-client&#x83B7;&#x53D6;&#x5230;&#x7684;&#x201C;rpc-client&#x201D; Namespace&#x7684;&#x914D;&#x7F6E;&#x662F;&#x5E94;&#x7528;&#x7684;&#x5173;&#x8054;&#x7C7B;&#x578B;&#x7684;Namespace&#x52A0;&#x4E0A;&#x516C;&#x5171;&#x7C7B;&#x578B;&#x7684;Namespace&#x3002;</li>
+</ul>
+<h4 id="&#x4F8B;&#x5B50;"><a name="&#x4F8B;&#x5B50;" class="anchor-navigation-ex-anchor" href="#&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4F8B;&#x5B50;" class="plugin-anchor" href="#&#x4F8B;&#x5B50;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.apolloconfig.com/#/zh/design/apollo-core-concept-namespace?id=_54-&#x4F8B;&#x5B50;" target="_blank">&#x4F8B;&#x5B50;</a></h4>
+<p>&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x6709;&#x4E09;&#x4E2A;&#x5E94;&#x7528;&#xFF1A;&#x5E94;&#x7528;A&#x3001;&#x5E94;&#x7528;B&#x3001;&#x5E94;&#x7528;C&#x3002;</p>
+<ul>
+<li><p>&#x5E94;&#x7528;A&#x6709;&#x4E24;&#x4E2A;&#x79C1;&#x6709;&#x7C7B;&#x578B;&#x7684;Namespace&#xFF1A;application&#x548C;NS-Private&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x5173;&#x8054;&#x7C7B;&#x578B;&#x7684;Namespace&#xFF1A;NS-Public&#x3002;</p>
+</li>
+<li><p>&#x5E94;&#x7528;B&#x6709;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x7C7B;&#x578B;&#x7684;Namespace&#xFF1A;application&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x516C;&#x5171;&#x7C7B;&#x578B;&#x7684;Namespace&#xFF1A;NS-Public&#x3002;</p>
+</li>
+<li><p>&#x5E94;&#x7528;C&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x7C7B;&#x578B;&#x7684;Namespace&#xFF1A;application</p>
+<p><a href="https://imgoss.xgss.net/picgo/namespace-model-example.png?aliyun" data-lightbox="7b90d7fb-97c4-48c5-8b7b-115579462339" data-title="Namespace&#x4F8B;&#x5B50;" target="_blank"><img src="https://imgoss.xgss.net/picgo/namespace-model-example.png?aliyun" alt="Namespace&#x4F8B;&#x5B50;"></a></p>
+</li>
+</ul>
+<h5 id="&#x5E94;&#x7528;a&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;"><a name="&#x5E94;&#x7528;a&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;a&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E94;&#x7528;a&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x5E94;&#x7528;a&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;A&#x83B7;&#x53D6;Apollo&#x914D;&#x7F6E;</h5>
+<pre class="language-"><code class="lang-java">  <span class="token comment">//application </span>
+  <span class="token class-name">Config</span> appConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getAppConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  appConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k1&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k1 = v11</span>
+  appConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k2&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k2 = v21</span>
+
+  <span class="token comment">//NS-Private</span>
+  <span class="token class-name">Config</span> privateConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token string">&quot;NS-Private&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  privateConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k1&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k1 = v3</span>
+  privateConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k3&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k3 = v4</span>
+
+  <span class="token comment">//NS-Public&#xFF0C;&#x8986;&#x76D6;&#x516C;&#x5171;&#x7C7B;&#x578B;&#x914D;&#x7F6E;&#x7684;&#x60C5;&#x51B5;&#xFF0C;k4&#x88AB;&#x8986;&#x76D6;</span>
+  <span class="token class-name">Config</span> publicConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token string">&quot;NS-Public&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  publicConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k4&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k4 = v6 cover</span>
+  publicConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k6&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k6 = v6</span>
+  publicConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k7&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k7 = v7&#x70B9;&#x51FB;&#x590D;&#x5236;&#x9519;&#x8BEF;&#x590D;&#x5236;&#x6210;&#x529F;</span>
+</code></pre>
+<h5 id="&#x5E94;&#x7528;b&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;"><a name="&#x5E94;&#x7528;b&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;b&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E94;&#x7528;b&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x5E94;&#x7528;b&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;B&#x83B7;&#x53D6;Apollo&#x914D;&#x7F6E;</h5>
+<pre class="language-"><code class="lang-java">  <span class="token comment">//application</span>
+  <span class="token class-name">Config</span> appConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getAppConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  appConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k1&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k1 = v12</span>
+  appConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k2&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k2 = null</span>
+  appConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k3&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k3 = v32</span>
+
+  <span class="token comment">//NS-Private&#xFF0C;&#x7531;&#x4E8E;&#x6CA1;&#x6709;NS-Private Namespace &#x6240;&#x4EE5;&#x83B7;&#x53D6;&#x5230;default value</span>
+  <span class="token class-name">Config</span> privateConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token string">&quot;NS-Private&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  privateConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;default value&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+  <span class="token comment">//NS-Public</span>
+  <span class="token class-name">Config</span> publicConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token string">&quot;NS-Public&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  publicConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k4&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k4 = v5</span>
+  publicConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k6&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k6 = v6</span>
+  publicConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k7&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k7 = v7&#x70B9;&#x51FB;&#x590D;&#x5236;&#x9519;&#x8BEF;&#x590D;&#x5236;&#x6210;&#x529F;</span>
+</code></pre>
+<h5 id="&#x5E94;&#x7528;c&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;"><a name="&#x5E94;&#x7528;c&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5E94;&#x7528;c&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E94;&#x7528;c&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x5E94;&#x7528;c&#x83B7;&#x53D6;apollo&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E94;&#x7528;C&#x83B7;&#x53D6;Apollo&#x914D;&#x7F6E;</h5>
+<pre class="language-"><code class="lang-java">  <span class="token comment">//application</span>
+  <span class="token class-name">Config</span> appConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getAppConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  appConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k1&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k1 = v12</span>
+  appConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k2&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k2 = null</span>
+  appConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k3&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k3 = v33</span>
+
+  <span class="token comment">//NS-Private&#xFF0C;&#x7531;&#x4E8E;&#x6CA1;&#x6709;NS-Private Namespace &#x6240;&#x4EE5;&#x83B7;&#x53D6;&#x5230;default value</span>
+  <span class="token class-name">Config</span> privateConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token string">&quot;NS-Private&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  privateConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;default value&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+  <span class="token comment">//NS-Public&#xFF0C;&#x516C;&#x5171;&#x7C7B;&#x578B;&#x7684;Namespace&#xFF0C;&#x4EFB;&#x4F55;&#x9879;&#x76EE;&#x90FD;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5230;</span>
+  <span class="token class-name">Config</span> publicConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token string">&quot;NS-Public&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  publicConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k4&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k4 = v5</span>
+  publicConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k6&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k6 = v6</span>
+  publicConfig<span class="token punctuation">.</span><span class="token function">getProperty</span><span class="token punctuation">(</span><span class="token string">&quot;k7&quot;</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// k7 = v7&#x70B9;&#x51FB;&#x590D;&#x5236;&#x9519;&#x8BEF;&#x590D;&#x5236;&#x6210;&#x529F;</span>
+</code></pre>
+<h5 id="changelistener"><a name="changelistener" class="anchor-navigation-ex-anchor" href="#changelistener"><i class="fa fa-link" aria-hidden="true"></i></a><a name="changelistener" class="plugin-anchor" href="#changelistener"><i class="fa fa-link" aria-hidden="true"></i></a>ChangeListener</h5>
+<p>&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x4F8B;&#x5B50;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x5728;&#x5BA2;&#x6237;&#x7AEF;Namespace&#x6620;&#x5C04;&#x6210;&#x4E00;&#x4E2A;Config&#x5BF9;&#x8C61;&#x3002;Namespace&#x914D;&#x7F6E;&#x53D8;&#x66F4;&#x7684;&#x76D1;&#x542C;&#x5668;&#x662F;&#x6CE8;&#x518C;&#x5728;Config&#x5BF9;&#x8C61;&#x4E0A;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x5728;&#x5E94;&#x7528;A&#x4E2D;&#x76D1;&#x542C;application&#x7684;Namespace&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Config</span> appConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getAppConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+appConfig<span class="token punctuation">.</span><span class="token function">addChangeListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ConfigChangeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token class-name">ConfigChangeEvent</span> changeEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//do something</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5728;&#x5E94;&#x7528;A&#x4E2D;&#x76D1;&#x542C;NS-Private&#x7684;Namespace&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Config</span> privateConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token string">&quot;NS-Private&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+privateConfig<span class="token punctuation">.</span><span class="token function">addChangeListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ConfigChangeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token class-name">ConfigChangeEvent</span> changeEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//do something</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5728;&#x5E94;&#x7528;A&#x3001;&#x5E94;&#x7528;B&#x3001;&#x5E94;&#x7528;C&#x4E2D;&#x76D1;&#x542C;NS-Public&#x7684;Namespace&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-java"><span class="token class-name">Config</span> publicConfig <span class="token operator">=</span> <span class="token class-name">ConfigService</span><span class="token punctuation">.</span><span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token string">&quot;NS-Public&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+publicConfig<span class="token punctuation">.</span><span class="token function">addChangeListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ConfigChangeListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token class-name">ConfigChangeEvent</span> changeEvent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//do something</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h1 id="&#x8C03;&#x6574;apolloconfigdb&#x914D;&#x7F6E;"><a name="&#x8C03;&#x6574;apolloconfigdb&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x8C03;&#x6574;apolloconfigdb&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8C03;&#x6574;apolloconfigdb&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x8C03;&#x6574;apolloconfigdb&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.apolloconfig.com/#/zh/deployment/distributed-deployment-guide?id=_32-&#x8C03;&#x6574;apolloconfigdb&#x914D;&#x7F6E;" target="_blank">&#x8C03;&#x6574;ApolloConfigDB&#x914D;&#x7F6E;</a></h1>
+<p>&#x914D;&#x7F6E;&#x9879;&#x7EDF;&#x4E00;&#x5B58;&#x50A8;&#x5728;ApolloConfigDB.ServerConfig&#x8868;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x6BCF;&#x4E2A;&#x73AF;&#x5883;&#x7684;ApolloConfigDB.ServerConfig&#x90FD;&#x9700;&#x8981;&#x5355;&#x72EC;&#x914D;&#x7F6E;&#xFF0C;&#x4FEE;&#x6539;&#x5B8C;&#x4E00;&#x5206;&#x949F;&#x5B9E;&#x65F6;&#x751F;&#x6548;&#x3002;</p>
+<h2 id="namespacelockswitch---&#x4E00;&#x6B21;&#x53D1;&#x5E03;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EBA;&#x4FEE;&#x6539;&#x5F00;&#x5173;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x5E03;&#x5BA1;&#x6838;"><a name="namespacelockswitch---&#x4E00;&#x6B21;&#x53D1;&#x5E03;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EBA;&#x4FEE;&#x6539;&#x5F00;&#x5173;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x5E03;&#x5BA1;&#x6838;" class="anchor-navigation-ex-anchor" href="#namespacelockswitch---&#x4E00;&#x6B21;&#x53D1;&#x5E03;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EBA;&#x4FEE;&#x6539;&#x5F00;&#x5173;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x5E03;&#x5BA1;&#x6838;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="namespacelockswitch---&#x4E00;&#x6B21;&#x53D1;&#x5E03;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EBA;&#x4FEE;&#x6539;&#x5F00;&#x5173;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x5E03;&#x5BA1;&#x6838;" class="plugin-anchor" href="#namespacelockswitch---&#x4E00;&#x6B21;&#x53D1;&#x5E03;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EBA;&#x4FEE;&#x6539;&#x5F00;&#x5173;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x5E03;&#x5BA1;&#x6838;"><i class="fa fa-link" aria-hidden="true"></i></a><a href="https://www.apolloconfig.com/#/zh/deployment/distributed-deployment-guide?id=_322-namespacelockswitch-&#x4E00;&#x6B21;&#x53D1;&#x5E03;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EBA;&#x4FEE;&#x6539;&#x5F00;&#x5173;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x5E03;&#x5BA1;&#x6838;" target="_blank">namespace.lock.switch - &#x4E00;&#x6B21;&#x53D1;&#x5E03;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#x4EBA;&#x4FEE;&#x6539;&#x5F00;&#x5173;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x5E03;&#x5BA1;&#x6838;</a></h2>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x5F00;&#x5173;&#xFF0C;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x4E3A;true&#x7684;&#x8BDD;&#xFF0C;&#x90A3;&#x4E48;&#x4E00;&#x6B21;&#x914D;&#x7F6E;&#x53D1;&#x5E03;&#x53EA;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x4EBA;&#x4FEE;&#x6539;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x53D1;&#x5E03;&#x3002;</p>
+<blockquote>
+<p>&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x5EFA;&#x8BAE;&#x5F00;&#x542F;&#x6B64;&#x9009;&#x9879;</p>
+</blockquote>
+<h1 id="&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x8BF4;&#x660E;"><a name="&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x8BF4;&#x660E;" class="plugin-anchor" href="#&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x8BF4;&#x660E;</h1>
+<blockquote>
+<p>&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x9664;&#x4E86;&#x652F;&#x6301;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x914D;&#x7F6E;&#x4EE5;&#x5916;&#xFF0C;&#x4E5F;&#x652F;&#x6301;&#x901A;&#x8FC7;-D&#x53C2;&#x6570;&#x3001;application.properties&#x7B49;&#x914D;&#x7F6E;&#xFF0C;&#x4E14;-D&#x53C2;&#x6570;&#x3001;application.properties&#x7B49;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x914D;&#x7F6E;</p>
+</blockquote>
+<h2 id="&#x8C03;&#x6574;apolloportaldb&#x914D;&#x7F6E;"><a name="&#x8C03;&#x6574;apolloportaldb&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x8C03;&#x6574;apolloportaldb&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8C03;&#x6574;apolloportaldb&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x8C03;&#x6574;apolloportaldb&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8C03;&#x6574;ApolloPortalDB&#x914D;&#x7F6E;</h2>
+<p>&#x914D;&#x7F6E;&#x9879;&#x7EDF;&#x4E00;&#x5B58;&#x50A8;&#x5728;ApolloPortalDB.ServerConfig&#x8868;&#x4E2D;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>&#x7BA1;&#x7406;&#x5458;&#x5DE5;&#x5177; - &#x7CFB;&#x7EDF;&#x53C2;&#x6570;</code>&#x9875;&#x9762;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#xFF0C;&#x65E0;&#x7279;&#x6B8A;&#x8BF4;&#x660E;&#x5219;&#x4FEE;&#x6539;&#x5B8C;&#x4E00;&#x5206;&#x949F;&#x5B9E;&#x65F6;&#x751F;&#x6548;&#x3002;</p>
+<h3 id="apolloportalenvs---&#x53EF;&#x652F;&#x6301;&#x7684;&#x73AF;&#x5883;&#x5217;&#x8868;"><a name="apolloportalenvs---&#x53EF;&#x652F;&#x6301;&#x7684;&#x73AF;&#x5883;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#apolloportalenvs---&#x53EF;&#x652F;&#x6301;&#x7684;&#x73AF;&#x5883;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="apolloportalenvs---&#x53EF;&#x652F;&#x6301;&#x7684;&#x73AF;&#x5883;&#x5217;&#x8868;" class="plugin-anchor" href="#apolloportalenvs---&#x53EF;&#x652F;&#x6301;&#x7684;&#x73AF;&#x5883;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>apollo.portal.envs - &#x53EF;&#x652F;&#x6301;&#x7684;&#x73AF;&#x5883;&#x5217;&#x8868;</h3>
+<p>&#x9ED8;&#x8BA4;&#x503C;&#x662F;dev&#xFF0C;&#x5982;&#x679C;portal&#x9700;&#x8981;&#x7BA1;&#x7406;&#x591A;&#x4E2A;&#x73AF;&#x5883;&#x7684;&#x8BDD;&#xFF0C;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#x5373;&#x53EF;&#xFF08;&#x5927;&#x5C0F;&#x5199;&#x4E0D;&#x654F;&#x611F;&#xFF09;&#xFF0C;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>DEV,FAT,UAT,PRO
+</code></pre><p>&#x540D;&#x8BCD;&#x89E3;&#x91CA;&#xFF1A;</p>
+<pre class="language-"><code>DEV(Development environment)
+&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF0C;&#x7528;&#x4E8E;&#x5F00;&#x53D1;&#x8005;&#x8C03;&#x8BD5;&#x4F7F;&#x7528;
+
+FAT(Feature Acceptance Test environment)
+&#x529F;&#x80FD;&#x9A8C;&#x6536;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#xFF0C;&#x7528;&#x4E8E;&#x8F6F;&#x4EF6;&#x6D4B;&#x8BD5;&#x8005;&#x6D4B;&#x8BD5;&#x4F7F;&#x7528;
+
+UAT(User Acceptance Test environment)
+&#x7528;&#x6237;&#x9A8C;&#x6536;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#xFF0C;&#x7528;&#x4E8E;&#x7528;&#x6237;&#x6D4B;&#x8BD5;&#x9A8C;&#x6536;&#x4F7F;&#x7528;
+
+PRO(Production environment)
+&#x751F;&#x4EA7;&#x73AF;&#x5883;
+</code></pre><p>&#x4FEE;&#x6539;&#x5B8C;&#x9700;&#x8981;&#x91CD;&#x542F;&#x751F;&#x6548;&#x3002;</p>
+<blockquote>
+<p>&#x6CE8;1&#xFF1A;&#x4E00;&#x5957;Portal&#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x591A;&#x4E2A;&#x73AF;&#x5883;&#xFF0C;&#x4F46;&#x662F;&#x6BCF;&#x4E2A;&#x73AF;&#x5883;&#x90FD;&#x9700;&#x8981;&#x72EC;&#x7ACB;&#x90E8;&#x7F72;&#x4E00;&#x5957;Config Service&#x3001;Admin Service&#x548C;ApolloConfigDB&#xFF0C;&#x5177;&#x4F53;&#x8BF7;&#x53C2;&#x8003;&#xFF1A;<a href="https://www.apolloconfig.com/#/zh/deployment/distributed-deployment-guide?id=_212-&#x521B;&#x5EFA;apolloconfigdb" target="_blank">2.1.2 &#x521B;&#x5EFA;ApolloConfigDB</a>&#xFF0C;<a href="https://www.apolloconfig.com/#/zh/deployment/distributed-deployment-guide?id=_32-&#x8C03;&#x6574;apolloconfigdb&#x914D;&#x7F6E;" target="_blank">3.2 &#x8C03;&#x6574;ApolloConfigDB&#x914D;&#x7F6E;</a>&#xFF0C;<a href="https://www.apolloconfig.com/#/zh/deployment/distributed-deployment-guide?id=_22112-&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;" target="_blank">2.2.1.1.2 &#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;</a>&#xFF0C;&#x53E6;&#x5916;&#x5982;&#x679C;&#x662F;&#x4E3A;&#x5DF2;&#x7ECF;&#x8FD0;&#x884C;&#x4E86;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x7684;Apollo&#x914D;&#x7F6E;&#x4E2D;&#x5FC3;&#x589E;&#x52A0;&#x73AF;&#x5883;&#xFF0C;&#x522B;&#x5FD8;&#x4E86;&#x53C2;&#x8003;<a href="https://www.apolloconfig.com/#/zh/deployment/distributed-deployment-guide?id=_2124-&#x4ECE;&#x522B;&#x7684;&#x73AF;&#x5883;&#x5BFC;&#x5165;apolloconfigdb&#x7684;&#x9879;&#x76EE;&#x6570;&#x636E;" target="_blank">2.1.2.4 &#x4ECE;&#x522B;&#x7684;&#x73AF;&#x5883;&#x5BFC;&#x5165;ApolloConfigDB&#x7684;&#x9879;&#x76EE;&#x6570;&#x636E;</a>&#x5BF9;&#x65B0;&#x7684;&#x73AF;&#x5883;&#x505A;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<p>&#x6CE8;2&#xFF1A;&#x53EA;&#x5728;&#x6570;&#x636E;&#x5E93;&#x6DFB;&#x52A0;&#x73AF;&#x5883;&#x662F;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x7684;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x4E3A;apollo-portal&#x6DFB;&#x52A0;&#x65B0;&#x589E;&#x73AF;&#x5883;&#x5BF9;&#x5E94;&#x7684;meta server&#x5730;&#x5740;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x8003;&#xFF1A;<a href="https://www.apolloconfig.com/#/zh/deployment/distributed-deployment-guide?id=_221124-&#x914D;&#x7F6E;apollo-portal&#x7684;meta-service&#x4FE1;&#x606F;" target="_blank">2.2.1.1.2.4 &#x914D;&#x7F6E;apollo-portal&#x7684;meta service&#x4FE1;&#x606F;</a>&#x3002;apollo-client&#x5728;&#x65B0;&#x7684;&#x73AF;&#x5883;&#x4E0B;&#x4F7F;&#x7528;&#x65F6;&#x4E5F;&#x9700;&#x8981;&#x505A;&#x597D;&#x76F8;&#x5E94;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x8003;&#xFF1A;<a href="https://www.apolloconfig.com/#/zh/usage/java-sdk-user-guide?id=_122-apollo-meta-server" target="_blank">1.2.2 Apollo Meta Server</a>&#x3002;</p>
+<p>&#x6CE8;3&#xFF1A;&#x5982;&#x679C;&#x5E0C;&#x671B;&#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x73AF;&#x5883;&#x540D;&#x79F0;&#xFF0C;&#x5177;&#x4F53;&#x6B65;&#x9AA4;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="https://www.apolloconfig.com/#/zh/faq/common-issues-in-deployment-and-development-phase?id=_4-portal&#x5982;&#x4F55;&#x589E;&#x52A0;&#x73AF;&#x5883;&#xFF1F;" target="_blank">Portal&#x5982;&#x4F55;&#x589E;&#x52A0;&#x73AF;&#x5883;</a>&#x3002;</p>
+<p>&#x6CE8;4&#xFF1A;1.1.0&#x7248;&#x672C;&#x589E;&#x52A0;&#x4E86;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;&#x9875;&#x9762;&#xFF08;<code>&#x7BA1;&#x7406;&#x5458;&#x5DE5;&#x5177;</code> -&gt; <code>&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</code>&#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BE5;&#x9875;&#x9762;&#x68C0;&#x67E5;&#x914D;&#x7F6E;&#x662F;&#x5426;&#x6B63;&#x786E;</p>
+</blockquote>
+<h1 id="&#x591A;&#x73AF;&#x5883;&#x90E8;&#x7F72;"><a name="&#x591A;&#x73AF;&#x5883;&#x90E8;&#x7F72;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x73AF;&#x5883;&#x90E8;&#x7F72;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x591A;&#x73AF;&#x5883;&#x90E8;&#x7F72;" class="plugin-anchor" href="#&#x591A;&#x73AF;&#x5883;&#x90E8;&#x7F72;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x591A;&#x73AF;&#x5883;&#x90E8;&#x7F72;</h1>
+<h2 id="&#x914D;&#x7F6E;apollo-portal&#x7684;meta-service&#x4FE1;&#x606F;"><a name="&#x914D;&#x7F6E;apollo-portal&#x7684;meta-service&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;apollo-portal&#x7684;meta-service&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;apollo-portal&#x7684;meta-service&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x914D;&#x7F6E;apollo-portal&#x7684;meta-service&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;apollo-portal&#x7684;meta service&#x4FE1;&#x606F;</h2>
+<p>Apollo Portal&#x9700;&#x8981;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x8BBF;&#x95EE;&#x4E0D;&#x540C;&#x7684;meta service(apollo-configservice)&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x914D;&#x7F6E;&#x4E2D;&#x63D0;&#x4F9B;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;meta service&#x548C;config service&#x662F;&#x90E8;&#x7F72;&#x5728;&#x540C;&#x4E00;&#x4E2A;JVM&#x8FDB;&#x7A0B;&#xFF0C;&#x6240;&#x4EE5;meta service&#x7684;&#x5730;&#x5740;&#x5C31;&#x662F;config service&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<blockquote>
+<p>&#x5BF9;&#x4E8E;1.6.0&#x53CA;&#x4EE5;&#x4E0A;&#x7248;&#x672C;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;ApolloPortalDB.ServerConfig&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x6765;&#x914D;&#x7F6E;Meta Service&#x5730;&#x5740;&#xFF0C;&#x8BE6;&#x89C1;<a href="https://www.apolloconfig.com/#/zh/deployment/distributed-deployment-guide?id=_312-apolloportalmetaservers-&#x5404;&#x73AF;&#x5883;meta-service&#x5217;&#x8868;" target="_blank">apollo.portal.meta.servers - &#x5404;&#x73AF;&#x5883;Meta Service&#x5217;&#x8868;</a></p>
+</blockquote>
+<p>&#x4F7F;&#x7528;&#x7A0B;&#x5E8F;&#x5458;&#x4E13;&#x7528;&#x7F16;&#x8F91;&#x5668;&#xFF08;&#x5982;vim&#xFF0C;notepad++&#xFF0C;sublime&#x7B49;&#xFF09;&#x6253;&#x5F00;<code>apollo-portal-x.x.x-github.zip</code>&#x4E2D;<code>config</code>&#x76EE;&#x5F55;&#x4E0B;&#x7684;<code>apollo-env.properties</code>&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x5047;&#x8BBE;DEV&#x7684;apollo-configservice&#x672A;&#x7ED1;&#x5B9A;&#x57DF;&#x540D;&#xFF0C;&#x5730;&#x5740;&#x662F;192.168.1.5:8080&#xFF0C;PRO&#x7684;apollo-configservice&#x7ED1;&#x5B9A;&#x4E86;&#x57DF;&#x540D;apollo.chuanqu.ltd&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5982;&#x4E0B;&#x4FEE;&#x6539;&#x5404;&#x73AF;&#x5883;meta service&#x670D;&#x52A1;&#x5730;&#x5740;&#xFF0C;&#x683C;&#x5F0F;&#x4E3A;<code>${env}.meta=http://${config-service-url:port}</code>&#xFF0C;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x73AF;&#x5883;&#x4E0D;&#x9700;&#x8981;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5220;&#x9664;&#x5BF9;&#x5E94;&#x7684;&#x914D;&#x7F6E;&#x9879;&#xFF08;&#x5982;lpt.meta&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code class="lang-sh">dev.meta<span class="token operator">=</span>http://1.1.1.1:8080
+fat.meta<span class="token operator">=</span>http://apollo.fat.xxx.com
+uat.meta<span class="token operator">=</span>http://apollo.uat.xxx.com
+pro.meta<span class="token operator">=</span>http://apollo.xxx.com
+</code></pre>
+<p>&#x9664;&#x4E86;&#x901A;&#x8FC7;<code>apollo-env.properties</code>&#x65B9;&#x5F0F;&#x914D;&#x7F6E;meta service&#x4EE5;&#x5916;&#xFF0C;apollo&#x4E5F;&#x652F;&#x6301;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x6307;&#x5B9A;meta service&#xFF08;&#x4F18;&#x5148;&#x7EA7;&#x6BD4;<code>apollo-env.properties</code>&#x9AD8;&#xFF09;&#xFF1A;</p>
+<ol>
+<li>&#x901A;&#x8FC7;Java System Property</li>
+</ol>
+<pre class="language-"><code>   ${env}_meta
+</code></pre><ul>
+<li>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;Java&#x7684;System Property <code>${env}_meta</code>&#x6765;&#x6307;&#x5B9A;</li>
+<li>&#x5982;<code>java -Ddev_meta=http://config-service-url -jar xxx.jar</code></li>
+<li>&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7A0B;&#x5E8F;&#x6307;&#x5B9A;&#xFF0C;&#x5982;<code>System.setProperty(&quot;dev_meta&quot;, &quot;http://config-service-url&quot;);</code></li>
+</ul>
+<ol>
+<li><p>&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;System Environment</p>
+<pre class="language-"><code>${ENV}_META
+</code></pre><ul>
+<li>&#x5982;<code>DEV_META=http://config-service-url</code></li>
+<li>&#x6CE8;&#x610F;key&#x4E3A;&#x5168;&#x5927;&#x5199;&#xFF0C;&#x4E14;&#x4E2D;&#x95F4;&#x662F;<code>_</code>&#x5206;&#x9694;</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>&#x6CE8;1: &#x4E3A;&#x4E86;&#x5B9E;&#x73B0;meta service&#x7684;&#x9AD8;&#x53EF;&#x7528;&#xFF0C;&#x63A8;&#x8350;&#x901A;&#x8FC7;SLB&#xFF08;Software Load Balancer&#xFF09;&#x505A;&#x52A8;&#x6001;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</p>
+<p>&#x6CE8;2: meta service&#x5730;&#x5740;&#x4E5F;&#x53EF;&#x4EE5;&#x586B;&#x5165;IP&#xFF0C;0.11.0&#x7248;&#x672C;&#x4E4B;&#x524D;&#x53EA;&#x652F;&#x6301;&#x586B;&#x5165;&#x4E00;&#x4E2A;IP&#x3002;&#x4ECE;0.11.0&#x7248;&#x672C;&#x5F00;&#x59CB;&#x652F;&#x6301;&#x586B;&#x5165;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x591A;&#x4E2A;&#x5730;&#x5740;&#xFF08;<a href="https://github.com/apolloconfig/apollo/pull/1214" target="_blank">PR #1214</a>&#xFF09;&#xFF0C;&#x5982;<code>http://1.1.1.1:8080,http://2.2.2.2:8080</code>&#xFF0C;&#x4E0D;&#x8FC7;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x8FD8;&#x662F;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x57DF;&#x540D;&#xFF08;&#x8D70;slb&#xFF09;&#xFF0C;&#x56E0;&#x4E3A;&#x673A;&#x5668;&#x6269;&#x5BB9;&#x3001;&#x7F29;&#x5BB9;&#x7B49;&#x90FD;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;IP&#x5217;&#x8868;&#x7684;&#x53D8;&#x5316;&#x3002;</p>
+</blockquote>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; g.xgss.net all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-04-28 11:07:26
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.基于Linux搭建开源配置管理中心apollo.html" class="navigation navigation-prev " aria-label="Previous page: 基于Linux搭建开源配置管理中心apollo">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Open-databases/" class="navigation navigation-next " aria-label="Next page: 开源软件-数据库">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"开源配置管理中心apollo使用方法","level":"1.12.2","depth":2,"next":{"title":"开源软件-数据库","level":"1.13","depth":1,"path":"doc/Open-databases/README.md","ref":"doc/Open-databases/README.md","articles":[{"title":"Archery-基于docker安装","level":"1.13.1","depth":2,"path":"doc/Open-databases/1_Archery_Install_Docker.md","ref":"doc/Open-databases/1_Archery_Install_Docker.md","articles":[]},{"title":"Archery-后台配置基本操作","level":"1.13.2","depth":2,"path":"doc/Open-databases/2_Archery_config.md","ref":"doc/Open-databases/2_Archery_config.md","articles":[]},{"title":"Archery-SQL上线流程","level":"1.13.3","depth":2,"path":"doc/Open-databases/3_Archery_online.md","ref":"doc/Open-databases/3_Archery_online.md","articles":[]},{"title":"Archery-SQL上线提示库名过长，建议使用别名解析","level":"1.13.4","depth":2,"path":"doc/Open-databases/4.sql-bieming.md","ref":"doc/Open-databases/4.sql-bieming.md","articles":[]},{"title":"开源的数据同步中间件-DBSyncer","level":"1.13.5","depth":2,"path":"doc/Open-databases/开源的数据同步中间件-DBSyncer.md","ref":"doc/Open-databases/开源的数据同步中间件-DBSyncer.md","articles":[]}]},"previous":{"title":"基于Linux搭建开源配置管理中心apollo","level":"1.12.1","depth":2,"path":"doc/Apollo/1.基于Linux搭建开源配置管理中心apollo.md","ref":"doc/Apollo/1.基于Linux搭建开源配置管理中心apollo.md","articles":[]},"dir":"ltr"},"config":{"plugins":["search-pro","back-to-top-button","splitter","anchors","github","donate","sharing-plus","anchor-navigation-ex","favicon","tbfed-pagefooter","-pageview-count","lightbox","-page-treeview","-page-toc-button","expandable-chapters","chapter-fold","code","theme-comscore","prism"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy g.xgss.net","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/funet8/g.xgss.net?g.xgss.net"},"baidu-tongji":{"token":"559562c6410b9fd49a0afe52650d40bd"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"alipay":"https://img.funet8.com/images/alipay_donate.jpg","alipayText":"支付宝打赏","button":"打赏","title":"请俺喝一杯茶","wechat":"https://img.funet8.com/images/wechat_donate.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":false,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"sharing":{"qq":true,"all":["weibo","douban","qq","qzone","facebook","google","instapaper","linkedin","twitter","messenger","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"twitter":true,"vk":false,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"星哥的书籍","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"github-buttons":{"buttons":[{"user":"Blankj","repo":"glory","type":"star","size":"small","count":true}]},"title":"Linux私有教程","language":"zh-hans","links":{"sidebar":{"星哥说事":"https://www.xgss.net","阿里云优惠":"http://y.xgss.net/aliyun","腾讯云优惠":"http://y.xgss.net/tx"}},"gitbook":"*","description":"Linux教程工作中总结的教程"},"file":{"path":"doc/Apollo/2.开源配置管理中心apollo使用方法.md","mtime":"2022-04-28T03:07:26.645Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-16T03:20:52.903Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

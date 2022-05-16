@@ -1,0 +1,1544 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>云服务器部署开源短链生成-YOURLS · Linux私有教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="星哥的书籍">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="通过Heimdall开源免费，搭建自己的网络书签.html" />
+    
+    
+    <link rel="prev" href="云服务器搭建自己的ngrok服务-实现内网穿透.html" />
+    
+
+    
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.xgss.net" target="_blank" class="custom-link">星哥说事</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://y.xgss.net/aliyun" target="_blank" class="custom-link">阿里云优惠</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://y.xgss.net/tx" target="_blank" class="custom-link">腾讯云优惠</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    项目介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linux-basis/">
+            
+                <a href="../linux-basis/">
+            
+                    
+                    Linux基础教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux-basis/Linux.html">
+            
+                <a href="../linux-basis/Linux.html">
+            
+                    
+                    Linux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../linux-basis/CentOS-7-Install.html">
+            
+                <a href="../linux-basis/CentOS-7-Install.html">
+            
+                    
+                    CentOS 7 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../linux-basis/CentOS6-and-CentOS7.html">
+            
+                <a href="../linux-basis/CentOS6-and-CentOS7.html">
+            
+                    
+                    CentOS 6 和 CentOS 7 差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../linux-basis/Linux常用命令及其使用详解.html">
+            
+                <a href="../linux-basis/Linux常用命令及其使用详解.html">
+            
+                    
+                    Linux常用命令及其使用详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../linux-basis/Cloud-Server-What-todo.html">
+            
+                <a href="../linux-basis/Cloud-Server-What-todo.html">
+            
+                    
+                    拥有一台云服务器能干嘛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../linux-basis/cdn.html">
+            
+                <a href="../linux-basis/cdn.html">
+            
+                    
+                    一文读懂CDN和CDN实现的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../linux-basis/负载均衡和CDN技术.html">
+            
+                <a href="../linux-basis/负载均衡和CDN技术.html">
+            
+                    
+                    负载均衡和CDN技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../linux-basis/operating-system-based.html">
+            
+                <a href="../linux-basis/operating-system-based.html">
+            
+                    
+                    资深运维工程师必须了解的操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../linux-basis/Linux服务器配置SSH免密码登陆.html">
+            
+                <a href="../linux-basis/Linux服务器配置SSH免密码登陆.html">
+            
+                    
+                    Linux服务器配置SSH免密码登陆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../linux-basis/一张图学会Git.html">
+            
+                <a href="../linux-basis/一张图学会Git.html">
+            
+                    
+                    一张图学会Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basis-tools/">
+            
+                <a href="../basis-tools/">
+            
+                    
+                    服务器基础工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basis-tools/Linux使用mail配合smtp发送邮件.html">
+            
+                <a href="../basis-tools/Linux使用mail配合smtp发送邮件.html">
+            
+                    
+                    Linux使用mail配合smtp发送邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basis-tools/GoAccess轻量nginx日志分析工具.html">
+            
+                <a href="../basis-tools/GoAccess轻量nginx日志分析工具.html">
+            
+                    
+                    GoAccess轻量nginx日志分析工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../web/">
+            
+                <a href="../web/">
+            
+                    
+                    WEB服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../web/Centos7-install-openresty-waf.html">
+            
+                <a href="../web/Centos7-install-openresty-waf.html">
+            
+                    
+                    Centos7安装openresty实现WAF防火墙功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../web/Linux服务器故障排查基本方案.html">
+            
+                <a href="../web/Linux服务器故障排查基本方案.html">
+            
+                    
+                    Linux服务器故障排查基本方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../file-system/">
+            
+                <a href="../file-system/">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../file-system/CentOS7下LVM给硬盘扩容操作.html">
+            
+                <a href="../file-system/CentOS7下LVM给硬盘扩容操作.html">
+            
+                    
+                    CentOS7下LVM给硬盘扩容操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.html">
+            
+                <a href="../file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.html">
+            
+                    
+                    CentOS7下LVM给腾讯云云硬盘扩容操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../file-system/Linux安装samba与windows实现共享文件夹.html">
+            
+                <a href="../file-system/Linux安装samba与windows实现共享文件夹.html">
+            
+                    
+                    Linux安装samba与windows实现共享文件夹
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../gitbook/Gitbook.html">
+            
+                <a href="../gitbook/Gitbook.html">
+            
+                    
+                    Gitbook基本使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../gitbook/Jenkins_Github.html">
+            
+                <a href="../gitbook/Jenkins_Github.html">
+            
+                    
+                    Jenkins+Github实现文档持续集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../gitbook/Github-Page-my-domain.html">
+            
+                <a href="../gitbook/Github-Page-my-domain.html">
+            
+                    
+                    Github Page怎么绑定自己的域名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../gitbook/gitbook中使用百度统计查看页面访问情况.html">
+            
+                <a href="../gitbook/gitbook中使用百度统计查看页面访问情况.html">
+            
+                    
+                    gitbook中使用百度统计查看页面访问情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../gitbook/gitbook使用gitalk插件制作留言板.html">
+            
+                <a href="../gitbook/gitbook使用gitalk插件制作留言板.html">
+            
+                    
+                    gitbook使用gitalk插件制作留言板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../android-to-apk/">
+            
+                <a href="../android-to-apk/">
+            
+                    
+                    自动打包安卓APP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../android-to-apk/1.Centos7-Android-software.html">
+            
+                <a href="../android-to-apk/1.Centos7-Android-software.html">
+            
+                    
+                    在CentOS 7下构建安卓Android编译环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../jenkins/CentOS-7-Install-Jenkins.html">
+            
+                <a href="../jenkins/CentOS-7-Install-Jenkins.html">
+            
+                    
+                    CentOS7下安装Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../android-to-apk/3.Centos7-Android-jenkins.html">
+            
+                <a href="../android-to-apk/3.Centos7-Android-jenkins.html">
+            
+                    
+                    基于centos7的jenkins安卓自动打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../safe/readme.html">
+            
+                <a href="../safe/readme.html">
+            
+                    
+                    服务器安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../safe/Web-safe.html">
+            
+                <a href="../safe/Web-safe.html">
+            
+                    
+                    WEB服务器攻击类型和应对方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../safe/why-ssl-safe.html">
+            
+                <a href="../safe/why-ssl-safe.html">
+            
+                    
+                    为什么说HTTPS是安全的
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../software/">
+            
+                <a href="../software/">
+            
+                    
+                    开发常用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../software/Typora_PicGo_Gitee_markdown_pic.html">
+            
+                <a href="../software/Typora_PicGo_Gitee_markdown_pic.html">
+            
+                    
+                    Typora+PicGo+Gitee或github实现markdown自带图床效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../software/Typora_PicGo_aliyun_oss.html">
+            
+                <a href="../software/Typora_PicGo_aliyun_oss.html">
+            
+                    
+                    程序员必备-Typora+PicGo+阿里云oss实现图床
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../software/Typora_PicGo_failedto_Fetch.html">
+            
+                <a href="../software/Typora_PicGo_failedto_Fetch.html">
+            
+                    
+                    PicGo failed to Fetch 出错解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../software/Install-PhpStorm.html">
+            
+                <a href="../software/Install-PhpStorm.html">
+            
+                    
+                    安装PhpStorm、破解、汉化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../software/Xmind2021安装激活破解.html">
+            
+                <a href="../software/Xmind2021安装激活破解.html">
+            
+                    
+                    Xmind2021安装激活破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../software/Windows下VSCode及中文配置.html">
+            
+                <a href="../software/Windows下VSCode及中文配置.html">
+            
+                    
+                    Windows下VSCode及中文配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../internet/">
+            
+                <a href="../internet/">
+            
+                    
+                    互联网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../internet/programmer_position_skills.html">
+            
+                <a href="../internet/programmer_position_skills.html">
+            
+                    
+                    互联网程序员各个职位技能图-多图警告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../internet/qinglong_jingdongdou.html">
+            
+                <a href="../internet/qinglong_jingdongdou.html">
+            
+                    
+                    青龙面板每天自动获取某东豆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../internet/jd_cookie.html">
+            
+                <a href="../internet/jd_cookie.html">
+            
+                    
+                    利用谷歌浏览器获取京东Cookie抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.html">
+            
+                <a href="../internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.html">
+            
+                    
+                    助力居家办公，免费领取语雀 VIP 会员 1-3 年
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    开源软件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="免费开源iPhone推送消息工具+服务端-Bark.html">
+            
+                <a href="免费开源iPhone推送消息工具+服务端-Bark.html">
+            
+                    
+                    免费开源iPhone推送消息工具+服务端-Bark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="如何给公司节约成本，搭建免费开源监控系统uptime-kuma.html">
+            
+                <a href="如何给公司节约成本，搭建免费开源监控系统uptime-kuma.html">
+            
+                    
+                    搭建免费开源监控系统uptime-kuma
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="免费开源Github Page实现短链接方案.html">
+            
+                <a href="免费开源Github Page实现短链接方案.html">
+            
+                    
+                    免费开源Github Page实现短链接方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="云服务器搭建自己的ngrok服务-实现内网穿透.html">
+            
+                <a href="云服务器搭建自己的ngrok服务-实现内网穿透.html">
+            
+                    
+                    云服务器搭建自己的ngrok服务实现内网穿透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11.5" data-path="云服务器部署开源短链生成-YOURLS.html">
+            
+                <a href="云服务器部署开源短链生成-YOURLS.html">
+            
+                    
+                    云服务器部署开源短链生成-YOURLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="通过Heimdall开源免费，搭建自己的网络书签.html">
+            
+                <a href="通过Heimdall开源免费，搭建自己的网络书签.html">
+            
+                    
+                    通过Heimdall开源免费，搭建自己的网络书签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="AdGuard搭建去广告公共DNS.html">
+            
+                <a href="AdGuard搭建去广告公共DNS.html">
+            
+                    
+                    AdGuard搭建去广告公共DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="开源文档管理系统.html">
+            
+                <a href="开源文档管理系统.html">
+            
+                    
+                    开源文档管理系统汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Apollo/readme.html">
+            
+                <a href="../Apollo/readme.html">
+            
+                    
+                    开源软件-Apollo
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Apollo/1.基于Linux搭建开源配置管理中心apollo.html">
+            
+                <a href="../Apollo/1.基于Linux搭建开源配置管理中心apollo.html">
+            
+                    
+                    基于Linux搭建开源配置管理中心apollo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Apollo/2.开源配置管理中心apollo使用方法.html">
+            
+                <a href="../Apollo/2.开源配置管理中心apollo使用方法.html">
+            
+                    
+                    开源配置管理中心apollo使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Open-databases/">
+            
+                <a href="../Open-databases/">
+            
+                    
+                    开源软件-数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Open-databases/1_Archery_Install_Docker.html">
+            
+                <a href="../Open-databases/1_Archery_Install_Docker.html">
+            
+                    
+                    Archery-基于docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Open-databases/2_Archery_config.html">
+            
+                <a href="../Open-databases/2_Archery_config.html">
+            
+                    
+                    Archery-后台配置基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Open-databases/3_Archery_online.html">
+            
+                <a href="../Open-databases/3_Archery_online.html">
+            
+                    
+                    Archery-SQL上线流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Open-databases/4.sql-bieming.html">
+            
+                <a href="../Open-databases/4.sql-bieming.html">
+            
+                    
+                    Archery-SQL上线提示库名过长，建议使用别名解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Open-databases/开源的数据同步中间件-DBSyncer.html">
+            
+                <a href="../Open-databases/开源的数据同步中间件-DBSyncer.html">
+            
+                    
+                    开源的数据同步中间件-DBSyncer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../cloud-disk/">
+            
+                <a href="../cloud-disk/">
+            
+                    
+                    网盘系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../cloud-disk/OwnCloud.html">
+            
+                <a href="../cloud-disk/OwnCloud.html">
+            
+                    
+                    OwnCloud搭建自己的私有云盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../blog/">
+            
+                <a href="../blog/">
+            
+                    
+                    博客系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../blog/基于VuePress和github搭建无服务器博客、文档系统.html">
+            
+                <a href="../blog/基于VuePress和github搭建无服务器博客、文档系统.html">
+            
+                    
+                    基于VuePress和github搭建无服务器博客、文档系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../debug/">
+            
+                <a href="../debug/">
+            
+                    
+                    调试Debug
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../debug/innodb_online_alter_log_max_size.html">
+            
+                <a href="../debug/innodb_online_alter_log_max_size.html">
+            
+                    
+                    Mysql数据库在释放一个数亿记录的表报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >云服务器部署开源短链生成-YOURLS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-yourls"><b></b>&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-YOURLS</a></li><li><span class="title-icon "></span><a href="#&#x524D;&#x671F;&#x51C6;&#x5907;"><b></b>&#x524D;&#x671F;&#x51C6;&#x5907;</a></li><ul><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;"><b></b>&#x793A;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x90E8;&#x7F72;"><b></b>&#x90E8;&#x7F72;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4E0B;&#x8F7D;yourls"><b></b>&#x4E0B;&#x8F7D;YOURLS</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;mysql&#x6570;&#x636E;&#x5E93;"><b></b>&#x914D;&#x7F6E;MySQL&#x6570;&#x636E;&#x5E93;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;"><b></b>&#x914D;&#x7F6E;nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;</a></li><li><span class="title-icon "></span><a href="#yourls&#x6C49;&#x5316;"><b></b>yourls&#x6C49;&#x5316;</a></li><li><span class="title-icon "></span><a href="#yourls--api"><b></b>YOURLS- API</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;sleeky&#x4E3B;&#x9898;&#xFF0C;&#x7F8E;&#x5316;yourls"><b></b>&#x5B89;&#x88C5;Sleeky&#x4E3B;&#x9898;&#xFF0C;&#x7F8E;&#x5316;YOURLS</a></li></ul></div><h1 id="&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-yourls"><a name="&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-yourls" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-yourls"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-yourls" class="plugin-anchor" href="#&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-yourls"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-YOURLS</h1>
+<p>YOURLS&#x662F;&#x4E00;&#x6B3E;&#x4F7F;&#x7528;PHP+Mysql&#x5F00;&#x53D1;&#x7684;&#x77ED;&#x94FE;&#x63A5;&#x7A0B;&#x5E8F;&#xFF0C;&#x76F8;&#x6BD4;&#x516C;&#x5171;&#x77ED;&#x7F51;&#x5740;&#x597D;&#x5904;&#x662F;&#x6570;&#x636E;&#x638C;&#x63E1;&#x5728;&#x81EA;&#x5DF1;&#x624B;&#x4E2D;&#xFF0C;&#x53EF;&#x63A7;&#x6027;&#x66F4;&#x9AD8;&#x3002;&#x5F00;&#x6E90;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/YOURLS/YOURLS" target="_blank">https://github.com/YOURLS/YOURLS</a></p>
+<h1 id="&#x524D;&#x671F;&#x51C6;&#x5907;"><a name="&#x524D;&#x671F;&#x51C6;&#x5907;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x671F;&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x524D;&#x671F;&#x51C6;&#x5907;" class="plugin-anchor" href="#&#x524D;&#x671F;&#x51C6;&#x5907;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x671F;&#x51C6;&#x5907;</h1>
+<p>window&#x7CFB;&#x7EDF;&#x63A8;&#x8350;phpStudy&#x7B49;&#x96C6;&#x6210;PHP&#x73AF;&#x5883;</p>
+<p>linux&#x7CFB;&#x7EDF;&#xFF1A;LNMP&#xFF08;Linux+Nginx+Mysql+PHP&#xFF09;&#x73AF;&#x5883;</p>
+<p>&#x57DF;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;&#x5728;&#x56FD;&#x5185;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5907;&#x6848;&#xFF0C;&#x7B14;&#x8005;&#x4F7F;&#x7528;&#x4E8C;&#x7EA7;&#x57DF;&#x540D;&#xFF0C;<a href="http://y.xgss.net" target="_blank">http://y.xgss.net</a></p>
+<p><a href="https://imgoss.xgss.net/picgo/&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-YOURLS.jpg?aliyun" data-lightbox="e30b621f-6b5a-4b6d-90ff-90df5ebc8fad" data-title="&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-YOURLS" target="_blank"><img src="https://imgoss.xgss.net/picgo/&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-YOURLS.jpg?aliyun" alt="&#x7B80;&#x5355;&#x90E8;&#x7F72;&#x5F00;&#x6E90;&#x77ED;&#x94FE;&#x5DE5;&#x5177;-YOURLS"></a></p>
+<h2 id="&#x793A;&#x4F8B;"><a name="&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x793A;&#x4F8B;" class="plugin-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
+<p><a href="http://y.xgss.net/aliyun" target="_blank">http://y.xgss.net/aliyun</a> | <a href="http://y.xgss.net/tx" target="_blank">http://y.xgss.net/tx</a></p>
+<h1 id="&#x90E8;&#x7F72;"><a name="&#x90E8;&#x7F72;" class="anchor-navigation-ex-anchor" href="#&#x90E8;&#x7F72;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x90E8;&#x7F72;" class="plugin-anchor" href="#&#x90E8;&#x7F72;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x90E8;&#x7F72;</h1>
+<p>YOURLS &#x7684;&#x5B89;&#x88C5;&#x6D41;&#x7A0B;&#x7C7B;&#x4F3C;&#x4E8E;PHP&#x7AD9;&#x70B9;&#x3002;</p>
+<p>&#x5C06;&#x5B89;&#x88C5;&#x5305;&#x89E3;&#x538B;&#x5E76;&#x4E0A;&#x4F20;&#x81F3;&#x670D;&#x52A1;&#x5668;&#xFF1B;
+&#x5C06; user/config-sample.php &#x91CD;&#x547D;&#x540D;&#x4E3A; user/config.php&#xFF1B;
+&#x7F16;&#x8F91; user/config.php &#x6587;&#x4EF6;&#xFF0C;&#x586B;&#x5165;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;&#x548C;&#x914D;&#x7F6E;&#x7AD9;&#x70B9;&#x9009;&#x9879;&#xFF1B;
+&#x8BBF;&#x95EE; <a href="http://yoursite.com/admin/" target="_blank">http://yoursite.com/admin/</a> &#x5F00;&#x59CB;&#x4F7F;&#x7528;&#x5427;&#xFF01;</p>
+<h2 id="&#x4E0B;&#x8F7D;yourls"><a name="&#x4E0B;&#x8F7D;yourls" class="anchor-navigation-ex-anchor" href="#&#x4E0B;&#x8F7D;yourls"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E0B;&#x8F7D;yourls" class="plugin-anchor" href="#&#x4E0B;&#x8F7D;yourls"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0B;&#x8F7D;YOURLS</h2>
+<p>YOURLS&#x514D;&#x8D39;&#x5F00;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;Github&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF08;<a href="https://github.com/YOURLS/YOURLS/releases&#xFF09;&#xFF0C;&#x89E3;&#x538B;&#x540E;&#x653E;&#x5230;&#x7AD9;&#x70B9;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x5E76;&#x5C06;config-sample.php&#x66F4;&#x540D;&#x4E3A;config.php&#x3002;" target="_blank">https://github.com/YOURLS/YOURLS/releases&#xFF09;&#xFF0C;&#x89E3;&#x538B;&#x540E;&#x653E;&#x5230;&#x7AD9;&#x70B9;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x5E76;&#x5C06;config-sample.php&#x66F4;&#x540D;&#x4E3A;config.php&#x3002;</a></p>
+<pre class="language-"><code>wget https://github.com/YOURLS/YOURLS/archive/refs/tags/1.8.2.tar.gz
+</code></pre><h2 id="&#x914D;&#x7F6E;mysql&#x6570;&#x636E;&#x5E93;"><a name="&#x914D;&#x7F6E;mysql&#x6570;&#x636E;&#x5E93;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;mysql&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;mysql&#x6570;&#x636E;&#x5E93;" class="plugin-anchor" href="#&#x914D;&#x7F6E;mysql&#x6570;&#x636E;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;MySQL&#x6570;&#x636E;&#x5E93;</h2>
+<p>&#x9700;&#x8981;&#x5148;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;MySQL&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x597D;&#x8D26;&#x53F7;&#x3001;&#x5BC6;&#x7801;&#xFF0C;&#x7136;&#x540E;&#x4FEE;&#x6539;user/config.php&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x586B;&#x5199;&#x6B63;&#x786E;&#x7684;MySQL&#x4FE1;&#x606F;&#xFF0C;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x5982;&#x4E0B;&#x3002;</p>
+<p>&#x4FEE;&#x6539;&#x6570;&#x636E;&#x5E93;&#x914D;&#x7F6E;</p>
+<pre class="language-"><code>&#x4FEE;&#x6539; user/config.php
+
+//&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;
+define( &apos;YOURLS_DB_USER&apos;, &apos;your db user name&apos; );
+define( &apos;YOURLS_DB_PASS&apos;, &apos;your db password&apos; );
+define( &apos;YOURLS_DB_NAME&apos;, &apos;yourls&apos; );
+define( &apos;YOURLS_DB_HOST&apos;, &apos;localhost&apos; );
+define( &apos;YOURLS_DB_PREFIX&apos;, &apos;yourls_&apos; );
+
+//&#x8BBE;&#x7F6E;&#x4F60;&#x7684;&#x57DF;&#x540D;
+define( &apos;YOURLS_SITE&apos;, &apos;http://y.xgss.net&apos; );
+
+//&#x8BBE;&#x7F6E;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;
+$yourls_user_passwords = [
+    &apos;admin&apos; =&gt; &apos;123456&apos;, // &#x8BBE;&#x7F6E;&#x597D;&#x5BC6;&#x7801;
+];
+</code></pre><p>&#x8F93;&#x5165;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x540E;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x201C;Could not auto-encrypt passwords. Error was: &#x201C;cannot write file&#x201D;.&#x201D;&#x62A5;&#x9519;&#xFF0C;&#x8BF7;&#x5C06;user/config.php&#x6587;&#x4EF6;&#x7684;&#x6743;&#x9650;&#x6539;&#x4E3A;666&#xFF0C;&#x7136;&#x540E;&#x5237;&#x65B0;&#x7F51;&#x9875;&#xFF0C;&#x518D;&#x628A;&#x6743;&#x9650;&#x6539;&#x56DE;644&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x521A;&#x624D;&#x586B;&#x5199;&#x5BC6;&#x7801;&#x65F6;&#x7528;&#x7684;&#x662F;&#x660E;&#x6587;&#xFF0C;&#x8FD9;&#x6837;&#x5F88;&#x5371;&#x9669;&#xFF0C;&#x6240;&#x4EE5;&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x5BF9;&#x5176;&#x52A0;&#x5BC6;&#x3002;</p>
+<h2 id="&#x914D;&#x7F6E;nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;"><a name="&#x914D;&#x7F6E;nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;" class="plugin-anchor" href="#&#x914D;&#x7F6E;nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;nginx&#x53CD;&#x5411;&#x4EE3;&#x7406;</h2>
+<pre class="language-"><code>server {
+        listen       80;
+        server_name  y.xgss.net;
+        root /data/wwwroot/web/y.xgss.net/;
+        access_log /data/wwwroot/log/y.xgss.net-access.log main_aliyun;
+        error_log /dev/null;
+
+
+        location / {
+                index index.php
+                try_files  $uri $uri/ /yourls-loader.php
+        }
+        location ~ ^/.+\.php {
+        fastcgi_index            index.php;
+        fastcgi_split_path_info  ^(.+\.php)(.*)$;
+        fastcgi_param            SCRIPT_FILENAME $request_filename;
+        fastcgi_param            PATH_INFO $fastcgi_path_info;
+        fastcgi_param            PATH_TRANSLATED $document_root$fastcgi_path_info;
+        include                  fastcgi_params;
+        fastcgi_pass             127.0.0.1:9000;
+        }
+}
+</code></pre><p>&#x91CD;&#x542F;nginx</p>
+<p>&#x5B89;&#x88C5;&#xFF1A;<a href="http://y.xgss.net/admin/install.php" target="_blank">http://y.xgss.net/admin/install.php</a></p>
+<p><a href="https://imgoss.xgss.net/picgo/image-20220309173850010.png?aliyun" data-lightbox="174673b4-7248-4f26-bab6-9281c77b8605" data-title="image-20220309173850010" target="_blank"><img src="https://imgoss.xgss.net/picgo/image-20220309173850010.png?aliyun" alt="image-20220309173850010"></a></p>
+<p>&#x767B;&#x5F55;&#xFF1A;<a href="http://y.xgss.net/admin/" target="_blank">http://y.xgss.net/admin/</a></p>
+<p><a href="https://imgoss.xgss.net/picgo/image-20220309174002660.png?aliyun" data-lightbox="92493827-3499-44dd-a3a9-874d6a612901" data-title="image-20220309174002660" target="_blank"><img src="https://imgoss.xgss.net/picgo/image-20220309174002660.png?aliyun" alt="image-20220309174002660"></a></p>
+<p>&#x6DFB;&#x52A0;&#x77ED;&#x94FE;&#x63A5;</p>
+<p><a href="https://imgoss.xgss.net/picgo/image-20220309174301121.png?aliyun" data-lightbox="b673f179-8bfa-4bdb-b3d0-caac47380d42" data-title="image-20220309174301121" target="_blank"><img src="https://imgoss.xgss.net/picgo/image-20220309174301121.png?aliyun" alt="image-20220309174301121"></a></p>
+<h2 id="yourls&#x6C49;&#x5316;"><a name="yourls&#x6C49;&#x5316;" class="anchor-navigation-ex-anchor" href="#yourls&#x6C49;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="yourls&#x6C49;&#x5316;" class="plugin-anchor" href="#yourls&#x6C49;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>yourls&#x6C49;&#x5316;</h2>
+<p>&#x6C49;&#x5316;&#x5305;&#x7684;git&#x5730;&#x5740;&#x4E3A;<a href="https://github.com/guox/yourls-zh_CN&#xFF0C;&#x4E0B;&#x8F7D;&#x4E2D;&#x6587;&#x5305;&#x7136;&#x540E;&#x89E3;&#x538B;&#x540E;&#x653E;&#x5728;&#x653E;&#x5728;user/languages/&#x76EE;&#x5F55;&#x4E0B;" target="_blank">https://github.com/guox/yourls-zh_CN&#xFF0C;&#x4E0B;&#x8F7D;&#x4E2D;&#x6587;&#x5305;&#x7136;&#x540E;&#x89E3;&#x538B;&#x540E;&#x653E;&#x5728;&#x653E;&#x5728;user/languages/&#x76EE;&#x5F55;&#x4E0B;</a></p>
+<p>YOURLS&#x9ED8;&#x8BA4;&#x662F;&#x4E2D;&#x6587;&#x754C;&#x9762;&#xFF0C;&#x4E0D;&#x65B9;&#x4FBF;&#x64CD;&#x4F5C;&#xFF0C;&#x770B;&#x5230;&#x6709;&#x7F51;&#x53CB;&#x63D0;&#x4F9B;&#x4E86;&#x6C49;&#x5316;&#xFF0C;&#x8BBF;&#x95EE;<a href="https://github.com/guox/yourls-zh_CN/archive/master.zip" target="_blank">yourls-zh_CN</a>&#x4E0B;&#x8F7D;&#x6C49;&#x5316;&#x5305;&#xFF0C;&#x5E76;&#x89E3;&#x538B;&#x81F3;<code>user/languages</code>&#x76EE;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x4FEE;&#x6539;<code>user/config.php</code></p>
+<pre class="language-"><code>#&#x8BED;&#x8A00;&#x5305;&#x653E;&#x5230;languages
+[root@aliyun-hz languages]# ll
+total 68
+-rw-r--r-- 1 www www   210 Apr 23  2017 index.html
+-rw-r--r-- 1 www www    51 Mar 24  2013 README.md
+-rw-r--r-- 1 www www 22123 Mar 24  2013 zh_CN.mo
+-rw-r--r-- 1 www www 32783 Mar 24  2013 zh_CN.po
+#&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x542F;&#x7528;&#x4E2D;&#x6587;
+vi user/config.php
+#&#x542F;&#x7528;&#x4E2D;&#x6587;
+define( &apos;YOURLS_LANG&apos;, &apos;zh_CN&apos; );
+</code></pre><h2 id="yourls--api"><a name="yourls--api" class="anchor-navigation-ex-anchor" href="#yourls--api"><i class="fa fa-link" aria-hidden="true"></i></a><a name="yourls--api" class="plugin-anchor" href="#yourls--api"><i class="fa fa-link" aria-hidden="true"></i></a>YOURLS- API</h2>
+<p>&#x8BF7;&#x6C42;&#x5730;&#x5740;&#xFF1A;<a href="http://&#x57DF;&#x540D;//yourls-api.php" target="_blank">http://&#x57DF;&#x540D;//yourls-api.php</a>
+&#x53C2;&#x6570;&#xFF1A;username(&#x7528;&#x6237;&#x540D;)&#x3001;password&#xFF08;&#x5BC6;&#x7801;&#xFF09;&#x3001;format&#xFF08;&#x683C;&#x5F0F; json&#xFF09;&#x3001;url&#xFF08;&#x957F;&#x5730;&#x5740;&#xFF09;&#x3001;action&#xFF08;&#x529F;&#x80FD;&#xFF0C;shorturl&#xFF09;</p>
+<p>1&#x3001;GET&#x8BF7;&#x6C42;&#xFF0C;&#x6784;&#x5EFA;&#x4E0B;get&#x8BF7;&#x6C42;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;python&#x6784;&#x5EFA;&#x8BF7;&#x6C42;</p>
+<pre class="language-"><code class="lang-powershell">http:<span class="token operator">/</span><span class="token operator">/</span>y<span class="token punctuation">.</span>xgss<span class="token punctuation">.</span>net/yourls-api<span class="token punctuation">.</span>php?username=user&amp;password=password&amp;url=http:<span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com&amp;format=json&amp;action=shorturl
+</code></pre>
+<p><a href="https://imgoss.xgss.net/picgo/image-20220314010326000.png?aliyun" data-lightbox="31352bda-cc12-4e99-b498-9236c3c58aea" data-title="image-20220314010326000" target="_blank"><img src="https://imgoss.xgss.net/picgo/image-20220314010326000.png?aliyun" alt="image-20220314010326000"></a></p>
+<p>python&#x6784;&#x5EFA;get&#x8BF7;&#x6C42;</p>
+<pre class="language-"><code class="lang-powershell">import requests<span class="token punctuation">,</span> json
+
+url = <span class="token string">&quot;http://10.0.0.101/yourls-api.php?&quot;</span>
+<span class="token keyword">data</span> = <span class="token punctuation">{</span><span class="token string">&quot;username&quot;</span>:<span class="token string">&quot;wangxiaoyu&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;password&quot;</span>:<span class="token string">&quot;123456&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;url&quot;</span>:<span class="token string">&quot;http://www.baidu.com&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;format&quot;</span>:<span class="token string">&quot;json&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;action&quot;</span>:<span class="token string">&quot;shorturl&quot;</span><span class="token punctuation">}</span>
+response = requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token keyword">data</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>response<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8BBF;&#x95EE;&#x8FD4;&#x56DE;&#x7684;<a href="http://10.0.0.101/q94n1k&#x8FD9;&#x4E2A;&#x77ED;&#x94FE;&#x63A5;&#x53EF;&#x4EE5;&#x8DF3;&#x8F6C;&#x5230;&#x767E;&#x5EA6;" target="_blank">http://10.0.0.101/q94n1k&#x8FD9;&#x4E2A;&#x77ED;&#x94FE;&#x63A5;&#x53EF;&#x4EE5;&#x8DF3;&#x8F6C;&#x5230;&#x767E;&#x5EA6;</a>
+&#x8FD4;&#x56DE;&#x4FE1;&#x606F;&#x4E3A;</p>
+<pre class="language-"><code class="lang-python"><span class="token punctuation">{</span>
+    <span class="token string">&apos;url&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&apos;keyword&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;q94o0a&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;url&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;http://www.baidu.com&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;title&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#xFF0C;&#x4F60;&#x5C31;&#x77E5;&#x9053;&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;date&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;2020-04-21 07:40:58&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;ip&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;10.0.0.1&apos;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;status&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;success&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;message&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;http://www.baidu.com &#x5DF2;&#x4FDD;&#x5B58;&#x4E3A;&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;title&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#xFF0C;&#x4F60;&#x5C31;&#x77E5;&#x9053;&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;shorturl&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;http://10.0.0.101/q94o0a&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;statusCode&apos;</span><span class="token punctuation">:</span> <span class="token number">200</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;format&#x4E3A;json&#x7684;&#x8BDD;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;XML&#x683C;&#x5F0F;
+<a href="https://imgoss.xgss.net/picgo/3b75393125636a4d837138e075bfd303.png?aliyun" data-lightbox="5e9a17e2-99b5-4a24-9cb3-51f4efffd2ff" data-title="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;" target="_blank"><img src="https://imgoss.xgss.net/picgo/3b75393125636a4d837138e075bfd303.png?aliyun" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></a></p>
+<p>2&#x3001;POST&#x8BF7;&#x6C42;
+&#x7528;python&#x6765;&#x53D1;&#x9001;POST&#x8BF7;&#x6C42;&#x6D4B;&#x8BD5;
+&#x8FD9;&#x91CC;&#x4EE5;form&#x8868;&#x5355;&#x5F62;&#x5F0F;&#x63D0;&#x4EA4;&#x6570;&#x636E;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x5C06;POST&#x7684;data&#x8F6C;&#x4E3A;json&#x683C;&#x5F0F;
+POST&#x8BF7;&#x6C42;&#x7684;&#x51E0;&#x79CD;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;<a href="https://www.cnblogs.com/android-it/p/9558751.html" target="_blank">https://www.cnblogs.com/android-it/p/9558751.html</a></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> requests<span class="token punctuation">,</span> json
+
+url <span class="token operator">=</span> <span class="token string">&quot;http://10.0.0.101/yourls-api.php?&quot;</span>
+data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;wangxiaoyu&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;password&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;123456&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;url&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;http://www.baidu.com&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;format&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;json&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;action&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;shorturl&quot;</span><span class="token punctuation">}</span>
+response <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>response<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x4FE1;&#x606F;&#x4E3A;</p>
+<pre class="language-"><code class="lang-python"><span class="token punctuation">{</span>
+    <span class="token string">&apos;url&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&apos;keyword&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;q94nkx&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;url&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;http://www.baidu.com&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;title&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#xFF0C;&#x4F60;&#x5C31;&#x77E5;&#x9053;&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;date&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;2020-04-21 07:31:45&apos;</span><span class="token punctuation">,</span>
+        <span class="token string">&apos;ip&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;10.0.0.1&apos;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;status&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;success&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;message&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;http://www.baidu.com &#x5DF2;&#x4FDD;&#x5B58;&#x4E3A;&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;title&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;&#x767E;&#x5EA6;&#x4E00;&#x4E0B;&#xFF0C;&#x4F60;&#x5C31;&#x77E5;&#x9053;&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;shorturl&apos;</span><span class="token punctuation">:</span> <span class="token string">&apos;http://10.0.0.101/q94nkx&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;statusCode&apos;</span><span class="token punctuation">:</span> <span class="token number">200</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>3&#x3001;&#x4F7F;&#x7528;token&#x800C;&#x4E0D;&#x4F7F;&#x7528;&#x8D26;&#x53F7;&#x5BC6;&#x7801;</p>
+<p>YOURLS&#x5141;&#x8BB8;&#x4F7F;&#x7528;username&#x548C;password&#x53C2;&#x6570;&#xFF08;&#x5982;&#x679C;&#x60A8;&#x7684;&#x8BBE;&#x7F6E;&#x662F;&#x79C1;&#x6709;&#x7684;&#x8BDD;&#xFF09;&#x4EE5;&#x8001;&#x5F0F;&#x7684;&#x65B9;&#x5F0F;&#x8C03;&#x7528;API &#x3002;&#x5982;&#x679C;&#x60A8;&#x62C5;&#x5FC3;&#x5C06;&#x81EA;&#x5DF1;&#x7684;&#x51ED;&#x8BC1;&#x53D1;&#x9001;&#x51FA;&#x53BB;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x79D8;&#x5BC6;&#x7B7E;&#x540D;&#x4EE4;&#x724C;&#x8FDB;&#x884C;API&#x8C03;&#x7528;&#x3002;
+signature&#x5728;API&#x8BF7;&#x6C42;&#x4E2D;&#x4F7F;&#x7528;&#x53C2;&#x6570;&#x3002;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-powershell">http:<span class="token operator">/</span><span class="token operator">/</span>yoursite/yourls-api<span class="token punctuation">.</span>php?signature=1002a612b4&amp;action=<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>python&#x793A;&#x4F8B;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> requests<span class="token punctuation">,</span> json
+
+url <span class="token operator">=</span> <span class="token string">&quot;http://10.0.0.101/yourls-api.php?&quot;</span>
+data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;signature&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;6962355501&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;url&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;http://www.baidu.com&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;format&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;json&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;action&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;shorturl&quot;</span><span class="token punctuation">}</span>
+response <span class="token operator">=</span> requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>response<span class="token punctuation">.</span>text<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h1 id="&#x5B89;&#x88C5;sleeky&#x4E3B;&#x9898;&#xFF0C;&#x7F8E;&#x5316;yourls"><a name="&#x5B89;&#x88C5;sleeky&#x4E3B;&#x9898;&#xFF0C;&#x7F8E;&#x5316;yourls" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;sleeky&#x4E3B;&#x9898;&#xFF0C;&#x7F8E;&#x5316;yourls"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B89;&#x88C5;sleeky&#x4E3B;&#x9898;&#xFF0C;&#x7F8E;&#x5316;yourls" class="plugin-anchor" href="#&#x5B89;&#x88C5;sleeky&#x4E3B;&#x9898;&#xFF0C;&#x7F8E;&#x5316;yourls"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;Sleeky&#x4E3B;&#x9898;&#xFF0C;&#x7F8E;&#x5316;YOURLS</h1>
+<p>YOURLS&#x754C;&#x9762;&#x663E;&#x5F97;&#x975E;&#x5E38;&#x53E4;&#x8001;&#xFF0C;&#x98CE;&#x683C;&#x633A;&#x8001;&#x7684;&#xFF0C;&#x524D;&#x51E0;&#x5929;&#x5728;Github&#x4E0A;&#x770B;&#x5230;&#x4E00;&#x6B3E;YOURLS&#x4E3B;&#x9898;Sleeky&#xFF0C;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x5206;&#x4EAB;&#x4E0B;Sleeky&#x4E3B;&#x9898;&#x7684;&#x5B89;&#x88C5;&#xFF0C;&#x5E0C;&#x671B;&#x5BF9;&#x4F60;&#x6709;&#x6240;&#x5E2E;&#x52A9;&#x3002;</p>
+<p>&#x5B89;&#x88C5;Sleeky&#x4E3B;&#x9898;</p>
+<p>&#x6700;&#x65B0;&#x7248;Sleeky&#x4E3B;&#x9898;&#x53EF;&#x524D;&#x5F80;Github&#x4E0B;&#x8F7D;&#xFF1A;<a href="https://github.com/Flynntes/Sleeky/releases" target="_blank">https://github.com/Flynntes/Sleeky/releases</a></p>
+<p>Sleeky&#x4E3B;&#x9898;&#x4E3B;&#x9898;&#x5305;&#x62EC;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x4E00;&#x90E8;&#x5206;&#x662F;YOURLS&#x524D;&#x7AEF;&#xFF0C;&#x53E6;&#x4E00;&#x90E8;&#x5206;&#x662F;YOURLS&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x3002;&#x4E0B;&#x8F7D;Sleeky&#x4E3B;&#x9898;&#x4E3B;&#x9898;&#x540E;&#x53EF;&#x770B;&#x5230;&#x6709;2&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#xFF1A;</p>
+<pre class="language-"><code>sleeky-frontend: &#x524D;&#x7AEF;&#x4E3B;&#x9898;
+sleeky-backend&#xFF1A;&#x540E;&#x7AEF;&#x4E3B;&#x9898;
+</code></pre><p>&#x5C06;sleeky-frontend&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x5185;&#x5BB9;&#x653E;&#x5230;YOURLS&#x7AD9;&#x70B9;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x5373;&#x53EF;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x989D;&#x5916;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;YOURLS&#x4E3B;&#x754C;&#x9762;&#x5373;&#x53EF;&#x770B;&#x5230;&#x6548;&#x679C;&#x3002;</p>
+<p><a href="https://imgoss.xgss.net/picgo/image-20220324135010266.png?aliyun" data-lightbox="0e22840e-5ec5-4657-bbd8-3ff8e216bd02" data-title="image-20220324135010266" target="_blank"><img src="https://imgoss.xgss.net/picgo/image-20220324135010266.png?aliyun" alt="image-20220324135010266"></a></p>
+<p>&#x5C06;&#x540E;&#x7AEF;&#x6587;&#x4EF6;&#x5939;sleeky-backend&#x653E;&#x5230;YOURLS&#x4E0B;&#x7684;/user/plugins&#x76EE;&#x5F55;&#xFF0C;&#x5E76;&#x5728;YOURLS&#x540E;&#x53F0;&#x542F;&#x7528;Sleeky&#x4E3B;&#x9898;&#x63D2;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x3002;</p>
+<p><a href="https://imgoss.xgss.net/picgo/image-20220324135929039.png?aliyun" data-lightbox="ce39f929-be03-4242-8cb6-33b3266c2202" data-title="image-20220324135929039" target="_blank"><img src="https://imgoss.xgss.net/picgo/image-20220324135929039.png?aliyun" alt="image-20220324135929039"></a></p>
+<p>&#x65E7;&#x7684;&#x540E;&#x53F0;&#x5730;&#x5740;&#xFF1A;</p>
+<p><a href="https://imgoss.xgss.net/picgo/image-20220324140031738.png?aliyun" data-lightbox="667fde26-4705-4faa-81c1-9b294682496b" data-title="image-20220324140031738" target="_blank"><img src="https://imgoss.xgss.net/picgo/image-20220324140031738.png?aliyun" alt="image-20220324140031738"></a></p>
+<p>&#x65B0;&#x7684;&#x540E;&#x53F0;&#x754C;&#x9762;&#xFF1A;</p>
+<p><a href="https://imgoss.xgss.net/picgo/image-20220324135959700.png?aliyun" data-lightbox="7b87cbc6-3d28-46b7-a197-92b84c400477" data-title="image-20220324135959700" target="_blank"><img src="https://imgoss.xgss.net/picgo/image-20220324135959700.png?aliyun" alt="image-20220324135959700"></a></p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; g.xgss.net all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-04-28 11:19:37
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="云服务器搭建自己的ngrok服务-实现内网穿透.html" class="navigation navigation-prev " aria-label="Previous page: 云服务器搭建自己的ngrok服务实现内网穿透">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="通过Heimdall开源免费，搭建自己的网络书签.html" class="navigation navigation-next " aria-label="Next page: 通过Heimdall开源免费，搭建自己的网络书签">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"云服务器部署开源短链生成-YOURLS","level":"1.11.5","depth":2,"next":{"title":"通过Heimdall开源免费，搭建自己的网络书签","level":"1.11.6","depth":2,"path":"doc/Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.md","ref":"doc/Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.md","articles":[]},"previous":{"title":"云服务器搭建自己的ngrok服务实现内网穿透","level":"1.11.4","depth":2,"path":"doc/Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.md","ref":"doc/Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.md","articles":[]},"dir":"ltr"},"config":{"plugins":["search-pro","back-to-top-button","splitter","anchors","github","donate","sharing-plus","anchor-navigation-ex","favicon","tbfed-pagefooter","-pageview-count","lightbox","-page-treeview","-page-toc-button","expandable-chapters","chapter-fold","code","theme-comscore","prism"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy g.xgss.net","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/funet8/g.xgss.net?g.xgss.net"},"baidu-tongji":{"token":"559562c6410b9fd49a0afe52650d40bd"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"alipay":"https://img.funet8.com/images/alipay_donate.jpg","alipayText":"支付宝打赏","button":"打赏","title":"请俺喝一杯茶","wechat":"https://img.funet8.com/images/wechat_donate.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":false,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"sharing":{"qq":true,"all":["weibo","douban","qq","qzone","facebook","google","instapaper","linkedin","twitter","messenger","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"twitter":true,"vk":false,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"星哥的书籍","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"github-buttons":{"buttons":[{"user":"Blankj","repo":"glory","type":"star","size":"small","count":true}]},"title":"Linux私有教程","language":"zh-hans","links":{"sidebar":{"星哥说事":"https://www.xgss.net","阿里云优惠":"http://y.xgss.net/aliyun","腾讯云优惠":"http://y.xgss.net/tx"}},"gitbook":"*","description":"Linux教程工作中总结的教程"},"file":{"path":"doc/Open-Source-Software/云服务器部署开源短链生成-YOURLS.md","mtime":"2022-04-28T03:19:37.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-16T03:20:52.903Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

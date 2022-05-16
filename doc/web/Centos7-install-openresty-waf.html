@@ -1,0 +1,1771 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Centos7安装openresty实现WAF防火墙功能 · Linux私有教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="星哥的书籍">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Linux服务器故障排查基本方案.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.xgss.net" target="_blank" class="custom-link">星哥说事</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://y.xgss.net/aliyun" target="_blank" class="custom-link">阿里云优惠</a>
+        </li>
+    
+        
+        <li>
+            <a href="http://y.xgss.net/tx" target="_blank" class="custom-link">腾讯云优惠</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    项目介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linux-basis/">
+            
+                <a href="../linux-basis/">
+            
+                    
+                    Linux基础教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux-basis/Linux.html">
+            
+                <a href="../linux-basis/Linux.html">
+            
+                    
+                    Linux 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../linux-basis/CentOS-7-Install.html">
+            
+                <a href="../linux-basis/CentOS-7-Install.html">
+            
+                    
+                    CentOS 7 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../linux-basis/CentOS6-and-CentOS7.html">
+            
+                <a href="../linux-basis/CentOS6-and-CentOS7.html">
+            
+                    
+                    CentOS 6 和 CentOS 7 差异
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../linux-basis/Linux常用命令及其使用详解.html">
+            
+                <a href="../linux-basis/Linux常用命令及其使用详解.html">
+            
+                    
+                    Linux常用命令及其使用详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../linux-basis/Cloud-Server-What-todo.html">
+            
+                <a href="../linux-basis/Cloud-Server-What-todo.html">
+            
+                    
+                    拥有一台云服务器能干嘛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../linux-basis/cdn.html">
+            
+                <a href="../linux-basis/cdn.html">
+            
+                    
+                    一文读懂CDN和CDN实现的原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../linux-basis/负载均衡和CDN技术.html">
+            
+                <a href="../linux-basis/负载均衡和CDN技术.html">
+            
+                    
+                    负载均衡和CDN技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../linux-basis/operating-system-based.html">
+            
+                <a href="../linux-basis/operating-system-based.html">
+            
+                    
+                    资深运维工程师必须了解的操作系统基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../linux-basis/Linux服务器配置SSH免密码登陆.html">
+            
+                <a href="../linux-basis/Linux服务器配置SSH免密码登陆.html">
+            
+                    
+                    Linux服务器配置SSH免密码登陆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../linux-basis/一张图学会Git.html">
+            
+                <a href="../linux-basis/一张图学会Git.html">
+            
+                    
+                    一张图学会Git
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../basis-tools/">
+            
+                <a href="../basis-tools/">
+            
+                    
+                    服务器基础工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basis-tools/Linux使用mail配合smtp发送邮件.html">
+            
+                <a href="../basis-tools/Linux使用mail配合smtp发送邮件.html">
+            
+                    
+                    Linux使用mail配合smtp发送邮件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basis-tools/GoAccess轻量nginx日志分析工具.html">
+            
+                <a href="../basis-tools/GoAccess轻量nginx日志分析工具.html">
+            
+                    
+                    GoAccess轻量nginx日志分析工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    WEB服务
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="Centos7-install-openresty-waf.html">
+            
+                <a href="Centos7-install-openresty-waf.html">
+            
+                    
+                    Centos7安装openresty实现WAF防火墙功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Linux服务器故障排查基本方案.html">
+            
+                <a href="Linux服务器故障排查基本方案.html">
+            
+                    
+                    Linux服务器故障排查基本方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../file-system/">
+            
+                <a href="../file-system/">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../file-system/CentOS7下LVM给硬盘扩容操作.html">
+            
+                <a href="../file-system/CentOS7下LVM给硬盘扩容操作.html">
+            
+                    
+                    CentOS7下LVM给硬盘扩容操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.html">
+            
+                <a href="../file-system/CentOS7下LVM给腾讯云云硬盘扩容操作.html">
+            
+                    
+                    CentOS7下LVM给腾讯云云硬盘扩容操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../file-system/Linux安装samba与windows实现共享文件夹.html">
+            
+                <a href="../file-system/Linux安装samba与windows实现共享文件夹.html">
+            
+                    
+                    Linux安装samba与windows实现共享文件夹
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../gitbook/Gitbook.html">
+            
+                <a href="../gitbook/Gitbook.html">
+            
+                    
+                    Gitbook基本使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../gitbook/Jenkins_Github.html">
+            
+                <a href="../gitbook/Jenkins_Github.html">
+            
+                    
+                    Jenkins+Github实现文档持续集成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../gitbook/Github-Page-my-domain.html">
+            
+                <a href="../gitbook/Github-Page-my-domain.html">
+            
+                    
+                    Github Page怎么绑定自己的域名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../gitbook/gitbook中使用百度统计查看页面访问情况.html">
+            
+                <a href="../gitbook/gitbook中使用百度统计查看页面访问情况.html">
+            
+                    
+                    gitbook中使用百度统计查看页面访问情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../gitbook/gitbook使用gitalk插件制作留言板.html">
+            
+                <a href="../gitbook/gitbook使用gitalk插件制作留言板.html">
+            
+                    
+                    gitbook使用gitalk插件制作留言板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../android-to-apk/">
+            
+                <a href="../android-to-apk/">
+            
+                    
+                    自动打包安卓APP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../android-to-apk/1.Centos7-Android-software.html">
+            
+                <a href="../android-to-apk/1.Centos7-Android-software.html">
+            
+                    
+                    在CentOS 7下构建安卓Android编译环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../jenkins/CentOS-7-Install-Jenkins.html">
+            
+                <a href="../jenkins/CentOS-7-Install-Jenkins.html">
+            
+                    
+                    CentOS7下安装Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../android-to-apk/3.Centos7-Android-jenkins.html">
+            
+                <a href="../android-to-apk/3.Centos7-Android-jenkins.html">
+            
+                    
+                    基于centos7的jenkins安卓自动打包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../safe/readme.html">
+            
+                <a href="../safe/readme.html">
+            
+                    
+                    服务器安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../safe/Web-safe.html">
+            
+                <a href="../safe/Web-safe.html">
+            
+                    
+                    WEB服务器攻击类型和应对方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../safe/why-ssl-safe.html">
+            
+                <a href="../safe/why-ssl-safe.html">
+            
+                    
+                    为什么说HTTPS是安全的
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../software/">
+            
+                <a href="../software/">
+            
+                    
+                    开发常用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../software/Typora_PicGo_Gitee_markdown_pic.html">
+            
+                <a href="../software/Typora_PicGo_Gitee_markdown_pic.html">
+            
+                    
+                    Typora+PicGo+Gitee或github实现markdown自带图床效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../software/Typora_PicGo_aliyun_oss.html">
+            
+                <a href="../software/Typora_PicGo_aliyun_oss.html">
+            
+                    
+                    程序员必备-Typora+PicGo+阿里云oss实现图床
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../software/Typora_PicGo_failedto_Fetch.html">
+            
+                <a href="../software/Typora_PicGo_failedto_Fetch.html">
+            
+                    
+                    PicGo failed to Fetch 出错解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../software/Install-PhpStorm.html">
+            
+                <a href="../software/Install-PhpStorm.html">
+            
+                    
+                    安装PhpStorm、破解、汉化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../software/Xmind2021安装激活破解.html">
+            
+                <a href="../software/Xmind2021安装激活破解.html">
+            
+                    
+                    Xmind2021安装激活破解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../software/Windows下VSCode及中文配置.html">
+            
+                <a href="../software/Windows下VSCode及中文配置.html">
+            
+                    
+                    Windows下VSCode及中文配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../internet/">
+            
+                <a href="../internet/">
+            
+                    
+                    互联网
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../internet/programmer_position_skills.html">
+            
+                <a href="../internet/programmer_position_skills.html">
+            
+                    
+                    互联网程序员各个职位技能图-多图警告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../internet/qinglong_jingdongdou.html">
+            
+                <a href="../internet/qinglong_jingdongdou.html">
+            
+                    
+                    青龙面板每天自动获取某东豆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../internet/jd_cookie.html">
+            
+                <a href="../internet/jd_cookie.html">
+            
+                    
+                    利用谷歌浏览器获取京东Cookie抓取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.html">
+            
+                <a href="../internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.html">
+            
+                    
+                    助力居家办公，免费领取语雀 VIP 会员 1-3 年
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Open-Source-Software/">
+            
+                <a href="../Open-Source-Software/">
+            
+                    
+                    开源软件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.html">
+            
+                <a href="../Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.html">
+            
+                    
+                    免费开源iPhone推送消息工具+服务端-Bark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.html">
+            
+                <a href="../Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.html">
+            
+                    
+                    搭建免费开源监控系统uptime-kuma
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Open-Source-Software/免费开源Github Page实现短链接方案.html">
+            
+                <a href="../Open-Source-Software/免费开源Github Page实现短链接方案.html">
+            
+                    
+                    免费开源Github Page实现短链接方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.html">
+            
+                <a href="../Open-Source-Software/云服务器搭建自己的ngrok服务-实现内网穿透.html">
+            
+                    
+                    云服务器搭建自己的ngrok服务实现内网穿透
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Open-Source-Software/云服务器部署开源短链生成-YOURLS.html">
+            
+                <a href="../Open-Source-Software/云服务器部署开源短链生成-YOURLS.html">
+            
+                    
+                    云服务器部署开源短链生成-YOURLS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.html">
+            
+                <a href="../Open-Source-Software/通过Heimdall开源免费，搭建自己的网络书签.html">
+            
+                    
+                    通过Heimdall开源免费，搭建自己的网络书签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../Open-Source-Software/AdGuard搭建去广告公共DNS.html">
+            
+                <a href="../Open-Source-Software/AdGuard搭建去广告公共DNS.html">
+            
+                    
+                    AdGuard搭建去广告公共DNS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../Open-Source-Software/开源文档管理系统.html">
+            
+                <a href="../Open-Source-Software/开源文档管理系统.html">
+            
+                    
+                    开源文档管理系统汇总
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Apollo/readme.html">
+            
+                <a href="../Apollo/readme.html">
+            
+                    
+                    开源软件-Apollo
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Apollo/1.基于Linux搭建开源配置管理中心apollo.html">
+            
+                <a href="../Apollo/1.基于Linux搭建开源配置管理中心apollo.html">
+            
+                    
+                    基于Linux搭建开源配置管理中心apollo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Apollo/2.开源配置管理中心apollo使用方法.html">
+            
+                <a href="../Apollo/2.开源配置管理中心apollo使用方法.html">
+            
+                    
+                    开源配置管理中心apollo使用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Open-databases/">
+            
+                <a href="../Open-databases/">
+            
+                    
+                    开源软件-数据库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Open-databases/1_Archery_Install_Docker.html">
+            
+                <a href="../Open-databases/1_Archery_Install_Docker.html">
+            
+                    
+                    Archery-基于docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Open-databases/2_Archery_config.html">
+            
+                <a href="../Open-databases/2_Archery_config.html">
+            
+                    
+                    Archery-后台配置基本操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Open-databases/3_Archery_online.html">
+            
+                <a href="../Open-databases/3_Archery_online.html">
+            
+                    
+                    Archery-SQL上线流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Open-databases/4.sql-bieming.html">
+            
+                <a href="../Open-databases/4.sql-bieming.html">
+            
+                    
+                    Archery-SQL上线提示库名过长，建议使用别名解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Open-databases/开源的数据同步中间件-DBSyncer.html">
+            
+                <a href="../Open-databases/开源的数据同步中间件-DBSyncer.html">
+            
+                    
+                    开源的数据同步中间件-DBSyncer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../cloud-disk/">
+            
+                <a href="../cloud-disk/">
+            
+                    
+                    网盘系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../cloud-disk/OwnCloud.html">
+            
+                <a href="../cloud-disk/OwnCloud.html">
+            
+                    
+                    OwnCloud搭建自己的私有云盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../blog/">
+            
+                <a href="../blog/">
+            
+                    
+                    博客系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../blog/基于VuePress和github搭建无服务器博客、文档系统.html">
+            
+                <a href="../blog/基于VuePress和github搭建无服务器博客、文档系统.html">
+            
+                    
+                    基于VuePress和github搭建无服务器博客、文档系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../debug/">
+            
+                <a href="../debug/">
+            
+                    
+                    调试Debug
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../debug/innodb_online_alter_log_max_size.html">
+            
+                <a href="../debug/innodb_online_alter_log_max_size.html">
+            
+                    
+                    Mysql数据库在释放一个数亿记录的表报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Centos7安装openresty实现WAF防火墙功能</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#centos7&#x5B89;&#x88C5;openresty&#x5B9E;&#x73B0;waf&#x9632;&#x706B;&#x5899;&#x529F;&#x80FD;"><b></b>Centos7&#x5B89;&#x88C5;openresty&#x5B9E;&#x73B0;WAF&#x9632;&#x706B;&#x5899;&#x529F;&#x80FD;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7CFB;&#x7EDF;&#x8BF4;&#x660E;"><b></b>&#x7CFB;&#x7EDF;&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#&#x5B9E;&#x73B0;waf"><b></b>&#x5B9E;&#x73B0;WAF</a></li><li><span class="title-icon "></span><a href="#waf&#x529F;&#x80FD;&#x5217;&#x8868;"><b></b>WAF&#x529F;&#x80FD;&#x5217;&#x8868;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6E90;&#x7801;&#x5B89;&#x88C5;openresty"><b></b>&#x6E90;&#x7801;&#x5B89;&#x88C5;openresty</a></li><ul><li><span class="title-icon "></span><a href="#yum&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;"><b></b>yum&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;</a></li><li><span class="title-icon "></span><a href="#&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5305;&#x5E76;&#x4E14;&#x5B89;&#x88C5;"><b></b>&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5305;&#x5E76;&#x4E14;&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><b></b>&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#&#x9A8C;&#x8BC1;"><b></b>&#x9A8C;&#x8BC1;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><b></b>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;&#x5E76;&#x4E14;&#x914D;&#x7F6E;waf"><b></b>&#x5B89;&#x88C5;&#x5E76;&#x4E14;&#x914D;&#x7F6E;WAF</a></li><li><span class="title-icon "></span><a href="#waf&#x6A21;&#x5757;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BE6;&#x89E3;"><b></b>WAF&#x6A21;&#x5757;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BE6;&#x89E3;</a></li><ul><li><span class="title-icon "></span><a href="#ip&#x9ED1;&#x540D;&#x5355;&#x914D;&#x7F6E;"><b></b>IP&#x9ED1;&#x540D;&#x5355;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#ip&#x767D;&#x540D;&#x5355;&#x914D;&#x7F6E;"><b></b>IP&#x767D;&#x540D;&#x5355;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#cc&#x653B;&#x51FB;&#x8FC7;&#x6EE4;"><b></b>CC&#x653B;&#x51FB;&#x8FC7;&#x6EE4;</a></li><li><span class="title-icon "></span><a href="#&#x5F02;&#x5E38;url&#x7B56;&#x7565;&#x914D;&#x7F6E;"><b></b>&#x5F02;&#x5E38;URL&#x7B56;&#x7565;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x5F02;&#x5E38;useragent&#x7B56;&#x7565;&#x914D;&#x7F6E;"><b></b>&#x5F02;&#x5E38;UserAgent&#x7B56;&#x7565;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x5F02;&#x5E38;get&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;"><b></b>&#x5F02;&#x5E38;Get&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x5F02;&#x5E38;post&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;"><b></b>&#x5F02;&#x5E38;POST&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;</a></li></ul></ul></div><h1 id="centos7&#x5B89;&#x88C5;openresty&#x5B9E;&#x73B0;waf&#x9632;&#x706B;&#x5899;&#x529F;&#x80FD;"><a name="centos7&#x5B89;&#x88C5;openresty&#x5B9E;&#x73B0;waf&#x9632;&#x706B;&#x5899;&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#centos7&#x5B89;&#x88C5;openresty&#x5B9E;&#x73B0;waf&#x9632;&#x706B;&#x5899;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="centos7&#x5B89;&#x88C5;openresty&#x5B9E;&#x73B0;waf&#x9632;&#x706B;&#x5899;&#x529F;&#x80FD;" class="plugin-anchor" href="#centos7&#x5B89;&#x88C5;openresty&#x5B9E;&#x73B0;waf&#x9632;&#x706B;&#x5899;&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>Centos7&#x5B89;&#x88C5;openresty&#x5B9E;&#x73B0;WAF&#x9632;&#x706B;&#x5899;&#x529F;&#x80FD;</h1>
+<p>OpenResty&#xAE; &#x662F;&#x4E00;&#x4E2A;&#x7ED3;&#x5408;&#x4E86; Nginx &#x4E0E; Lua &#x7684;&#x9AD8;&#x6027;&#x80FD; Web &#x5E73;&#x53F0;&#xFF0C;&#x5176;&#x5185;&#x90E8;&#x96C6;&#x6210;&#x4E86;&#x5927;&#x91CF;&#x7CBE;&#x826F;&#x7684; Lua &#x5E93;&#x3001;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x4EE5;&#x53CA;&#x5927;&#x591A;&#x6570;&#x7684;&#x4F9D;&#x8D56;&#x9879;&#x3002;&#x7528;&#x4E8E;&#x65B9;&#x4FBF;&#x5730;&#x642D;&#x5EFA;&#x80FD;&#x591F;&#x5904;&#x7406;&#x8D85;&#x9AD8;&#x5E76;&#x53D1;&#x3001;&#x6269;&#x5C55;&#x6027;&#x6781;&#x9AD8;&#x7684;&#x52A8;&#x6001; Web &#x5E94;&#x7528;&#x3001;Web &#x670D;&#x52A1;&#x548C;&#x52A8;&#x6001;&#x7F51;&#x5173;&#x3002;
+OpenResty&#xAE; &#x901A;&#x8FC7;&#x6C47;&#x805A;&#x5404;&#x79CD;&#x8BBE;&#x8BA1;&#x7CBE;&#x826F;&#x7684; Nginx &#x6A21;&#x5757;&#xFF08;&#x4E3B;&#x8981;&#x7531; OpenResty &#x56E2;&#x961F;&#x81EA;&#x4E3B;&#x5F00;&#x53D1;&#xFF09;&#xFF0C;&#x4ECE;&#x800C;&#x5C06; Nginx &#x6709;&#x6548;&#x5730;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x5F3A;&#x5927;&#x7684;&#x901A;&#x7528; Web &#x5E94;&#x7528;&#x5E73;&#x53F0;&#x3002;&#x8FD9;&#x6837;&#xFF0C;Web &#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x548C;&#x7CFB;&#x7EDF;&#x5DE5;&#x7A0B;&#x5E08;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Lua &#x811A;&#x672C;&#x8BED;&#x8A00;&#x8C03;&#x52A8; Nginx &#x652F;&#x6301;&#x7684;&#x5404;&#x79CD; C &#x4EE5;&#x53CA; Lua &#x6A21;&#x5757;&#xFF0C;&#x5FEB;&#x901F;&#x6784;&#x9020;&#x51FA;&#x8DB3;&#x4EE5;&#x80DC;&#x4EFB; 10K &#x4E43;&#x81F3; 1000K &#x4EE5;&#x4E0A;&#x5355;&#x673A;&#x5E76;&#x53D1;&#x8FDE;&#x63A5;&#x7684;&#x9AD8;&#x6027;&#x80FD; Web &#x5E94;&#x7528;&#x7CFB;&#x7EDF;&#x3002;
+OpenResty&#xAE; &#x7684;&#x76EE;&#x6807;&#x662F;&#x8BA9;&#x4F60;&#x7684;Web&#x670D;&#x52A1;&#x76F4;&#x63A5;&#x8DD1;&#x5728; Nginx &#x670D;&#x52A1;&#x5185;&#x90E8;&#xFF0C;&#x5145;&#x5206;&#x5229;&#x7528; Nginx &#x7684;&#x975E;&#x963B;&#x585E; I/O &#x6A21;&#x578B;&#xFF0C;&#x4E0D;&#x4EC5;&#x4EC5;&#x5BF9; HTTP &#x5BA2;&#x6237;&#x7AEF;&#x8BF7;&#x6C42;,&#x751A;&#x81F3;&#x4E8E;&#x5BF9;&#x8FDC;&#x7A0B;&#x540E;&#x7AEF;&#x8BF8;&#x5982; MySQL&#x3001;PostgreSQL&#x3001;Memcached &#x4EE5;&#x53CA; Redis &#x7B49;&#x90FD;&#x8FDB;&#x884C;&#x4E00;&#x81F4;&#x7684;&#x9AD8;&#x6027;&#x80FD;&#x54CD;&#x5E94;&#x3002;</p>
+<p><a href="https://imgoss.xgss.net/picgo/Centos7-openresty-16415487083161.jpg?aliyun" data-lightbox="2c1381fe-d45a-4efe-a4be-e06155b44a51" data-title="Centos7-openresty" target="_blank"><img src="https://imgoss.xgss.net/picgo/Centos7-openresty-16415487083161.jpg?aliyun" alt="Centos7-openresty"></a></p>
+<h2 id="&#x7CFB;&#x7EDF;&#x8BF4;&#x660E;"><a name="&#x7CFB;&#x7EDF;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x7CFB;&#x7EDF;&#x8BF4;&#x660E;" class="plugin-anchor" href="#&#x7CFB;&#x7EDF;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7CFB;&#x7EDF;&#x8BF4;&#x660E;</h2>
+<pre class="language-"><code>&#x7CFB;&#x7EDF;&#xFF1A; centos7
+ip: 192.168.1.4
+</code></pre><h2 id="&#x5B9E;&#x73B0;waf"><a name="&#x5B9E;&#x73B0;waf" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x73B0;waf"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B9E;&#x73B0;waf" class="plugin-anchor" href="#&#x5B9E;&#x73B0;waf"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x73B0;WAF</h2>
+<p>&#x4E24;&#x79CD;&#x65B9;&#x5F0F;</p>
+<p>1.&#x4F7F;&#x7528;nginx+lua&#x6765;&#x5B9E;&#x73B0;WAF,&#x987B;&#x5728;&#x7F16;&#x8BD1;nginx&#x7684;&#x65F6;&#x5019;&#x914D;&#x7F6E;&#x4E0A;lua&#x3002;</p>
+<p>2.&#x90E8;&#x7F72;OpenResty,&#x4E0D;&#x9700;&#x8981;&#x5728;&#x7F16;&#x8BD1;nginx&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;lua&#xFF0C;&#x672C;&#x6587;&#x91C7;&#x53D6;&#x6B64;&#x65B9;&#x6848;</p>
+<h2 id="waf&#x529F;&#x80FD;&#x5217;&#x8868;"><a name="waf&#x529F;&#x80FD;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#waf&#x529F;&#x80FD;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="waf&#x529F;&#x80FD;&#x5217;&#x8868;" class="plugin-anchor" href="#waf&#x529F;&#x80FD;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>WAF&#x529F;&#x80FD;&#x5217;&#x8868;</h2>
+<ol>
+<li><p>&#x652F;&#x6301;IP&#x767D;&#x540D;&#x5355;&#x548C;&#x9ED1;&#x540D;&#x5355;&#x529F;&#x80FD;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x9ED1;&#x540D;&#x5355;&#x7684;IP&#x8BBF;&#x95EE;&#x62D2;&#x7EDD;&#x3002;</p>
+</li>
+<li><p>&#x652F;&#x6301;URL&#x767D;&#x540D;&#x5355;&#xFF0C;&#x5C06;&#x4E0D;&#x9700;&#x8981;&#x8FC7;&#x6EE4;&#x7684;URL&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#x3002;</p>
+</li>
+<li><p>&#x652F;&#x6301;User-Agent&#x7684;&#x8FC7;&#x6EE4;&#xFF0C;&#x5339;&#x914D;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x4E2D;&#x7684;&#x6761;&#x76EE;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF08;&#x8FD4;&#x56DE;403&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x652F;&#x6301;CC&#x653B;&#x51FB;&#x9632;&#x62A4;&#xFF0C;&#x5355;&#x4E2A;URL&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x7684;&#x8BBF;&#x95EE;&#x6B21;&#x6570;&#xFF0C;&#x8D85;&#x8FC7;&#x8BBE;&#x5B9A;&#x503C;&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;403&#x3002;</p>
+</li>
+<li><p>&#x652F;&#x6301;Cookie&#x8FC7;&#x6EE4;&#xFF0C;&#x5339;&#x914D;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x4E2D;&#x7684;&#x6761;&#x76EE;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF08;&#x8FD4;&#x56DE;403&#xFF09;&#x3002;</p>
+</li>
+<li><p>&#x652F;&#x6301;URL&#x8FC7;&#x6EE4;&#xFF0C;&#x5339;&#x914D;&#x81EA;&#x5B9A;&#x4E49;&#x89C4;&#x5219;&#x4E2D;&#x7684;&#x6761;&#x76EE;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x7684;URL&#x5305;&#x542B;&#x8FD9;&#x4E9B;&#xFF0C;&#x8FD4;&#x56DE;403&#x3002;</p>
+</li>
+<li><p>&#x652F;&#x6301;URL&#x53C2;&#x6570;&#x8FC7;&#x6EE4;&#xFF0C;&#x539F;&#x7406;&#x540C;&#x4E0A;&#x3002;</p>
+</li>
+<li><p>&#x652F;&#x6301;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#xFF0C;&#x5C06;&#x6240;&#x6709;&#x62D2;&#x7EDD;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x8BB0;&#x5F55;&#x5230;&#x65E5;&#x5FD7;&#x4E2D;&#x53BB;&#x3002;</p>
+</li>
+<li><p>&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x4E3A;JSON&#x683C;&#x5F0F;&#xFF0C;&#x4FBF;&#x4E8E;&#x65E5;&#x5FD7;&#x5206;&#x6790;&#xFF0C;&#x4F8B;&#x5982;&#x4F7F;&#x7528;ELKStack&#x8FDB;&#x884C;&#x653B;&#x51FB;&#x65E5;&#x5FD7;&#x6536;&#x96C6;&#x3001;&#x5B58;&#x50A8;&#x3001;&#x641C;&#x7D22;&#x548C;&#x5C55;&#x793A;</p>
+</li>
+</ol>
+<h1 id="&#x6E90;&#x7801;&#x5B89;&#x88C5;openresty"><a name="&#x6E90;&#x7801;&#x5B89;&#x88C5;openresty" class="anchor-navigation-ex-anchor" href="#&#x6E90;&#x7801;&#x5B89;&#x88C5;openresty"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6E90;&#x7801;&#x5B89;&#x88C5;openresty" class="plugin-anchor" href="#&#x6E90;&#x7801;&#x5B89;&#x88C5;openresty"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E90;&#x7801;&#x5B89;&#x88C5;openresty</h1>
+<h2 id="yum&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;"><a name="yum&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;" class="anchor-navigation-ex-anchor" href="#yum&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="yum&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;" class="plugin-anchor" href="#yum&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;"><i class="fa fa-link" aria-hidden="true"></i></a>yum&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x5E93;</h2>
+<pre class="language-"><code>yum install -y pcre-devel openssl-devel gcc postgresql-devel
+</code></pre><h2 id="&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5305;&#x5E76;&#x4E14;&#x5B89;&#x88C5;"><a name="&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5305;&#x5E76;&#x4E14;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5305;&#x5E76;&#x4E14;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5305;&#x5E76;&#x4E14;&#x5B89;&#x88C5;" class="plugin-anchor" href="#&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5305;&#x5E76;&#x4E14;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E0B;&#x8F7D;&#x6E90;&#x7801;&#x5305;&#x5E76;&#x4E14;&#x5B89;&#x88C5;</h2>
+<p>&#x4ECE;&#x4E0B;&#x8F7D;&#x9875; <a href="http://openresty.org/cn/download.html" target="_blank">Download</a> <a href="http://openresty.org/cn/download.html" target="_blank">http://openresty.org/cn/download.html</a> &#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7684; OpenResty&#xAE; &#x6E90;&#x7801;&#x5305;&#xFF0C;&#x5E76;&#x4E14;&#x50CF;&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4E00;&#x6837;&#x5C06;&#x5176;&#x89E3;&#x538B;:</p>
+<pre class="language-"><code>mkdir /data/software
+cd  /data/software
+wget https://openresty.org/download/openresty-1.19.9.1.tar.gz
+# &#x5907;&#x7528;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A; http://js.funet8.com/centos_software/openresty-1.19.9.1.tar.gz
+tar -zxvf openresty-1.19.9.1.tar.gz
+cd openresty-1.19.9.1/
+
+./configure --prefix=/usr/local/openresty \
+            --with-luajit \
+            --without-http_redis2_module \
+            --with-http_iconv_module \
+            --with-http_postgres_module
+
+gmake &amp;&amp; gmake install
+</code></pre><p>&#x53C2;&#x8003;&#x5730;&#x5740;&#xFF1A; <a href="http://openresty.org/cn/installation.html" target="_blank">http://openresty.org/cn/installation.html</a></p>
+<h2 id="&#x5E38;&#x7528;&#x547D;&#x4EE4;"><a name="&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E38;&#x7528;&#x547D;&#x4EE4;" class="plugin-anchor" href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x547D;&#x4EE4;</h2>
+<pre class="language-"><code># &#x542F;&#x52A8;
+/usr/local/openresty/nginx/sbin/nginx
+
+# &#x6216;&#x8005;&#x6307;&#x5B9A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x542F;&#x52A8;
+/usr/local/openresty/nginx/sbin/nginx -c /usr/local/openresty/nginx/conf/nginx.conf -p /usr/local/openresty/nginx/
+
+&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x51FA;&#x73B0;&#xFF1A; http://IP
+
+&#x505C;&#x6B62;
+/usr/local/openresty/nginx/sbin/nginx -s stop
+
+# &#x542F;&#x52A8;
+/usr/local/openresty/nginx/sbin/nginx
+
+&#x91CD;&#x7F6E;
+/usr/local/openresty/nginx/sbin/nginx -s reload
+</code></pre><h2 id="&#x9A8C;&#x8BC1;"><a name="&#x9A8C;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x9A8C;&#x8BC1;" class="plugin-anchor" href="#&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9A8C;&#x8BC1;</h2>
+<pre class="language-"><code>vim /usr/local/openresty/nginx/conf/nginx.conf
+&#x6DFB;&#x52A0;&#xFF1A;
+location /hello {
+                default_type &apos;text/plain&apos;;
+                content_by_lua &apos;ngx.say(&quot;hello,lua&quot;)&apos;;
+        }
+
+/usr/local/openresty/nginx/sbin/nginx -s reload
+
+http://IP:80/hello
+
+&#x662F;&#x5426;&#x8F93;&#x51FA;&#xFF1A;hello,lua
+# curl http://127.0.0.1/hello
+hello,lua
+</code></pre><h2 id="&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><a name="&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;" class="plugin-anchor" href="#&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<pre class="language-"><code>echo &apos;# &#x914D;&#x7F6E;OpenResty&#x73AF;&#x5883;&#x53D8;&#x91CF;&apos; &gt;&gt; /etc/profile
+echo &apos;export OPENRESTY_HOME=/usr/local/openresty/&apos; &gt;&gt; /etc/profile
+echo &apos;export PATH=${OPENRESTY_HOME}/bin:$PATH&apos; &gt;&gt; /etc/profile
+echo &apos;PATH=/usr/local/openresty/nginx/sbin:$PATH&apos; &gt;&gt; /etc/profile
+echo &apos;export PATH&apos; &gt;&gt; /etc/profile
+
+&#x751F;&#x6548;&#xFF1A;
+source  /etc/profile
+
+echo $OPENRESTY_HOME
+
+openresty -s reload
+nginx -V
+nginx -t
+
+# openresty -help
+nginx version: openresty/1.19.9.1
+Usage: nginx [-?hvVtTq] [-s signal] [-p prefix]
+             [-e filename] [-c filename] [-g directives]
+
+Options:
+  -?,-h         : this help
+  -v            : show version and exit
+  -V            : show version and configure options then exit
+  -t            : test configuration and exit
+  -T            : test configuration, dump it and exit
+  -q            : suppress non-error messages during configuration testing
+  -s signal     : send signal to a master process: stop, quit, reopen, reload
+  -p prefix     : set prefix path (default: /usr/local/openresty/nginx/)
+  -e filename   : set error log file (default: logs/error.log)
+  -c filename   : set configuration file (default: conf/nginx.conf)
+  -g directives : set global directives out of configuration file
+</code></pre><h1 id="&#x5B89;&#x88C5;&#x5E76;&#x4E14;&#x914D;&#x7F6E;waf"><a name="&#x5B89;&#x88C5;&#x5E76;&#x4E14;&#x914D;&#x7F6E;waf" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;&#x5E76;&#x4E14;&#x914D;&#x7F6E;waf"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B89;&#x88C5;&#x5E76;&#x4E14;&#x914D;&#x7F6E;waf" class="plugin-anchor" href="#&#x5B89;&#x88C5;&#x5E76;&#x4E14;&#x914D;&#x7F6E;waf"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;&#x5E76;&#x4E14;&#x914D;&#x7F6E;WAF</h1>
+<pre class="language-"><code># git clone https://github.com/unixhot/waf.git
+
+&#x514B;&#x9686;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x4ED3;&#x5E93;&#xFF1A;
+# git clone https://gitee.com/funet8/waf.git
+
+# cd /usr/local/openresty/nginx/conf/
+# git clone https://gitee.com/funet8/waf.git waf-git
+# cp -a ./waf-git/waf /usr/local/openresty/nginx/conf/
+
+# vim /usr/local/openresty/nginx/conf/nginx.conf
+
+#&#x5728;http{}&#x4E2D;&#x589E;&#x52A0;&#xFF0C;&#x6CE8;&#x610F;&#x8DEF;&#x5F84;&#xFF0C;&#x540C;&#x65F6;WAF&#x65E5;&#x5FD7;&#x9ED8;&#x8BA4;&#x5B58;&#x653E;&#x5728;/tmp/&#x65E5;&#x671F;_waf.log
+#WAF
+    lua_shared_dict limit 50m;
+    lua_package_path &quot;/usr/local/openresty/nginx/conf/waf/?.lua&quot;;
+    init_by_lua_file &quot;/usr/local/openresty/nginx/conf/waf/init.lua&quot;;
+    access_by_lua_file &quot;/usr/local/openresty/nginx/conf/waf/access.lua&quot;;
+
+waf&#x76EE;&#x5F55;&#xFF1A;/usr/local/openresty/nginx/conf/waf/
+lua&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;/usr/local/openresty/nginx/conf/waf/config.lua
+Waf&#x7684;ip&#x9ED1;&#x540D;&#x5355;&#xFF1A;/usr/local/openresty/nginx/conf/waf/rule-config/blackip.rule
+Waf&#x7684;ip&#x767D;&#x540D;&#x5355;&#xFF1A;/usr/local/openresty/nginx/conf/waf/rule-config/whiteip.rule
+Waf&#x7684;&#x89C4;&#x5219;&#x5B58;&#x653E;&#x76EE;&#x5F55;&#xFF1A;/usr/local/openresty/nginx/conf/waf/rule-config
+
+
+# ln -s /usr/local/openresty/lualib/resty/ /usr/local/openresty/nginx/conf/waf/resty
+# /usr/local/openresty/nginx/sbin/nginx -t
+# /usr/local/openresty/nginx/sbin/nginx -s reload
+
+&#x7136;&#x540E;&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#x91CD;&#x542F;&#x770B;&#x65E5;&#x5FD7;
+openresty -t &amp;&amp; openresty -s reload
+</code></pre><h1 id="waf&#x6A21;&#x5757;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BE6;&#x89E3;"><a name="waf&#x6A21;&#x5757;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BE6;&#x89E3;" class="anchor-navigation-ex-anchor" href="#waf&#x6A21;&#x5757;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BE6;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="waf&#x6A21;&#x5757;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BE6;&#x89E3;" class="plugin-anchor" href="#waf&#x6A21;&#x5757;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BE6;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>WAF&#x6A21;&#x5757;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x8BE6;&#x89E3;</h1>
+<p>&#x6765;&#x5B66;&#x4E60;&#x4E00;&#x4E0B;waf/config.lua&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;</p>
+<pre class="language-"><code>cat /usr/local/openresty/nginx/conf/waf/config.lua
+--lua&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;--&#x4E3A;&#x884C;&#x6CE8;&#x91CA;&#xFF0C;
+--[[
+&#x8FD9;&#x662F;&#x5757;&#x6CE8;&#x91CA;
+--]]
+</code></pre><pre class="language-"><code>cat /usr/local/openresty/nginx/conf/waf/config.lua
+
+config_waf_enable = &quot;on&quot; --&#x662F;&#x5426;&#x542F;&#x7528;waf&#x6A21;&#x5757;&#xFF0C;&#x503C;&#x4E3A; on &#x6216; off
+config_log_dir = &quot;/tmp&quot; --waf&#x7684;&#x65E5;&#x5FD7;&#x4F4D;&#x7F6E;&#xFF0C;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;&#x9ED8;&#x8BA4;&#x4E3A;json
+config_rule_dir = &quot;/usr/local/openresty/nginx/conf/waf/rule-config&quot; --&#x7B56;&#x7565;&#x89C4;&#x5219;&#x76EE;&#x5F55;&#x4F4D;&#x7F6E;&#xFF0C;&#x53EF;&#x6839;&#x636E;&#x60C5;&#x51B5;&#x53D8;&#x52A8;
+config_white_url_check = &quot;on&quot; --&#x662F;&#x5426;&#x5F00;&#x542F;URL&#x68C0;&#x6D4B;
+config_white_ip_check = &quot;on&quot; --&#x662F;&#x5426;&#x5F00;&#x542F;IP&#x767D;&#x540D;&#x5355;&#x68C0;&#x6D4B;
+config_black_ip_check = &quot;on&quot; --&#x662F;&#x5426;&#x5F00;&#x542F;IP&#x9ED1;&#x540D;&#x5355;&#x68C0;&#x6D4B;
+config_url_check = &quot;on&quot; --&#x662F;&#x5426;&#x5F00;&#x542F;URL&#x8FC7;&#x6EE4;
+config_url_args_check = &quot;on&quot; --&#x662F;&#x5426;&#x5F00;&#x542F;Get&#x53C2;&#x6570;&#x8FC7;&#x6EE4;
+config_user_agent_check = &quot;on&quot; --&#x662F;&#x5426;&#x5F00;&#x542F;UserAgent&#x5BA2;&#x6237;&#x7AEF;&#x8FC7;&#x6EE4;
+config_cookie_check = &quot;on&quot; --&#x662F;&#x5426;&#x5F00;&#x542F;cookie&#x8FC7;&#x6EE4;
+config_cc_check = &quot;on&quot; --&#x662F;&#x5426;&#x5F00;&#x542F;cc&#x653B;&#x51FB;&#x8FC7;&#x6EE4;
+config_cc_rate = &quot;10/60&quot; --cc&#x653B;&#x51FB;&#x7684;&#x901F;&#x7387;/&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x79D2;&#xFF1B;&#x9ED8;&#x8BA4;&#x793A;&#x4F8B;&#x4E2D;&#x4E3A;&#x5355;&#x4E2A;IP&#x5730;&#x5740;&#x5728;60&#x79D2;&#x5185;&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x6B21;&#x6570;&#x8D85;&#x8FC7;10&#x6B21;&#x5219;&#x8BA4;&#x4E3A;&#x662F;cc&#x653B;&#x51FB;&#xFF0C;&#x5219;&#x81EA;&#x52A8;&#x7981;&#x6B62;&#x6B64;IP&#x5730;&#x5740;&#x8BBF;&#x95EE;&#x6B64;&#x9875;&#x9762;60&#x79D2;&#xFF0C;60&#x79D2;&#x540E;&#x89E3;&#x5C01;(&#x5C01;&#x7981;&#x8FC7;&#x7A0B;&#x4E2D;&#x6B64;IP&#x5730;&#x5740;&#x4F9D;&#x7136;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5176;&#x5B83;&#x9875;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x540C;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x8BBF;&#x95EE;&#x6B21;&#x6570;&#x8D85;&#x8FC7;10&#x6B21;&#x4F9D;&#x7136;&#x4F1A;&#x88AB;&#x7981;&#x6B62;)
+config_post_check = &quot;on&quot; --&#x662F;&#x5426;&#x5F00;&#x542F;POST&#x68C0;&#x6D4B;
+config_waf_output = &quot;html&quot; --&#x5BF9;&#x4E8E;&#x8FDD;&#x53CD;&#x89C4;&#x5219;&#x7684;&#x8BF7;&#x6C42;&#x5219;&#x8DF3;&#x8F6C;&#x5230;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;html&#x9875;&#x9762;&#x8FD8;&#x662F;&#x6307;&#x5B9A;&#x9875;&#x9762;&#xFF0C;&#x503C;&#x4E3A; html &#x548C; redirect
+config_waf_redirect_url = &quot;https://www.unixhot.com&quot; --&#x6307;&#x5B9A;&#x8FDD;&#x53CD;&#x8BF7;&#x6C42;&#x540E;&#x8DF3;&#x8F6C;&#x7684;&#x6307;&#x5B9A;html&#x9875;&#x9762;
+--&#x6307;&#x5B9A;&#x8FDD;&#x53CD;&#x89C4;&#x5219;&#x540E;&#x8DF3;&#x8F6C;&#x7684;&#x81EA;&#x5B9A;&#x4E49;html&#x9875;&#x9762;
+config_output_html=[[
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Type<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/html; charset=utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Language<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zh-cn<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>&#x7F51;&#x7AD9;&#x9632;&#x706B;&#x5899;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x6B22;&#x8FCE;&#x767D;&#x5E3D;&#x5B50;&#x8FDB;&#x884C;&#x6388;&#x6743;&#x5B89;&#x5168;&#x6D4B;&#x8BD5;&#xFF0C;&#x5B89;&#x5168;&#x6F0F;&#x6D1E;&#x8BF7;&#x8054;&#x7CFB;QQ&#xFF1A;1111111&#x3002;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+]]
+</code></pre><h2 id="ip&#x9ED1;&#x540D;&#x5355;&#x914D;&#x7F6E;"><a name="ip&#x9ED1;&#x540D;&#x5355;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#ip&#x9ED1;&#x540D;&#x5355;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ip&#x9ED1;&#x540D;&#x5355;&#x914D;&#x7F6E;" class="plugin-anchor" href="#ip&#x9ED1;&#x540D;&#x5355;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>IP&#x9ED1;&#x540D;&#x5355;&#x914D;&#x7F6E;</h2>
+<p>&#x9700;&#x8981;&#x5728;config.lua&#x4E2D;&#x5F00;&#x542F;config_black_ip_check = &quot;on&quot;&#x53C2;&#x6570;
+IP&#x9ED1;&#x540D;&#x5355;&#x914D;&#x7F6E;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E0E;Nginx&#x7684;ngx_http_access_module&#x6A21;&#x5757;&#x539F;&#x7406;&#x662F;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x628A;&#x62D2;&#x7EDD;&#x7684;&#x5730;&#x5740;&#x52A0;&#x5165;&#x5230; waf/rule-config/blackip.rule&#x6587;&#x4EF6;&#x4E2D;&#x5373;&#x53EF;</p>
+<pre class="language-"><code>cat /usr/local/openresty/nginx/conf/waf/rule-config/blackip.rule
+192.168.1.4
+&#x7136;&#x540E;&#x8BBF;&#x95EE;Openresty&#x5730;&#x5740;&#xFF0C;&#x5982;&#x4E0B;&#x5DF2;&#x8FD4;&#x56DE;403&#x88AB;&#x7981;&#x6B62;
+</code></pre><h2 id="ip&#x767D;&#x540D;&#x5355;&#x914D;&#x7F6E;"><a name="ip&#x767D;&#x540D;&#x5355;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#ip&#x767D;&#x540D;&#x5355;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="ip&#x767D;&#x540D;&#x5355;&#x914D;&#x7F6E;" class="plugin-anchor" href="#ip&#x767D;&#x540D;&#x5355;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>IP&#x767D;&#x540D;&#x5355;&#x914D;&#x7F6E;</h2>
+<p>&#x9700;&#x8981;&#x5728;config.lua&#x4E2D;&#x5F00;&#x542F;config_white_ip_check = &quot;on&quot;&#x53C2;&#x6570;
+IP&#x767D;&#x540D;&#x5355;&#x4E0E;&#x9ED1;&#x540D;&#x5355;&#x76F8;&#x51B2;&#x7A81;&#xFF0C;&#x6DFB;&#x52A0;&#x5230;IP&#x767D;&#x540D;&#x5355;&#x4E2D;&#x7684;IP&#x4E0D;&#x53D7;WAF&#x9650;&#x5236;,&#x5177;&#x4F53;&#x8BF7;&#x81EA;&#x884C;&#x6D4B;&#x8BD5;</p>
+<pre class="language-"><code>cat /usr/local/openresty/nginx/conf/waf/rule-config/whiteip.rule
+192.168.1.4
+</code></pre><h2 id="cc&#x653B;&#x51FB;&#x8FC7;&#x6EE4;"><a name="cc&#x653B;&#x51FB;&#x8FC7;&#x6EE4;" class="anchor-navigation-ex-anchor" href="#cc&#x653B;&#x51FB;&#x8FC7;&#x6EE4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="cc&#x653B;&#x51FB;&#x8FC7;&#x6EE4;" class="plugin-anchor" href="#cc&#x653B;&#x51FB;&#x8FC7;&#x6EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>CC&#x653B;&#x51FB;&#x8FC7;&#x6EE4;</h2>
+<p>&#x9700;&#x8981;&#x5728;config.lua&#x4E2D;&#x5F00;&#x542F;config_cc_check = &quot;on&quot;&#x53C2;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x6307;&#x5B9A;config_cc_rate = &quot;10/60&quot;&#x901F;&#x7387;&#x548C;&#x65F6;&#x95F4;
+CC&#x653B;&#x51FB;&#x53EA;&#x9700;&#x8981;&#x5728;config.lua&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x4E0A;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x5373;&#x53EF;</p>
+<p>&#x5982;&#x4E0B;&#x6307;&#x5B9A;&#x5728;60&#x79D2;&#x5185;&#x5BF9;&#x4E8E;&#x5355;&#x4E2A;IP&#x5730;&#x5740;&#x8BBF;&#x95EE;&#x5355;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x6B21;&#x6570;&#x6700;&#x5927;10&#x6B21;&#xFF0C;&#x8D85;&#x8FC7;10&#x6B21;&#x5219;&#x81EA;&#x52A8;&#x62C9;&#x5165;&#x9ED1;&#x540D;&#x5355;&#xFF0C;60&#x79D2;&#x540E;&#x81EA;&#x52A8;&#x89E3;&#x9664;</p>
+<pre class="language-"><code>vim /usr/local/openresty/nginx/conf/waf/config.lua
+config_cc_check = &quot;on&quot;
+config_cc_rate = &quot;10/60&quot;
+&#x7136;&#x540E;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;,&#x5982;&#x4E0B;&#x5237;&#x65B0;10&#x6B21;&#x4EE5;&#x540E;&#x5C31;&#x53D8;&#x4E3A;&#x6765;403
+</code></pre><p>&#x6211;&#x4EEC;&#x6362;&#x4E2A;&#x9875;&#x9762;&#x518D;&#x6B21;&#x5237;&#x65B0;&#xFF0C;&#x5982;&#x4E0B;&#x6362;&#x4E2A;&#x9875;&#x9762;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x8BBF;&#x95EE;&#xFF0C;&#x4E0D;&#x8FC7;&#x8FDE;&#x7EED;&#x5BF9;&#x4E00;&#x4E2A;&#x9875;&#x9762;60&#x79D2;&#x5185;&#x5237;&#x65B0;10&#x6B21;&#x4EE5;&#x540E;&#x5C06;&#x4E5F;&#x88AB;&#x62C9;&#x5165;&#x9ED1;&#x540D;&#x5355;</p>
+<h2 id="&#x5F02;&#x5E38;url&#x7B56;&#x7565;&#x914D;&#x7F6E;"><a name="&#x5F02;&#x5E38;url&#x7B56;&#x7565;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5F02;&#x5E38;url&#x7B56;&#x7565;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5F02;&#x5E38;url&#x7B56;&#x7565;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x5F02;&#x5E38;url&#x7B56;&#x7565;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F02;&#x5E38;URL&#x7B56;&#x7565;&#x914D;&#x7F6E;</h2>
+<p>&#x9700;&#x8981;&#x5728;config.lua&#x4E2D;&#x5F00;&#x542F;config_url_check = &quot;on&quot;&#x53C2;&#x6570;
+&#x7136;&#x540E;&#x5B9A;&#x4E49;rule-config/url.rule&#x6587;&#x4EF6;&#xFF0C;url.rule&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x4E3A;&#x5982;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x5339;&#x914D;&#x5230;&#x89C4;&#x5219;&#x7684;&#x5C06;&#x8DF3;&#x8F6C;&#x5230;&#x7531;config.lua&#x4E2D;config_waf_output = &quot;html&quot;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x7684;&#x9875;&#x9762;</p>
+<p>&#x7981;&#x6B62;URL&#x8BBF;&#x95EE; .htaccess|.bash_history &#x7684;&#x6587;&#x4EF6;
+&#x7981;&#x6B62;URL&#x8BBF;&#x95EE;&#x5305;&#x542B;&#x5E26;&#x6709;phpmyadmin|jmx-console|admin-console|jmxinvokerservlet&#x5730;&#x5740;
+&#x7981;&#x6B62;URL&#x8BBF;&#x95EE;&#x5305;&#x542B; java.lang &#x7684;&#x5730;&#x5740;
+&#x7981;&#x6B62;URL&#x8BBF;&#x95EE;&#x5305;&#x542B; .svn/ &#x7684;&#x5730;&#x5740;</p>
+<pre class="language-"><code>cat url.rule
+\.(htaccess|bash_history)
+\.(bak|inc|old|mdb|sql|backup|java|class|tgz|gz|tar|zip)$
+(phpmyadmin|jmx-console|admin-console|jmxinvokerservlet)
+java\.lang
+\.svn\/
+/(attachments|upimg|images|css|uploadfiles|html|uploads|templets|static|template|data|inc|forumdata|upload|includes|cache|avatar)/(\\w+).(php|jsp)
+&#x5047;&#x5982;&#x4F60;&#x4E0D;&#x60F3;&#x8BA9;&#x522B;&#x4EBA;&#x8BBF;&#x95EE;&#x6839;&#x4E0B;&#x7684;/login&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x5199;&#x5165;&#x5230;&#x914D;&#x7F6E;&#x4E2D;
+
+cat url.rule
+\.(htaccess|bash_history)
+\.(bak|inc|old|mdb|sql|backup|java|class|tgz|gz|tar|zip)$
+(phpmyadmin|jmx-console|admin-console|jmxinvokerservlet)
+java\.lang
+\.svn\/
+/(attachments|upimg|images|css|uploadfiles|html|uploads|templets|static|template|data|inc|forumdata|upload|includes|cache|avatar)/(\\w+).(php|jsp)
+/login
+</code></pre><p>&#x7136;&#x540E;&#x8FDB;&#x884C;&#x91CD;&#x542F;&#x540E;&#x8BBF;&#x95EE;,&#x5982;&#x4E0B;&#x5C31;&#x8DF3;&#x8F6C;&#x5230;&#x4E86;&#x6211;&#x4EEC;&#x5728;config.lua&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x6B64;&#x9875;&#x9762;&#x53EF;&#x6839;&#x636E;&#x9700;&#x6C42;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;&#x5982;&#x679C;&#x4E0A;&#x9762;&#x9ED8;&#x8BA4;&#x7684;url&#x89C4;&#x5219;&#x5339;&#x914D;&#x5230;&#x4E86;&#x4F60;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x76F8;&#x5E94;&#x914D;&#x7F6E;&#x53BB;&#x6389;</p>
+<h2 id="&#x5F02;&#x5E38;useragent&#x7B56;&#x7565;&#x914D;&#x7F6E;"><a name="&#x5F02;&#x5E38;useragent&#x7B56;&#x7565;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5F02;&#x5E38;useragent&#x7B56;&#x7565;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5F02;&#x5E38;useragent&#x7B56;&#x7565;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x5F02;&#x5E38;useragent&#x7B56;&#x7565;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F02;&#x5E38;UserAgent&#x7B56;&#x7565;&#x914D;&#x7F6E;</h2>
+<p>&#x9700;&#x8981;&#x5728;config.lua&#x4E2D;&#x5F00;&#x542F;config_user_agent_check = &quot;on&quot;&#x53C2;&#x6570;</p>
+<p>WAF&#x6A21;&#x5757;&#x4E2D;&#x9ED8;&#x8BA4;&#x5C01;&#x9501;&#x4E86;&#x4EE5;&#x4E0B;UserAgent&#xFF0C;&#x5982;
+HTTrack&#x7F51;&#x7AD9;&#x4E0B;&#x8F7D;
+namp&#x7F51;&#x7EDC;&#x626B;&#x63CF;
+audit&#x7F51;&#x7EDC;&#x5BA1;&#x8BA1;
+dirbuster&#x7F51;&#x7AD9;&#x76EE;&#x5F55;&#x626B;&#x63CF;
+pangolin SQL&#x6CE8;&#x5165;&#x5DE5;&#x5177;
+scan&#x7F51;&#x7EDC;&#x626B;&#x63CF;
+hydra&#x5BC6;&#x7801;&#x66B4;&#x529B;&#x7834;&#x89E3;
+libwww&#x6F0F;&#x6D1E;&#x5DE5;&#x5177;
+sqlmap&#x81EA;&#x52A8;SQL&#x6CE8;&#x5165;&#x5DE5;&#x5177;
+w3af&#x7F51;&#x7EDC;&#x626B;&#x63CF;
+Nikto Web&#x6F0F;&#x6D1E;&#x626B;&#x63CF;
+&#x2026;
+&#x7B49;&#x7B49;</p>
+<pre class="language-"><code>cat useragent.rule
+(HTTrack|harvest|audit|dirbuster|pangolin|nmap|sqln|-scan|hydra|Parser|libwww|BBBike|sqlmap|w3af|owasp|Nikto|fimap|havij|PycURL|zmeu|BabyKrokodil|netsparker|httperf|bench)
+&#x6211;&#x4EEC;&#x6B63;&#x5E38;&#x8BBF;&#x95EE;URL&#x662F;&#x6CA1;&#x95EE;&#x9898;&#x7684;&#xFF0C;&#x4E0B;&#x9762;&#x6765;&#x6A21;&#x62DF;&#x4E00;&#x4E2A;&#x975E;&#x6CD5;&#x7684;UserAgent&#x8FDB;&#x884C;&#x8BBF;&#x95EE;
+
+#&#x6A21;&#x62DF;&#x7F51;&#x7AD9;&#x4E0B;&#x8F7D;
+curl http://192.168.31.219/ --user-agent &apos;HTTrack&apos;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Type<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/html; charset=utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Language<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zh-cn<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>&#x7F51;&#x7AD9;&#x9632;&#x706B;&#x5899;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x6B22;&#x8FCE;&#x767D;&#x5E3D;&#x5B50;&#x8FDB;&#x884C;&#x6388;&#x6743;&#x5B89;&#x5168;&#x6D4B;&#x8BD5;&#xFF0C;&#x5B89;&#x5168;&#x6F0F;&#x6D1E;&#x8BF7;&#x8054;&#x7CFB;QQ&#xFF1A;1111111&#x3002;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+#&#x6A21;&#x62DF;nmap&#x7F51;&#x7EDC;&#x626B;&#x63CF;
+curl http://192.168.31.219/ --user-agent &apos;nmap&apos;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Type<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/html; charset=utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Language<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zh-cn<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>&#x7F51;&#x7AD9;&#x9632;&#x706B;&#x5899;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x6B22;&#x8FCE;&#x767D;&#x5E3D;&#x5B50;&#x8FDB;&#x884C;&#x6388;&#x6743;&#x5B89;&#x5168;&#x6D4B;&#x8BD5;&#xFF0C;&#x5B89;&#x5168;&#x6F0F;&#x6D1E;&#x8BF7;&#x8054;&#x7CFB;QQ&#xFF1A;1111111&#x3002;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+&#x6DFB;&#x52A0;&#x7981;&#x6B62;Chrome&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x7684;UserAgent
+
+#&#x8DDF;&#x968F;&#x914D;&#x7F6E;&#x6DFB;&#x52A0;&#x5230;&#x6700;&#x540E;
+cat useragent.rule
+(HTTrack|harvest|audit|dirbuster|pangolin|nmap|sqln|-scan|hydra|Parser|libwww|BBBike|sqlmap|w3af|owasp|Nikto|fimap|havij|PycURL|zmeu|BabyKrokodil|netsparker|httperf|bench|Chrome)
+</code></pre><p>&#x7136;&#x540E;&#x91CD;&#x542F;Openrestry&#xFF0C;&#x901A;&#x8FC7;Chrome&#x6D4F;&#x89C8;&#x5668;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#xFF0C;&#x547D;&#x4E2D;&#x4E86;WAF&#x7684;&#x89C4;&#x5219;</p>
+<h2 id="&#x5F02;&#x5E38;get&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;"><a name="&#x5F02;&#x5E38;get&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5F02;&#x5E38;get&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5F02;&#x5E38;get&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x5F02;&#x5E38;get&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F02;&#x5E38;Get&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;</h2>
+<p>&#x9700;&#x8981;&#x5728;config.lua&#x914D;&#x7F6E;&#x4E2D;&#x5F00;&#x542F;config_url_args_check = &quot;on&quot;&#x53C2;&#x6570;</p>
+<p>&#x9ED8;&#x8BA4;&#x5C01;&#x9501;&#x4E86;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>cat args.rule
+\.\./
+\:\$
+\$\{
+select.+(from|limit)
+(?:(union(.*?)select))
+having|rongjitest
+sleep\((\s*)(\d*)(\s*)\)
+benchmark\((.*)\,(.*)\)
+base64_decode\(
+(?:from\W+information_schema\W)
+(?:(?:current_)user|database|schema|connection_id)\s*\(
+(?:etc\/\W*passwd)
+into(\s+)+(?:dump|out)file\s*
+group\s+by.+\(
+xwork.MethodAccessor
+(?:define|eval|file_get_contents|include|require|require_once|shell_exec|phpinfo|system|passthru|preg_\w+|execute|echo|print|print_r|var_dump|(fp)open|alert|showmodaldialog)\(
+xwork\.MethodAccessor
+(gopher|doc|php|glob|file|phar|zlib|ftp|ldap|dict|ogg|data)\:\/
+java\.lang
+\$_(GET|post|cookie|files|session|env|phplib|GLOBALS|SERVER)\[
+\&lt;(iframe|script|body|img|layer|div|meta|style|base|object|input)
+(onmouseover|onerror|onload)\=
+</code></pre><p>&#x9A8C;&#x8BC1;</p>
+<pre class="language-"><code>&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x8BBF;&#x95EE; http://192.168.31.219/hello?aa=select id from mysql,&#x5F97;&#x5230;&#x5982;&#x4E0B;&#xFF0C;&#x8FDB;&#x884C;&#x5339;&#x914D;
+
+curl &apos;http://192.168.31.219/hello?aa=select id from mysql&apos;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Type<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/html; charset=utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Language<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zh-cn<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>&#x7F51;&#x7AD9;&#x9632;&#x706B;&#x5899;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x6B22;&#x8FCE;&#x767D;&#x5E3D;&#x5B50;&#x8FDB;&#x884C;&#x6388;&#x6743;&#x5B89;&#x5168;&#x6D4B;&#x8BD5;&#xFF0C;&#x5B89;&#x5168;&#x6F0F;&#x6D1E;&#x8BF7;&#x8054;&#x7CFB;QQ&#xFF1A;1111111&#x3002;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x9700;&#x6C42;&#x53BB;&#x914D;&#x7F6E;&#xFF0C;&#x5982;&#x4E0B;&#x6700;&#x540E;&#x6DFB;&#x52A0;abcops
+
+cat args.rule
+\.\./
+\:\$
+\$\{
+select.+(from|limit)
+(?:(union(.*?)select))
+having|rongjitest
+sleep\((\s*)(\d*)(\s*)\)
+benchmark\((.*)\,(.*)\)
+base64_decode\(
+(?:from\W+information_schema\W)
+(?:(?:current_)user|database|schema|connection_id)\s*\(
+(?:etc\/\W*passwd)
+into(\s+)+(?:dump|out)file\s*
+group\s+by.+\(
+xwork.MethodAccessor
+(?:define|eval|file_get_contents|include|require|require_once|shell_exec|phpinfo|system|passthru|preg_\w+|execute|echo|print|print_r|var_dump|(fp)open|alert|showmodaldialog)\(
+xwork\.MethodAccessor
+(gopher|doc|php|glob|file|phar|zlib|ftp|ldap|dict|ogg|data)\:\/
+java\.lang
+\$_(GET|post|cookie|files|session|env|phplib|GLOBALS|SERVER)\[
+\&lt;(iframe|script|body|img|layer|div|meta|style|base|object|input)
+(onmouseover|onerror|onload)\=
+abcops
+&#x7136;&#x540E;&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;http://192.168.31.219/hello?aa=abcops&#x4E5F;&#x4F1A;&#x5339;&#x914D;&#x5230;&#x89C4;&#x5219;
+</code></pre><h2 id="&#x5F02;&#x5E38;post&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;"><a name="&#x5F02;&#x5E38;post&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5F02;&#x5E38;post&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5F02;&#x5E38;post&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;" class="plugin-anchor" href="#&#x5F02;&#x5E38;post&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F02;&#x5E38;POST&#x53C2;&#x6570;&#x7B56;&#x7565;&#x914D;&#x7F6E;</h2>
+<p>&#x9700;&#x8981;&#x5728;config.lua&#x4E2D;&#x5F00;&#x542F;config_post_check = &quot;on&quot;&#x9009;&#x9879;&#xFF0C;&#x9ED8;&#x8BA4;POST&#x8BF7;&#x6C42;&#x5C01;&#x7981;&#x5982;&#x4E0B;&#xFF0C;POST&#x5C01;&#x7981;&#x5185;&#x5BB9;&#x4E0E;GET&#x76F8;&#x4F3C;</p>
+<pre class="language-"><code>cat post.rule
+\.\./
+select.+(from|limit)
+(?:(union(.*?)select))
+having|rongjitest
+sleep\((\s*)(\d*)(\s*)\)
+benchmark\((.*)\,(.*)\)
+base64_decode\(
+(?:from\W+information_schema\W)
+(?:(?:current_)user|database|schema|connection_id)\s*\(
+(?:etc\/\W*passwd)
+into(\s+)+(?:dump|out)file\s*
+group\s+by.+\(
+xwork.MethodAccessor
+(?:define|eval|file_get_contents|include|require|require_once|shell_exec|phpinfo|system|passthru|preg_\w+|execute|echo|print|print_r|var_dump|(fp)open|alert|showmodaldialog)\(
+xwork\.MethodAccessor
+(gopher|doc|php|glob|file|phar|zlib|ftp|ldap|dict|ogg|data)\:\/
+java\.lang
+\$_(GET|post|cookie|files|session|env|phplib|GLOBALS|SERVER)\[
+\&lt;(iframe|script|body|img|layer|div|meta|style|base|object|input)
+(onmouseover|onerror|onload)\=
+&#x76F4;&#x63A5;&#x5BF9;POST&#x7B56;&#x7565;&#x8FDB;&#x884C;&#x63D0;&#x4EA4;&#x8BF7;&#x6C42;&#xFF0C;&#x901A;&#x8FC7;curl -XPOST&#x6765;&#x8FDB;&#x884C;&#x63D0;&#x4EA4;POST&#x8BF7;&#x6C42;
+
+curl -XPOST &apos;http://192.168.31.219/hello?aa=select id from mysql&apos;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Type<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/html; charset=utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>Content-Language<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>zh-cn<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>&#x7F51;&#x7AD9;&#x9632;&#x706B;&#x5899;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>center<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> &#x6B22;&#x8FCE;&#x767D;&#x5E3D;&#x5B50;&#x8FDB;&#x884C;&#x6388;&#x6743;&#x5B89;&#x5168;&#x6D4B;&#x8BD5;&#xFF0C;&#x5B89;&#x5168;&#x6F0F;&#x6D1E;&#x8BF7;&#x8054;&#x7CFB;QQ&#xFF1A;1111111&#x3002;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+&#x5982;&#x4E0A;&#x547D;&#x4E2D;&#x89C4;&#x5219;&#xFF0C;&#x6211;&#x4EEC;&#x67E5;&#x770B;Openrestry&#x65E5;&#x5FD7;&#xFF0C;&#x67E5;&#x770B;&#x662F;&#x5426;&#x4E3A;POST&#x8BF7;&#x6C42;
+
+tail -1 /usr/local/openresty/nginx/logs/access.log
+192.168.31.217 - - [27/Jul/2020:18:21:32 +0800] &quot;POST /hello?aa=select id from mysql HTTP/1.1&quot; 403 313 &quot;-&quot; &quot;curl/7.29.0&quot;
+</code></pre><footer class="page-footer"><span class="copyright">Copyright &#xA9; g.xgss.net all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-04-27 11:08:47
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: WEB服务">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Linux服务器故障排查基本方案.html" class="navigation navigation-next " aria-label="Next page: Linux服务器故障排查基本方案">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Centos7安装openresty实现WAF防火墙功能","level":"1.4.1","depth":2,"next":{"title":"Linux服务器故障排查基本方案","level":"1.4.2","depth":2,"path":"doc/web/Linux服务器故障排查基本方案.md","ref":"doc/web/Linux服务器故障排查基本方案.md","articles":[]},"previous":{"title":"WEB服务","level":"1.4","depth":1,"path":"doc/web/README.md","ref":"doc/web/README.md","articles":[{"title":"Centos7安装openresty实现WAF防火墙功能","level":"1.4.1","depth":2,"path":"doc/web/Centos7-install-openresty-waf.md","ref":"doc/web/Centos7-install-openresty-waf.md","articles":[]},{"title":"Linux服务器故障排查基本方案","level":"1.4.2","depth":2,"path":"doc/web/Linux服务器故障排查基本方案.md","ref":"doc/web/Linux服务器故障排查基本方案.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["search-pro","back-to-top-button","splitter","anchors","github","donate","sharing-plus","anchor-navigation-ex","favicon","tbfed-pagefooter","-pageview-count","lightbox","-page-treeview","-page-toc-button","expandable-chapters","chapter-fold","code","theme-comscore","prism"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy g.xgss.net","modify_label":"修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/funet8/g.xgss.net?g.xgss.net"},"baidu-tongji":{"token":"559562c6410b9fd49a0afe52650d40bd"},"splitter":{},"search-pro":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"donate":{"alipay":"https://img.funet8.com/images/alipay_donate.jpg","alipayText":"支付宝打赏","button":"打赏","title":"请俺喝一杯茶","wechat":"https://img.funet8.com/images/wechat_donate.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"showLevel":false,"showGoTop":false,"isShowTocTitleIcon":false,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"favicon":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"back-to-top-button":{},"sharing":{"qq":true,"all":["weibo","douban","qq","qzone","facebook","google","instapaper","linkedin","twitter","messenger","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"instapaper":false,"twitter":true,"vk":false,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{}},"theme":"default","author":"星哥的书籍","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"github-buttons":{"buttons":[{"user":"Blankj","repo":"glory","type":"star","size":"small","count":true}]},"title":"Linux私有教程","language":"zh-hans","links":{"sidebar":{"星哥说事":"https://www.xgss.net","阿里云优惠":"http://y.xgss.net/aliyun","腾讯云优惠":"http://y.xgss.net/tx"}},"gitbook":"*","description":"Linux教程工作中总结的教程"},"file":{"path":"doc/web/Centos7-install-openresty-waf.md","mtime":"2022-04-27T03:08:47.344Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-16T03:20:52.903Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
