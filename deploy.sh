@@ -17,7 +17,7 @@ yarn docs:build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
-
+echo 'vuepress.xgss.net' >  CNAME
 git init
 git remote add origin git@github.com:funet8/g.xgss.net.git
 git add .

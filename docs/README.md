@@ -9,7 +9,7 @@
 | owncloud云盘    | [o.xgss.net](https://o.xgss.net)             | owncloud云盘                                                 |                                               |
 | 私人网盘        | [z.xgss.net](https://z.xgss.net)             | 基于zfile搭建                                                |                                               |
 | gitbook         | [gitbook.xgss.net](http://gitbook.xgss.net/) | gitbook.xgss.net CNAME解析到  funet8.github.io，服务器在github |                                               |
-| 私人文档库      | [g.xgss.net](http://g.xgss.net/)             | 本地编辑md文件，通过gitbook工具生成html文件，上传到腾讯云。  |                                               |
+| 私人文档库      | [g.xgss.net](http://g.xgss.net/)             | 本地编辑md文件，域名CNAME到 gitbook.xgss.net                 |                                               |
 | 私人图片库      | [p.xgss.net](http://p.xgss.net/)             | 基于开源欧奥[PicHome](https://oaooa.com/pichome.html)搭建，私人相册库 | [开源地址](https://gitee.com/zyx0814/Pichome) |
 | 开源短链接      | [d.xgss.net](http://d.xgss.net)              | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
 | 开源yourls      | [y.xgss.net](http://y.xgss.net)              | 基于开源[yourls](http://y.xgss.net/yourls)搭建，[添加url地址](http://y.xgss.net/admin) | [开源地址](http://y.xgss.net/yourls)          |
