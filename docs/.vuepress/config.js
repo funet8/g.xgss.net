@@ -1,5 +1,5 @@
 module.exports = {
-  title: '星哥说事-vuepress模板',
+  title: '星哥私有教程',
   description: '星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍',
   head: [ // 注入到当前页面的 HTML <head> 中的标签
     ['link', { rel: 'icon', href: '/images/logo.png' }],
