@@ -2,6 +2,7 @@
 /node_modules
 yarn.lock
 docs/.vuepress/dist
+_book
 
 
 ##其他
