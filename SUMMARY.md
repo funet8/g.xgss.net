@@ -1,6 +1,6 @@
 * [项目介绍](README.md)
 
-* [Linux基础教程](README.md)
+* [Linux基础教程](doc/linux-basis/README.md)
   * [Linux 介绍](doc/linux-basis/Linux.md)
   * [CentOS 7 安装](doc/linux-basis/CentOS-7-Install.md)
   * [CentOS 6 和 CentOS 7 差异](doc/linux-basis/CentOS6-and-CentOS7.md)
@@ -50,14 +50,12 @@
   * [Windows下VSCode及中文配置](doc/software/Windows下VSCode及中文配置.md)
   
 * [互联网](doc/internet/README.md)
-  
   * [互联网程序员各个职位技能图-多图警告](doc/internet/programmer_position_skills.md)
   * [青龙面板每天自动获取某东豆](doc/internet/qinglong_jingdongdou.md)
   * [利用谷歌浏览器获取京东Cookie抓取](doc/internet/jd_cookie.md)
   * [助力居家办公，免费领取语雀 VIP 会员 1-3 年](doc/internet/助力居家办公，免费领取语雀 VIP 会员 1-3 年.md)
   
 * [开源软件](doc/Open-Source-Software/README.md)
-  
   * [免费开源iPhone推送消息工具+服务端-Bark](doc/Open-Source-Software/免费开源iPhone推送消息工具+服务端-Bark.md)
   * [搭建免费开源监控系统uptime-kuma](doc/Open-Source-Software/如何给公司节约成本，搭建免费开源监控系统uptime-kuma.md)
   * [免费开源Github Page实现短链接方案](doc/Open-Source-Software/免费开源Github Page实现短链接方案.md)
@@ -72,18 +70,18 @@
   * [开源配置管理中心apollo使用方法](doc/Apollo/2.开源配置管理中心apollo使用方法.md)
 
 * [开源软件-数据库](doc/Open-databases/README.md)
-	* [Archery-基于docker安装](doc/Open-databases/1_Archery_Install_Docker.md)
-	* [Archery-后台配置基本操作](doc/Open-databases/2_Archery_config.md)
-	* [Archery-SQL上线流程](doc/Open-databases/3_Archery_online.md)
-	* [Archery-SQL上线提示库名过长，建议使用别名解析](doc/Open-databases/4.sql-bieming.md)
-	* [开源的数据同步中间件-DBSyncer](doc/Open-databases/开源的数据同步中间件-DBSyncer.md)
+  * [Archery-基于docker安装](doc/Open-databases/1_Archery_Install_Docker.md)
+  * [Archery-后台配置基本操作](doc/Open-databases/2_Archery_config.md)
+  * [Archery-SQL上线流程](doc/Open-databases/3_Archery_online.md)
+  * [Archery-SQL上线提示库名过长，建议使用别名解析](doc/Open-databases/4.sql-bieming.md)
+  * [开源的数据同步中间件-DBSyncer](doc/Open-databases/开源的数据同步中间件-DBSyncer.md)
 	
 * [网盘系统](doc/cloud-disk/README.md)
-	* [OwnCloud搭建自己的私有云盘](doc/cloud-disk/OwnCloud.md)
+  * [OwnCloud搭建自己的私有云盘](doc/cloud-disk/OwnCloud.md)
 * [博客系统](doc/blog/README.md)
-	* [基于VuePress和github搭建无服务器博客、文档系统](doc/blog/基于VuePress和github搭建无服务器博客、文档系统.md)
+  * [基于VuePress和github搭建无服务器博客、文档系统](doc/blog/基于VuePress和github搭建无服务器博客、文档系统.md)
 * [调试Debug](doc/debug/README.md)
-	* [Mysql数据库在释放一个数亿记录的表报错](doc/debug/innodb_online_alter_log_max_size.md)
+  * [Mysql数据库在释放一个数亿记录的表报错](doc/debug/innodb_online_alter_log_max_size.md)
 
 
 
