@@ -53,25 +53,75 @@ cd docs/.vuepress/dist
 
 
 
-# 开源知识推荐
+## 开源推荐
 
-
-
-## 前端
+### 前端
 
 [jsliang 的文档库](https://github.com/LiangJunrong/document-library)
 
+[腾讯alloyteam](http://www.alloyteam.com/)
+
+[移动端滑块-Swiper](https://github.com/nolimits4web/swiper)
+
+[HTML5视频播放器-video.js](https://github.com/videojs/video.js)
+
+[前端监控系统-webfunny](https://github.com/a597873885/webfunny_monitor)
+
+[AdminLTE](https://github.com/ColorlibHQ/AdminLTE)
+
+[轻松搭建H5页面](https://github.com/MrXujiang/h5-Dooring)
 
 
-## 运维
+
+### 运维
 
 [DevOps 知识图谱](https://github.com/tsejx/devops-guidebook)
 
 [bash-tutorial bash教程](https://github.com/wangdoc/bash-tutorial) [官方网站](https://wangdoc.com/bash/)
 
+[定时任务管理器-webcron](https://github.com/lisijie/webcron)
+
+[cronsun一个分布式任务系统](https://github.com/shunfei/cronsun)
+
+[Docker相关配置-birdDocker](https://github.com/birdben/birdDocker)
+
+[使用Nginx+Lua实现的WAF](https://github.com/unixhot/waf)
+
+[游族统一异地备份系统-UBackup](https://github.com/lustlost/ubackup)
+
+[docker-elk](https://github.com/deviantony/docker-elk)
+
+[开源堡垒机-jumpserver](https://github.com/jumpserver/jumpserver)
+
+[Java程序员眼中的Linux教程-Linux-Tutorial](https://github.com/judasn/Linux-Tutorial)
+
+[GitLab中文社区版](https://github.com/twang2218/gitlab-ce-zh)
+
+[自动化运维平台-SaltAdmin](https://github.com/luxiaok/SaltAdmin)
+
+[开源运维平台-spug](https://github.com/openspug/spug)
+
+[自动化运维平台-OpsManage](https://github.com/welliamcao/OpsManage)
+
+[内网穿透代理服务器-nps](https://github.com/ehang-io/nps)
+
+[自建iPhone消息通知-Bark](https://github.com/Finb/Bark)
+
+[自建监控工具-Uptime Kuma](https://github.com/louislam/uptime-kuma)
 
 
-## 后端
+
+### 数据库
+
+[图形化显示MySQL慢日志工具-slowquery](https://github.com/hcymysql/slowquery)
+
+[Redis数据库在线管理工具-RedisMyAdmin](https://github.com/daivem/RedisMyAdmin)
+
+[SQL审核查询平台-Archery](https://github.com/hhyo/Archery)
+
+
+
+### 后端
 
 [JavaCollection](https://github.com/hansonwang99/JavaCollection) | Java开源项目之「自学编程之路」
 
@@ -79,17 +129,157 @@ cd docs/.vuepress/dist
 
 [bestJavaer](https://github.com/crisxuan/bestJavaer) | 这是一个成为更好的Java程序员的系列教程
 
-[27天成为Java大神](https://github.com/DuGuQiuBai/Java)
+[27天成为Java大神-Java](https://github.com/DuGuQiuBai/Java)
 
 [HelloGithub](https://github.com/521xueweihan/HelloGitHub) | 分享 GitHub 上有趣、入门级的开源项目
 
+[第三方登录开源组件-JustAuth](https://github.com/justauth/JustAuth)
+
+[MaxKey单点登录认证系统](https://github.com/dromara/MaxKey)
+
+[可视化的接口管理平台-YApi](https://github.com/YMFE/yapi)
+
+[开源的推荐系统服务-gorse](https://github.com/gorse-io/gorse)
+
+[阿里巴巴开源的一款标准通用且功能强大的构建应用多活架构的开源中间件](https://github.com/alibaba/Appactive)
 
 
-## 其他
+
+### 实用主义
+
+[蚂蚁笔记-Leanote](https://github.com/leanote/leanote)
+
+[在线API文档-ShowDoc](https://github.com/star7th/showdoc)
+
+[文档管理系统-MinDoc](https://github.com/mindoc-org/mindoc)
+
+[开源办公套件-dzzoffice](https://github.com/zyx0814/dzzoffice)
+
+[公有云文件系统-Cloudreve](https://github.com/cloudreve/Cloudreve)
+
+[在线云盘-zfile](https://github.com/zhaojun1998/zfile)
+
+[开源的网址导航网站-WebStack-Laravel](https://github.com/funet8/WebStack-Laravel)
+
+[极客导航-geeknav](https://github.com/CrazyBoyM/geeknav)
+
+[短链网站程序-YOURLS](https://github.com/YOURLS/YOURLS)
+
+[解锁网易云音乐客户端变灰歌曲-UnblockNeteaseMusic 荐](https://github.com/nondanee/UnblockNeteaseMusic)
+
+[网易云音乐客户端破解无版权灰色歌曲-UnblockNeteaseMusic](https://github.com/lovebai/UnblockNeteaseMusic)
+
+[艺术二维码生成器-qrbtf](https://github.com/ciaochaos/qrbtf)
+
+[命令行程序从YouTube下载视频和其他视频网站-youtube-dl](https://github.com/ytdl-org/youtube-dl)
+
+[自动签到框架-qiandao](https://github.com/binux/qiandao)
+
+[免费、安全、稳定、高效的发卡系统](https://github.com/zfaka-plus/zfaka)
+
+[欧奥PicHome是用于欧奥图文档系统的图片展示门户](https://github.com/zyx0814/Pichome)
+
+
+
+### 商业开源
+
+[春松客服](https://github.com/chatopera/cskefu)
+
+[画图工具-drawio](https://github.com/jgraph/drawio)
+
+[功能丰富的绘图工具-topology](https://github.com/le5le-com/topology)
+
+[协作板书](https://github.com/toger5/TheBoard)
+
+[在线项目任务管理工具-dootask](https://github.com/kuaifan/dootask)
+
+[鉴黄工具-nsfwjs](https://github.com/infinitered/nsfwjs)
+
+[构建自己的简历-Reactive-Resume](https://github.com/AmruthPillai/Reactive-Resume)
+
+
+
+### 微信相关
+
+[开源微信小程序商城-NideShop](https://github.com/tumobi/nideshop)
+
+[微信助手-EverydayWechat](https://github.com/sfyc23/EverydayWechat)
+
+[wechatBot](https://github.com/leochen-g/wechatBot) 微信每日说，三步教你用Node做一个微信哄女友(基友)神器 
+
+
+
+### Python
+
+[python爬虫开发与项目实战](https://github.com/qiyeboy/SpiderBook)
+
+[爬虫实用工具-代理、cookie池](https://github.com/wkunzhi/SpiderUtilPackage)
+
+[Python爬虫代理IP池-proxy pool](https://github.com/jhao104/proxy_pool)
+
+[爬取百度搜索结果的爬虫BaiduSpider](https://github.com/BaiduSpider/BaiduSpider)
+
+[DDoS攻击脚本-MHDDoS](https://github.com/MatrixTM/MHDDoS)
+
+
+
+### WordPress
+
+[人人都能学会的 WordPress 实战课](https://github.com/bestony/EasyWordPressBook)
+
+[程序员如何优雅的挣零花钱](https://github.com/easychen/howto-make-more-money)
+
+[专注阅读体验的WordPress主题-kratos](https://github.com/seatonjiang/kratos)
+
+
+
+### 自动化脚本
+
+[安卓平台上的JavaScript自动化工具-Auto.js](https://github.com/hyb1996/Auto.js)
+
+[auto.js示例](https://github.com/snailuncle/autojsDemo)
+
+[基于Auto.js的自动刷看短视频脚本-AutoWatch](https://github.com/wpc2333/AutoWatch)
+
+[显示和控制你的Android设备-scrcpy](https://github.com/Genymobile/scrcpy)
+
+
+
+### 其他
+
+[GitHub中文排行榜-GitHub-Chinese-Top-Charts](https://github.com/GrowingGit/GitHub-Chinese-Top-Charts)
+
+[分享GitHub上有趣、入门级的开源项目-HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
+
+[996.ICU](https://github.com/996icu/996.ICU)
 
 [程序员考公指南](https://github.com/coder2gwy/coder2gwy)
 
 [超赞的 Linux 软件](https://github.com/alim0x/Awesome-Linux-Software-zh_CN) | 一个 Linux 上超赞的应用，软件，工具以及其它资源的集中地
+
+[免费的编程书籍-free-programming-book](https://github.com/EbookFoundation/free-programming-books)
+
+[技术面试必备基础知识-CS-Notes](https://github.com/CyC2018/CS-Notes)
+
+[程序员找工作黑名单](https://github.com/shengxinjing/programmer-job-blacklist)
+
+[收集公开的IPTV频道-iptv](https://github.com/iptv-org/iptv)
+
+[直播源相关资源汇总-Tvlist-awesome-m3u-m3u8](https://github.com/imDazui/Tvlist-awesome-m3u-m3u8)
+
+[iOS端破解版App集合-CrackediOSApps](https://github.com/ooozzy/CrackediOSApps)
+
+[Shadowsocks/SS一键脚本](https://github.com/hijkpw/scripts/tree/master)
+
+[v2rayN](https://github.com/2dust/v2rayN)
+
+[还不错的图床工具-PicUploader](https://github.com/xiebruce/PicUploader)
+
+[中文语音对话机器人](https://github.com/wzpan/wukong-robot)
+
+[为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件-qwerty-learner](https://github.com/Kaiyiwing/qwerty-learner)
+
+
 
 
 

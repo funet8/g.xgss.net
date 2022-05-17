@@ -6,7 +6,7 @@
 
 
 
-## 安装recoz主题
+## vuepress博客主题—vuepress-theme-reco
 
 https://vuepress-theme-reco.recoluan.com/views/1.x/installUse.html
 
@@ -67,3 +67,7 @@ module.exports = {
   }  
 }
 ```
+
+效果
+
+![image-20220517145006930](https://imgoss.xgss.net/picgo/image-20220517145006930.png?aliyun)
