@@ -8,9 +8,9 @@
 
 `gitalk` 评论插件解决了这一痛点,利用 `github` 的开发者接口授权,将讨论区的 `issue` 变成评论区,和 `github` 结合的如此紧密,适合用源码托管到 `github` 这类情况.
 
-看一下gitalk [https://gitalk.github.io/](https://gitalk.github.io/) 是如何介绍自己的呢.
+看一下gitalk [https://gitalk.github.io/](https://gitalk.github.io/) 是如何介绍自己的呢
 
-![img](https:////upload-images.jianshu.io/upload_images/16648241-c99011c0d91da595.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp)
+![image-20220517101004780](https://imgoss.xgss.net/picgo/image-20220517101004780.png?aliyun)
 
 
 

@@ -1,20 +1,21 @@
 ## 星哥说事导航
 
-| 项目名          | **正式域名**                                 | 说明                                                         | 开源仓库                                      |
-| --------------- | -------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------- |
-| 星哥说事首页    | [www.xgss.net](https://www.xgss.net)         | 基于wordpress搭建博客系统                                    |                                               |
-| 静态资源图片等  | [s.xgss.net](https://s.xgss.net)             | 蜘蛛采集的图片                                               |                                               |
-| 看云-书籍       | http://book.xgss.net/                        | 测试用的，看云空间只有50M，放弃了                            |                                               |
-| 图库            | [imgoss.xgss.net](https://imgoss.xgss.net)   | 主要用于图片存放，通过typora编写上传到阿里云oss上            |                                               |
-| owncloud云盘    | [o.xgss.net](https://o.xgss.net)             | owncloud云盘                                                 |                                               |
-| 私人网盘        | [z.xgss.net](https://z.xgss.net)             | 基于zfile搭建                                                |                                               |
-| gitbook         | [gitbook.xgss.net](http://gitbook.xgss.net/) | gitbook.xgss.net CNAME解析到  funet8.github.io，服务器在github |                                               |
-| 私人文档库      | [g.xgss.net](http://g.xgss.net/)             | 本地编辑md文件，域名CNAME到 gitbook.xgss.net                 |                                               |
-| 私人图片库      | [p.xgss.net](http://p.xgss.net/)             | 基于开源欧奥[PicHome](https://oaooa.com/pichome.html)搭建，私人相册库 | [开源地址](https://gitee.com/zyx0814/Pichome) |
-| 开源短链接      | [d.xgss.net](http://d.xgss.net)              | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
-| 开源yourls      | [y.xgss.net](http://y.xgss.net)              | 基于开源[yourls](http://y.xgss.net/yourls)搭建，[添加url地址](http://y.xgss.net/admin) | [开源地址](http://y.xgss.net/yourls)          |
-| 开源短链接-模板 | [d.xgss.net](http://d.xgss.net)              | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
-| 青龙签到        | [ql.xgss.net](http://ql.xgss.net)            | [青龙面板每天自动获取京东豆](doc/internet/qinglong_jingdongdou.md) |                                               |
+| 项目名          | **正式域名**                                   | 说明                                                         | 开源仓库                                      |
+| --------------- | ---------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------- |
+| 星哥说事首页    | [www.xgss.net](https://www.xgss.net)           | 基于wordpress搭建博客系统                                    |                                               |
+| 静态资源图片等  | [s.xgss.net](https://s.xgss.net)               | 蜘蛛采集的图片                                               |                                               |
+| 看云-书籍       | http://book.xgss.net/                          | 测试用的，看云空间只有50M，放弃了                            |                                               |
+| 图库            | [imgoss.xgss.net](https://imgoss.xgss.net)     | 主要用于图片存放，通过typora编写上传到阿里云oss上            |                                               |
+| owncloud云盘    | [o.xgss.net](https://o.xgss.net)               | owncloud云盘                                                 |                                               |
+| 私人网盘        | [z.xgss.net](https://z.xgss.net)               | 基于zfile搭建                                                |                                               |
+| gitbook         | [gitbook.xgss.net](http://gitbook.xgss.net/)   | gitbook.xgss.net CNAME解析到  funet8.github.io，服务器在github |                                               |
+| vuepress        | [vuepress.xgss.net](http://vuepress.xgss.net/) | 基于vuepress搭建站点                                         |                                               |
+| 私人文档库      | [g.xgss.net](http://g.xgss.net/)               | 本地编辑md文件，域名CNAME到 vuepress.xgss.net                |                                               |
+| 私人图片库      | [p.xgss.net](http://p.xgss.net/)               | 基于开源欧奥[PicHome](https://oaooa.com/pichome.html)搭建，私人相册库 | [开源地址](https://gitee.com/zyx0814/Pichome) |
+| 开源短链接      | [d.xgss.net](http://d.xgss.net)                | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
+| 开源yourls      | [y.xgss.net](http://y.xgss.net)                | 基于开源[yourls](http://y.xgss.net/yourls)搭建，[添加url地址](http://y.xgss.net/admin) | [开源地址](http://y.xgss.net/yourls)          |
+| 开源短链接-模板 | [d.xgss.net](http://d.xgss.net)                | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
+| 青龙签到        | [ql.xgss.net](http://ql.xgss.net)              | [青龙面板每天自动获取京东豆](doc/internet/qinglong_jingdongdou.md) |                                               |
 
 
 

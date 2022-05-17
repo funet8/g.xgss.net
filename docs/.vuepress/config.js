@@ -9,18 +9,18 @@ module.exports = {
     ['meta', { 'http-quiv': 'pragma', cotent: 'no-cache,must-revalidate'}],
     ['meta', { 'http-quiv': 'expires', cotent: '0'}]
   ],
-  //host: '192.168.1.5', // 指定特定的IP
-  host: 'localhost', // 只能使用http://localhost:8099 访问
+  host: 'localhost', // 只能使用http://localhost:8099 , 可以指定ip
   port: '8099', //端口号
   //theme: '@vuepress/blog',
   //theme: 'vuepress-theme-note',
+  theme: 'reco',
   serviceWorker: true, // 是否开启 PWA
   base: '/', // 部署到github相关的配置
   markdown: {
     lineNumbers: true // 代码块是否显示行号
   },
   themeConfig: {
-    search: true, //关闭搜索
+    search: true, //搜索
     searchMaxSuggestions: 10,
     nav: [
 		{ text: '首页', link: '/' },
@@ -43,18 +43,21 @@ module.exports = {
 	  { text: '服务器安全', link: '/safe/' },
 	  { text: '常用软件', link: '/software/' },
 	  { text: '互联网福利', link: '/internet/' },
-	  { text: '调试Debug', link: '/debug/' },
+	  { text: '调试Debug', link: '/debug/' }
     ],
 	sidebar: 'auto', // 侧边栏配置
-    sidebarDepth: 3
+    sidebarDepth: 3,
 	
-    /**
-	//固定在侧边栏
-	sidebar: [
-      ['/','首页'],
-      ['/帮助/','guide'],
-      ['/前端文档/','前端文档1'],
-    ]**/
+	//代码主题
+	 /**
+     * support for
+     * 'default'
+     * 'funky'
+     * 'okaidia'
+     * 'solarizedlight'
+     * 'tomorrow'
+     */
+    codeTheme: 'okaidia' // default 'tomorrow'
   }
 }
 

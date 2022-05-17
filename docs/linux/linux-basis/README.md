@@ -19,3 +19,6 @@
 ## [Linux服务器配置SSH免密码登陆](Linux服务器配置SSH免密码登陆.md)
 
 ## [一张图学会Git](一张图学会Git.md)
+
+## [一文学会curl](一文学会curl.md)
+
