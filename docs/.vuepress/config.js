@@ -57,7 +57,16 @@ module.exports = {
      * 'solarizedlight'
      * 'tomorrow'
      */
-    codeTheme: 'okaidia' // default 'tomorrow'
+    codeTheme: 'okaidia', // default 'tomorrow'
+	socialLinks: [     // 信息栏展示社交信息
+        { icon: 'reco-github', link: 'https://github.com/recoluan' },
+        { icon: 'reco-npm', link: 'https://www.npmjs.com/~reco_luan' }
+      ],
+	//留言配置
+	valineConfig: {
+      appId: 'iVB5aJ4Y7ApUfjsjusQ3h9k7-gzGzoHsz',// your appId
+      appKey: '4TR3eWVYMnc8McyctYhqwXuo', // your appKey
+    }
   }
 }
 

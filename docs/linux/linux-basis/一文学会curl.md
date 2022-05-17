@@ -8,6 +8,8 @@ cURL是一个利用URL语法在命令行下工作的文件传输工具，1997年
 
 cURL支持的通信协议有FTP、FTPS、HTTP、HTTPS、TFTP、SFTP、Gopher、SCP、Telnet、DICT、FILE、LDAP、LDAPS、IMAP、POP3、SMTP和RTSP。
 
+![curl](https://imgoss.xgss.net/picgo/curl.jpg?aliyun)
+
 # 常用参数
 
 ```
