@@ -26,8 +26,8 @@ module.exports = {
 		{ text: '首页', link: '/' },
 		{ text: 'Linux基础教程',
 			items: [
-			{ text: '基础教程', link: '/linux/linux-basis/' },
-			{ text: '基础工具', link: '/linux/basis-tools/' },
+			{ text: '基础知识', link: '/linux/linux-basis/' },
+			{ text: '基础服务', link: '/linux/basis-tools/' },
 			{ text: 'WEB服务', link: '/linux/web/' },
 			{ text: '文件系统', link: '/linux/file-system/' },
           ]
@@ -45,8 +45,15 @@ module.exports = {
 	  { text: '互联网福利', link: '/internet/' },
 	  { text: '调试Debug', link: '/debug/' }
     ],
-	sidebar: 'auto', // 侧边栏配置
-    sidebarDepth: 3,
+	sidebar: [
+	  ['/', '首页'],
+	  ['/linux/linux-basis/', '基础知识'],
+	  ['/linux/basis-tools/', '基础服务'],
+	  ['/git/', 'Git服务'],
+      ['/kaiyuan/Open-Source-Software/', '开源软件'],
+    ],
+	//sidebar: 'auto', // 侧边栏配置
+    //sidebarDepth: 3,
 	
 	//代码主题
 	 /**

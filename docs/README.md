@@ -75,15 +75,9 @@ cd docs/.vuepress/dist
 
 ### 运维
 
-[DevOps 知识图谱](https://github.com/tsejx/devops-guidebook)
-
-[bash-tutorial bash教程](https://github.com/wangdoc/bash-tutorial) [官方网站](https://wangdoc.com/bash/)
-
 [定时任务管理器-webcron](https://github.com/lisijie/webcron)
 
 [cronsun一个分布式任务系统](https://github.com/shunfei/cronsun)
-
-[Docker相关配置-birdDocker](https://github.com/birdben/birdDocker)
 
 [使用Nginx+Lua实现的WAF](https://github.com/unixhot/waf)
 
@@ -109,6 +103,14 @@ cd docs/.vuepress/dist
 
 [自建监控工具-Uptime Kuma](https://github.com/louislam/uptime-kuma)
 
+[nginx网页管理工具-nginxWebUI](https://gitee.com/cym1102/nginxWebUI)
+
+[DT固定资产设备管理系统-dtAsset](https://gitee.com/lank/dtAsset)
+
+[高颜值的开源信息化资产管理系统-chemex](https://gitee.com/celaraze/chemex)
+
+[免费、开源的远程连接管理工具-SimpleRemote](https://gitee.com/zhudongyang/SimpleRemote)
+
 
 
 ### 数据库
@@ -119,19 +121,13 @@ cd docs/.vuepress/dist
 
 [SQL审核查询平台-Archery](https://github.com/hhyo/Archery)
 
+[开源的数据同步中间件-DBSyncer](https://gitee.com/ghi/dbsyncer)
+
+[开源企业级数据库监控系统-lepus](https://gitee.com/lepus-group/lepus)
+
 
 
 ### 后端
-
-[JavaCollection](https://github.com/hansonwang99/JavaCollection) | Java开源项目之「自学编程之路」
-
-[cdk8s-team-style](https://github.com/cdk8s/cdk8s-team-style) | 寻找志同道合的人，引发自身的思考
-
-[bestJavaer](https://github.com/crisxuan/bestJavaer) | 这是一个成为更好的Java程序员的系列教程
-
-[27天成为Java大神-Java](https://github.com/DuGuQiuBai/Java)
-
-[HelloGithub](https://github.com/521xueweihan/HelloGitHub) | 分享 GitHub 上有趣、入门级的开源项目
 
 [第三方登录开源组件-JustAuth](https://github.com/justauth/JustAuth)
 
@@ -165,10 +161,6 @@ cd docs/.vuepress/dist
 
 [短链网站程序-YOURLS](https://github.com/YOURLS/YOURLS)
 
-[解锁网易云音乐客户端变灰歌曲-UnblockNeteaseMusic 荐](https://github.com/nondanee/UnblockNeteaseMusic)
-
-[网易云音乐客户端破解无版权灰色歌曲-UnblockNeteaseMusic](https://github.com/lovebai/UnblockNeteaseMusic)
-
 [艺术二维码生成器-qrbtf](https://github.com/ciaochaos/qrbtf)
 
 [命令行程序从YouTube下载视频和其他视频网站-youtube-dl](https://github.com/ytdl-org/youtube-dl)
@@ -178,6 +170,8 @@ cd docs/.vuepress/dist
 [免费、安全、稳定、高效的发卡系统](https://github.com/zfaka-plus/zfaka)
 
 [欧奥PicHome是用于欧奥图文档系统的图片展示门户](https://github.com/zyx0814/Pichome)
+
+[Java实现的DNS服务器- DNS-Cheater](https://gitee.com/matrixy/dns-cheater)
 
 
 
@@ -193,9 +187,17 @@ cd docs/.vuepress/dist
 
 [在线项目任务管理工具-dootask](https://github.com/kuaifan/dootask)
 
+[开源在线团队协作工具-WookTeam](https://gitee.com/aipaw/wookteam)
+
 [鉴黄工具-nsfwjs](https://github.com/infinitered/nsfwjs)
 
 [构建自己的简历-Reactive-Resume](https://github.com/AmruthPillai/Reactive-Resume)
+
+[酷瓜云-在线教育系统](https://gitee.com/koogua/course-tencent-cloud)
+
+[开源的线上教培系统-MeEdu](https://gitee.com/myteng/MeEdu)
+
+[中文语音对话机器人](https://github.com/wzpan/wukong-robot)
 
 
 
@@ -243,6 +245,70 @@ cd docs/.vuepress/dist
 
 [显示和控制你的Android设备-scrcpy](https://github.com/Genymobile/scrcpy)
 
+[Android实时投屏软件](https://gitee.com/Barryda/QtScrcpy)
+
+
+
+### 程序员教程经验
+
+[**组团学**](https://www.zutuanxue.com/)
+
+[程序员考公指南](https://github.com/coder2gwy/coder2gwy)
+
+[免费的编程书籍-free-programming-book](https://github.com/EbookFoundation/free-programming-books)
+
+[技术面试必备基础知识-CS-Notes](https://github.com/CyC2018/CS-Notes)
+
+[JavaCollection](https://github.com/hansonwang99/JavaCollection) | Java开源项目之「自学编程之路」
+
+[cdk8s-team-style](https://github.com/cdk8s/cdk8s-team-style) | 寻找志同道合的人，引发自身的思考
+
+[bestJavaer](https://github.com/crisxuan/bestJavaer) | 这是一个成为更好的Java程序员的系列教程
+
+[27天成为Java大神-Java](https://github.com/DuGuQiuBai/Java)
+
+[DevOps 知识图谱](https://github.com/tsejx/devops-guidebook)
+
+[bash-tutorial bash教程](https://github.com/wangdoc/bash-tutorial) [官方网站](https://wangdoc.com/bash/)
+
+[996.ICU](https://github.com/996icu/996.ICU)
+
+[程序员找工作黑名单](https://github.com/shengxinjing/programmer-job-blacklist)
+
+
+
+### 增强工具
+
+[离线IP地址定位库-Ip2region](https://gitee.com/lionsoul/ip2region)
+
+[还不错的图床工具-PicUploader](https://github.com/xiebruce/PicUploader)
+
+[行为验证码-captcha](https://gitee.com/anji-plus/captcha)
+
+
+
+### 音乐娱乐
+
+[收集公开的IPTV频道-iptv](https://github.com/iptv-org/iptv)
+
+[直播源相关资源汇总-Tvlist-awesome-m3u-m3u8](https://github.com/imDazui/Tvlist-awesome-m3u-m3u8)
+
+[解锁网易云音乐客户端变灰歌曲-UnblockNeteaseMusic 荐](https://github.com/nondanee/UnblockNeteaseMusic)
+
+[网易云音乐客户端破解无版权灰色歌曲-UnblockNeteaseMusic](https://github.com/lovebai/UnblockNeteaseMusic)
+
+[全网音乐搜索和下载-music-php](https://gitee.com/guanguans/music-php)
+
+[音视频处理、下载工具-QuickCut](https://gitee.com/haujet/QuickCut)
+
+[自动生成字幕SRT文件的开源命令行工具-video-srt](https://gitee.com/641453620/video-srt)
+
+
+
+### 支付
+
+[个人支付解决方案-YunGouOS-PAY-SDK](https://gitee.com/YunGouOS/YunGouOS-PAY-SDK)
+
 
 
 ### 其他
@@ -251,31 +317,13 @@ cd docs/.vuepress/dist
 
 [分享GitHub上有趣、入门级的开源项目-HelloGitHub](https://github.com/521xueweihan/HelloGitHub)
 
-[996.ICU](https://github.com/996icu/996.ICU)
-
-[程序员考公指南](https://github.com/coder2gwy/coder2gwy)
-
 [超赞的 Linux 软件](https://github.com/alim0x/Awesome-Linux-Software-zh_CN) | 一个 Linux 上超赞的应用，软件，工具以及其它资源的集中地
-
-[免费的编程书籍-free-programming-book](https://github.com/EbookFoundation/free-programming-books)
-
-[技术面试必备基础知识-CS-Notes](https://github.com/CyC2018/CS-Notes)
-
-[程序员找工作黑名单](https://github.com/shengxinjing/programmer-job-blacklist)
-
-[收集公开的IPTV频道-iptv](https://github.com/iptv-org/iptv)
-
-[直播源相关资源汇总-Tvlist-awesome-m3u-m3u8](https://github.com/imDazui/Tvlist-awesome-m3u-m3u8)
 
 [iOS端破解版App集合-CrackediOSApps](https://github.com/ooozzy/CrackediOSApps)
 
 [Shadowsocks/SS一键脚本](https://github.com/hijkpw/scripts/tree/master)
 
 [v2rayN](https://github.com/2dust/v2rayN)
-
-[还不错的图床工具-PicUploader](https://github.com/xiebruce/PicUploader)
-
-[中文语音对话机器人](https://github.com/wzpan/wukong-robot)
 
 [为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件-qwerty-learner](https://github.com/Kaiyiwing/qwerty-learner)
 
