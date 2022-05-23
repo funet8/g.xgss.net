@@ -2,13 +2,17 @@
 
 # 什么是CDN
 
-![20201014cdn](https://gitee.com/funet8/blogimage/raw/master/picgo/20201014cdn.jpg)
+![20201014cdn](https://imgoss.xgss.net/picgo/20201014cdn.jpg?aliyun)
+
+
 
 [百度百科CDN](https://baike.baidu.com/item/CDN/420951)的全称是Content Delivery Network，即内容分发网络。CDN是构建在现有网络基础之上的智能虚拟网络，依靠部署在各地的边缘服务器，通过中心平台的负载均衡、内容分发、调度等功能模块，使用户就近获取所需内容，降低网络拥塞，提高用户访问响应速度和命中率。CDN的关键技术主要有内容存储和分发技术。
 
 CDN简单的来说就是存储一些静态文件的一台或多台服务器，通过复制，缓存等方式，将文件保存其中。
 
-![731c3dfcc0ff4cdda666f331139a793a](https://gitee.com/funet8/blogimage/raw/master/picgo/731c3dfcc0ff4cdda666f331139a793a.jpg)
+![731c3dfcc0ff4cdda666f331139a793a](https://imgoss.xgss.net/picgo/731c3dfcc0ff4cdda666f331139a793a.jpg?aliyun)
+
+
 
 ## 如果没有CDN会怎么样？
 
@@ -71,7 +75,11 @@ css，html，jpg，png，apk，mp4等媒体都属于静态文件，也就是说�
 
 ## 传统访问过程
 
-![img](https://gitee.com/funet8/blogimage/raw/master/picgo/6534548-7c8899afcd671a0c.png)
+![img](https://imgoss.xgss.net/picgo/6534548-7c8899afcd671a0c.png?aliyun)
+
+
+
+
 
 由上图可见，用户访问未使用CDN缓存网站的过程为:
 
@@ -88,7 +96,9 @@ css，html，jpg，png，apk，mp4等媒体都属于静态文件，也就是说�
 
 ## CDN访问过程
 
-![img](https://gitee.com/funet8/blogimage/raw/master/picgo/6534548-eaabc85f59942d23.png)
+![img](https://imgoss.xgss.net/picgo/6534548-eaabc85f59942d23.png?aliyun)
+
+
 
 通过上图，我们可以了解到，使用了CDN缓存后的网站的访问过程变为：
 
