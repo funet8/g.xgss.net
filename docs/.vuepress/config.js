@@ -48,7 +48,6 @@ module.exports = {
 	sidebar: [
 	  ['/', '首页'],
 	  ['/linux-basis/', '基础知识'],
-	  ['/basis-tools/', '基础服务'],
 	  ['/git/', 'Git服务'],
       ['/kaiyuan/Open-Source-Software/', '开源软件'],
     ],
