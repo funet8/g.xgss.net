@@ -16,7 +16,7 @@
 | 开源yourls      | [y.xgss.net](http://y.xgss.net)                | 基于开源[yourls](http://y.xgss.net/yourls)搭建，[添加url地址](http://y.xgss.net/admin) | [开源地址](http://y.xgss.net/yourls)          |
 | 开源短链接-模板 | [d.xgss.net](http://d.xgss.net)                | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
 | 青龙签到        | [ql.xgss.net](http://ql.xgss.net)              | [青龙面板每天自动获取京东豆](doc/internet/qinglong_jingdongdou.md) |                                               |
-| gitlab仓库      | [gitlab.xgss.net](http://gitlab.xgss.net)      |                                                              |                                               |
+| gitlab仓库      | [gitlab.xgss.net](http://gitlab.xgss.net)      | 开源gitlab项目                                               |                                               |
 
 
 
