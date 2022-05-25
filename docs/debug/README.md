@@ -1,6 +1,18 @@
-# 调试
+# 调试流程
+
+## [Linux服务器故障排查基本方案](Linux-paicha.md)
+
+## [Linux问题分析与性能优化](Linux问题分析与性能优化.md)
+
+## [Linux 服务器的性能参数指标总结](Linux 服务器的性能参数指标总结.md)
+
+# 数据库调试
 
 ## [Mysql数据库在释放一个数亿记录的表报错](innodb_online_alter_log_max_size.md)
 
-## [Linux服务器故障排查基本方案](Linux-paicha.md)
+
+
+# 应用调试
+
+## [httpd无法启动，报错No space left on device](httpd无法启动，报错No space left on device.md)
 

@@ -26,10 +26,10 @@ module.exports = {
 		{ text: '首页', link: '/' },
 		{ text: 'Linux基础教程',
 			items: [
-			{ text: '基础知识', link: '/linux/linux-basis/' },
-			{ text: '基础服务', link: '/linux/basis-tools/' },
-			{ text: 'WEB服务', link: '/linux/web/' },
-			{ text: '文件系统', link: '/linux/file-system/' },
+			{ text: '基础知识', link: '/linux-basis/' },
+			{ text: 'DevOps', link: '/devops/' },
+			{ text: 'WEB服务', link: '/web/' },
+			{ text: '文件系统', link: '/file-system/' },
           ]
 		},
 		{
@@ -47,8 +47,8 @@ module.exports = {
     ],
 	sidebar: [
 	  ['/', '首页'],
-	  ['/linux/linux-basis/', '基础知识'],
-	  ['/linux/basis-tools/', '基础服务'],
+	  ['/linux-basis/', '基础知识'],
+	  ['/basis-tools/', '基础服务'],
 	  ['/git/', 'Git服务'],
       ['/kaiyuan/Open-Source-Software/', '开源软件'],
     ],
@@ -66,7 +66,7 @@ module.exports = {
      */
     codeTheme: 'okaidia', // default 'tomorrow'
 	socialLinks: [     // 信息栏展示社交信息
-        { icon: 'reco-github', link: 'https://github.com/recoluan' },
+        { icon: 'reco-github', link: 'https://github.com/funet8' },
         { icon: 'reco-npm', link: 'https://www.npmjs.com/~reco_luan' }
       ],
 	//留言配置

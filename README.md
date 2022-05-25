@@ -2,5 +2,5 @@
 
 
 
-地址： http://g.xgss.net
+地址： https://g.xgss.net
 
