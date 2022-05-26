@@ -104,7 +104,7 @@ https://toscode.gitee.com/cormac/StreamerHelper
 
 
 
-## 十一、开游戏私服
+## 十一、开游戏s服
 
 
 

@@ -1,4 +1,4 @@
-# 对大于2T的硬盘分区工具-parted
+# Linux对大于2T的硬盘分区工具-parted
 
 
 
@@ -8,6 +8,8 @@
 超过2T的磁盘：
 其一是通过卷管理来实现；
 其二就是通过我们今天谈到的Parted工具来实现对GPT磁盘进行分区操作。
+
+![linux-file-system.webp](https://imgoss.xgss.net/picgo/linux-file-system.webp.jpg?aliyun)
 
 ## parted
 
@@ -49,14 +51,6 @@ umount /dev/sda
 ```
 
 
-
-
-
-
-http://www.cnblogs.com/afxcn/p/5289876.html
-
-
-http://blog.csdn.net/codemanship/article/details/47056673
 
 
 

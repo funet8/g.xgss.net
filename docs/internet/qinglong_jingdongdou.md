@@ -79,7 +79,6 @@
   -v /data/docker/QingLong/scripts:/ql/scripts \
   -v /data/docker/QingLong/jbot:/ql/jbot \
   whyour/qinglong:latest
-  
 ```
 http://192.168.1.5:5700/login
 

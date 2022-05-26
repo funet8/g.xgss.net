@@ -176,11 +176,7 @@ RD-->DBA-->CTO（审批）
 工单待审核时，关联当前审批权限组、并且关联工单所在资源组的用户，均可查看审核工单（资源组隔离）
 待办列表包含当前用户可审核的所有工单
 
-![image-20200908161641296](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20200908161641296.png)
-
-# 
-
-
+![image-20200908161641296](https://imgoss.xgss.net/picgo/image-20200908161641296.png?aliyun)
 
 
 

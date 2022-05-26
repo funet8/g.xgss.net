@@ -6,8 +6,6 @@
 
 其他的可以推荐一个网站，https://www.linuxcool.com/ linux命令比较全
 
-
-
 # 常用命令速记
 
 ```

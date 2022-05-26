@@ -2,6 +2,8 @@
 
 
 
+多图预警：
+
 ## 程序开发语言综述
 
 ![kaifayuyan](https://imgoss.xgss.net/picgo/kaifayuyan.jpg?aliyun)
