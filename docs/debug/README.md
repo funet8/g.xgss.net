@@ -4,7 +4,7 @@
 
 ## [Linux问题分析与性能优化](Linux问题分析与性能优化.md)
 
-## [Linux 服务器的性能参数指标总结](Linux 服务器的性能参数指标总结.md)
+## [Linux服务器的性能参数指标总结](Linux服务器的性能参数指标总结.md)
 
 # 数据库调试
 
@@ -14,5 +14,5 @@
 
 # 应用调试
 
-## [httpd无法启动，报错No space left on device](httpd无法启动，报错No space left on device.md)
+## [httpd无法启动，报错No space left on device](httpd无法启动报错No-space-left-on-device.md)
 

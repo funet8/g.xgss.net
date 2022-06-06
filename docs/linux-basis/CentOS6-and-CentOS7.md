@@ -71,11 +71,3 @@
 
 - `timedatectl set-timezone Asia/Shanghai`
 - `timedatectl status`
-
-
-## 资料
-
-- <http://blog.topspeedsnail.com/archives/3017>
-- <http://chenbaocheng.com/2015/07/15/Centos-7-%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEiptables/>
-- <http://cuidehua.blog.51cto.com/5449828/1858374>
-- <http://putty.biz/760>

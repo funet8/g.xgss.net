@@ -44,7 +44,7 @@ DDOS和cc攻击
 **链接资源耗尽网络层CC攻击**
 **应用资源耗尽类型攻击**
 
-![img](https://gitee.com/funet8/blogimage/raw/master/picgo/db1b088694194c22b44e23e0ad79f9d7)
+![db1b088694194c22b44e23e0ad79f9d7](https://imgoss.xgss.net/picgo/db1b088694194c22b44e23e0ad79f9d7.jpg?aliyun)
 
 其中三类攻击包括：
 
@@ -109,7 +109,7 @@ DDOS和cc攻击
 1. 占带宽，让目标服务器接受不到新的请求，从而达到拒绝服务的目的。
 2. 溢出攻击，因伺服系统、操作系统的一些未修复的漏洞，让攻击者探测到，攻击者则可以依此用非常小的代价实现让目标服务器死机、重启、甚至被提权。
    此案例属于1情况，攻击者发包的目的就是为拼带宽实现拒绝服务。若是托管在普通机房，没有流量清洗能力的，很快你服务器IP会被机房网关null（网关封了你服务器IP）严重的还会被下架。
-   若是在阿里云，云盾可以起到一定的防护作用，官方公布的数据是可防20G，承诺免费防护300M。为了防止有漏网之鱼，掌握常用的iptables命令是必要的（http://bbs.aliyun.com/read/107407.html? 特别是4中的封禁IP的命令 ），毕竟机器不是人，不可能有人工那么智能，而且发包攻击若量较小的时候，很容易被防火墙放过，所以最好、最万无一失的解决之道就是在云主机上封禁IP，配合云盾将服务器受到的影响降到最低。
+   若是在阿里云，云盾可以起到一定的防护作用，官方公布的数据是可防20G，承诺免费防护300M。为了防止有漏网之鱼，掌握常用的iptables命令是必要 特别是4中的封禁IP的命令 ），毕竟机器不是人，不可能有人工那么智能，而且发包攻击若量较小的时候，很容易被防火墙放过，所以最好、最万无一失的解决之道就是在云主机上封禁IP，配合云盾将服务器受到的影响降到最低。
    为防止被溢出攻击，需要日常多关注下系统漏洞，及时为自己的主机打上补丁。
 
 ### 案例2：某网站受到攻击，CPU占满，流量并不高，但网站完全无法打开了。
@@ -119,8 +119,6 @@ DDOS和cc攻击
 这是CC攻击（通过某些攻击工具伪造大量僵尸请求，让目标某部分资源耗尽）的特征，首先，你需要明确一个事情，此时WEB服务继续进行，高CPU占用将会成为你在云主机上操作的负担。
 
 # CC攻击
-
-[百度百科-cc攻击](https://baike.baidu.com/item/cc%E6%94%BB%E5%87%BB?fr=aladdin), https://baike.baidu.com/item/cc%E6%94%BB%E5%87%BB?fr=aladdin
 
 百度百科定义：攻击者借助代理服务器生成指向受害主机的合法请求，实现DDOS和伪装就叫：CC(ChallengeCollapsar)。
 
@@ -204,9 +202,7 @@ HTTP 请求的特征一般有两种：IP 地址和 User Agent 字段。比如，
 
 CDN 指的是网站的静态内容分发到多个服务器，用户就近访问，提高速度。因此，CDN 也是带宽扩容的一种方法，可以用来防御 DDOS 攻击。这里有一个关键点，一旦上了 CDN，千万不要泄露源服务器的 IP 地址，否则攻击者可以绕过 CDN 直接攻击源服务器，前面的努力都白费。
 
-# 阿里云WAF-2019年Web应用安全年度报告
 
-完整文档 ：http://z.xgss.net/file/1/%E6%8A%80%E6%9C%AF%E7%B1%BB%E4%B9%A6%E7%B1%8D/2019%E5%B9%B4Web%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8%E5%B9%B4%E5%BA%A6%E6%8A%A5%E5%91%8A.pdf
 
 ## 1. 为什么我总抢不到茅台酒？
 
@@ -262,40 +258,46 @@ CDN 指的是网站的静态内容分发到多个服务器，用户就近访问�
 
 ### 攻击类型分布
 
-![image-20201224113713588](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224113713588.png)
+![image-20201224113713588](https://imgoss.xgss.net/picgo/image-20201224113713588.png?aliyun)
+
+
 
 ### 攻击源分布
 
 从地域上来看，国内攻击最多的省份还是浙江省，其次是江苏、香港、北京、上海等发达省级行政单位。根据2018年国家统计局数据，香港和浙江的总人口比例约为1/7，但是攻击却达到了40%以上，是中国攻击源最密集的来源。
 
-![image-20201224113756889](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224113756889.png)
+![image-20201224113756889](https://imgoss.xgss.net/picgo/image-20201224113756889.png?aliyun)
+
+
 
 境外攻击的80%以上均来自于美国，占比高达82%。
 
-![image-20201224113837536](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224113837536.png)
+![image-20201224113837536](https://imgoss.xgss.net/picgo/image-20201224113837536.png?aliyun)
+
+
 
 ### 流量客户端
 
 从攻击源的客户端信息来看，全网的正常流量与攻击流量在客户端类型分布上存在着较为明显的差异，且攻击流量中异常的客户端分布情况存在值得挖掘的地方。
 在正常流量中，Android、IOS等移动端的访问流量累计占据了较大比例，其他客户端如浏览器、搜索引擎爬虫、各类开发工具等也占据前列。
 
-![image-20201224113953089](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224113953089.png)
+![image-20201224113953089](https://imgoss.xgss.net/picgo/image-20201224113953089.png?aliyun)
 
 而在攻击流量中，Chrome、IE浏览器则是一骑绝尘，总计占比超过99%。但这并不是说移动端Web应用很少被攻击，也并不代表Chrome、IE等浏览器是目前最主要的攻击载体。出现这种现象的原因是在Web攻击中，各类扫描器、攻击工具等大多会采用伪造UA的方式进行攻击，而其伪造的对象则集中在Chrome、IE等最主流的浏览器中。根据我们的分析发现，在攻击流量中声称自己是所谓Chrome、IE以及各类常见搜索引擎爬虫等客户端的源，有超过99.67%是由各类扫描器、攻击脚本等伪装的。
 
-![image-20201224114021804](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224114021804.png)
+![image-20201224114021804](https://imgoss.xgss.net/picgo/image-20201224113953089.png?aliyun)
 
 ### 时间变化趋势
 
 从攻击现象趋势来看除了春节期和小长假期间攻击量明显减少，其它时间基本处于一个平稳中略有上升的状态。
 
-![image-20201224114109390](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224114109390.png)
+![image-20201224114109390](https://imgoss.xgss.net/picgo/image-20201224114109390.png?aliyun)
 
 ### 重点行业分布
 
 从行业来看，攻击主要集中在互联网、科研教育、租赁和商务服务、电商4个行业，攻击总量占比超过了90%，这也跟目前这4个行业的请求占比基本对应。
 
-![image-20201224114154227](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224114154227.png)
+![image-20201224114154227](https://imgoss.xgss.net/picgo/image-20201224114154227.png?aliyun)
 
 ## 攻击手法剖析
 
@@ -303,17 +305,17 @@ CDN 指的是网站的静态内容分发到多个服务器，用户就近访问�
 
 在针对Web服务的攻击中，扫描器及各类自动化攻击工具占据绝大部分比例。根据当前的数据保守计算，在所有针对Web服务的攻击流量中，自动化工具占比超过70%。这些工具的攻击方式涵盖了目录扫描、SQL注入、XSS、命令执行、漏洞探测等多种威胁类型。
 
-![image-20201224114227059](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224114227059.png)
+![image-20201224114227059](https://imgoss.xgss.net/picgo/image-20201224114227059.png?aliyun)
 
 图示是攻击者最常探测的部分敏感目录文件。其中包括一些Web框架或服务器的默认配置文件，也包括一些攻击者想要螳螂捕蝉，黄雀在后的尝试较为常见的Webshell文件名称。
 
 
 
-![image-20201224114307773](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224114307773.png)
+![image-20201224114307773](https://imgoss.xgss.net/picgo/image-20201224114307773.png?aliyun)
 
 ### 重点攻击目标
 
-![image-20201224114400277](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224114400277.png)
+![image-20201224114400277](https://imgoss.xgss.net/picgo/image-20201224114400277.png?aliyun)
 
 其中WebLogic Server远程命令执行(CVE-2019-2725)的拦截数量最多，从2019年4月漏洞爆发到年末攻击拦截数量共计851684次，之所以该漏洞攻击次数较多的原因是WebLogic Server远程命令执行(CVE-2019-2725)漏洞利用了XMLDecoder，攻击协议使用的是http协议，无需出网，所以比起其它WebLogic Server漏洞利用条件很低，因此成为很多挖矿、勒索程序的主要利用漏洞。值得一提的是，WebLogic Server是美国甲骨文（Oracle）公司开发的一款适用于云环境和传统环境的应用服务中间件，被广泛应用于保险、证券、银行等金融领域，所以这些领域的客户在使用WebLogic Server部署网站业务时，请及时购买Oracle官方账号更新补丁，以防被黑客入侵。经过观测值得一提的现象是，每次Web漏洞被披露后，当安全研究员公开PoC的2-3天后就开始出现大规模的互联网扫描行为。
 
@@ -324,7 +326,7 @@ CDN 指的是网站的静态内容分发到多个服务器，用户就近访问�
 随着WAF对网站的防护越来越普及，针对基础Web攻防来说，利用诸如MySQL、JavaScript、Html语言特性进行各种编码、变形，从而绕过WAF防护的攻击payload也越来越多，攻防是一个持续对抗升级的过程。根据阿里云安全团队的观察发现，当前已有超过1/3的攻击数据采用了不同程度或类型的编码、变形手段，以期绕过安全防护，其中甚至不乏使用多维度的复合变形、编码手段实施攻击。目前云
 上已经发现的不同类型攻击的绕过比例如下图所示：
 
-![image-20201224114513720](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224114513720.png)
+![image-20201224114513720](https://imgoss.xgss.net/picgo/image-20201224114513720.png?aliyun)
 
 例如： 对于x s s 弹窗攻击行为， 现在越来越来越多攻击p a y l o a d 会进行编码进行攻击：
 alert-->\u0061\u006c\u0065\u0072\u0074，传统WAF或者IPS设备只会对alert这样的特征关键字拦截，但是黑客也会了解WAF或者IPS设备防御原理，从而针对性的使用不同语言特殊用法进行绕过防护设备攻击。下面是一些真实的案例攻击：
@@ -353,7 +355,7 @@ $func($_REQUEST['cmd']);
 
 根据使用阿里云爬虫风险管理产品的用户流量统计，房产交易、交通、游戏、电商、资讯论坛几个行业中恶意爬虫的占比都超过了50%。
 
-![image-20201224114810382](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224114810382.png)
+![image-20201224114810382](https://imgoss.xgss.net/picgo/image-20201224114810382.png?aliyun)
 
 这些行业的用户有一个显著的特点是，他们往往对外提供的服务内容有着很强的时效性，比如不同城市的新上房源、不同线路的票务信息、商品价格、简历信息等等，所以会吸引大量爬虫持续的爬取以获取最新的资讯。比较特殊的一个是游戏行业，爬虫则总是聚焦在虚假账号和挂机两个经典场景。
 
@@ -361,17 +363,17 @@ $func($_REQUEST['cmd']);
 
 从区域来源上看，东南亚和美国的流量中恶意爬虫的占比相对较高，当然爬虫的绝对数量上看还是中国大陆占据大头。随着近些年国内黑灰产的专业程度越来越高，手上掌握的全球代理IP资源也越来越丰富，IP层面的对抗已经非常艰难，防护要更多的考虑其他的维度，如设备指纹、异常行为分析、威胁情报以及业务层面的对抗。
 
-![image-20201224114916810](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224114916810.png)
+![image-20201224114916810](https://imgoss.xgss.net/picgo/image-20201224114916810.png?aliyun)
 
 从国内的省份分布来看，北京、江苏、浙江分列爬虫流量占比的前三位，随着秒拨IP的全面普及，爬虫的来源分布会越来越模糊，“大隐隐于市”，最终无限逼近真实用户的分布情况：
 
-![image-20201224114941009](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224114941009.png)
+![image-20201224114941009](https://imgoss.xgss.net/picgo/image-20201224114941009.png?aliyun)
 
 ### ISP分布
 
 从爬虫来源运营商的请求量绝对值分布来看，三家运营商和阿里云占就据了约98%的流量：
 
-![image-20201224115012923](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224115012923.png)
+![image-20201224115012923](https://imgoss.xgss.net/picgo/image-20201224115012923.png?aliyun)
 
 ### 爬虫分级
 
@@ -389,9 +391,9 @@ $func($_REQUEST['cmd']);
 
 【分布式真人】：通过有偿支付或偷偷收集的方式，让大量真人与真机帮助操作，针对业务发起流量的攻击方式
 
-![image-20201224135524771](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224135524771.png)
+![image-20201224135524771](https://imgoss.xgss.net/picgo/image-20201224135524771.png?aliyun)
 
-![image-20201224135541035](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224135541035.png)
+![image-20201224135541035](https://imgoss.xgss.net/picgo/image-20201224135541035.png?aliyun)
 
 可以看到，使用“简单接口爬虫”发起机器流量的攻击事件虽然占比不多，但是这部分攻击手法贡献了大量机器流量，他们用类似“野蛮爬取”的策略，毫无节制的向业务各个链路节点发送大量机器请求。而driver玩家虽然在攻击事件/团伙中占比较大，但在流量分布中占比却不多，这类攻击更加偏向于精细化攻击，不会无节制的大量爬取。
 
@@ -409,9 +411,9 @@ $func($_REQUEST['cmd']);
 
 【协议破解】：破解并分析出了客户端采集的特征，以及对应的加密上报协议，直接在字符串层面上对上报信息进行破解或篡改
 
-![image-20201224135750768](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224135750768.png)
+![image-20201224135750768](https://imgoss.xgss.net/picgo/image-20201224135750768.png?aliyun)
 
-![image-20201224135803186](https://gitee.com/funet8/blogimage/raw/master/picgo/image-20201224135803186.png)
+![image-20201224135803186](https://imgoss.xgss.net/picgo/image-20201224135803186.png?aliyun)
 
 低级伪造类的攻击者无论在流量分布还是在攻击事件分布上，都占有绝大部分比例。同时随着攻击手法精细化，不少特征篡改工具以越来越低的成本、越来越强的功能，开始支撑越来越多有丰富人机对抗经验的专业型攻击者。另外，随着以火狐、Chrome为代表的浏览器及其厂商愈发重视隐私保护以及愈发开放定制化功能，会有更多产业中的相关团伙使用自定义浏览器或是自定义ROM进行精细化攻击。
 
@@ -463,7 +465,7 @@ d. CC防护能力（通过CC策略来确保在黄牛的疯狂攻击下，源站�
 
 SYN攻击是黑客攻击的手段。SYN洪泛攻击的基础是依靠TCP建立连接时三次握手的设计。第三个数据包验证连接发起人在第一次请求中使用的源IP地址上具有接受数据包的能力，即其返回是可达的。
 
-![image](https://gitee.com/funet8/blogimage/raw/master/picgo/20170505142058_41716.png)
+![image](https://imgoss.xgss.net/picgo/20170505142058_41716.png?aliyun)
 
 
 
@@ -499,7 +501,7 @@ TIME_WAIT       3569
 
 
 
-![img](https://gitee.com/funet8/blogimage/raw/master/picgo/20191129E7CfKX.jpg)
+![img](https://imgoss.xgss.net/picgo/20191129E7CfKX.jpg?aliyun)
 
  防范羊毛党：运营同学必看的防薅羊毛技术完全解读  https://www.cnwebe.com/articles/60403.html
 
@@ -653,7 +655,7 @@ CSRF攻击方式早几年并不为大家所熟知，实际上很多网站都存�
 早在2000年，CSRF这种攻击方式已经由国外的安全人员提出，但在国内，直到2006年才开始被关注。2008年，国内外多个大型社区和交互网站先后爆出CSRF漏洞，如：百度HI、NYTimes.com（纽约时报）、Metafilter（一个大型的BLOG网站）和YouTube等。但直到现在，互联网上的许多站点仍对此毫无防备，以至于安全业界称CSRF为“沉睡的巨人”，其威胁程度由此“美誉”便可见一斑。
 那么，我们先来看一下CSRF的攻击原理吧：
 
-![img](https://gitee.com/funet8/blogimage/raw/master/picgo/1923057-20200529142345530-1054068874.png)
+![img](https://imgoss.xgss.net/picgo/1923057-20200529142345530-1054068874.png?aliyun)
 
 
 
@@ -739,8 +741,6 @@ sshd: 113.92.153.163
 
 密切注意第三方代码，及时打补丁。
 
-乌云 http://www.anquan.us/
-
 
 # 域名劫持、DNS劫持
 
@@ -778,9 +778,9 @@ windows7: 网络和共享中心---->本地连接---->属性
 
 制定严格操作流程，防止出现操作失误
 
+```
 rm -rf /*
-
-
+```
 
 # web开发工程师要求
 
@@ -809,24 +809,3 @@ apk下载连接地址，有鉴权
 
 所谓的秒换在于产商的硬件与优化程度通过服务器进程线路实现秒换ip 效果，打开某一个程序或浏览器 实现单窗口单ip，在于承包运营商的优化技术，专业技术上实现秒换。如果有的地区VPS没有办法秒换是在于承包商的技术问题，比较好的秒换有 等拨号VPS。
 由于其主机对外开放了诸如WWW 、FTP 、E-mail等访问服务，通常要对外公布一个固定的IP地址，以方便用户访问。当然，数字IP不便记忆和识别，人们更习惯于通过域名来访问主机，而域名实际上仍然需要被域名服务器(DNS )翻译为IP地址！所以为了IP资源不浪费全世界一共有43亿个IP按人分配资源就很少了，所以运营商就形成了两种模式公网IP和私有IP，公网IP可以与网络公司共享运营，增加运营商的额外利润。有需求就有市场，秒换最好找一些有试用的厂家可以对比选择！
-
-
-
-
-
-web安全知识点（常见web攻击总结） https://blog.csdn.net/yin_fei_lnmp/article/details/106524645
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -2,6 +2,14 @@
 
 
 
+## 什么AdGuard
+
+AdGuard 是摆脱恼人广告、在线跟踪，保护您远离恶意软件的最佳选择。AdGuard 使您网络冲浪更快速，更安全，更便捷！
+
+![AdGuard.webp](https://imgoss.xgss.net/picgo/AdGuard.webp.jpg?aliyun)
+
+
+
 > AdGuard Home官方下载：https://github.com/AdguardTeam/AdGuardHome/releases
 
 ## 可根据自己的平台下载最新版本。CentOS 7 安装方法如下：

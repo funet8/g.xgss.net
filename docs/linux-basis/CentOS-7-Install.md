@@ -1,4 +1,4 @@
-# CentOS 7 安装 
+# VMware Workstation 中安装 CentOS7 详细版
 
 ## 概括
 
@@ -10,12 +10,7 @@
 
 ## VMware 下安装 CentOS 过程
 
-- VMware Workstation 的介绍和下载
- - 官网：<https://www.vmware.com/products/workstation>
- - wiki：<https://zh.wikipedia.org/wiki/VMware_Workstation>
- - 百度 wiki：<http://baike.baidu.com/view/555554.htm>
- - 百度云下载（64 位）：<http://pan.baidu.com/s/1eRuJAFK>
- - 官网下载：<http://www.vmware.com/products/workstation/workstation-evaluation>
+- VMware Workstation 的介绍和下载，可以自行去官网下载
 
 
 - 安装细节开始：

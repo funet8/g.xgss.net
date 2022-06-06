@@ -14,3 +14,6 @@
 ## [Windows下VSCode及中文配置](Windows下VSCode及中文配置.md)
 
 ## [让你的Linux客户端secureCRT充满颜色](让你的Linux客户端secureCRT充满颜色.md)
+
+## [Linux常用远程连接工具介绍，总有一款适合你](Linux常用远程连接工具介绍，总有一款适合你.md)
+

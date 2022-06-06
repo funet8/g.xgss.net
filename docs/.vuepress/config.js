@@ -49,6 +49,7 @@ module.exports = {
 	  ['/', '首页'],
 	  ['/linux-basis/', '基础知识'],
 	  ['/git/', 'Git服务'],
+	  ['/safe/', '网络安全'],
       ['/kaiyuan/Open-Source-Software/', '开源软件'],
     ],
 	//sidebar: 'auto', // 侧边栏配置
