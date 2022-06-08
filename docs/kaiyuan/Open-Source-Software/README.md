@@ -34,9 +34,25 @@
 
 ## [快速搭建专属的私人网盘系统-iFileSpace](快速搭建专属的私人网盘系统-iFileSpace.md)
 
-
-
 # 博客系统
 
 ## [基于VuePress和github搭建无服务器博客、文档系统](基于VuePress和github搭建无服务器博客、文档系统.md)
+
+
+
+# 资产管理
+
+## [Centos7搭建开源高颜值的IT资产管理平台chemex](Centos7搭建开源高颜值的IT资产管理平台chemex.md)
+
+
+
+# 音乐类
+
+## [解锁网易云音乐灰色无版权音乐的开源工具unblock163](解锁网易云音乐灰色无版权音乐的开源工具unblock163.md)
+
+
+
+# 相册
+
+## [开源炫酷相册系统，网页展示你的照片PicHome](开源炫酷相册系统，网页展示你的照片PicHome.md)
 
