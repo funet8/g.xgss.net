@@ -17,7 +17,11 @@
 
 ## [Linux常用远程连接工具介绍，总有一款适合你](Linux常用远程连接工具介绍，总有一款适合你.md)
 
-
-
 ## [Eagle-安装及破解教程](Eagle-安装及破解教程.md)
+
+# 办公软件
+
+## [地球不爆炸，数据不丢失！FreeFileSync文件软件自动备份重要资料](地球不爆炸，数据不丢失！FreeFileSync文件软件自动备份重要资料.md)
+
+## [Windows任务计划程序，实现自动备份功能FreeFileSync](Windows任务计划程序，实现自动备份功能FreeFileSync.md)
 

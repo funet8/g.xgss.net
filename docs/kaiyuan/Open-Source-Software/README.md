@@ -16,6 +16,8 @@
 
 ## [开源文档管理系统汇总](开源文档管理系统.md)
 
+## [Linux搭建开源企业邮箱系统EwoMail](Linux搭建开源企业邮箱系统EwoMail.md)
+
 # 开源软件-Apollo
 
 ## [基于Linux搭建开源配置管理中心apollo](1.基于Linux搭建开源配置管理中心apollo.md)
@@ -40,6 +42,16 @@
 
 
 
+# 禅道
+
+## [Linux基于Docker安装开源项目管理禅道系统](Linux基于Docker安装开源项目管理禅道系统.md)
+
+## [禅道的使用-基于官方15版本](禅道的使用-基于官方15版本.md)
+
+## [禅道使用-基于禅道11.4.1版本](禅道使用-基于禅道11.4.1版本.md)
+
+
+
 # 资产管理
 
 ## [Centos7搭建开源高颜值的IT资产管理平台chemex](Centos7搭建开源高颜值的IT资产管理平台chemex.md)
@@ -55,4 +67,10 @@
 # 相册
 
 ## [开源炫酷相册系统，网页展示你的照片PicHome](开源炫酷相册系统，网页展示你的照片PicHome.md)
+
+
+
+# 签到
+
+## [Linux基于Docker安装开源自动签到qiandao](Linux基于Docker安装开源自动签到qiandao.md)
 

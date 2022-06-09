@@ -21,7 +21,9 @@
 
 
 
-[阿里云服务器优惠](http://y.xgss.net/aliyun) | [腾讯云服务器优惠](http://y.xgss.net/tx)
+[阿里云云产品优惠](http://y.xgss.net/aliyun) | [腾讯云云产品优惠](http://y.xgss.net/tx) | [Ucloud云产品优惠](http://y.xgss.net/7)
+
+
 
 
 
