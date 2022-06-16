@@ -52,6 +52,7 @@ module.exports = {
 	  ['/safe/', '网络安全'],
 	  ['/mysql/', '数据库'],
       ['/kaiyuan/Open-Source-Software/', '开源软件'],
+	  ['/shell/', 'Shell'],
     ],
 	//sidebar: 'auto', // 侧边栏配置
     //sidebarDepth: 3,

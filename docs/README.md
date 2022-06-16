@@ -57,6 +57,24 @@ cd docs/.vuepress/dist
 
 
 
+## 一、准备工作
+
+本文完整的方案会用到 DNSPod、腾讯云CDN、CVM 以及 COS 4 个云服务，因此我们先登录腾讯云控制台购买或激活服务：
+
+- 个人域名一个，下文以 passwd.xgss.net 代替（必须，最好是备案过的域名，如果没有可以[新注册]()一个）
+
+- SSL 证书一个（必须，可以申请[腾讯云免费证书](https://zhangge.net/goto/aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL3NzbA==)）
+
+- 域名解析平台账号（必须，推荐使用 DNSPod）
+
+- 腾讯云 CVM 一台（必须，安装 Centos7.2 以上版本系统，**如果没有备案域名请购买香港或海外区域**）
+
+- 腾讯云 CDN 服务（可选/推荐 ）
+
+- 腾讯云 COS 服务（可选/推荐）
+
+  
+
 ## 开源推荐
 
 ### 前端
@@ -324,10 +342,6 @@ cd docs/.vuepress/dist
 [超赞的 Linux 软件](https://github.com/alim0x/Awesome-Linux-Software-zh_CN) | 一个 Linux 上超赞的应用，软件，工具以及其它资源的集中地
 
 [iOS端破解版App集合-CrackediOSApps](https://github.com/ooozzy/CrackediOSApps)
-
-[Shadowsocks/SS一键脚本](https://github.com/hijkpw/scripts/tree/master)
-
-[v2rayN](https://github.com/2dust/v2rayN)
 
 [为键盘工作者设计的单词记忆与英语肌肉记忆锻炼软件-qwerty-learner](https://github.com/Kaiyiwing/qwerty-learner)
 

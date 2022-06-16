@@ -5,6 +5,12 @@
 
 ## [PicGo failed to Fetch 出错解决方案](Typora_PicGo_failedto_Fetch.md)
 
+
+
+# 安卓
+
+## [安卓手机上安装Linux开源模拟器-Termux](安卓手机上安装Linux开源模拟器-Termux.md)
+
 # 编程IDE
 
 ## [安装PhpStorm、破解、汉化](Install-PhpStorm.md)
