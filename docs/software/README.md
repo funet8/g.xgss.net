@@ -31,3 +31,5 @@
 
 ## [Windows任务计划程序，实现自动备份功能FreeFileSync](Windows任务计划程序，实现自动备份功能FreeFileSync.md)
 
+## [Windows系统激活命令](Windows系统激活命令.md)
+
