@@ -12,6 +12,8 @@
 
 Lepus有v3版本和v5版本
 
+![mysql-leplus.webp](https://imgoss.xgss.net/picgo/mysql-leplus.webp.jpg?aliyun)
+
 # Docker安装v3版本
 
 https://hub.docker.com/r/georce/lepus
@@ -382,6 +384,8 @@ decrypt:
 ![image-20220617101735813](https://imgoss.xgss.net/picgo/image-20220617101735813.png?aliyun)
 
 
+
+使用手册： https://www.lepus.cc/docs/lepus-v5/manual/
 
 参考：https://www.lepus.cc/docs/lepus-v5/
 

@@ -30,6 +30,7 @@ module.exports = {
 			{ text: 'DevOps', link: '/devops/' },
 			{ text: 'WEB服务', link: '/web/' },
 			{ text: '文件系统', link: '/file-system/' },
+			{ text: 'nginx', link: '/nginx/' },
           ]
 		},
 		{
@@ -52,6 +53,7 @@ module.exports = {
 	  ['/safe/', '网络安全'],
 	  ['/mysql/', '数据库'],
       ['/kaiyuan/Open-Source-Software/', '开源软件'],
+	  ['/nginx/', 'Nginx'],
 	  ['/shell/', 'Shell'],
     ],
 	//sidebar: 'auto', // 侧边栏配置
