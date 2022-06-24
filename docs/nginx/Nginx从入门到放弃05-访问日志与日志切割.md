@@ -6,6 +6,8 @@
 
 当我们访问nginx服务时，nginx会记录日志，nginx日志分两种，一种是访问日志，一种是错误日志，访问日志记录在”access.log”文件中，错误日志记录在”error.log”文件中。
 
+笔者把自己总结的文档分为几遍，合集在 https://g.xgss.net/nginx/
+
 自定义nginx日志的路径
 
 ```

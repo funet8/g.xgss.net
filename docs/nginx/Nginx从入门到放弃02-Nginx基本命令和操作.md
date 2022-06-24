@@ -2,6 +2,8 @@
 
 通过上一篇文章我们知道了的一些基础知识还有在centos7上安装nginx，yum源或者通过编译，但是通过两种方式安装后的nginx的目录结构略有不同，默认提供的资源与配置略有不同，我们暂且先以编译安装的方式进行介绍。
 
+笔者把自己总结的文档分为几遍，合集在 https://g.xgss.net/nginx/
+
 ![nginx-webapp.webp](https://imgoss.xgss.net/picgo/nginx-webapp.webp.jpg?aliyun)
 
 ## 一、Nginx的常用命令

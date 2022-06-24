@@ -4,6 +4,8 @@
 
 nginx（发音同engine x）是一款由俄罗斯程序员Igor Sysoev所开发轻量级的网页服务器、反向代理服务器以及电子邮件（IMAP/POP3）代理服务器。Nginx是一个轻量级/高性能的反向代理Web服务器，用于 HTTP、HTTPS、SMTP、POP3 和 IMAP 协议。他实现非常高效的反向代理、负载平衡，他可以处理2-3万并发连接数，官方监测能支持5万并发。
 
+笔者把自己总结的文档分为几遍，合集在 https://g.xgss.net/nginx/
+
 ## Nginx优点
 
 跨平台、配置简单。

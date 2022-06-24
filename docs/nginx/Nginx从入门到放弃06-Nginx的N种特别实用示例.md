@@ -2,6 +2,8 @@
 
 从前面的几篇教程里面我们知道了nginx的安装和调优、负载均衡、反向代理等，这篇文档我们来介绍Nginx的N种特别实用示例
 
+笔者把自己总结的文档分为几遍，合集在 https://g.xgss.net/nginx/
+
 ![nginx06](https://imgoss.xgss.net/picgo/nginx06.jpg?aliyun)
 
 # 一、location

@@ -2,6 +2,8 @@
 
 通过前面几篇的文章，我们知道nginx最主要的功能之一可以做负载均衡器、正向代理和反向代理，今天我们就来学习如何利用nginx配置
 
+笔者把自己总结的文档分为几遍，合集在 https://g.xgss.net/nginx/
+
 ![nginx04](https://imgoss.xgss.net/picgo/nginx04.jpg?aliyun)
 
 # 反向代理
