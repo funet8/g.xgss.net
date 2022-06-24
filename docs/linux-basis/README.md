@@ -80,3 +80,9 @@
 
 ## [拥有一台云服务器能干嘛](Cloud-Server-What-todo.md)
 
+
+
+### TCP/IP七层应用协议
+
+![七层网络模型](https://imgoss.xgss.net/picgo/七层网络模型.png?aliyun)
+
