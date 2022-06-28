@@ -2,13 +2,17 @@
 
 
 
-## 需要准备
+# 前期准备
 
 1.域名
 
-2.Linux云服务器（系统Centos7，本篇文章采用的是某讯云），测试IP为：150.158.130.33
+2.Linux云服务器（本文系统某讯云的Centos7），测试公网IP为：150.158.130.33
 
-## 安装acme.sh
+3.域名服务商的API Token，或者域名解析到申请SSL云服务器IP（实验项目： ssl.xgss.net）
+
+![sslzhegnshu.webp](https://imgoss.xgss.net/picgo/sslzhegnshu.webp.jpg?aliyun)
+
+# 安装acme.sh
 
 普通用户和 root 用户都可以安装使用. 安装过程进行了以下几步:
 
@@ -16,7 +20,7 @@
 # yum install socat -y
 
 # curl https://get.acme.sh | sh
-# curl https://get.acme.sh | sh -s email=my@example.com(zerossl.com注册的邮箱账号)
+# curl https://get.acme.sh | sh -s email=my@example.com(zerossl.com注册的邮箱账号，在浏览器登录ZeroSSL之后可以看到证书)
 
 # 或者
 # wget -O- https://get.acme.sh | sh
@@ -42,13 +46,7 @@ alias acme.sh=~/.acme.sh/acme.sh
 echo 'alias acme.sh=~/.acme.sh/acme.sh' >>/etc/profile
 ```
 
-### 定时任务
 
-安装过程中会自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书。
-
-```
-00 00 * * * root /root/.acme.sh/acme.sh --cron --home /root/.acme.sh &>/var/log/acme.sh.logs
-```
 
 ### 获取帮助
 
@@ -60,17 +58,21 @@ acme.sh --help
 
 ## 生成证书
 
-acme.sh 实现了 acme 协议支持的所有验证协议. 一般有两种方式验证: http 和 dns 验证.
+acme.sh 实现了 acme 协议支持的所有验证协议. 一般有两种方式验证: HTTP 和 DNS 验证。
 
-# http认证
+如果有条件建议使用DNS验证，
 
-服务器需要安装nginx，**不支持域名的泛解析**
+# HTTP认证
+
+此方法**好像不支持域名的泛解析**，笔者想泛解析做泛域名的认证，但一直不成功，不知道什么原因。
 
 ## 域名解析
 
 ```
 ssl.xgss.net A记录解析到 150.158.130.33
+只解析上面一条即可，因为只是为 ssl.xgss.net 申请证书，后面的解析是为了实验能否申请到多*.xgss.net的证书
 xgss.net A记录解析到 150.158.130.33
+*.xgss.net A记录解析到 150.158.130.33
 ```
 
 ![image-20220627164634187](https://imgoss.xgss.net/picgo/image-20220627164634187.png?aliyun)
@@ -111,6 +113,18 @@ acme.sh  --issue  -d mydomain.com -d www.mydomain.com  --webroot  /home/wwwroot/
 只需要指定域名, 并指定域名所在的网站根目录. acme.sh 会全自动的生成验证文件, 并放到网站的根目录, 然后自动完成验证. 最后会聪明的删除验证文件. 整个过程没有任何副作用.
 
 如果你用的 nginx服务器, 或者反代, acme.sh 还可以智能的从 nginx的配置中自动完成验证, 你不需要指定网站根目录:
+
+```
+acme.sh --issue  -d mydomain.com   --nginx
+```
+
+**注意, 无论是 apache 还是 nginx 模式, acme.sh在完成验证之后, 会恢复到之前的状态, 都不会私自更改你本身的配置. 好处是你不用担心配置被搞坏, 也有一个缺点, 你需要自己配置 ssl 的配置, 否则只能成功生成证书, 你的网站还是无法访问https. 但是为了安全, 你还是自己手动改配置吧.**
+
+如果你还没有运行任何 web 服务, **80** 端口是空闲的, 那么 **acme.sh** 还能假装自己是一个webserver, 临时听在**80** 端口, 完成验证:
+
+```
+acme.sh  --issue -d mydomain.com   --standalone
+```
 
 
 
@@ -200,25 +214,53 @@ openssl dhparam -out /data/wwwroot/web/ssl/dhparam.pem     2048
 
 # DNS认证
 
-由于`acme.sh`对域名解析/提供商的支持十分广泛,所以请针对自己所在的域名提供商获取对应的API Token。
+## 手动DNS方式
 
-支持列表:[点我跳转](https://github.com/Neilpang/acme.sh/blob/master/dnsapi/README.md)
+手动在域名上添加一条 txt 解析记录, 验证域名所有权。
 
-国内目前使用较多的是腾讯云和阿里云，获取API Token的方法分别是：
+这种方式的好处是, 你不需要任何服务器, 不需要任何公网 ip, 只需要 dns 的解析记录即可完成验证. 坏处是，如果不同时配置 Automatic DNS API，使用这种方式 acme.sh 将无法自动更新证书，每次都需要手动再次重新解析验证域名所有权。
 
-- 腾讯的`DNSPod`
+```
+acme.sh  --issue  --dns   -d mydomain.com \
+ --yes-I-know-dns-manual-mode-enough-go-ahead-please
+```
 
-  登录[DNSPod](https://www.dnspod.cn/),进入顶部导航栏里的用户中心,在左侧的导航栏里,找到`安全设置`,看到页面的最下面,有个`API Token`.点击`查看`->`创建API Token`->填写`Tokens名称`,复制好ID与Token即可.保存待用。
+然后, acme.sh 会生成相应的解析记录显示出来, 你只需要在你的域名管理面板中添加这条 txt 记录即可.
 
-- 阿里云域名
+等待解析完成之后, 重新生成证书:
 
-  需要登录到阿里云官网获取Ali_Key和Ali_Secret。[点击此处跳转](https://usercenter.console.aliyun.com/#/manage/ak)
+```
+acme.sh  --renew   -d mydomain.com \
+  --yes-I-know-dns-manual-mode-enough-go-ahead-please
+```
+
+注意第二次这里用的是 **--renew**
+
+
+
+## 自动DNS方式
+
+dns 方式的真正强大之处在于可以使用域名解析商提供的 api 自动添加 txt 记录完成验证.
+
+由于`acme.sh`对域名解析/提供商的支持十分广泛,所以请针对自己所在的域名提供商获取对应的API Token，目前支持 cloudflare, dnspod, cloudxns, godaddy 以及 ovh 等数十种解析商的自动集成.
+
+支持列表:[点我跳转](https://github.com/acmesh-official/acme.sh/wiki/dnsapi) | https://github.com/acmesh-official/acme.sh/wiki/dnsapi
+
+国内目前使用较多的是某讯云和某里云，获取API Token的方法分别是：
+
+- 某讯云的`DNSPod`
+
+  登录DNSPod,进入顶部导航栏里的用户中心,在左侧的导航栏里,找到`安全设置`,看到页面的最下面,有个`API Token`.点击`查看`->`创建API Token`->填写`Tokens名称`,复制好ID与Token即可.保存待用。
+
+- 某里云域名
+
+  需要登录到某里云官网获取Ali_Key和Ali_Secret。[点击此处跳转](https://usercenter.console.aliyun.com/#/manage/ak) | https://usercenter.console.aliyun.com/#/manage/ak
   
   当然可以直接使用accessKey
 
 ![image-20220627170505702](https://imgoss.xgss.net/picgo/image-20220627170505702.png?aliyun)
 
-## 阿里云API Token申请
+## 某里云API Token申请
 
 申请子账户来申请。
 
@@ -277,11 +319,19 @@ total 16
 
 (一个小提醒, 这里用的是 service nginx force-reload, 不是 service nginx reload, 据测试, reload 并不会重新加载证书, 所以用的 force-reload)
 
-域名新增了两条记录
+**你的KEY和Secret都将明文保存‘~/.acme.sh/account.conf’文件中，注意保护隐私。**
+
+![image-20220628095240206](https://imgoss.xgss.net/picgo/image-20220628095240206.png?aliyun)
+
+
+
+域名后台新增了两条记录
 
 ![image-20220627190154936](https://imgoss.xgss.net/picgo/image-20220627190154936.png?aliyun)
 
 ## 验证SSL
+
+浏览器打开网址，点击地址的小锁图标，可以查看更多信息。
 
 ![image-20220627190701821](https://imgoss.xgss.net/picgo/image-20220627190701821.png?aliyun)
 
@@ -292,6 +342,16 @@ hello SSL
 hello SSL
 [root@shanghai-node02 ssl]# curl https://ssl4.xgss.net/
 hello SSL
+```
+
+
+
+# 定时更新证书
+
+安装过程中会自动为你创建 cronjob, 每天 0:00 点自动检测所有的证书, 如果快过期了, 需要更新, 则会自动更新证书。
+
+```
+00 00 * * * root /root/.acme.sh/acme.sh --cron --home /root/.acme.sh &>/var/log/acme.sh.logs
 ```
 
 # 查看已安装证书的信息
@@ -320,7 +380,7 @@ crontab  -l
 
 目前由于 acme 协议和 letsencrypt CA 都在频繁的更新, 因此 acme.sh 也经常更新以保持同步.
 
-升级 acme.sh 到最新版 :
+升级 acme.sh 到最新版
 
 ```
 acme.sh --upgrade
