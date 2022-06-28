@@ -1,7 +1,5 @@
 # 通过acme.sh开源工具申请泛解析SSL证书
 
-
-
 # 前期准备
 
 1.域名
@@ -48,11 +46,23 @@ echo 'alias acme.sh=~/.acme.sh/acme.sh' >>/etc/profile
 
 
 
-### 获取帮助
+### 常用命令
 
 ```
-acme.sh --help
+acme.sh --help     #获取帮助
+acme.sh --version  # 查看版本
+
 ```
+
+## 关联 ZeroSSL
+
+目前 acme.sh 支持四个正式环境 CA，分别是 Let’s Encrypt、Buypass、ZeroSSL 和 SSL.com，默认使用 ZeroSSL，所以我们不用切换。如果不放心，可以设置一下：
+
+```
+acme.sh --set-default-ca --server zerossl
+```
+
+
 
 
 
@@ -402,7 +412,7 @@ acme.sh --upgrade  --auto-upgrade  0
 
 
 
-
+# 参考
 
 官方中文说明： https://github.com/acmesh-official/acme.sh/wiki/%E8%AF%B4%E6%98%8E
 
