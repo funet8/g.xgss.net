@@ -8,3 +8,5 @@
 
 ## [DDos的九个误区](DDos的九个误区.md)
 
+## [通过acme.sh开源工具申请泛解析SSL证书](通过acme.sh开源工具申请泛解析SSL证书.md)
+

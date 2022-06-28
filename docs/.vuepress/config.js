@@ -55,6 +55,7 @@ module.exports = {
       ['/kaiyuan/Open-Source-Software/', '开源软件'],
 	  ['/nginx/', 'Nginx'],
 	  ['/shell/', 'Shell'],
+	  ['/Ubuntu/', 'Ubuntu'],
     ],
 	//sidebar: 'auto', // 侧边栏配置
     //sidebarDepth: 3,
