@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>开源的数据同步中间件-DBSyncer | 星哥私有教程</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/images/logo.png">
+    <link rel="manifest" href="/images/logo.png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <meta name="description" content="星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍">
+    <meta http-quiv="pragma" cotent="no-cache">
+    <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
+    <meta http-quiv="expires" cotent="0">
+    
+    <link rel="preload" href="/assets/css/0.styles.aadc6af7.css" as="style"><link rel="preload" href="/assets/js/app.b517e5d6.js" as="script"><link rel="preload" href="/assets/js/3.4c71d4a9.js" as="script"><link rel="preload" href="/assets/js/1.39b4ab80.js" as="script"><link rel="preload" href="/assets/js/71.16b4ac96.js" as="script"><link rel="prefetch" href="/assets/js/10.bad7c0c0.js"><link rel="prefetch" href="/assets/js/100.9fd740b2.js"><link rel="prefetch" href="/assets/js/101.b77896f0.js"><link rel="prefetch" href="/assets/js/102.74a50540.js"><link rel="prefetch" href="/assets/js/103.5e2d6979.js"><link rel="prefetch" href="/assets/js/104.e863b876.js"><link rel="prefetch" href="/assets/js/105.6eeff200.js"><link rel="prefetch" href="/assets/js/106.53e262fc.js"><link rel="prefetch" href="/assets/js/107.db310d08.js"><link rel="prefetch" href="/assets/js/108.cc5c0f7b.js"><link rel="prefetch" href="/assets/js/109.de474a45.js"><link rel="prefetch" href="/assets/js/11.62fe6bb3.js"><link rel="prefetch" href="/assets/js/110.5b9ca485.js"><link rel="prefetch" href="/assets/js/111.4418dcb6.js"><link rel="prefetch" href="/assets/js/112.f3562177.js"><link rel="prefetch" href="/assets/js/113.dba0e12d.js"><link rel="prefetch" href="/assets/js/114.83d8204e.js"><link rel="prefetch" href="/assets/js/115.4dba3436.js"><link rel="prefetch" href="/assets/js/116.69fff367.js"><link rel="prefetch" href="/assets/js/117.3660761a.js"><link rel="prefetch" href="/assets/js/118.a0a7b51e.js"><link rel="prefetch" href="/assets/js/119.2a2c8082.js"><link rel="prefetch" href="/assets/js/12.72b91304.js"><link rel="prefetch" href="/assets/js/120.b0485b76.js"><link rel="prefetch" href="/assets/js/121.0be0bde4.js"><link rel="prefetch" href="/assets/js/122.59c9ebdc.js"><link rel="prefetch" href="/assets/js/123.29b9c47f.js"><link rel="prefetch" href="/assets/js/124.6d7e400f.js"><link rel="prefetch" href="/assets/js/125.9e893aef.js"><link rel="prefetch" href="/assets/js/126.14d1bfd8.js"><link rel="prefetch" href="/assets/js/127.627f55ad.js"><link rel="prefetch" href="/assets/js/128.9e94b063.js"><link rel="prefetch" href="/assets/js/129.7f0347cf.js"><link rel="prefetch" href="/assets/js/13.231c2319.js"><link rel="prefetch" href="/assets/js/130.0c33b7bf.js"><link rel="prefetch" href="/assets/js/131.d80ded0f.js"><link rel="prefetch" href="/assets/js/132.5a1c1231.js"><link rel="prefetch" href="/assets/js/133.26e55788.js"><link rel="prefetch" href="/assets/js/134.1ed0ad8f.js"><link rel="prefetch" href="/assets/js/135.21ed0450.js"><link rel="prefetch" href="/assets/js/136.62fb803b.js"><link rel="prefetch" href="/assets/js/137.1995e95e.js"><link rel="prefetch" href="/assets/js/138.bc4a99bd.js"><link rel="prefetch" href="/assets/js/139.88bcce9f.js"><link rel="prefetch" href="/assets/js/14.66ff6cc9.js"><link rel="prefetch" href="/assets/js/140.450d8ea2.js"><link rel="prefetch" href="/assets/js/141.96f85d5f.js"><link rel="prefetch" href="/assets/js/142.ff97ee66.js"><link rel="prefetch" href="/assets/js/143.66613814.js"><link rel="prefetch" href="/assets/js/144.f8c3c3a0.js"><link rel="prefetch" href="/assets/js/145.599f47db.js"><link rel="prefetch" href="/assets/js/146.572a1a6a.js"><link rel="prefetch" href="/assets/js/147.d8b08642.js"><link rel="prefetch" href="/assets/js/148.0e936995.js"><link rel="prefetch" href="/assets/js/15.07cb47c7.js"><link rel="prefetch" href="/assets/js/16.80931d2f.js"><link rel="prefetch" href="/assets/js/17.db7bca80.js"><link rel="prefetch" href="/assets/js/18.49256a24.js"><link rel="prefetch" href="/assets/js/19.e93fe23c.js"><link rel="prefetch" href="/assets/js/20.5309e956.js"><link rel="prefetch" href="/assets/js/21.a25f1ead.js"><link rel="prefetch" href="/assets/js/22.3a5b50c9.js"><link rel="prefetch" href="/assets/js/23.54faa8f0.js"><link rel="prefetch" href="/assets/js/24.3a7798d7.js"><link rel="prefetch" href="/assets/js/25.e8b45006.js"><link rel="prefetch" href="/assets/js/26.172662dd.js"><link rel="prefetch" href="/assets/js/27.56365df3.js"><link rel="prefetch" href="/assets/js/28.e276db46.js"><link rel="prefetch" href="/assets/js/29.0bc2196c.js"><link rel="prefetch" href="/assets/js/30.dee0e293.js"><link rel="prefetch" href="/assets/js/31.6bf6d6c3.js"><link rel="prefetch" href="/assets/js/32.130dd15d.js"><link rel="prefetch" href="/assets/js/33.6da96894.js"><link rel="prefetch" href="/assets/js/34.490bda0c.js"><link rel="prefetch" href="/assets/js/35.96d8edba.js"><link rel="prefetch" href="/assets/js/36.79f7284e.js"><link rel="prefetch" href="/assets/js/37.cf407511.js"><link rel="prefetch" href="/assets/js/38.951b48cc.js"><link rel="prefetch" href="/assets/js/39.4927c2cf.js"><link rel="prefetch" href="/assets/js/4.65fdb70c.js"><link rel="prefetch" href="/assets/js/40.1005f11d.js"><link rel="prefetch" href="/assets/js/41.d87eae68.js"><link rel="prefetch" href="/assets/js/42.0565d541.js"><link rel="prefetch" href="/assets/js/43.4571f7d0.js"><link rel="prefetch" href="/assets/js/44.f5291979.js"><link rel="prefetch" href="/assets/js/45.fe154178.js"><link rel="prefetch" href="/assets/js/46.93a8b6e5.js"><link rel="prefetch" href="/assets/js/47.8b910e6e.js"><link rel="prefetch" href="/assets/js/48.e6f4bd84.js"><link rel="prefetch" href="/assets/js/49.9e20eefb.js"><link rel="prefetch" href="/assets/js/5.5f2c50f2.js"><link rel="prefetch" href="/assets/js/50.b2f15d7c.js"><link rel="prefetch" href="/assets/js/51.ec1e40a3.js"><link rel="prefetch" href="/assets/js/52.bcfc6035.js"><link rel="prefetch" href="/assets/js/53.b4ee3476.js"><link rel="prefetch" href="/assets/js/54.bf8ea0b7.js"><link rel="prefetch" href="/assets/js/55.fccf530c.js"><link rel="prefetch" href="/assets/js/56.8a03204e.js"><link rel="prefetch" href="/assets/js/57.468f6c0a.js"><link rel="prefetch" href="/assets/js/58.554a2463.js"><link rel="prefetch" href="/assets/js/59.d45a3b2c.js"><link rel="prefetch" href="/assets/js/6.eb3197d0.js"><link rel="prefetch" href="/assets/js/60.3fd1ddd4.js"><link rel="prefetch" href="/assets/js/61.2a27be39.js"><link rel="prefetch" href="/assets/js/62.49730ede.js"><link rel="prefetch" href="/assets/js/63.7b8f571b.js"><link rel="prefetch" href="/assets/js/64.daccac32.js"><link rel="prefetch" href="/assets/js/65.f1c7cc94.js"><link rel="prefetch" href="/assets/js/66.3e539baa.js"><link rel="prefetch" href="/assets/js/67.e3e79f83.js"><link rel="prefetch" href="/assets/js/68.0f67d35f.js"><link rel="prefetch" href="/assets/js/69.e8b6a6dd.js"><link rel="prefetch" href="/assets/js/7.55d3c43a.js"><link rel="prefetch" href="/assets/js/70.efcbf13f.js"><link rel="prefetch" href="/assets/js/72.14003741.js"><link rel="prefetch" href="/assets/js/73.f5addeea.js"><link rel="prefetch" href="/assets/js/74.80d30f8d.js"><link rel="prefetch" href="/assets/js/75.b7200932.js"><link rel="prefetch" href="/assets/js/76.3102c0a6.js"><link rel="prefetch" href="/assets/js/77.868a469e.js"><link rel="prefetch" href="/assets/js/78.55dac72f.js"><link rel="prefetch" href="/assets/js/79.0efaa490.js"><link rel="prefetch" href="/assets/js/8.cd63bc55.js"><link rel="prefetch" href="/assets/js/80.2a40a882.js"><link rel="prefetch" href="/assets/js/81.9ec29160.js"><link rel="prefetch" href="/assets/js/82.eb6d9c21.js"><link rel="prefetch" href="/assets/js/83.2a663a2d.js"><link rel="prefetch" href="/assets/js/84.029750fb.js"><link rel="prefetch" href="/assets/js/85.c6072791.js"><link rel="prefetch" href="/assets/js/86.89ce068b.js"><link rel="prefetch" href="/assets/js/87.2c27bd9e.js"><link rel="prefetch" href="/assets/js/88.3da13dbd.js"><link rel="prefetch" href="/assets/js/89.24e79e4e.js"><link rel="prefetch" href="/assets/js/9.c8381b41.js"><link rel="prefetch" href="/assets/js/90.773c219c.js"><link rel="prefetch" href="/assets/js/91.36550ee2.js"><link rel="prefetch" href="/assets/js/92.77786a17.js"><link rel="prefetch" href="/assets/js/93.5f3d3f70.js"><link rel="prefetch" href="/assets/js/94.c839c727.js"><link rel="prefetch" href="/assets/js/95.06080027.js"><link rel="prefetch" href="/assets/js/96.125b0205.js"><link rel="prefetch" href="/assets/js/97.359e25ff.js"><link rel="prefetch" href="/assets/js/98.6c6b4b6f.js"><link rel="prefetch" href="/assets/js/99.6fc3af39.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aadc6af7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-130b300a><div data-v-130b300a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-130b300a data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>星哥私有教程</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2022
+        </a></span></div></div> <div class="hide" data-v-130b300a><header class="navbar" data-v-130b300a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">星哥私有教程</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link router-link-active"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-130b300a></div> <aside class="sidebar" data-v-130b300a><div class="personal-info-wrapper" data-v-39576ba9 data-v-130b300a><!----> <!----> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>138</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>0</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  nginx
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link router-link-active"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/linux-basis/" class="sidebar-link">基础知识</a></li><li><a href="/git/" class="sidebar-link">Git服务</a></li><li><a href="/safe/" class="sidebar-link">网络安全</a></li><li><a href="/mysql/" class="sidebar-link">数据库</a></li><li><a href="/kaiyuan/Open-Source-Software/" class="sidebar-link">开源软件</a></li><li><a href="/nginx/" class="sidebar-link">Nginx</a></li><li><a href="/shell/" class="sidebar-link">Shell</a></li><li><a href="/Ubuntu/" class="sidebar-link">Ubuntu</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2></h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2022
+        </a></span></div></div> <div data-v-130b300a><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">开源的数据同步中间件-DBSyncer</h1> <div data-v-f875f3fc><!----> <!----> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/kaiyuan/Open-databases/%E5%BC%80%E6%BA%90%E7%9A%84%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5%E4%B8%AD%E9%97%B4%E4%BB%B6-DBSyncer.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="开源的数据同步中间件-dbsyncer"><a href="#开源的数据同步中间件-dbsyncer" class="header-anchor">#</a> 开源的数据同步中间件-DBSyncer</h1> <h1 id="项目介绍"><a href="#项目介绍" class="header-anchor">#</a> 项目介绍</h1> <p>DBSyncer是一款开源的数据同步中间件，提供Mysql、Oracle、SqlServer、Elasticsearch(ES)、Kafka、SQL(Mysql/Oracle/SqlServer)等同步场景。支持上传插件自定义同步转换业务，提供监控全量和增量数据统计图、应用性能预警等。</p> <p>开源地址：https://gitee.com/ghi/dbsyncer</p> <ul><li><p>组合驱动，自定义库同步到库组合，关系型数据库与非关系型之间组合，任意搭配表同步映射关系</p></li> <li><p>实时监控，驱动全量或增量实时同步运行状态、结果、同步日志和系统日志</p></li> <li><p>开发插件，自定义转化同步逻辑</p> <p><img src="https://imgoss.xgss.net/picgo/%E5%BC%80%E6%BA%90%E7%9A%84%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5%E4%B8%AD%E9%97%B4%E4%BB%B6-DBSyncer.jpg?aliyun" alt="开源的数据同步中间件-DBSyncer"></p></li></ul> <h1 id="安装部署"><a href="#安装部署" class="header-anchor">#</a> 安装部署</h1> <h2 id="系统介绍"><a href="#系统介绍" class="header-anchor">#</a> 系统介绍</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>centos7
+
+ip:192.168.1.8
+
+需要部署安装JDK和Maven
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="安装jdk-1-8"><a href="#安装jdk-1-8" class="header-anchor">#</a> 安装JDK 1.8</h2> <p>如果安装了可以忽略</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># mkdir /data/software/
+# cd /data/software/
+# wget http://js.funet8.com/centos_software/jdk-8u211-linux-x64.tar.gz
+# mkdir /usr/local/java/
+# tar -zxvf jdk-8u211-linux-x64.tar.gz -C /usr/local/java/
+
+# echo '
+export JAVA_HOME=/usr/local/java/jdk1.8.0_211
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+'&gt;&gt; /etc/profile
+
+# source /etc/profile
+
+# ln -s /usr/local/java/jdk1.8.0_211/bin/java /usr/bin/java
+
+# java -version
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><h2 id="安装maven"><a href="#安装maven" class="header-anchor">#</a> 安装maven</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code># mkdir /data/maven
+# cd /data/maven
+# wget http://mirrors.cnnic.cn/apache/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
+备用下载地址：
+# wget http://js.funet8.com/centos_software/apache-maven-3.5.4-bin.tar.gz
+# tar -zxvf apache-maven-3.5.4-bin.tar.gz
+
+配置maven：  
+# vim /etc/profile
+在配置文件配置中加上：
+
+export MAVEN_HOME=/data/maven/apache-maven-3.5.4
+export PATH=$MAVEN_HOME/bin:$PATH
+
+使配置立即生效
+# source  /etc/profile
+
+# mvn --version
+Apache Maven 3.5.4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="下载安装包"><a href="#下载安装包" class="header-anchor">#</a> 下载安装包</h2> <p>https://gitee.com/ghi/dbsyncer/releases ，这里我下载v1.1.7-Beta版本</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># cd /data/wwwroot/web/
+# wget http://js.funet8.com/centos_software/dbsyncer-v1.1.7-Beta.tar.gz
+解压
+# tar -zxvf dbsyncer-v1.1.7-Beta.tar.gz 
+# cd dbsyncer-v1.1.7-Beta
+编译包
+# sh build.sh 
+...
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 03:17 min
+[INFO] Finished at: 2022-04-28T16:40:21+08:00
+[INFO] ------------------------------------------------------------------------
+‘/data/wwwroot/web/dbsyncer-v1.1.7-Beta/dbsyncer-web/target/dbsyncer-1.1.7-Beta.zip’ -&gt; ‘/data/wwwroot/web/dbsyncer-v1.1.7-Beta/dbsyncer-1.1.7-Beta.zip’
+
+# unzip dbsyncer-1.1.7-Beta.zip 
+# cd dbsyncer-1.1.7-Beta 
+# ./bin/startup.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>查看端口</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># netstat -tunpl|grep 18686
+tcp6       0      0 :::18686                :::*                    LISTEN      5754/java     
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>开放端口(非必要)</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>iptables -A INPUT -p tcp --dport 18686 -j ACCEPT
+service iptables save
+systemctl restart iptables.service
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="打开浏览器访问"><a href="#打开浏览器访问" class="header-anchor">#</a> 打开浏览器访问</h3> <p>http://IP:18686</p> <p>http://192.168.1.8:18686/</p> <h3 id="账号和密码"><a href="#账号和密码" class="header-anchor">#</a> 账号和密码</h3> <p>admin/admin</p> <p><img src="https://imgoss.xgss.net/picgo/image-20220428165146386.png?aliyun" alt="image-20220428165146386"></p> <h1 id="同步mysql数据库"><a href="#同步mysql数据库" class="header-anchor">#</a> 同步MySQL数据库</h1> <div class="language- line-numbers-mode"><pre class="language-text"><code>192.168.1.6:3306 同步到---&gt; 192.168.1.8:61921
+
+192.168.1.6:61922
+root
+123456
+
+192.168.1.8:61921
+root
+123456
+同步数据库 dzzoffice
+
+mysql -u root -h 192.168.1.6 -P61922 -p'123456'
+mysql -u root -h 192.168.1.8 -P61921 -p'123456'
+查看binlog日志
+&gt; show binary logs;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>目标库的server_id不能为1</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysqladmin -u root -h 192.168.1.8 -p123456 -P61921 shutdown
+修改mysql的配置文件
+server_id=1 改为 server_id=100
+再次启动
+/usr/bin/mysqld_safe --defaults-file=/data/mysql/etc/61921.cnf &amp;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="添加连接"><a href="#添加连接" class="header-anchor">#</a> 添加连接</h2> <p>进入后台点击 “添加连接”</p> <p><img src="https://imgoss.xgss.net/picgo/image-20220428181006187.png?aliyun" alt="image-20220428181006187"></p> <p><img src="https://imgoss.xgss.net/picgo/image-20220428181020667.png?aliyun" alt="image-20220428181020667"></p> <p>添加驱动</p> <p><img src="https://imgoss.xgss.net/picgo/image-20220428181251742.png?aliyun" alt="image-20220428181251742"></p> <p>启动</p> <p><img src="https://imgoss.xgss.net/picgo/image-20220428181231313.png?aliyun" alt="image-20220428181231313"></p> <p><img src="https://imgoss.xgss.net/picgo/image-20220428181337970.png?aliyun" alt="image-20220428181337970"></p> <p>优点： 开源系统，使用上类似于阿里云的DTS，如果作为数据同步使用还可以，作为生产环境就需要多测试了</p> <p>主要用于A库的某数据库同步到B库</p> <h2 id="增量同步配置-源库"><a href="#增量同步配置-源库" class="header-anchor">#</a> 增量同步配置（源库）</h2> <p>Mysql</p> <ul><li>Dump Binlog二进制日志。Master同步Slave, 创建IO线程读取数据，写入relaylog，基于消息订阅捕获增量数据。</li> <li>配置</li></ul> <p>修改my.ini文件</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#服务唯一ID
+server_id=1
+log-bin=mysql_bin
+binlog-format=ROW
+max_binlog_cache_size = 256M
+max_binlog_size = 512M
+expire_logs_days = 7
+#监听同步的库, 多个库使用英文逗号“,”拼接
+replicate-do-db=test
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="oracle"><a href="#oracle" class="header-anchor">#</a> <strong>Oracle</strong></h2> <ul><li>CDN注册订阅。监听增删改事件，得到rowid，根据rowid执行SQL查询，得到变化数据。</li> <li>授予账号监听权限, 同时要求目标源表必须定义一个长度为18的varchar字段，通过接收rowid值实现增删改操作。</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>grant change notification to 你的账号
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h1 id="定时"><a href="#定时" class="header-anchor">#</a> 定时</h1> <p><img src="https://imgoss.xgss.net/picgo/5eb194cd687f4b669d44cba753f4c30d.png?aliyun" alt="DBSyncer 一款开源的数据同步中间件"></p> <p>假设源表数据格式</p> <p><img src="https://imgoss.xgss.net/picgo/a957bb7f7fcb4fb8847e635bf20ea31d.png?aliyun" alt="DBSyncer 一款开源的数据同步中间件"></p> <h1 id="预览"><a href="#预览" class="header-anchor">#</a> 预览</h1> <p><img src="https://imgoss.xgss.net/picgo/aab4da41d1154f3e96bb406c04454693.png?aliyun" alt="DBSyncer 一款开源的数据同步中间件"></p> <p>驱动管理</p> <p><img src="https://imgoss.xgss.net/picgo/6422d911c563406495b6c64ceb1b4072.png?aliyun" alt="DBSyncer 一款开源的数据同步中间件"></p> <h2 id="驱动详情"><a href="#驱动详情" class="header-anchor">#</a> 驱动详情</h2> <p><img src="https://imgoss.xgss.net/picgo/29520029fb8b46c080f2926cd86ffe1c.png?aliyun" alt="DBSyncer 一款开源的数据同步中间件"></p> <h2 id="驱动表字段关系配置"><a href="#驱动表字段关系配置" class="header-anchor">#</a> 驱动表字段关系配置</h2> <p><img src="https://imgoss.xgss.net/picgo/3180974b153f4727bd0bbda41f64086f.png?aliyun" alt="DBSyncer 一款开源的数据同步中间件"></p> <h2 id="监控"><a href="#监控" class="header-anchor">#</a> 监控</h2> <p><img src="https://imgoss.xgss.net/picgo/000645_35a544b3_376718.png?aliyun" alt="img"></p> <h2 id="上传插件"><a href="#上传插件" class="header-anchor">#</a> 上传插件</h2> <p><img src="https://imgoss.xgss.net/picgo/232643_9b1f3f64_376718.png?aliyun" alt="img"></p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.b517e5d6.js" defer></script><script src="/assets/js/3.4c71d4a9.js" defer></script><script src="/assets/js/1.39b4ab80.js" defer></script><script src="/assets/js/71.16b4ac96.js" defer></script>
+  </body>
+</html>
