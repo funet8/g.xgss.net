@@ -21,9 +21,7 @@
 
 
 
-[阿里云云产品优惠](http://y.xgss.net/aliyun) | [腾讯云云产品优惠](http://y.xgss.net/tx) | [Ucloud云产品优惠](http://y.xgss.net/7)
-
-
+[阿里云优惠](http://y.xgss.net/aliyun) | [腾讯云优惠](http://y.xgss.net/tx) | [Ucloud云产品优惠](http://y.xgss.net/7)
 
 
 
@@ -57,13 +55,13 @@ cd docs/.vuepress/dist
 
 
 
-## 一、准备工作
+## 准备工作
 
 本文完整的方案会用到 DNSPod、腾讯云CDN、CVM 以及 COS 4 个云服务，因此我们先登录腾讯云控制台购买或激活服务：
 
-- 个人域名一个，下文以 passwd.xgss.net 代替（必须，最好是备案过的域名，如果没有可以[新注册]()一个）
+- 个人域名一个，下文以 passwd.xgss.net 代替（必须，最好是备案过的域名，如果没有可以新注册个）
 
-- SSL 证书一个（必须，可以申请[腾讯云免费证书](https://zhangge.net/goto/aHR0cHM6Ly9jb25zb2xlLmNsb3VkLnRlbmNlbnQuY29tL3NzbA==)）
+- SSL 证书一个（必须，可以申请腾讯云、阿里云免费证书1年）
 
 - 域名解析平台账号（必须，推荐使用 DNSPod）
 
