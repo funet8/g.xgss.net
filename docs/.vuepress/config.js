@@ -33,12 +33,19 @@ module.exports = {
 			{ text: 'nginx', link: '/nginx/' },
           ]
 		},
-		{
-		text: '开源软件',
+		{	text: '开源软件',
 			items: [
 			{ text: '开源软件', link: '/kaiyuan/Open-Source-Software/' },
 			{ text: '数据库', link: '/kaiyuan/Open-databases/' },
 			{ text: '安卓相关', link: '/kaiyuan/android/' },
+          ]
+        },
+		{	text: '云服务',
+			items: [
+			{ text: '阿里云', link: '/cloud/aliyun/' },
+			{ text: '腾讯云', link: '/cloud/tengxunyun/' },
+			{ text: '亚马逊云', link: '/cloud/aws/' },
+			{ text: '其他', link: '/cloud/other/' },
           ]
         },
 	  { text: '服务器安全', link: '/safe/' },

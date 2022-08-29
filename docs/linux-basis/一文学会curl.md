@@ -209,6 +209,14 @@ curl -X POST --data "data=xxx" example.com/form.cgi
 
 
 
+POST-json格式
+
+```
+$ curl -H "Content-Type: application/json" -X POST -d '{"id": "001", "name":"张三", "phone":"13099999999"}'  http://localhost:2000/api/json
+```
+
+
+
 POST发送请求的数据体可以用-d
 
 ```
@@ -216,6 +224,8 @@ curl -X POST -d'login=emma&password=123' https://baidu.com/login
 
 curl -X POST -d 'login=emma' -d 'password=123' https://baidu.com/login
 ```
+
+
 
 使用-d参数以后，HTTP 请求会自动加上标头Content-Type :
 application/x-www-form-urlencoded。并且会自动将请求转为 POST 方法，因此可以省略-X POST。-d参数可以读取本地文本文件的数据，向服务器发送。
