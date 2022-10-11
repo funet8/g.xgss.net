@@ -55,6 +55,16 @@ cd docs/.vuepress/dist
 
 
 
+# 软件下载
+
+
+
+## 360系列
+
+[360安全卫士](http://urlqh.cn/mSFTo) | [360浏览器](http://urlqh.cn/mTLVf) | [360极速浏览器](http://urlqh.cn/n1mZf) 
+
+
+
 ## 准备工作
 
 本文完整的方案会用到 DNSPod、腾讯云CDN、CVM 以及 COS 4 个云服务，因此我们先登录腾讯云控制台购买或激活服务：

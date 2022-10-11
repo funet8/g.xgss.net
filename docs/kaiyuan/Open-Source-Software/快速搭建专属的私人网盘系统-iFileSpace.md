@@ -80,13 +80,14 @@ Version:1.8.9
 docker run -itd --name ifile \
 --restart always \
 -p 3030:3030 \
--v /data/docker/ifile/conf:/root/conf \
--v /data/docker/ifile/files:/root/files \
--v /data/docker/ifile/data:/root/data \
--v /data/docker/ifile/assets:/root/assets \
--v /data/docker/ifile/tmp:/root/tmp \
--v /data/docker/ifile/thumb:/root/thumb \
-lgs821/ifile
+-v /data4T/docker_file/ifile/conf:/ifile/conf \
+-v /data4T/docker_file/ifile/files:/ifile/files  \
+-v /data4T/docker_file/ifile/data:/ifile/data \
+-v /data4T/docker_file/ifile/assets:/ifile/assets \
+-v /data4T/docker_file/ifile/tmp:/ifile/tmp \
+-v /data4T/docker_file/ifile/thumb:/ifile/thumb \
+-v /data4T/docker_file/ifile/logs:/ifile/logs \
+-d lgs821/ifile
 
 #替换 ‘~/ifile’ 为您的路径
 # -v ~/ifile/conf:/root/conf 映射配置文件目录
