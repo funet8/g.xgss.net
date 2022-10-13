@@ -19,6 +19,9 @@
 | gitlab仓库      | [gitlab.xgss.net](http://gitlab.xgss.net)      | 开源gitlab项目                                               |                                               |
 | nextcloud 网盘  | [n.xgss.net](https://n.xgss.net/)              | 基于开源nextcloud项目搭建【iosapp一直登陆不了】              | [开源地址](https://github.com/nextcloud)      |
 | 私有密码工具    | [b.xgss.net](https://b.xgss.net)               | [安装教程](https://g.xgss.net/kaiyuan/Open-Source-Software/%E6%90%AD%E5%BB%BA%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E7%9A%84%E5%85%A8%E5%B9%B3%E5%8F%B0%E7%A7%81%E6%9C%89%E5%AF%86%E7%A0%81%E5%B7%A5%E5%85%B7BitWarden.html) |                                               |
+| WebDav服务      | w.xgss.net                                     | [安装教程](https://g.xgss.net/kaiyuan/Open-Source-Software/CentOS7部署WebDav服务.html) | [开源地址](https://github.com/hacdias/webdav) |
+
+
 
 
 

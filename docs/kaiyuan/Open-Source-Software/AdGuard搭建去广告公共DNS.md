@@ -103,6 +103,39 @@ iptables -A INPUT -p udp --dport 53 -j ACCEPT
 service iptables save
 ```
 
+
+
+# # docker安装AdGuardHome
+
+
+
+```
+docker run -itd \
+    --name adguardhome \
+    --restart=always \
+    -v /data/docker/adguardhome/work:/opt/adguardhome/work \
+    -v /data/docker/adguardhome/conf:/opt/adguardhome/conf \
+    -p 53:53/tcp -p 53:53/udp \
+    -p 67:67/udp -p 68:68/udp \
+    -p 80:80/tcp -p 443:443/tcp -p 443:443/udp -p 3000:3000/tcp \
+    -p 853:853/tcp \
+    -p 784:784/udp -p 853:853/udp -p 8853:8853/udp \
+    -p 5443:5443/tcp -p 5443:5443/udp \
+-d adguard/adguardhome
+```
+
+
+
+![image-20221012162543033](https://imgoss.xgss.net/picgo/image-20221012162543033.png?aliyun)
+
+
+
+![image-20221012162614150](https://imgoss.xgss.net/picgo/image-20221012162614150.png?aliyun)
+
+![image-20221012165855925](https://imgoss.xgss.net/picgo/image-20221012165855925.png?aliyun)
+
+
+
 参考：
 
 https://www.ixigua.com/6841132261996233223
