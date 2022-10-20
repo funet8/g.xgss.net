@@ -63,6 +63,7 @@ module.exports = {
 	  ['/nginx/', 'Nginx'],
 	  ['/shell/', 'Shell'],
 	  ['/Ubuntu/', 'Ubuntu'],
+	  ['/hardware/', '硬件'],
     ],
 	//sidebar: 'auto', // 侧边栏配置
     //sidebarDepth: 3,

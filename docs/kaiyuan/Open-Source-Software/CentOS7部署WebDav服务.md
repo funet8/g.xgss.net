@@ -1,10 +1,4 @@
-
-
-苹果系统上很多APP支持跨设备同步，实现方式不一，有的是用iCloud，有的是用自建的同步服务器，但速度不是太理想，延迟较高。
-
-就拿我常用的OmniFoucs来说，用的是Omni免费的同步服务，同步一次要几十秒，经常出现早上在电脑改了状态，手机上晚上还没同步过来的情况。好在OmniFoucs支持自定义的WebDav服务，加之本人有台国内服务器，就自建了一个WebDav服务，迁移之后基本上秒同步，爽！
-
-后续把Notability上的文档也备份到了该服务器里。
+# CentOS7部署开源WebDav服务，实现全端文件共享
 
 服务器操作系统：Centos7.8
 
@@ -55,6 +49,8 @@ users:
 ```
 
 对外服务的端口号为`15108`，需要在安全组或防火墙里放开。
+
+![image-20221013141821514](https://imgoss.xgss.net/picgo/image-20221013141821514.png?aliyun)
 
 目录`/data`用于存储`user1`的文件，需要手动创建。
 
@@ -141,6 +137,7 @@ server {
         server_name  s.test1.net;
         access_log /data/wwwroot/log/s.test1.net-access.log main_aliyun;
         error_log /dev/null;
+        client_max_body_size    0;
 		location / {
                 proxy_pass      http://127.0.0.1:15108;
                 proxy_redirect off;
@@ -150,6 +147,8 @@ server {
         }	
 }
 ```
+
+
 
 查看日志
 
@@ -164,8 +163,5 @@ server {
 
 
 
+苹果IOS系统和ios的客户端连接webdav就可以实现文件同步了。
 
-
-
-
-https://www.pimspeak.com/centos7-deploy-webdav.html
