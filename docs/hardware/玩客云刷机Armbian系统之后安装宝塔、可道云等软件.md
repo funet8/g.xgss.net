@@ -6,17 +6,58 @@
 
 Armbian刷好后，我们对其进行一些优化操作。首次登录需要更改密码和创建用户。默认root用户,密码：1234
 
-### 修改密码
+### 1.修改密码
 
 ```
 passwd root
 ```
 
+### 2.修改时区
 
+```
+rm -rf /etc/localtime
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+echo Etc/UTC > /etc/timezone
+date 查看时间
+```
+
+### 3.换软件源
+
+```
+# 备份原文件
+cp /etc/apt/sources.list.d/armbian.list /etc/apt/sources.list.d/armbian.list.bak
+
+# 清华源(以下是一条命令复制完整)
+sudo tee /etc/apt/sources.list.d/armbian.list <<-'EOF'
+deb https://mirrors.tuna.tsinghua.edu.cn/armbian/ stretch main stretch-utils stretch-desktop
+EOF
+
+
+# 备份原文件
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+
+# 中科大源(以下是一条命令复制完整)
+sudo tee /etc/apt/sources.list <<-'EOF'
+deb http://mirrors.ustc.edu.cn/debian stretch main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian stretch-updates main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian stretch-backports main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian-security/ stretch/updates main contrib non-free
+EOF
+```
+
+
+
+### 4.更新软件
+
+```
+apt-get update && apt-get upgrade
+```
+
+![image-20221020233903873](https://imgoss.xgss.net/picgo/image-20221020233903873.png?aliyun)
 
 ## 固定IP
 
-由于安装完成之后IP（192.168.124.9）是路由器自动获取的，这里在把玩客云的ip改成固定的，方便管理。
+由于安装完成之后玩客云的IP（192.168.124.7）是路由器自动获取的，这里在把玩客云的ip改成固定的，方便管理。
 
 ![image-20221020112103701](https://imgoss.xgss.net/picgo/image-20221020112103701.png?aliyun)
 
@@ -89,6 +130,26 @@ reboot
 ifconfig
 ```
 
+## 查看系统版本
+
+```
+# cat /etc/debian_version 
+9.9
+# cat /etc/issue
+Debian GNU/Linux 9 \n \l
+
+# cat /etc/os-release 
+
+安装工具软件也行，# apt-get install -y lsb-release 此处略过
+# lsb_release -a
+
+# uname -a
+
+# arch
+
+# dpkg
+```
+
 
 
 ## 挂载硬盘
@@ -136,48 +197,168 @@ UUID=9495d4d6-c0a1-457a-8345-af6242502a82   /www/wwwroot   ext4    defaults    0
 
 
 
+## 挂载NTFS格式硬盘
 
+我这里有一块闲置的ntfs格式的移动硬盘，不想格式化数据。直接挂载到 /www目录下，挂载方法跟上面类似，最主要是不格式化硬盘直接挂载，后续可能会出现什么问题。
 
-### 修改时区
-
-```
-rm -rf /etc/localtime
-ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-echo Etc/UTC > /etc/timezone
-Bash
-```
-
-
-
-
-
-### 换软件源
+查看系统所检测到的外置磁盘名称(这里用sda1):
 
 ```
-# 备份原文件
-cp /etc/apt/sources.list.d/armbian.list /etc/apt/sources.list.d/armbian.list.bak
+# lsblk
+NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda            8:0    0 298.1G  0 disk 
+`-sda1         8:1    0 298.1G  0 part 
+sdb            8:16   1    15G  0 disk 
+mmcblk0      179:0    0   7.3G  0 disk 
+|-mmcblk0p1  179:1    0   122M  0 part /boot
+`-mmcblk0p2  179:2    0   6.5G  0 part /
+mmcblk0boot0 179:16   0     4M  1 disk 
+mmcblk0boot1 179:32   0     4M  1 disk 
+```
 
-# 清华源(以下是一条命令复制完整)
-sudo tee /etc/apt/sources.list.d/armbian.list <<-'EOF'
-deb https://mirrors.tuna.tsinghua.edu.cn/armbian/ stretch main stretch-utils stretch-desktop
-EOF
+其中sda1为我的移动硬盘
 
+在根目录新建一个目录用于挂载硬盘:
 
-# 备份原文件
-cp /etc/apt/sources.list /etc/apt/sources.list.bak
+```
+mkdir /www
+```
 
-# 中科大源(以下是一条命令复制完整)
-sudo tee /etc/apt/sources.list <<-'EOF'
-deb http://mirrors.ustc.edu.cn/debian stretch main contrib non-free
-deb http://mirrors.ustc.edu.cn/debian stretch-updates main contrib non-free
-deb http://mirrors.ustc.edu.cn/debian stretch-backports main contrib non-free
-deb http://mirrors.ustc.edu.cn/debian-security/ stretch/updates main contrib non-free
-EOF
+将新增的外置硬盘挂载映射到新建的目录中：
+
+```
+# mount /dev/sda1 /www
+The disk contains an unclean file system (0, 0).
+The file system wasn't safely closed on Windows. Fixing.
+
+# df -h|grep www
+/dev/sda1       299G   79G  220G  27% /www
+```
+
+挂载成功。
+
+设置开机自动启动挂载：
+
+```
+vi  /etc/fstab
+提现写
+/dev/sda1 /www  ntfs defaults 0 0
 ```
 
 
 
-### 更新软件
+修改填好好后，按: 键，输入 wq! 强制保存退出，然后输入命令强制刷新即可
+
+```
+# mount  -a
+```
+
+
+
+# docker相关
+
+## 使用docker安装脚本
+
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh --mirror Aliyun
+或者
+apt-get install docker.io
+apt install docker.io
+
+或者
+wget -qO- https://get.docker.com/ | sh
+启动：
+service docker start
+```
+
+## 安装可视面板
+
+```
+docker run --restart always --name fast -p 8081:8081 -d -v /var/run/docker.sock:/var/run/docker.sock wangbinxingkong/fast
+```
+
+安装完成后在浏览器访问 http://服务器IP地址或域名:8081 
+
+首次登录需要注册，注册成功后即可正常使用。
+
+### 装宝塔
+
+拉取镜像,ssh里面执行
+
+```
+docker pull centos:centos7
+```
+
+创建容器
+
+```
+docker run -tid --name baota -p 88:80 -p 8888:8888 --restart always centos:centos7
+```
+
+需要开放的端口自行拉回 -p 80:80 --name=baota其中baota是容器名称，可以更改成你想要的，容器名称注意不要和其他容器一样，会冲突
+
+进入容器
+
+```
+docker exec -it baota /bin/bash
+```
+
+装宝塔
+
+```
+yum install -y wget && wget -O install.sh http://download.bt.cn/install/install.sh&& sh install.sh
+```
+
+
+
+### 青龙面板 
+
+ssh里面执行
+
+1.拉取镜像
+
+```
+docker pull whyour/qinglong:latest
+```
+
+2.创建容器
+
+```
+docker run -tid --name qinglong -p 5700:5700 --restart always whyour/qinglong:latest
+```
+
+然后就可以通过http://ip:5700访问面板了
+
+默认账号：admin 密码：admin
+
+### 装 openwrt 
+
+ssh里面执行
+
+1.拉取镜像
+
+```
+docker pull xuanaimai/onecloud:21-05-29
+```
+
+
+
+2.创建容器
+
+```
+docker run -tid --name openwrt -p 80:80 --restart always xuanaimai/onecloud:21-05-29
+```
+
+
+启动成功后使用IP访问即可 密码是 password
+
+需要开放的端口自行拉回 -p 80:80 --name=openwrt其中openwrt是容器名称，可以更改成你想要的，容器名称注意不要和其他容器一样，会冲突
+
+### docker装openwrt
+
+下面是我找的别人docker装openwrt的教程
+更新软件（非必要）
 
 ```
 apt-get update && apt-get upgrade
@@ -185,7 +366,40 @@ apt-get update && apt-get upgrade
 
 
 
-## 宝塔面板
+安装 Docker
+
+```
+apt install docker.io
+```
+
+打开网卡混杂模式
+
+```
+ip link set eth0 promisc on
+```
+
+创建网络
+
+```
+docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 macnet
+```
+
+[↑自己根据 玩客云 所在网段修改，如：玩客云IP:192.168.2.175，则192.168.1.0/24 改成 192.168.2.0/24，192.168.1.1改成主路由地址]
+拉取 OpenWRT 镜像
+
+```
+docker pull xuanaimai/onecloud:21-05-29
+```
+
+创建容器
+
+```
+docker run -itd --name=OneCloud --restart=always --network=macnet --privileged=true xuanaimai/onecloud:21-05-29 /sbin/init
+```
+
+–name=OneCloud 其中OneCloud是容器名称，可以更改成你想要的，容器名称注意不要和其他容器一样，会冲突根据主路由 DHCP 分配里找到一个主机名叫 OpenWRT 的，复制它的IPv4 地址粘贴到浏览器就能进入 OpenWRT 了密码是 password
+
+# 宝塔面板
 
 为了省点内存这里我安装了5.9版本的宝塔面板，当然也可以安装7.0以上的版本。面板安装完大概要1个小时，进入面板安装LNMP服务更有长达4小时的等待时间。中途可能面板还无法访问，安装完就可以打开了，建议这个时候睡一觉醒来就好了。哈哈
 
@@ -196,10 +410,31 @@ wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh && bash insta
 
 # 宝塔面板7.0版本
 wget -O install.sh http://yangwenqing.com/files/Source/install_bt_ubuntu_7.0.sh && bash install.sh
-Bash
 ```
 
 
+
+或者安装最新版的
+
+官网：https://bt.cn/new/download.html
+
+```
+wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh && bash install.sh ed8484bec
+```
+
+
+
+![image-20221020212618447](https://imgoss.xgss.net/picgo/image-20221020212618447.png?aliyun)
+
+
+
+安装：
+
+![image-20221020212911224](https://imgoss.xgss.net/picgo/image-20221020212911224.png?aliyun)
+
+启动失败！
+
+![image-20221020221124897](https://imgoss.xgss.net/picgo/image-20221020221124897.png?aliyun)
 
 玩客云IP:8888 即可访问宝塔面板
 安装宝塔面板中SSH可能会卡掉线，看不到宝塔面板的账号和密码，可以对面板进行重置密码
