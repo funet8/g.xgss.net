@@ -4,7 +4,6 @@
 | --------------- | ---------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------- |
 | 星哥说事首页    | [www.xgss.net](https://www.xgss.net)           | 基于wordpress搭建博客系统                                    |                                               |
 | 静态资源图片等  | [s.xgss.net](https://s.xgss.net)               | 蜘蛛采集的图片                                               |                                               |
-| 看云-书籍       | http://book.xgss.net/                          | 测试用的，看云空间只有50M，放弃了                            |                                               |
 | 图库            | [imgoss.xgss.net](https://imgoss.xgss.net)     | 主要用于图片存放，通过typora编写上传到阿里云oss上            |                                               |
 | owncloud云盘    | [o.xgss.net](https://o.xgss.net)               | owncloud云盘                                                 |                                               |
 | 私人网盘        | [z.xgss.net](https://z.xgss.net)               | 基于zfile搭建                                                |                                               |

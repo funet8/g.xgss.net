@@ -30,7 +30,8 @@ module.exports = {
 			{ text: 'DevOps', link: '/devops/' },
 			{ text: 'WEB服务', link: '/web/' },
 			{ text: '文件系统', link: '/file-system/' },
-			{ text: 'nginx', link: '/nginx/' },
+			{ text: 'Nginx', link: '/nginx/' },
+			{ text: 'Docker', link: '/docker/' },
           ]
 		},
 		{	text: '开源软件',
