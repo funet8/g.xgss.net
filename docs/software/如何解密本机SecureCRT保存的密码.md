@@ -254,21 +254,53 @@ if __name__ == '__main__':
 
 ## 三、解密
 
-1.如果ini配置文件是v2
+### 帮助信息
+
+```
+# python SecureCRTCipher.py
+Usage:
+    SecureCRTCipher.py <enc|dec> [-v2] [-p ConfigPassphrase] <plaintext|ciphertext>
+
+    <enc|dec>              "enc" for encryption, "dec" for decryption.
+                           This parameter must be specified.
+
+    [-v2]                  Encrypt/Decrypt with "Password V2" algorithm.
+                           This parameter is optional.
+
+    [-p ConfigPassphrase]  The config passphrase that SecureCRT uses.
+                           This parameter is optional.
+
+    <plaintext|ciphertext> Plaintext string or ciphertext string.
+                           NOTICE: Ciphertext string must be a hex string.
+                           This parameter must be specified.
+
+```
+
+
+
+### 1.如果ini配置文件是v2
 
 执行命令行中执行python decrypt.py dec [-v2] 编码字符串
 
 执行
 
 ```
-python decrypt.py dec -v2 加密串
+python SecureCRTCipher.py dec -v2 加密串
 ```
 
 
 
-2.如果ini配置文件是
+### 2.如果ini配置文件是
 
+```
+python SecureCRTCipher.py dec  加密串
+```
 
+例如：
+
+![image-20221102133949379](https://imgoss.xgss.net/picgo/image-20221102133949379.png?aliyun)
+
+解密成功。
 
 
 
