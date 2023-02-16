@@ -3,10 +3,8 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-
-
 #提交到github仓库-vuepress分支
-git init
+#git init
 git add -A
 git commit -m 'deploy.sh-脚本自动提交'
 git push -f git@github.com:funet8/g.xgss.net.git vuepress
