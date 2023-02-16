@@ -143,6 +143,8 @@ curtinlv仓库  ql repo https://github.com/curtinlv/JD-Script.git  13 1-23/4 * *
 cdle仓库  ql repo https://github.com/cdle/jd_study.git "jd_"  14 1-23/4 * * *
 ```
 
+
+
 青龙相关仓库集锦： https://github.com/Oreomeow/VIP/tree/main/Tasks/qlrepo
 
 本人就测试第一个地址
@@ -153,7 +155,7 @@ cdle仓库  ql repo https://github.com/cdle/jd_study.git "jd_"  14 1-23/4 * * *
 
 
 
-[利用谷歌浏览器获取京东Cookie抓取教程](https://g.xgss.net/doc/internet/jd_cookie.html)，https://g.xgss.net/doc/internet/jd_cookie.html，cookie值千万不能泄露，如图，环境变量--->添加变量
+[利用谷歌浏览器获取京东Cookie抓取教程](https://g.xgss.net/internet/jd_cookie.html)，https://g.xgss.net/internet/jd_cookie.html，cookie值千万不能泄露，如图，环境变量--->添加变量
 
 ![image-20210930170920577](http://imgoss.xgss.net/picgo/image-20210930170920577.png?aliyunoss)
 

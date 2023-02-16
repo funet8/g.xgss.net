@@ -14,6 +14,12 @@
 
 ## [使用XtraBackup将阿里云的MySQL5.7备份文件恢复到自建服务器](使用XtraBackup将阿里云的MySQL5.7备份文件恢复到自建服务器.md)
 
+# 数据同步
+
+## [阿里巴巴高效的离线数据同步工具DataX](alibaba-datax.md)
+
+
+
 # 监控
 
 ## [搭建开源美观的数据库监控系统-Lepus](搭建开源美观的数据库监控系统-Lepus.md)

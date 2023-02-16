@@ -178,7 +178,7 @@ $ sudo docker tag 37bb9c63c8b2 registry..aliyuncs.com/acs/agent:0.7-dfb6816
 
 你可以使用官方 `registry` 镜像来运行。
 
-```
+```shell
 # docker run -d -p 5000:5000 --restart=always --name registry registry
 或者：
 # docker run -d \
