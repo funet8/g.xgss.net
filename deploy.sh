@@ -29,7 +29,6 @@ cd -
 # git push origin vuepress
 ## 切换分支
 # git checkout master
-
 ## VuePress基本命令
 # yarn init 或者 npm init
 # yarn add -D vuepress 或者 npm install -D vuepress
