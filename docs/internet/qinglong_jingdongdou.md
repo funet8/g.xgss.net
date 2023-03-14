@@ -18,6 +18,8 @@
 
 可以安装青龙面板、elecV2P、面板签到等软件。
 
+青龙GitHub地址： https://github.com/whyour/qinglong
+
 优点：活动众多，获取jing豆较多。可以按照自己的方式设定，完全满足私人定制。
 
 缺点：安装面板前需要有服务器安装docker，或者能安装docker都可以。再安装面板，之后还需要拉取jing东签到的各种脚本，对脚本做稍微修改。过程较为繁琐，没有一键搞定的功能。
@@ -154,6 +156,78 @@ cdle仓库  ql repo https://github.com/cdle/jd_study.git "jd_"  14 1-23/4 * * *
 ![image-20210930165126965](http://imgoss.xgss.net/picgo/image-20210930165126965.png?aliyunoss)
 
 运行就会执行，就会在任务栏中有很多任务，刷新页面。
+
+# 仓库失效
+
+咱们为了防止漏掉某些羊毛，**下方所有的库**新建定时任务拉取，里面有重复脚本禁用脚本，重复的内容会被禁用的。
+
+### 京东定时任务库
+
+GitHub 上的一些任务库，通过添加任务，并设置定时规则，使其自动拉取、更新羊毛任务。
+
+这个库是不是会更新，如果你有所需要，可以**评论留言**，将会接收到**邮件提醒**。
+
+**2022.10.24**：对所有库进行检查排序，前3个建议拉库使用。
+
+### **KingRan/KR（集合库）**
+
+```
+ql repo https://github.com/KingRan/KR.git "jd_|jx_|jdCookie" "activity|backUp" "^jd[^_]|USER|utils|function|sign|sendNotify|ql|JDJR"
+```
+
+### **6dylan6/jdpro（集合库）**
+
+任务定时建议`50 7-23/2 * * *`
+
+```
+ql repo https://github.com/6dylan6/jdpro.git "jd_|jx_|jddj_" "backUp" "^jd[^_]|USER|JD|function|sendNotify"
+```
+
+
+
+**国内服务器请使用以下命令：**
+
+```
+ql repo https://js.dayplus.xyz/https://github.com/6dylan6/jdpro.git "jd_|jx_|jddj_" "backUp" "^jd[^_]|USER|JD|function|sendNotify"
+```
+
+
+
+上述方式还不行的话，可以考虑使用 gitee 版本，更新相比 GitHub 可能会稍慢点。
+
+```
+ql repo https://gitee.com/dylanote/jdpro.git "jd_|jx_|jddj_" "backUp" "^jd[^_]|USER|JD|function|sendNotify"
+
+50 7-23/2 * * *
+```
+
+### **gys619/Absinthe（集合库）**
+
+```
+ql repo https://github.com/gys619/Absinthe.git "jd_|jx_|jddj_|gua_|getJDCookie|wskey" "activity|backUp" "^jd[^_]|USER|utils|ZooFaker_Necklace|JDJRValidator_|sign_graphics_validate|jddj_cookie|function|ql|magic|JDJR|JD" "main"
+```
+
+### **smiek2121（开卡库）**
+
+```
+ql repo ql repo https://github.com/smiek2121/scripts.git "jd_|gua_" "" "ZooFaker_Necklace.js|JDJRValidator_Pure.js|sign_graphics_validate.js|cleancart_activity.js|jdCookie.js|sendNotify.js"
+```
+
+**Yun-City/City（集合库）**
+
+```
+ql repo https://github.com/Yun-City/City.git "jd_|jx_|gua_|jddj_|getJDCookie" "activity|backUp" "^jd[^_]|USER|function|utils|sendnotify|ZooFaker_Necklace|jd_Cookie|JDJRValidator_|sign_graphics_validate|ql|magic|cleancart_activity"
+```
+
+### **zero205/JD_tencent_scf**
+
+```
+ql repo https://github.com/zero205/JD_tencent_scf.git "jd_|jx_|jdCookie" "backUp|icon" "^jd[^_]|USER|sendNotify|sign_graphics_validate|JDJR|JDSign|ql" "main"
+```
+
+
+
+# 获取京东cookie
 
 
 

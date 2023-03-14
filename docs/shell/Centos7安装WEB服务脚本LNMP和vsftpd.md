@@ -1,7 +1,5 @@
 # Centos7安装WEB服务脚本LNMP和vsftpd
 
-https://images2015.cnblogs.com/blog/790056/201609/790056-20160909200548207-1009109453.jpg
-
 本文主要介绍笔者经常用到的shell脚本，在centos7系统下安装LNMP和FTP，还有redis和docker，主要针对服务器的。
 L=Linux(这里系统Centos7)，N=Nginx（Yum安装 nginx），M=Mysql(这里安装MariaDB-10.2.9)，P=PHP7和PHP8
 
