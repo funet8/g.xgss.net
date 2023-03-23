@@ -18,6 +18,8 @@
 
 ## [阿里巴巴高效的离线数据同步工具DataX](alibaba-datax.md)
 
+## [DataX同步MySQL数据库](datax-tongbu-mysql.md)
+
 
 
 # 监控

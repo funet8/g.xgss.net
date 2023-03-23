@@ -59,6 +59,8 @@ REPOSITORY                    TAG                 IMAGE ID            CREATED   
 test                          0.1                 b2ac4664aadb        16 seconds ago      188 MB
 ```
 
+
+
 ### 2.基于本地模板导入
 
 从一个操作系统模板导入一个镜像
@@ -66,6 +68,8 @@ test                          0.1                 b2ac4664aadb        16 seconds
 ```
 cat centos-6-x86_64-minimal.tar.gz |docker import - centos6min
 ```
+
+
 
 ### 3.基于Dockerfile创建
 
