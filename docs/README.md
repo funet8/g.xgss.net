@@ -5,8 +5,8 @@
 | 星哥说事首页    | [www.xgss.net](https://www.xgss.net)           | 基于wordpress搭建博客系统                                    |                                               |
 | 静态资源图片等  | [s.xgss.net](https://s.xgss.net)               | 蜘蛛采集的图片                                               |                                               |
 | 图库            | [imgoss.xgss.net](https://imgoss.xgss.net)     | 主要用于图片存放，通过typora编写上传到阿里云oss上            |                                               |
-| owncloud云盘    | [o.xgss.net](https://o.xgss.net)               | owncloud云盘                                                 |                                               |
-| 私人网盘        | [z.xgss.net](https://z.xgss.net)               | 基于zfile搭建                                                |                                               |
+| owncloud云盘    | [o.xgss.net](https://o.xgss.net)               | [owncloud云盘](kaiyuan/Open-Source-Software/OwnCloud.md)     |                                               |
+| 私人网盘        | [z.xgss.net](https://z.xgss.net)               | [基于zfile搭建](kaiyuan/Open-Source-Software/快速搭建专属的私人网盘系统-iFileSpace.md) |                                               |
 | gitbook         | [gitbook.xgss.net](https://gitbook.xgss.net/)  | gitbook.xgss.net CNAME解析到  funet8.github.io，服务器在github |                                               |
 | vuepress        | [vuepress.xgss.net](http://vuepress.xgss.net/) | vuepress.xgss.net 基于vuepress搭建站点                       |                                               |
 | 私人文档库      | [g.xgss.net](http://g.xgss.net/)               | 本地编辑md文件，域名CNAME到 vuepress.xgss.net                |                                               |
@@ -113,8 +113,6 @@ cd docs/.vuepress/dist
 [cronsun一个分布式任务系统](https://github.com/shunfei/cronsun)
 
 [使用Nginx+Lua实现的WAF](https://github.com/unixhot/waf)
-
-[游族统一异地备份系统-UBackup](https://github.com/lustlost/ubackup)
 
 [docker-elk](https://github.com/deviantony/docker-elk)
 

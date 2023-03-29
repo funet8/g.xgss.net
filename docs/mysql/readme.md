@@ -14,11 +14,15 @@
 
 ## [使用XtraBackup将阿里云的MySQL5.7备份文件恢复到自建服务器](使用XtraBackup将阿里云的MySQL5.7备份文件恢复到自建服务器.md)
 
-# 数据同步
+# DataX
 
 ## [阿里巴巴高效的离线数据同步工具DataX](alibaba-datax.md)
 
-## [DataX同步MySQL数据库](datax-tongbu-mysql.md)
+## [阿里巴巴开源DataX同步MySQL数据库](datax-tongbu-mysql.md)
+
+## [阿里巴巴开源DataX集成可视化项目datax-web的安装](datax-web.md)
+
+## [阿里巴巴开源DataX集成可视化项目datax-web的使用](datax-web-use.md)
 
 
 

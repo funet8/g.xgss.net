@@ -6,8 +6,6 @@
 
 
 
-![img](images/1wxcfg3iyl.png)
-
 **Ubuntu系统使用指南**
 
 ------
