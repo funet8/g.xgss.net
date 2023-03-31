@@ -1,12 +1,12 @@
-# 阿里巴巴开源DataX全量同步MySQL多个数据库
-
-
+# 阿里巴巴开源DataX全量同步多个MySQL数据库
 
 # 前言
 
 上次 写了[阿里巴巴高效的离线数据同步工具DataX](https://mp.weixin.qq.com/s/_ZXqA3H__Kwk-9O-9dKyOQ)： https://mp.weixin.qq.com/s/_ZXqA3H__Kwk-9O-9dKyOQ 安装DataX这个开源工具，并且同步备份了几张数据表。但是发现一个问题，就是每张表都需要单独写一个 job。如果数据表有几百张是不是要写几百个，这个不太现实了。
 
 正当一筹莫展之际看到看到 @慌途L  https://blog.csdn.net/qq_25112523/article/details/109276879 的文章，我根据文章这篇文章优化了一下，先理一下思路。
+
+![img](https://imgoss.xgss.net/picgo/e3606d85c0629ba2dcd0e67c906dfec0edc5faba.jpg?aliyun)
 
 # 思路
 

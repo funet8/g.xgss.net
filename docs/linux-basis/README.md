@@ -30,6 +30,12 @@
 
 ## [一文学会curl](一文学会curl.md)
 
+
+
+# 常用软件
+
+## [centos7安装RabbitMQ](centos7安装RabbitMQ.md)
+
 # 系统管理
 
 ## [如何查看Centos用户登陆记录](如何查看Centos用户登陆记录.md)
