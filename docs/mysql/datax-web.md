@@ -14,11 +14,13 @@ DataX Web是在DataX之上开发的分布式数据同步工具，提供简单易
 
 任务"执行器"支持集群部署，支持执行器多节点路由策略选择，支持超时控制、失败重试、失败告警、任务依赖，执行器CPU.内存.负载的监控等等。后续还将提供更多的数据源支持、数据转换UDF、表结构同步、数据同步血缘等更为复杂的业务场景。
 
+先看一下后台
 
+![image-20230331170510415](https://imgoss.xgss.net/picgo/image-20230331170510415.png?aliyun)
 
 # DataX Web架构图
 
-![img](https://imgoss.xgss.net/picgo/68747470733a2f2f64617461782d7765622e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f646f632f44617461582d5765622e706e67?aliyun)
+![datax-webjiagou](https://imgoss.xgss.net/picgo/datax-webjiagou.png?aliyun)
 
 # DataX Web安装
 
@@ -262,6 +264,9 @@ http://192.168.1.3:9527/index.html
 
 下次来记录datax-web的后台配置。
 
-![image-20230327161147535](H:/typora_images/image-20230327161147535.png)
+![image-20230327161147535](https://imgoss.xgss.net/picgo/image-20230327161147535.png?aliyun)
+
+
 
 参考： https://github.com/WeiYe-Jing/datax-web/blob/master/doc/datax-web/datax-web-deploy.md
+
