@@ -4,7 +4,7 @@
 
 之前使用vuepress搭建过博客，后期觉得界面太丑，出现了审美疲劳，想换个主题在网上找一个vuepress-theme-vdoing既可以做博客系统也可以做知识库。
 
-本期知识点 
+## 主要目标 
 
 1.什么是vuepress和 vuepress-theme-vdoing 
 
@@ -56,6 +56,8 @@ VuePress 需要 [Node.js](https://nodejs.org/en/download)>= 8.6,没有安装的�
 
 演示是用window系统，安装 nodejs
 
+**注意官方提醒Node请使用>=14.17.0且<=16.20.0的版本。**
+
 ```
 $ node -v
 v16.14.0
@@ -73,7 +75,7 @@ $ mkdir vuepress-starter && cd vuepress-starter
 $ yarn init
 
 3.将 VuePress 安装为本地依赖
-yarn add -D vuepress
+$ yarn add -D vuepress
 
 4.创建你的第一篇文档
 $ mkdir docs && echo '# Hello VuePress' > docs/README.md
@@ -102,7 +104,15 @@ VuePress 会在 http://localhost:8080 启动一个热重载的开发服务器。
 
 ## 三、Github上fork项目
 
-进入Github，[https://github.com/xugaoyi/vuepress-theme-vdoing](https://github.com/xugaoyi/vuepress-theme-vdoing)  fork到自己的仓库
+进入Github，选择适合自己的vuepress-theme-vdoing仓库，再fork到自己账号下。
+
+知识库兼博客风格仓库 [https://github.com/xugaoyi/vuepress-theme-vdoing](https://github.com/xugaoyi/vuepress-theme-vdoing)
+
+文档风格： [https://github.com/xugaoyi/vuepress-theme-vdoing-doc.git](https://github.com/xugaoyi/vuepress-theme-vdoing-doc.git)
+
+简洁模板预设配置(社区提供)  [https://github.com/u2sb/vuepress-theme-vdoing-template.git](https://github.com/u2sb/vuepress-theme-vdoing-template.git)
+
+
 
 ![image-20230427093855419](https://imgoss.xgss.net/picgo/image-20230427093855419.png?aliyun)
 

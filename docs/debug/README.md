@@ -18,3 +18,4 @@
 
 ## [httpd无法启动，报错No space left on device](httpd无法启动报错No-space-left-on-device.md)
 
+## [Linux开机出现welcome to emergency mode!](emergency-mode.md)
