@@ -34,10 +34,16 @@ https://github.com/rabbitmq/erlang-rpm/releases/tag/v23.3.4
 
 ```
 rabbitmq-server-3.9.13-1.el7.noarch.rpm
-下载：https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.9.13/rabbitmq-server-3.9.13-1.el7.noarch.rpm
+下载：
+# wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.9.13/rabbitmq-server-3.9.13-1.el7.noarch.rpm
 
 erlang-23.3.4.11-1.el7.x86_64.rpm
-下载： https://github.com/rabbitmq/erlang-rpm/releases/download/v23.3.4/erlang-23.3.4-1.el7.x86_64.rpm
+下载： 
+# wget https://github.com/rabbitmq/erlang-rpm/releases/download/v23.3.4/erlang-23.3.4-1.el7.x86_64.rpm
+
+备用下载：
+# wget  http://js.funet8.com/centos_software/rabbitmq/rabbitmq-server-3.9.13-1.el7.noarch.rpm
+# wget  http://js.funet8.com/centos_software/rabbitmq/erlang-23.3.4-1.el7.x86_64.rpm
 ```
 
 将下载好的文件上传到服务器。

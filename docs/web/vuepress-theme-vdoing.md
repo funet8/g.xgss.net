@@ -192,7 +192,7 @@ $ sh deploy.sh
 vdoing.xgss.net 域名CNAME解析到 funet8.github.io
 ```
 
-![image-20230427105300531](H:/typora_images/image-20230427105300531.png)
+![image-20230427105300531](https://imgoss.xgss.net/picgo/image-20230427105300531.png?aliyun)
 
 
 

@@ -62,6 +62,7 @@ module.exports = {
 	  ['/kaiyuan/Open-Source-Software/', '开源软件'],
 	  ['/mysql/', 'MySQL'],
 	  ['/nginx/', 'Nginx'],
+	  ['/chatgpt/', 'ChatGPT'],
 	  ['/shell/', 'Shell'],
 	  ['/Ubuntu/', 'Ubuntu'],
 	  ['/hardware/', '硬件'],
