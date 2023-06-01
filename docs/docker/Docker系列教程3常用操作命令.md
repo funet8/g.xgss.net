@@ -281,6 +281,34 @@ sudo docker images --tree
 
 执行命令，显示下面的内容。正你看到的，导出后再导入(exported-imported)的镜像会丢失所有的历史，而保存后再加载（saveed-loaded）的镜像没有丢失历史和层(layer)。这意味着使用导出后再导入的方式，你将无法回滚到之前的层(layer)，同时，使用保存后再加载的方式持久化整个镜像，就可以做到层回滚（可以执行docker tag 来回滚之前的层）。
 
+# 文件权限管理
+
+
+实际环境中docker程序中生成的文件权限 在宿主机上显示的是 500
+
+
+在宿主上查看www用户的ID
+
+```
+# cat /etc/passwd |grep www
+www:x:1001:1001::/home/www:/sbin/nologin
+```
+
+
+进入docker虚拟机
+
+```
+# usermod -u 1001 www
+# groupmod -g 1001 www
+```
+
+
+将所需要的目录更改权限
+
+```
+chown www.www -R /data/web/dir/   
+```
+
 
 
 # 常用命令图

@@ -15,10 +15,13 @@
 | 开源yourls      | [y.xgss.net](http://y.xgss.net)                | 基于开源[yourls](http://y.xgss.net/yourls)搭建，[添加url地址](http://y.xgss.net/admin) | [开源地址](http://y.xgss.net/yourls)          |
 | 开源短链接-模板 | [d.xgss.net](http://d.xgss.net)                | 基于开源[nlsn.cf/1](https://nlsn.cf/1)搭建，[添加url地址](http://d.xgss.net/4) | [开源地址](http://d.xgss.net/5)               |
 | 青龙签到        | [ql.xgss.net](http://ql.xgss.net)              | [青龙面板每天自动获取京东豆](https://g.xgss.net/internet/qinglong_jingdongdou.html) |                                               |
-| gitlab仓库      | [gitlab.xgss.net](http://gitlab.xgss.net)      | 开源gitlab项目                                               |                                               |
+| gitlab仓库      | [gitlab.xgss.net](http://gitlab.xgss.net)      | 开源gitlab项目                                               | 【内存消耗太大，关闭】                        |
 | nextcloud 网盘  | [n.xgss.net](https://n.xgss.net/)              | 基于开源nextcloud项目搭建【iosapp一直登陆不了】              | [开源地址](https://github.com/nextcloud)      |
 | 私有密码工具    | [b.xgss.net](https://b.xgss.net)               | [安装教程](kaiyuan/Open-Source-Software/%E6%90%AD%E5%BB%BA%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E7%9A%84%E5%85%A8%E5%B9%B3%E5%8F%B0%E7%A7%81%E6%9C%89%E5%AF%86%E7%A0%81%E5%B7%A5%E5%85%B7BitWarden.html) |                                               |
+| iFileSpace      | [i.xgss.net](https://i.xgss.net/)              | [安装教程](kaiyuan/Open-Source-Software/快速搭建专属的私人网盘系统-iFileSpace.html) |                                               |
 | WebDav服务      | w.xgss.net                                     | [安装教程](https://g.xgss.net/kaiyuan/Open-Source-Software/CentOS7部署WebDav服务.html) | [开源地址](https://github.com/hacdias/webdav) |
+
+
 
 
 
