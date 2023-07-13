@@ -118,6 +118,8 @@ USB Burning Tool 装好后打开，左上角点击 “文件”，然后选择�
 
 ![image-20220907102752435](https://imgoss.xgss.net/picgo/image-20220907102752435.png?aliyun)
 
+
+
 再拧下6颗螺丝保存好，拆完如图。
 
 ![image-20220907102844564](https://imgoss.xgss.net/picgo/image-20220907102844564.png?aliyun)
