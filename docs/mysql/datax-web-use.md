@@ -71,13 +71,13 @@
 
 
 
-![image-20230328163800009](H:/typora_images/image-20230328163800009.png)
+![image-20230328163800009](https://imgoss.xgss.net/picgo/image-20230328163800009.png?aliyun)
 
 
 
 ### 3.批量创建任务
 
-![image-20230328163835852](H:/typora_images/image-20230328163835852.png)
+![image-20230328163835852](https://imgoss.xgss.net/picgo/image-20230328163835852.png?aliyun)
 
 手动执行一次
 
@@ -89,7 +89,7 @@
 
 ### 查看日志
 
-![image-20230328164221949](H:/typora_images/image-20230328164221949.png)
+![image-20230328164221949](https://imgoss.xgss.net/picgo/image-20230328164221949.png?aliyun)
 
 
 
@@ -135,7 +135,7 @@ Python (2.x) (支持Python3需要修改替换datax/bin下面的三个python文�
 
 ## 5.查看任务
 
-![image-20230329112816134](H:/typora_images/image-20230329112816134.png)
+![image-20230329112816134](https://imgoss.xgss.net/picgo/image-20230329112816134.png?aliyun)
 
 查看日志：
 
@@ -259,7 +259,9 @@ select * from test_list where operationDate >= FROM_UNIXTIME(${lastTime}) and op
 
 按下图中4个步骤进行配置
 
-[![img](H:/typora_images/68747470733a2f2f64617461782d7765622e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f646f632f69642d696e6372656d656e742e6a7067)](https://camo.githubusercontent.com/5d9383b190aca3c57630a1c48f59a6b64de12c9df1a4a8e1df07776f44787908/68747470733a2f2f64617461782d7765622e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f646f632f69642d696e6372656d656e742e6a7067)
+[![img](https://imgoss.xgss.net/picgo/68747470733a2f2f64617461782d7765622e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f646f632f69642d696e6372656d656e742e6a7067.jpg?aliyun)](https://camo.githubusercontent.com/5d9383b190aca3c57630a1c48f59a6b64de12c9df1a4a8e1df07776f44787908/68747470733a2f2f64617461782d7765622e6f73732d636e2d68616e677a686f752e616c6979756e63732e636f6d2f646f632f69642d696e6372656d656e742e6a7067.jpg)
+
+
 
 - 1.任务类型选DataX任务
 - 2.辅助参数选择主键自增
