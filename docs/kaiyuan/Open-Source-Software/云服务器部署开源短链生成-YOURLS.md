@@ -269,5 +269,77 @@ Sleeky主题主题包括两部分，一部分是YOURLS前端，另一部分是YO
 
 
 
+# 升级服务
 
+ 1.8.2 升级到 1.9.2
+
+```
+1.备份
+# cd  /www/wwwroot
+# cp -a y.xgss.net y.xgss.net20230803
+
+2.下载最新版
+https://github.com/YOURLS/YOURLS/releases
+
+# wget https://github.com/YOURLS/YOURLS/archive/refs/tags/1.9.2.tar.gz
+
+下载： YOURLS-1.9.2.tar.gz
+解压
+tar -zxvf YOURLS-1.9.2.tar.gz 
+
+cp复制直接覆盖不提示
+
+# \cp -rf YOURLS-1.9.2/* y.xgss.net/
+
+确定无误之后再删除备份文件
+# rm -rf YOURLS-1.9.2* y.xgss.net20230803/
+```
+
+
+
+升级之前后台截图
+
+![image-20230803160921215](https://imgoss.xgss.net/picgo/image-20230803160921215.png?aliyun)
+
+
+
+升级之后
+
+![image-20230803161550212](https://imgoss.xgss.net/picgo/image-20230803161550212.png?aliyun)
+
+
+
+# YOURLS 目录权限配置
+
+```
+
+chown -R www:www /www/wwwroot/y.xgss.net/
+
+
+find /www/wwwroot/y.xgss.net/ -type d -exec chmod 755 {} \;
+find /www/wwwroot/y.xgss.net/ -type f -exec chmod 644 {} \;
+
+su -l www
+touch /www/wwwroot/y.xgss.net/user/config/index.html
+touch /www/wwwroot/y.xgss.net/user/logs/index.html
+chmod 777 /www/wwwroot/y.xgss.net/user/config/index.html
+chmod 777 /www/wwwroot/y.xgss.net/user/logs/index.html
+
+
+```
+
+
+
+# YOURLS-宝塔伪静态配置
+
+```
+location / {
+    try_files $uri $uri/ /yourls-loader.php$is_args$args;
+    # if YOURLS is installed in a subdirectory, change the path
+    # to yourls-loader.php accordingly, eg
+    # try_files $uri $uri/ /subdir/yourls-loader.php$is_args$args;
+}
+```
+
+![image-20230803162535424](https://imgoss.xgss.net/picgo/image-20230803162535424.png?aliyun)
 
