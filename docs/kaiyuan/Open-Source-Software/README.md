@@ -42,6 +42,8 @@
 
 ## [CentOS7部署WebDav服务](CentOS7部署WebDav服务.md)
 
+## [开源网盘空间本地挂载神器，挂载百度、阿里云盘、OneDrive等云盘到本地工具-AList](开源网盘空间本地挂载神器，挂载百度、阿里云盘、OneDrive等云盘到本地工具-AList.md)
+
 # 博客系统
 
 ## [基于VuePress和github搭建无服务器博客、文档系统](基于VuePress和github搭建无服务器博客、文档系统.md)
