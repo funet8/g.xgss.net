@@ -43,6 +43,36 @@ CentOS Linux release 7.3.1611 (Core)
 # systemctl enable docker    # 加入开机自启动
 ```
 
+
+
+## Docker 更换配置国内镜像
+
+使用 Docker 构建和部署应用程序时，几乎都需要下载一些基础镜像和依赖库。但由于国内网络比较特殊，想要从官方的 Docker Hub 仓库下载会极其缓慢，甚至会出现连接超时、无法下载等情况。为了解决网络问题，我们需要配置使用国内的镜像仓库，来加快镜像的下载速度。
+
+```
+vim /etc/docker/daemon.json
+
+{
+    "registry-mirrors": [
+        "https://hub-mirror.c.163.com",
+        "https://mirror.baidubce.com",
+        "https://dockerproxy.com",
+        "https://docker.nju.edu.cn"
+    ]
+}
+```
+
+修改之后重启 Docker 服务：
+
+```
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+
+
+
+
 ## yum安装高版本
 
 ```

@@ -39,6 +39,7 @@ module.exports = {
 			{ text: '开源软件', link: '/kaiyuan/Open-Source-Software/' },
 			{ text: '数据库', link: '/kaiyuan/Open-databases/' },
 			{ text: '安卓相关', link: '/kaiyuan/android/' },
+			{ text: 'JumpServer', link: '/kaiyuan/jumpserver/' },
           ]
         },
 		{	text: '云服务',

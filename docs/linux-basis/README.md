@@ -30,6 +30,8 @@
 
 ## [一文学会curl](一文学会curl.md)
 
+## [centos7作为客户端连接Socks5上网](centos7作为客户端连接Socks5上网.md)
+
 
 
 # 常用软件

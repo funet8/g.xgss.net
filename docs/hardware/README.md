@@ -6,3 +6,5 @@
 
 
 
+## [mini小主机 ALL IN ONE搭建教程](mini小主机 ALL IN ONE搭建教程.md)
+

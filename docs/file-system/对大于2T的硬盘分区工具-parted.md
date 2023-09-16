@@ -16,7 +16,6 @@
 ```
 yum install -y parted # 安装
 parted --help   #获取帮助
-
 ```
 
 
