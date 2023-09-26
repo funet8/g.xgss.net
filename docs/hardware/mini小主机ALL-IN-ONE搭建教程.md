@@ -1,7 +1,5 @@
 # mini小主机 ALL IN ONE搭建教程
 
-
-
 # 一、安装Esxi虚拟机系统
 
 ## 准备工作
@@ -78,7 +76,7 @@
 
 到这里，我们的Esxi就已经安装完成了 
 
-![img](H:/typora_images/00db6b626d0b42a6a82f09369866171c.png)
+![img](https://imgoss.xgss.net/picgo/00db6b626d0b42a6a82f09369866171c.png?aliyun)
 
 
 
@@ -90,11 +88,53 @@
 
 ![image-20230914164946997](https://imgoss.xgss.net/picgo/image-20230914164946997.png?aliyun)
 
+
+
+## 修改Exsi的IP地址
+
+登录到VMware ESXi Direct控制台用户界面（DCUI）。完成ESXi服务器的安装后，将显示DCUI界面，如下所示。
+
+![image-20230916164018453](https://imgoss.xgss.net/picgo/image-20230916164018453.png?aliyun)
+
+请按F2键进入自定义系统设置
+
+这将显示一个登录屏幕，如下图所示。输入root用户密码，然后按Enter键。
+
+![image-20230916164053399](https://imgoss.xgss.net/picgo/image-20230916164053399.png?aliyun)
+
+成功登录后，将显示系统自定义设置，如下面的屏幕快照所示。使用键盘上的箭头键选择Configure Management Network选项，然后单击Enter。
+
+![image-20230916164109344](https://imgoss.xgss.net/picgo/image-20230916164109344.png?aliyun)
+
+![image-20230916164122241](https://imgoss.xgss.net/picgo/image-20230916164122241.png?aliyun)
+
+
+
+默认情况下，第二个选项“使用动态IPv4地址和网络配置”处于选中状态，这意味着ESXi主机将从网络中的DHCP服务器获取及接收IP。使用箭头键选择第三个选项“设置静态IPv4地址和网络配置”，然后按空格键以选中该选项。之后，您可以键入静态IP地址、子网掩码和默认网关，如下图所示。配置完成后，按Enter键继续。
+
+![image-20230916164149999](https://imgoss.xgss.net/picgo/image-20230916164149999.png?aliyun)
+
+
+
+
+
 Esxi系统的安装教程到这里就结束了，基本上没有什么难度，接下来就是软路由、群晖NAS、还有Windows系统安装的教程了，我们继续。
 
+## Esxi激活
+
+VMware ESXi7.0许可证密钥附使用教程：https://www.downkuai.com/soft/129134.html
 
 
 
+## 开启远程SSH
+
+进入web管理界面，依次点操作，服务，启用Secure shell
+
+![image-20230918091241899](https://imgoss.xgss.net/picgo/image-20230918091241899.png?aliyun)
+
+再使用ssh远程链接工具连接。
+
+![image-20230918091429706](https://imgoss.xgss.net/picgo/image-20230918091429706.png?aliyun)
 
 # 二、Openwrt软路由系统安装
 
@@ -154,9 +194,13 @@ vi etc/config/network
 
 
 
-找到option ipaddr一栏，按下i进行编辑，改成和主路由下同一网段的任意ip即可，这里我的网段是192.168.2.xx,所以给我改成192.168.2.200
+找到option ipaddr一栏，按下i进行编辑，改成和主路由下同一网段的任意ip即可，这里我的网段是192.168.1.xx,所以给我改成192.168.1.3
 
 ![img](https://imgoss.xgss.net/picgo/6a0aef724e6e441dbd35e40662edc63d.png?aliyun)
+
+![image-20230918093338043](https://imgoss.xgss.net/picgo/image-20230918093338043.png?aliyun)
+
+
 
 修改好后，按下Esc键退出编辑模式，Shift+：唤醒末行模式，然后wq命令保存退出文件编辑，继续输入命令reboot进行重启:
 
@@ -173,6 +217,8 @@ vi etc/config/network
 
 
 ![img](https://imgoss.xgss.net/picgo/e685cdc068ba495883d7d6bc0100730e.png?aliyun)
+
+
 
 接下来进行简单设置下，就可以正常链接网络了，首先进入网络-接口，进入lan口配置
 
@@ -289,6 +335,8 @@ vi etc/config/network
 
 打开Synology Assistant群晖助手软件，搜索设备，右键联机进行安装系统
 
+http://soft.onlinedown.net/soft/10008842.htm
+
  ![img](https://imgoss.xgss.net/picgo/0a7b9051b0db4981ad847c57acd811b8.png?aliyun)
 
 ![img](https://imgoss.xgss.net/picgo/b8c11fadb03f4a29ba75c776a3d41b79.png?aliyun)
@@ -320,8 +368,6 @@ vi etc/config/network
 ![img](https://imgoss.xgss.net/picgo/f7b5f88756614b98a2e9bce015e17636.png?aliyun)
 
 到这里，ESxi安装群晖的步骤已经全部完成了，是不是非常简单呢。接下来我们继续安装Windows
-
-
 
 # 四、Windows系统的安装
 
