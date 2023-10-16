@@ -1,4 +1,4 @@
-# Esxi7.0安装centos7系统教程
+# Mini小主机All-in-one搭建教程5-安装centos7系统
 
 # 下载centos7
 
@@ -7,6 +7,8 @@
 清华大学下载站： https://mirrors.tuna.tsinghua.edu.cn/centos/7.9.2009/isos/x86_64/
 
 
+
+![allinone05](https://imgoss.xgss.net/picgo/allinone05.jpg?aliyun)
 
 # 上传镜像
 

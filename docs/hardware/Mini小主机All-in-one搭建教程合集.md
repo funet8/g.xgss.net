@@ -1,10 +1,22 @@
-# mini小主机 ALL IN ONE搭建教程
+# Mini小主机All-in-one搭建教程1-安装Esxi7.0虚拟机系统
 
-# 一、安装Esxi虚拟机系统
+
+
+# 硬件介绍
+
+在狗东买的 [极摩客M2](https://u.jd.com/Pq3ObYl) 到手价是2799元
+
+具体配置如下： 酷睿英特尔11代标压i7 11390H  64G+1TB固态。
+
+以下是安装Esxi7.0虚拟机系统的教程。
+
+![image-20231010172521256](https://imgoss.xgss.net/picgo/image-20231010172521256.png?aliyun)
+
+# 安装Esxi7.0虚拟机系统
 
 ## 准备工作
 
-需要1个U盘，1G以上的就可以，用来安装Esxi系统，我这边使用的是闪迪酷豆，比较小巧
+需要1个U盘，1G以上的就可以，用来安装Esxi系统
 
 
 
@@ -136,7 +148,9 @@ VMware ESXi7.0许可证密钥附使用教程：https://www.downkuai.com/soft/129
 
 ![image-20230918091429706](https://imgoss.xgss.net/picgo/image-20230918091429706.png?aliyun)
 
-# 二、Openwrt软路由系统安装
+
+
+# 二、安装Openwrt软路由系统
 
 
 
