@@ -21,6 +21,7 @@
 | iFileSpace      | [i.xgss.net](https://i.xgss.net/)              | [安装教程](kaiyuan/Open-Source-Software/快速搭建专属的私人网盘系统-iFileSpace.html) |                                                     |
 | WebDav服务      | w.xgss.net                                     | [安装教程](https://g.xgss.net/kaiyuan/Open-Source-Software/CentOS7部署WebDav服务.html) | [开源地址](https://github.com/hacdias/webdav)       |
 | Alist           | [alist.xgss.net](https://alist.xgss.net)       | [安装教程](kaiyuan/Open-Source-Software/开源网盘空间本地挂载神器，挂载百度、阿里云盘、OneDrive等云盘到本地工具-AList.md) | [alist开源地址](https://github.com/alist-org/alist) |
+| onenav          | [nav.xgss.net](https://nav.xgss.net)           | [安装教程](kaiyuan/Open-Source-Software/#基于docker搭建开源导航站onenav.md) | [官网](https://www.onenav.top/)                     |
 
 
 

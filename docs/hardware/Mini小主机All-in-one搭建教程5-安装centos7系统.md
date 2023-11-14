@@ -36,7 +36,7 @@
 
 ![image-20230921162023278](https://imgoss.xgss.net/picgo/image-20230921162023278.png?aliyun)
 
-不要忘记再CD的位置选择刚才上传的centos7镜像文件。
+不要忘记在CD的位置选择刚才上传的centos7镜像文件。
 
 ![image-20230921171917680](https://imgoss.xgss.net/picgo/image-20230921171917680.png?aliyun)
 
@@ -45,6 +45,26 @@
 ## 4.打开电源安装系统
 
 ![image-20230921172120314](https://imgoss.xgss.net/picgo/image-20230921172120314.png?aliyun)
+
+## 修改IP地址
+
+```
+vi  /etc/sysconfig/network-scripts/ifcfg-eth0
+或者
+vi /etc/sysconfig/network-scripts/ifcfg-ens192
+
+TYPE="Ethernet"
+#BOOTPROTO="dhcp" # 把DHCP改成 static
+BOOTPROTO="static"
+
+IPADDR=192.168.1.15  # 固定的内网IP
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1   #网关
+DNS1=114.114.114.114
+DNS2=223.5.5.5
+```
+
+
 
 
 

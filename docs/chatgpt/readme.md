@@ -22,7 +22,7 @@
 
 ## [搭建基于Github开源项目ChatGPT的微信聊天机器人教程](11.搭建基于Github开源项目ChatGPT的微信聊天机器人教程.md)
 
-## [使用开源免费AI绘图工具神器-Stable Diffusion懒人整合包](12.试用开源免费AI绘图工具神器-Stable Diffusion懒人整合包.md)
+## [使用开源免费AI绘图工具神器-Stable Diffusion懒人整合包](12.试用开源免费AI绘图工具神器-StableDiffusion懒人整合包.md)
 
 ## [ChatHub一款开源全能整合AI各大聊天机器人客户端](13.ChatHub一款开源全能整合AI各大聊天机器人客户端.md)
 
