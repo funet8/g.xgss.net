@@ -38,14 +38,25 @@ docker run --rm -it -e REDIS_1_HOST=myredis.host -e REDIS_1_NAME=MyRedis -p 80:8
 
 ### 环境变量摘要
 
-> REDIS_1_HOST - 定义 Redis 服务器的主机
-> REDIS_1_NAME - 定义 Redis 服务器的名称
-> REDIS_1_PORT - 定义 Redis 服务器的端口
-> REDIS_1_AUTH - 定义 Redis 服务器的密码
-> REDIS_1_AUTH_FILE - 定义包含 Redis 服务器密码的文件
-> REDIS_1_DATABASES - 您可以修改配置以阻止 phpRedisAdmin 使用 CONFIG 命令
-> ADMIN_USER - 定义用户界面基本认证的用户名
-> ADMIN_PASS - 定义用户界面基本认证的密码
+```
+REDIS_1_HOST - 定义 Redis 服务器的主机
+
+REDIS_1_NAME - 定义 Redis 服务器的名称
+
+REDIS_1_PORT - 定义 Redis 服务器的端口
+
+REDIS_1_AUTH - 定义 Redis 服务器的密码
+
+REDIS_1_AUTH_FILE - 定义包含 Redis 服务器密码的文件
+
+REDIS_1_DATABASES - 您可以修改配置以阻止 phpRedisAdmin 使用 CONFIG 命令
+
+ADMIN_USER - 定义用户界面基本认证的用户名
+
+ADMIN_PASS - 定义用户界面基本认证的密码
+```
+
+
 
 
 
@@ -53,11 +64,13 @@ docker run --rm -it -e REDIS_1_HOST=myredis.host -e REDIS_1_NAME=MyRedis -p 80:8
 
 ```
 docker run \
--itd --name redis01 \
+-itd --name redis-web \
 --restart always \
--e REDIS_1_HOST=192.168.1.16 -e REDIS_1_NAME=MyRedis-name \
--e REDIS_2_HOST=192.168.1.12 -e REDIS_2_NAME=MyRedis12 -e REDIS_2_PORT=63920 \
+-e REDIS_1_HOST=192.168.0.251 -e REDIS_1_NAME=Redis-jiankong -e  REDIS_1_PORT=123 -e  REDIS_1_AUTH=123456 \
+-e REDIS_2_HOST=192.168.0.2 -e REDIS_2_NAME=Redis01 \
+-e REDIS_3_HOST=192.168.0.3 -e REDIS_3_NAME=Redis02 \
 -p 82:80 erikdubbelboer/phpredisadmin:latest
+
 ```
 
 

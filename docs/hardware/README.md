@@ -21,6 +21,22 @@
 
 ## [Esxi7克隆虚拟机](Esxi7克隆虚拟机.md)
 
+
+
+# 玩转群晖Nas
+
+## [群晖NAS基础设置](群晖NAS基础设置.md)
+
+## [群晖NAS配置之ZeroTier实现内网穿透](群晖NAS配置之ZeroTier实现内网穿透.md)
+
+## [群晖NAS配置之自有服务器ngrok实现内网穿透](群晖NAS配置之自有服务器ngrok实现内网穿透.md)
+
+## [群晖NAS配置之自有服务器frp实现内网穿透](群晖NAS配置之自有服务器frp实现内网穿透.md)
+
+## [群晖NAS配置之搭建WordPress个人博客站点](群晖NAS配置之搭建WordPress个人博客站点.md)
+
+
+
 # Openwrt玩法
 
 ## [Openwrt配置V2ray](Openwrt配置V2ray.md)
