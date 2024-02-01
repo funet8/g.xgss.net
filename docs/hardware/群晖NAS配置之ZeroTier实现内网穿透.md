@@ -137,7 +137,7 @@ zerotier/zerotier-synology
 200 join OK
 ```
 
-![image-20231124104652623](H:/typora_images/image-20231124104652623.png)
+![image-20231124104652623](https://imgoss.xgss.net/picgo/image-20231124104652623.png?aliyun)
 
 如果不是200 join ok，择要看看你的docker日志
 
@@ -201,7 +201,7 @@ Windows系统的ip是：
 
 ## 安卓系统
 
-### 1.安装ZeroTier
+### 1.安装ZeroTier的手机APP
 
 ![image-20231124111017541](https://imgoss.xgss.net/picgo/image-20231124111017541.png?aliyun)
 

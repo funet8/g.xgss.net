@@ -185,3 +185,35 @@ VMware ESXi7.0许可证密钥附使用教程：https://www.downkuai.com/soft/129
 再使用ssh远程链接工具连接。
 
 ![image-20230918091429706](https://imgoss.xgss.net/picgo/image-20230918091429706.png?aliyun)
+
+
+
+# https服务挂掉处理方法
+
+重启报错： 503 Service Unavailable (Failed to connect to endpoint: [N7Vmacore4Http16LocalServiceSpecE:0x000000bcbba766b0] _serverNamespace = / action = Allow _port = 8309)
+
+ssh连接esxi输入
+
+```
+[root@localhost:~] /etc/init.d/hostd status
+hostd is not running.
+[root@localhost:~] 
+[root@localhost:~] /etc/init.d/hostd start
+hostd started.
+[root@localhost:~] 
+[root@localhost:~] 
+[root@localhost:~] /etc/init.d/ntpd restart
+ntpd is not running
+Starting ntpd
+[root@localhost:~] /etc/init.d/vpxa restart
+watchdog-vpxa[1053350]: Terminating watchdog process with PID 1051330
+vpxa stopped.
+vpxa started.
+[root@localhost:~] /etc/init.d/ntpd restart
+Stopping ntpd
+watchdog-ntpd[1053433]: Terminating watchdog process with PID 1053306
+Starting ntpd
+```
+
+解决问题了。
+

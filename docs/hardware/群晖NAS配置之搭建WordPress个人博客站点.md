@@ -4,6 +4,12 @@
 
 之前写了一些ngrok和frp给群晖nas做内网穿透，今天分享一下在群晖nas下安装wordpress的教程。
 
+WordPress是一个开源的内容管理系统（CMS），最初是用来搭建博客的，但后来发展成为创建各种类型网站的强大工具。它使用PHP语言和MySQL数据库构建，让用户可以轻松地创建和管理网站内容。白宫的官网也是用WordPress部署的
+
+![wordpress-logs](https://imgoss.xgss.net/picgo/wordpress-logs.jpg?aliyun)
+
+
+
 ## 安装群晖 NAS 上的 Web 站点套件
 
 1. 登录群晖 DSM（DiskStation Manager）管理界面。
@@ -187,11 +193,13 @@ echo phpinfo();
 
 ![image-20231129183803368](https://imgoss.xgss.net/picgo/image-20231129183803368.png?aliyun)
 
-再次访问
+## 访问安装
+
+再次访问安装wordpress
 
 ![image-20231129184024526](https://imgoss.xgss.net/picgo/image-20231129184024526.png?aliyun)
 
-填写
+填写数据库信息
 
 ![image-20231129184118476](https://imgoss.xgss.net/picgo/image-20231129184118476.png?aliyun)
 
@@ -204,6 +212,46 @@ echo phpinfo();
 ![image-20231129184556118](https://imgoss.xgss.net/picgo/image-20231129184556118.png?aliyun)
 
 
+
+## 目录权限
+
+WordPress安装插件等操作需要对网站目录拥有写入权限，而群晖设定的http用户只包含读取权限而不包含写入权限，这会导致一些操作失败或异常，所以接下来我们要调整文件夹的权限。
+
+首先我们打开File Station并找到WordPress目录，然后点击“属性”。
+
+![image-20231207133430116](H:/typora_images/image-20231207133430116.png)
+
+来到这个界面，我们切换到“权限”
+
+![image-20231207133555332](https://imgoss.xgss.net/picgo/image-20231207133555332.png?aliyun)
+
+我们选中“http”（图像为单人）并按“编辑”
+
+![image-20231207133657747](H:/typora_images/image-20231207133657747.png)
+
+然后我们把“写入”部分全部打勾，完成后点击“完成”
+
+![image-20231207133712027](H:/typora_images/image-20231207133712027.png)
+
+回到这个界面，我们将“应用到这个文件夹、子文件夹及文件”打上勾，然后点击“保存”
+
+![image-20231207133724269](https://imgoss.xgss.net/picgo/image-20231207133724269.png?aliyun)
+
+设置权限部分完成啦！
+
+## 解决需要FTP账户密码的问题
+
+但是，当我们安装插件时，我们就会碰上WordPress要求FTP账号密码这个问题
+
+![image-20231207133820660](https://imgoss.xgss.net/picgo/image-20231207133820660.png?aliyun)
+
+要解决这个问题，我们首先要打开File Station，并找到WordPress的目录。然后打开wp-config.php
+
+在这个php文件的第86行加入如下代码
+
+```
+define('FS_METHOD', 'direct');
+```
 
 # 总结
 
