@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用xtrabackup备份和恢复mysql数据库 | 星哥私有教程</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/images/logo.png">
+    <link rel="manifest" href="/images/logo.png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <meta name="description" content="星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍">
+    <meta http-quiv="pragma" cotent="no-cache">
+    <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
+    <meta http-quiv="expires" cotent="0">
+    
+    <link rel="preload" href="/assets/css/0.styles.aadc6af7.css" as="style"><link rel="preload" href="/assets/js/app.44414999.js" as="script"><link rel="preload" href="/assets/js/3.dac1e8fe.js" as="script"><link rel="preload" href="/assets/js/1.2b084c82.js" as="script"><link rel="preload" href="/assets/js/203.bdbe048c.js" as="script"><link rel="prefetch" href="/assets/js/10.d948419f.js"><link rel="prefetch" href="/assets/js/100.fb8bbc91.js"><link rel="prefetch" href="/assets/js/101.23c6db11.js"><link rel="prefetch" href="/assets/js/102.f3e6e4bc.js"><link rel="prefetch" href="/assets/js/103.12c5752b.js"><link rel="prefetch" href="/assets/js/104.c514ca9d.js"><link rel="prefetch" href="/assets/js/105.5b525962.js"><link rel="prefetch" href="/assets/js/106.2bf777b3.js"><link rel="prefetch" href="/assets/js/107.3138603e.js"><link rel="prefetch" href="/assets/js/108.fd5bd233.js"><link rel="prefetch" href="/assets/js/109.8d0bfe38.js"><link rel="prefetch" href="/assets/js/11.2364fdb2.js"><link rel="prefetch" href="/assets/js/110.4237be6a.js"><link rel="prefetch" href="/assets/js/111.1f9cc2a6.js"><link rel="prefetch" href="/assets/js/112.21b17394.js"><link rel="prefetch" href="/assets/js/113.34bc511e.js"><link rel="prefetch" href="/assets/js/114.5a7dc0d9.js"><link rel="prefetch" href="/assets/js/115.28fdf540.js"><link rel="prefetch" href="/assets/js/116.80db10fc.js"><link rel="prefetch" href="/assets/js/117.f96ae1e4.js"><link rel="prefetch" href="/assets/js/118.687d1d39.js"><link rel="prefetch" href="/assets/js/119.9b96d881.js"><link rel="prefetch" href="/assets/js/12.dfbb0ebd.js"><link rel="prefetch" href="/assets/js/120.e8cff284.js"><link rel="prefetch" href="/assets/js/121.d9f2a059.js"><link rel="prefetch" href="/assets/js/122.27570364.js"><link rel="prefetch" href="/assets/js/123.d28be490.js"><link rel="prefetch" href="/assets/js/124.53e37b4c.js"><link rel="prefetch" href="/assets/js/125.f9322de8.js"><link rel="prefetch" href="/assets/js/126.eae0d779.js"><link rel="prefetch" href="/assets/js/127.5066d08e.js"><link rel="prefetch" href="/assets/js/128.d4843e2c.js"><link rel="prefetch" href="/assets/js/129.dfb557d2.js"><link rel="prefetch" href="/assets/js/13.2f339c60.js"><link rel="prefetch" href="/assets/js/130.adf01ff1.js"><link rel="prefetch" href="/assets/js/131.2e54b328.js"><link rel="prefetch" href="/assets/js/132.f17050a2.js"><link rel="prefetch" href="/assets/js/133.28c68e6a.js"><link rel="prefetch" href="/assets/js/134.8ab84102.js"><link rel="prefetch" href="/assets/js/135.d3c6db80.js"><link rel="prefetch" href="/assets/js/136.f98fda3f.js"><link rel="prefetch" href="/assets/js/137.a4fc31f5.js"><link rel="prefetch" href="/assets/js/138.c8850621.js"><link rel="prefetch" href="/assets/js/139.cc6cfd5d.js"><link rel="prefetch" href="/assets/js/14.970db6ab.js"><link rel="prefetch" href="/assets/js/140.dfa0903d.js"><link rel="prefetch" href="/assets/js/141.255ade94.js"><link rel="prefetch" href="/assets/js/142.5880752f.js"><link rel="prefetch" href="/assets/js/143.641717d3.js"><link rel="prefetch" href="/assets/js/144.807bcc92.js"><link rel="prefetch" href="/assets/js/145.4f6ec774.js"><link rel="prefetch" href="/assets/js/146.5e4b7c32.js"><link rel="prefetch" href="/assets/js/147.e3465f3e.js"><link rel="prefetch" href="/assets/js/148.1ad0d217.js"><link rel="prefetch" href="/assets/js/149.704e530b.js"><link rel="prefetch" href="/assets/js/15.cac89473.js"><link rel="prefetch" href="/assets/js/150.64302ed7.js"><link rel="prefetch" href="/assets/js/151.3077b142.js"><link rel="prefetch" href="/assets/js/152.cff06017.js"><link rel="prefetch" href="/assets/js/153.6953872f.js"><link rel="prefetch" href="/assets/js/154.53f2fee9.js"><link rel="prefetch" href="/assets/js/155.bdd12704.js"><link rel="prefetch" href="/assets/js/156.7299b83e.js"><link rel="prefetch" href="/assets/js/157.190eb90d.js"><link rel="prefetch" href="/assets/js/158.cdec71bf.js"><link rel="prefetch" href="/assets/js/159.f1928d2a.js"><link rel="prefetch" href="/assets/js/16.b02c5827.js"><link rel="prefetch" href="/assets/js/160.4352cf10.js"><link rel="prefetch" href="/assets/js/161.b9043a34.js"><link rel="prefetch" href="/assets/js/162.eeac6f07.js"><link rel="prefetch" href="/assets/js/163.72db20e7.js"><link rel="prefetch" href="/assets/js/164.6ed707d1.js"><link rel="prefetch" href="/assets/js/165.b48249f5.js"><link rel="prefetch" href="/assets/js/166.b9cf2e8a.js"><link rel="prefetch" href="/assets/js/167.f41650cd.js"><link rel="prefetch" href="/assets/js/168.25a54bc1.js"><link rel="prefetch" href="/assets/js/169.25357c41.js"><link rel="prefetch" href="/assets/js/17.f7cba118.js"><link rel="prefetch" href="/assets/js/170.02d046d1.js"><link rel="prefetch" href="/assets/js/171.dd3fba8e.js"><link rel="prefetch" href="/assets/js/172.46e2acc4.js"><link rel="prefetch" href="/assets/js/173.71a35500.js"><link rel="prefetch" href="/assets/js/174.71d545f7.js"><link rel="prefetch" href="/assets/js/175.ae1d5111.js"><link rel="prefetch" href="/assets/js/176.11f3b985.js"><link rel="prefetch" href="/assets/js/177.a768b1ba.js"><link rel="prefetch" href="/assets/js/178.9eb0db2c.js"><link rel="prefetch" href="/assets/js/179.9e385294.js"><link rel="prefetch" href="/assets/js/18.aec38902.js"><link rel="prefetch" href="/assets/js/180.47636ce4.js"><link rel="prefetch" href="/assets/js/181.f9182f2b.js"><link rel="prefetch" href="/assets/js/182.427e6786.js"><link rel="prefetch" href="/assets/js/183.dc3d5aef.js"><link rel="prefetch" href="/assets/js/184.ece0126e.js"><link rel="prefetch" href="/assets/js/185.0d201eea.js"><link rel="prefetch" href="/assets/js/186.2f5bdcec.js"><link rel="prefetch" href="/assets/js/187.564d8583.js"><link rel="prefetch" href="/assets/js/188.6224db09.js"><link rel="prefetch" href="/assets/js/189.0f4ec19d.js"><link rel="prefetch" href="/assets/js/19.f09be7d9.js"><link rel="prefetch" href="/assets/js/190.208f3310.js"><link rel="prefetch" href="/assets/js/191.87f1c1f9.js"><link rel="prefetch" href="/assets/js/192.22d6a11a.js"><link rel="prefetch" href="/assets/js/193.e15ff727.js"><link rel="prefetch" href="/assets/js/194.e7d8f87d.js"><link rel="prefetch" href="/assets/js/195.0169ba9c.js"><link rel="prefetch" href="/assets/js/196.bdbf7dff.js"><link rel="prefetch" href="/assets/js/197.9b76e6f5.js"><link rel="prefetch" href="/assets/js/198.0de047d6.js"><link rel="prefetch" href="/assets/js/199.b07dfa0a.js"><link rel="prefetch" href="/assets/js/20.a644b163.js"><link rel="prefetch" href="/assets/js/200.7b05aa86.js"><link rel="prefetch" href="/assets/js/201.97e83e9d.js"><link rel="prefetch" href="/assets/js/202.afecd374.js"><link rel="prefetch" href="/assets/js/204.d0ef5791.js"><link rel="prefetch" href="/assets/js/205.3cfb1c56.js"><link rel="prefetch" href="/assets/js/206.568c53da.js"><link rel="prefetch" href="/assets/js/207.1feb163d.js"><link rel="prefetch" href="/assets/js/208.528acf43.js"><link rel="prefetch" href="/assets/js/209.4560f9d4.js"><link rel="prefetch" href="/assets/js/21.7f1728ea.js"><link rel="prefetch" href="/assets/js/210.2559cb42.js"><link rel="prefetch" href="/assets/js/211.2f723171.js"><link rel="prefetch" href="/assets/js/212.79628027.js"><link rel="prefetch" href="/assets/js/213.eeca0f4a.js"><link rel="prefetch" href="/assets/js/214.1fb41c81.js"><link rel="prefetch" href="/assets/js/215.b5f69040.js"><link rel="prefetch" href="/assets/js/216.c62dbfff.js"><link rel="prefetch" href="/assets/js/217.36f7e15b.js"><link rel="prefetch" href="/assets/js/218.15c61121.js"><link rel="prefetch" href="/assets/js/219.d427439e.js"><link rel="prefetch" href="/assets/js/22.6ac35747.js"><link rel="prefetch" href="/assets/js/220.d8bf0028.js"><link rel="prefetch" href="/assets/js/221.b186da86.js"><link rel="prefetch" href="/assets/js/222.dc35c353.js"><link rel="prefetch" href="/assets/js/223.17e32375.js"><link rel="prefetch" href="/assets/js/224.515f2539.js"><link rel="prefetch" href="/assets/js/225.070e6785.js"><link rel="prefetch" href="/assets/js/226.1ec07211.js"><link rel="prefetch" href="/assets/js/227.10babbd0.js"><link rel="prefetch" href="/assets/js/228.10d2322c.js"><link rel="prefetch" href="/assets/js/229.68fdfd8a.js"><link rel="prefetch" href="/assets/js/23.9d8529b4.js"><link rel="prefetch" href="/assets/js/230.ce705130.js"><link rel="prefetch" href="/assets/js/231.ef53390e.js"><link rel="prefetch" href="/assets/js/232.2f76c4b1.js"><link rel="prefetch" href="/assets/js/233.71cfd6a0.js"><link rel="prefetch" href="/assets/js/234.15d8793a.js"><link rel="prefetch" href="/assets/js/235.f5614898.js"><link rel="prefetch" href="/assets/js/236.7352b6f5.js"><link rel="prefetch" href="/assets/js/237.5add9e34.js"><link rel="prefetch" href="/assets/js/238.aada021b.js"><link rel="prefetch" href="/assets/js/239.4cf64d74.js"><link rel="prefetch" href="/assets/js/24.d2af7089.js"><link rel="prefetch" href="/assets/js/240.d66fe533.js"><link rel="prefetch" href="/assets/js/241.eb1a179f.js"><link rel="prefetch" href="/assets/js/242.8e0f2ae8.js"><link rel="prefetch" href="/assets/js/243.39980f52.js"><link rel="prefetch" href="/assets/js/244.b065ad4b.js"><link rel="prefetch" href="/assets/js/245.69c14157.js"><link rel="prefetch" href="/assets/js/246.3a51ce42.js"><link rel="prefetch" href="/assets/js/247.8b92c18d.js"><link rel="prefetch" href="/assets/js/248.e05d69c0.js"><link rel="prefetch" href="/assets/js/249.49e0b21f.js"><link rel="prefetch" href="/assets/js/25.771a511c.js"><link rel="prefetch" href="/assets/js/250.2b8e71b1.js"><link rel="prefetch" href="/assets/js/26.21923cbb.js"><link rel="prefetch" href="/assets/js/27.4cd350c4.js"><link rel="prefetch" href="/assets/js/28.3013c8f6.js"><link rel="prefetch" href="/assets/js/29.faf75556.js"><link rel="prefetch" href="/assets/js/30.2baec88b.js"><link rel="prefetch" href="/assets/js/31.fcbd28cc.js"><link rel="prefetch" href="/assets/js/32.297e1243.js"><link rel="prefetch" href="/assets/js/33.24d6a8d5.js"><link rel="prefetch" href="/assets/js/34.cba3788c.js"><link rel="prefetch" href="/assets/js/35.650a33fd.js"><link rel="prefetch" href="/assets/js/36.86ffd067.js"><link rel="prefetch" href="/assets/js/37.1085254f.js"><link rel="prefetch" href="/assets/js/38.f66b1e84.js"><link rel="prefetch" href="/assets/js/39.9051bd56.js"><link rel="prefetch" href="/assets/js/4.5096cd25.js"><link rel="prefetch" href="/assets/js/40.4a6eb2a9.js"><link rel="prefetch" href="/assets/js/41.d32f6ae2.js"><link rel="prefetch" href="/assets/js/42.1becbc16.js"><link rel="prefetch" href="/assets/js/43.398b6717.js"><link rel="prefetch" href="/assets/js/44.4ef5e13d.js"><link rel="prefetch" href="/assets/js/45.51cf0d90.js"><link rel="prefetch" href="/assets/js/46.37d929ac.js"><link rel="prefetch" href="/assets/js/47.03c5dd43.js"><link rel="prefetch" href="/assets/js/48.1a371346.js"><link rel="prefetch" href="/assets/js/49.d137766d.js"><link rel="prefetch" href="/assets/js/5.3869a340.js"><link rel="prefetch" href="/assets/js/50.82f518c8.js"><link rel="prefetch" href="/assets/js/51.67bfb3b8.js"><link rel="prefetch" href="/assets/js/52.7e422fc0.js"><link rel="prefetch" href="/assets/js/53.f8cbf830.js"><link rel="prefetch" href="/assets/js/54.8b776889.js"><link rel="prefetch" href="/assets/js/55.536f7b3e.js"><link rel="prefetch" href="/assets/js/56.48859523.js"><link rel="prefetch" href="/assets/js/57.3a540bd9.js"><link rel="prefetch" href="/assets/js/58.ec078fdc.js"><link rel="prefetch" href="/assets/js/59.3334a223.js"><link rel="prefetch" href="/assets/js/6.eb4dc413.js"><link rel="prefetch" href="/assets/js/60.91773eb2.js"><link rel="prefetch" href="/assets/js/61.100a3ac7.js"><link rel="prefetch" href="/assets/js/62.6b91e15c.js"><link rel="prefetch" href="/assets/js/63.728217c8.js"><link rel="prefetch" href="/assets/js/64.48bc35b2.js"><link rel="prefetch" href="/assets/js/65.334d1610.js"><link rel="prefetch" href="/assets/js/66.c7497965.js"><link rel="prefetch" href="/assets/js/67.6aa84f94.js"><link rel="prefetch" href="/assets/js/68.8fb349bc.js"><link rel="prefetch" href="/assets/js/69.db48cfc6.js"><link rel="prefetch" href="/assets/js/7.d8afdfd4.js"><link rel="prefetch" href="/assets/js/70.cccb423f.js"><link rel="prefetch" href="/assets/js/71.eaacc498.js"><link rel="prefetch" href="/assets/js/72.059b23ea.js"><link rel="prefetch" href="/assets/js/73.492b7e39.js"><link rel="prefetch" href="/assets/js/74.ec93b989.js"><link rel="prefetch" href="/assets/js/75.03f2bccc.js"><link rel="prefetch" href="/assets/js/76.e316fcbb.js"><link rel="prefetch" href="/assets/js/77.4aabc55a.js"><link rel="prefetch" href="/assets/js/78.4d060933.js"><link rel="prefetch" href="/assets/js/79.38b6cfbb.js"><link rel="prefetch" href="/assets/js/8.0f122f40.js"><link rel="prefetch" href="/assets/js/80.a9fadb32.js"><link rel="prefetch" href="/assets/js/81.2f17c316.js"><link rel="prefetch" href="/assets/js/82.65754408.js"><link rel="prefetch" href="/assets/js/83.c588ab80.js"><link rel="prefetch" href="/assets/js/84.0aa66359.js"><link rel="prefetch" href="/assets/js/85.33d6441e.js"><link rel="prefetch" href="/assets/js/86.9d898e56.js"><link rel="prefetch" href="/assets/js/87.86ef3cc9.js"><link rel="prefetch" href="/assets/js/88.33106010.js"><link rel="prefetch" href="/assets/js/89.59431d10.js"><link rel="prefetch" href="/assets/js/9.5aad96fe.js"><link rel="prefetch" href="/assets/js/90.d67b212b.js"><link rel="prefetch" href="/assets/js/91.47cd225f.js"><link rel="prefetch" href="/assets/js/92.781d57d8.js"><link rel="prefetch" href="/assets/js/93.18ad9b1f.js"><link rel="prefetch" href="/assets/js/94.a42bcb38.js"><link rel="prefetch" href="/assets/js/95.beb0c3bb.js"><link rel="prefetch" href="/assets/js/96.51751a73.js"><link rel="prefetch" href="/assets/js/97.dcf01d58.js"><link rel="prefetch" href="/assets/js/98.cb536506.js"><link rel="prefetch" href="/assets/js/99.d20576b5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aadc6af7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-130b300a><div data-v-130b300a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-130b300a data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>星哥私有教程</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2024
+        </a></span></div></div> <div class="hide" data-v-130b300a><header class="navbar" data-v-130b300a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">星哥私有教程</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/jumpserver/" class="nav-link"><i class="undefined"></i>
+  JumpServer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      云服务
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud/aliyun/" class="nav-link"><i class="undefined"></i>
+  阿里云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/tengxunyun/" class="nav-link"><i class="undefined"></i>
+  腾讯云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/aws/" class="nav-link"><i class="undefined"></i>
+  亚马逊云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/other/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-130b300a></div> <aside class="sidebar" data-v-130b300a><div class="personal-info-wrapper" data-v-39576ba9 data-v-130b300a><!----> <!----> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>240</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>0</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/jumpserver/" class="nav-link"><i class="undefined"></i>
+  JumpServer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      云服务
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud/aliyun/" class="nav-link"><i class="undefined"></i>
+  阿里云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/tengxunyun/" class="nav-link"><i class="undefined"></i>
+  腾讯云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/aws/" class="nav-link"><i class="undefined"></i>
+  亚马逊云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/other/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/linux-basis/" class="sidebar-link">基础知识</a></li><li><a href="/git/" class="sidebar-link">Git服务</a></li><li><a href="/safe/" class="sidebar-link">网络安全</a></li><li><a href="/kaiyuan/Open-Source-Software/" class="sidebar-link">开源软件</a></li><li><a href="/mysql/" aria-current="page" class="sidebar-link">MySQL</a></li><li><a href="/nginx/" class="sidebar-link">Nginx</a></li><li><a href="/chatgpt/" class="sidebar-link">ChatGPT</a></li><li><a href="/shell/" class="sidebar-link">Shell</a></li><li><a href="/Ubuntu/" class="sidebar-link">Ubuntu</a></li><li><a href="/hardware/" class="sidebar-link">硬件</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2></h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2024
+        </a></span></div></div> <div data-v-130b300a><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">使用xtrabackup备份和恢复mysql数据库</h1> <div data-v-f875f3fc><!----> <!----> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/mysql/%E4%BD%BF%E7%94%A8xtrabackup%E5%A4%87%E4%BB%BD%E5%92%8C%E6%81%A2%E5%A4%8Dmysql%E6%95%B0%E6%8D%AE%E5%BA%93.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="使用xtrabackup备份和恢复mysql数据库"><a href="#使用xtrabackup备份和恢复mysql数据库" class="header-anchor">#</a> 使用xtrabackup备份和恢复mysql数据库</h1> <h2 id="mysqldump"><a href="#mysqldump" class="header-anchor">#</a> mysqldump</h2> <p>一种逻辑备份方式，将数据转换成sql文件，其最大的缺陷就是备份和恢复时间很长，对于一个小于10G的数据库而言，这个速度还是可以接受的，但是如果数据库较大，那在使用mysqldump备份就非常不合适了。</p> <h2 id="lvm"><a href="#lvm" class="header-anchor">#</a> lvm</h2> <p>是一种采用逻辑卷快照功能对数据进行备份，可以实现几乎热备，但是备份过程较为复杂(来回切换终端)，很难用shell脚本直接实现，不过现在似乎有个工具mylvmbackup可以实现自动化备份，但是没有尝试过。</p> <h2 id="xtrabackup"><a href="#xtrabackup" class="header-anchor">#</a> Xtrabackup</h2> <p>对MyISAM表只能实现温备，并且不支持增量备份，所以每次对MyISAM表备份都是全备。</p> <p>XtraBackup更多高级特性通常只能在innodb存储引擎上实现，而且高级特性还都依赖于mysql数据库对innodb引擎实现了单独表空间，否则没办法实现单表或单库导出</p> <p>那么今天就和大家聊聊第三款开源备份工具xtrabackup：</p> <p>官方站点：http://www.percona.com</p> <p>官方在线文档：http://www.percona.com/doc/percona-xtrabackup/2.2/</p> <p>最新软件包下载地址：http://www.percona.com/downloads/XtraBackup/</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mysql&gt; show global variables like '%innodb_file_per_table%';
+
++-----------------------+-------+
+| Variable_name         | Value |
++-----------------------+-------+
+| innodb_file_per_table | ON    |
++-----------------------+-------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="系统说明"><a href="#系统说明" class="header-anchor">#</a> 系统说明</h2> <p>系统：CentOS release 6.7
+数据库： 10.0.25-MariaDB
+数据库目录： /var/lib/mysql --软连接--&gt; /data/mysql
+备份目录：/backup/</p> <h1 id="二、安装"><a href="#二、安装" class="header-anchor">#</a> 二、安装</h1> <p>XtraBackup本篇文章采用yum安装方式</p> <h2 id="_1、yum安装"><a href="#_1、yum安装" class="header-anchor">#</a> 1、yum安装</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code># wget http://www.percona.com/downloads/XtraBackup/XtraBackup-2.2.9/binary/redhat/6/x86_64/percona-xtrabackup-2.2.9-5067.el6.x86_64.rpm
+# rpm -ivh percona-xtrabackup-2.2.9-5067.el6.x86_64.rpm
+warning: percona-xtrabackup-2.2.9-5067.el6.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID cd2efd2a: NOKEY
+error: Failed dependencies:
+        perl(DBD::mysql) is needed by percona-xtrabackup-2.2.9-5067.el6.x86_64
+        perl(Time::HiRes) is needed by percona-xtrabackup-2.2.9-5067.el6.x86_64
+# yum -y install perl-Time-HiRes perl-DBD-MySQL perl-IO-Socket-SSL
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h2 id="_2、查看xtrabackup安装的工具"><a href="#_2、查看xtrabackup安装的工具" class="header-anchor">#</a> 2、查看Xtrabackup安装的工具</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code># rpm -ql percona-xtrabackup |grep bin
+/usr/bin/innobackupex
+/usr/bin/xbcrypt
+/usr/bin/xbstream
+/usr/bin/xtrabackup
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="_3、xtrabackup中主要包含了三个工具"><a href="#_3、xtrabackup中主要包含了三个工具" class="header-anchor">#</a> 3、XtraBackup中主要包含了三个工具</h2> <p>xbsteam 支持流式备份
+xtrbackup 用于热备innodb、xtradb表中数据的工具，不能备份其它类型的表，也不能备份数据表结构
+innobackupex 是将xtrabackup进行封装的perl脚本，提供了备份MyISAM表的能力</p> <h1 id="三、innobackupex几个非常重要的参数"><a href="#三、innobackupex几个非常重要的参数" class="header-anchor">#</a> 三、innobackupex几个非常重要的参数</h1> <p>--apply-log
+一般情况下，在备份完成后，数据尚且不能用于恢复操作，因为备份的数据中可能会包含尚未提交的事务或已经提交但尚未同步至数据文件中的事务。因此，此时数据文件仍处理不一致状态。“准备”的主要作用正是通过回滚未提交的事务及同步已经提交的事务至数据文件也使得数据文件处于一致性状态。</p> <p>--redo-only
+准备(prepare)增量备份与整理完全备份有着一些不同，尤其要注意的是：
+(1)需要在每个备份(包括完全和各个增量备份)上，将已经提交的事务进行“重放”。“重放”之后，所有的备份数据将合并到完全备份上。
+(2)基于所有的备份将未提交的事务进行“回滚”。</p> <p>--copy-back
+该选项用于执行恢复(还原)操作，其通过复制所有数据相关的文件至mysql服务器DATADIR目录中来执行恢复过程。innobackupex通过backup-my.cnf来获取DATADIR目录的相关信息。</p> <h1 id="四、innobackup备份语法"><a href="#四、innobackup备份语法" class="header-anchor">#</a> 四、innobackup备份语法</h1> <h2 id="_1-完全备份-完全恢复"><a href="#_1-完全备份-完全恢复" class="header-anchor">#</a> 1.完全备份+完全恢复</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>完全备份
+# innobackupex --user=DBUSER --password=DBUSERPASS  /path/to/BACKUP-DIR/
+innobackupex --user=root --password=123456  /backup
+准备一个完全备份
+innobackupex --apply-log  /path/to/BACKUP-DIR
+
+从一个完全备份中恢复数据
+# innobackupex --copy-back /path/to/BACKUP-DIR
+innobackupex --copy-back /backup
+
+修改datadir目录权限
+# chown -R  mysql:mysql  /mydata/data/
+
+innobackupex --defaults-file=/etc/my.cnf --user=root  --copy-back /backup/2016-07-07_14-32-33/
+恢复操作出现错误
+innobackupex: Error: no 'datadir' option in group 'mysqld' in server configuration file '/etc/my.cnf' at /usr/bin/innobackupex line 4506.
+解决办法：
+vi /etc/my.cnf 在[mysqld]选项下面添加：
+datadir                = /data/mysql
+出现错误：
+innobackupex: Error: Original data directory '/data/mysql' is not empty! at /usr/bin/innobackupex line 2194.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h2 id="_2-完全备份-增量备份-完全恢复"><a href="#_2-完全备份-增量备份-完全恢复" class="header-anchor">#</a> 2.完全备份+增量备份+完全恢复</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>完全备份：
+# innobackupex --user=DBUSER --password=DBUSERPASS  /path/to/BACKUP-DIR/
+
+第一次增量备份
+# innobackupex --user=DBUSER --password=DBUSERPASS --incremental /backup --incremental-basedir=BASEDIR
+
+第二次增量备份
+# innobackupex --user=DBUSER --password=DBUSERPASS --incremental /backup --incremental-basedir=BASEDIR
+
+准备：
+执行完全备份redo
+
+# innobackupex --apply-log --redo-only BASE-DIR
+执行第一次增量备份redo
+
+# innobackupex --apply-log --redo-only BASE-DIR --incremental-dir=INCREMENTAL-DIR-1
+
+执行第二次增量备份redo
+
+# innobackupex --apply-log --redo-only BASE-DIR --incremental-dir=INCREMENTAL-DIR-2
+
+还原：
+
+# innobackupex --copy-back BASE-DIR
+
+解释：
+其中BASE-DIR指的是完全备份所在的目录，
+而INCREMENTAL-DIR-1指的是第一次增量备份的目录，
+INCREMENTAL-DIR-2指的是第二次增量备份的目录，
+其它依次类推，即如果有多次增量备份，每一次都要执行如上操作；
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h1 id="五、以上两种方式案列重放"><a href="#五、以上两种方式案列重放" class="header-anchor">#</a> 五、以上两种方式案列重放</h1> <h2 id="_1-完全备份-完全恢复-2"><a href="#_1-完全备份-完全恢复-2" class="header-anchor">#</a> 1.完全备份+完全恢复</h2> <h3 id="_1、实验前的准备工作"><a href="#_1、实验前的准备工作" class="header-anchor">#</a> 1、实验前的准备工作</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># service mysqld stop
+# rm -rf /mydata/data/*	
+# /usr/local/mysql/scripts/mysql_install_db --user=mysql --datadir=/mydata/data/ --basedir=/usr/local/mysql/
+# service mysqld start
+# mysqladmin -uroot -p password 123456
+# mysql -uroot -p123456
+mysql&gt; create database jiaowu;
+mysql&gt; use jiaowu;
+mysql&gt; set sql_log_bin = 0;
+mysql&gt; source /root/tutor.sql;    //导入tutor数据表
+mysql&gt; set sql_log_bin = 1;
+mysql&gt; select * from tutor;
++------+---------------+--------+------+
+| TID  | Tname         | Gender | Age  |
++------+---------------+--------+------+
+|    1 | ZhengYansheng | M      |   25 |
+|    2 | LiJian        | M      |   26 |
+|    3 | OuYangyu      | M      |   27 |
+|    4 | LuoChenghui   | M      |   25 |
+|    5 | LiuYunbo      | M      |   25 |
+|    6 | FuJian        | M      |   24 |
+|    7 | LiMenglu      | F      |   23 |
+|    8 | BaoYintu      | M      |   28 |
+|    9 | WangYana      | F      |   25 |
++------+---------------+--------+------+
+9 rows in set (0.00 sec)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h3 id="_2、innobackupex对db进行完全备份"><a href="#_2、innobackupex对db进行完全备份" class="header-anchor">#</a> 2、innobackupex对DB进行完全备份</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># innobackupex --user=root --password=123456 /backup/
+
+如果执行正确，其最后输出的几行信息通常如下：
+innobackupex: Backup created in directory '/backup/2015-03-18_21-00-17'
+innobackupex: MySQL binlog position: filename 'mysql-bin.000003', position 332
+150318 21:00:23  innobackupex: Connection to database server closed
+150318 21:00:23  innobackupex: completed OK!
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_3、查看备份目录和文件"><a href="#_3、查看备份目录和文件" class="header-anchor">#</a> 3、查看备份目录和文件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># ls /backup/
+2015-03-18_21-00-17
+# ls /backup/2015-03-18_21-00-17/
+backup-my.cnf  jiaowu  performance_schema  xtrabackup_binlog_info  xtrabackup_info
+ibdata1        mysql   test                xtrabackup_checkpoints  xtrabackup_logfile
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_4、准备一个完全备份"><a href="#_4、准备一个完全备份" class="header-anchor">#</a> 4、准备一个完全备份</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># innobackupex --user=root --password=123456 --apply-log /backup/2015-03-18_21-00-17/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_5、这里还是采用老方法直接删除所有的数据文件"><a href="#_5、这里还是采用老方法直接删除所有的数据文件" class="header-anchor">#</a> 5、这里还是采用老方法直接删除所有的数据文件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># service mysqld stop
+# rm -rf /mydata/data/*
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="_6、从一个完全备份中恢复数据库"><a href="#_6、从一个完全备份中恢复数据库" class="header-anchor">#</a> 6、从一个完全备份中恢复数据库</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>innobackupex --copy-back /backup/2015-03-18_21-00-17/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_7、修改数据目录权限"><a href="#_7、修改数据目录权限" class="header-anchor">#</a> 7、修改数据目录权限</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># chown -R mysql.mysql /mydata/data/
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_8、启动mysqld服务"><a href="#_8、启动mysqld服务" class="header-anchor">#</a> 8、启动mysqld服务</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>service mysqld start
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_9、登陆mysql查看是否是否一致"><a href="#_9、登陆mysql查看是否是否一致" class="header-anchor">#</a> 9、登陆mysql查看是否是否一致</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># mysql -e 'use jiaowu;select * from tutor;'
++------+---------------+--------+------+
+| TID  | Tname         | Gender | Age  |
++------+---------------+--------+------+
+|    1 | ZhengYansheng | M      |   25 |
+|    2 | LiJian        | M      |   26 |
+|    3 | OuYangyu      | M      |   27 |
+|    4 | LuoChenghui   | M      |   25 |
+|    5 | LiuYunbo      | M      |   25 |
+|    6 | FuJian        | M      |   24 |
+|    7 | LiMenglu      | F      |   23 |
+|    8 | BaoYintu      | M      |   28 |
+|    9 | WangYana      | F      |   25 |
++------+---------------+--------+------+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>数据已经成功恢复到数据库当中</p> <h2 id="_2-完全备份-增量备份-完全恢复-2"><a href="#_2-完全备份-增量备份-完全恢复-2" class="header-anchor">#</a> 2.完全备份+增量备份+完全恢复</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>1、实验前的准备工作
+# service mysqld stop
+# rm -rf /mydata/data/*     //删除原来的备份文件
+# rm -rf /backup/*
+# /usr/local/mysql/scripts/mysql_install_db --user=mysql --datadir=/mydata/data/ --basedir=/usr/local/mysql/
+# service mysqld start
+# mysqladmin -uroot -p password 123456
+# mysql -uroot -p123456
+mysql&gt; create database jiaowu;
+mysql&gt; use jiaowu;
+mysql&gt; set sql_log_bin = 0;
+mysql&gt; source /root/tutor.sql;   //导入tutor数据表
+mysql&gt; set sql_log_bin = 1;
+mysql&gt; select * from tutor;
++------+---------------+--------+------+
+| TID  | Tname         | Gender | Age  |
++------+---------------+--------+------+
+|    1 | ZhengYansheng | M      |   25 |
+|    2 | LiJian        | M      |   26 |
+|    3 | OuYangyu      | M      |   27 |
+|    4 | LuoChenghui   | M      |   25 |
+|    5 | LiuYunbo      | M      |   25 |
+|    6 | FuJian        | M      |   24 |
+|    7 | LiMenglu      | F      |   23 |
+|    8 | BaoYintu      | M      |   28 |
+|    9 | WangYana      | F      |   25 |
++------+---------------+--------+------+
+9 rows in set (0.00 sec)
+
+2、innobackupex对DB进行完全备份
+# innobackupex --user=root --password=123456 /backup/
+如果执行正确，其最后输出的几行信息通常如下：
+innobackupex: Backup created in directory '/backup/2015-03-18_21-14-49'
+innobackupex: MySQL binlog position: filename 'mysql-bin.000003', position 332
+150318 21:14:54  innobackupex: Connection to database server closed
+150318 21:14:54  innobackupex: completed OK!
+
+3、仅查看备份目录
+# ls /backup/
+2015-03-18_21-14-49
+
+4、操作数据库并插入数据
+# mysql jiaowu;
+mysql&gt; insert into tutor(TID) values(11);
+mysql&gt; insert into tutor(TID) values(12);
+mysql&gt; insert into tutor(TID) values(13);
+mysql&gt; select * from tutor;
++------+---------------+--------+------+
+| TID  | Tname         | Gender | Age  |
++------+---------------+--------+------+
+|    1 | ZhengYansheng | M      |   25 |
+|    2 | LiJian        | M      |   26 |
+|    3 | OuYangyu      | M      |   27 |
+|    4 | LuoChenghui   | M      |   25 |
+|    5 | LiuYunbo      | M      |   25 |
+|    6 | FuJian        | M      |   24 |
+|    7 | LiMenglu      | F      |   23 |
+|    8 | BaoYintu      | M      |   28 |
+|    9 | WangYana      | F      |   25 |
+|   11 | NULL          | NULL   | NULL |
+|   12 | NULL          | NULL   | NULL |
+|   13 | NULL          | NULL   | NULL |
++------+---------------+--------+------+
+12 rows in set (0.00 sec)
+
+5、执行第一次增量备份并查看备份目录
+# innobackupex --user=root --password=123456 --incremental /backup/ --incremental-basedir=/backup/2015-03-18_21-14-49/
+# ls /backup/
+2015-03-18_21-14-49  2015-03-18_21-18-45
+
+6、再次操作数据库并插入多条数据
+# mysql jiaowu;
+mysql&gt; insert into tutor(TID) values(21);
+mysql&gt; insert into tutor(TID) values(22);
+mysql&gt; insert into tutor(TID) values(23);
+mysql&gt; select * from tutor;
++------+---------------+--------+------+
+| TID  | Tname         | Gender | Age  |
++------+---------------+--------+------+
+|    1 | ZhengYansheng | M      |   25 |
+|    2 | LiJian        | M      |   26 |
+|    3 | OuYangyu      | M      |   27 |
+|    4 | LuoChenghui   | M      |   25 |
+|    5 | LiuYunbo      | M      |   25 |
+|    6 | FuJian        | M      |   24 |
+|    7 | LiMenglu      | F      |   23 |
+|    8 | BaoYintu      | M      |   28 |
+|    9 | WangYana      | F      |   25 |
+|   11 | NULL          | NULL   | NULL |
+|   12 | NULL          | NULL   | NULL |
+|   13 | NULL          | NULL   | NULL |
+|   21 | NULL          | NULL   | NULL |
+|   22 | NULL          | NULL   | NULL |
+|   23 | NULL          | NULL   | NULL |
++------+---------------+--------+------+
+15 rows in set (0.00 sec)
+
+7、执行第二次增量备份并查看备份文件
+# innobackupex --user=root --password=123456 --incremental /backup/ --incremental-basedir=/backup/2015-03-18_21-18-45/
+# ls /backup/
+2015-03-18_21-14-49  2015-03-18_21-18-45  2015-03-18_21-22-31
+
+解释：
+2015-03-18_21-14-49：为innobackupex的完全备份目录
+2015-03-18_21-18-45：为innobackupex的第一次增量备份目录
+2015-03-18_21-22-31：为innobackupex的第二次增量备份目录
+
+8、开始准备innobackupex
+首先执行完全备份redo-only
+# innobackupex --user=root --password=123456 --apply-log --redo-only /backup/2015-03-18_21-14-49/
+执行第一个增量备份redo-only
+# innobackupex --user=root --password=123456 --apply-log --redo-only /backup/2015-03-18_21-14-49/ --incremental-dir=/backup/2015-03-18_21-18-45/
+执行第二个增量备份redo-only
+# innobackupex --user=root --password=123456 --apply-log --redo-only /backup/2015-03-18_21-14-49/ --incremental-dir=/backup/2015-03-18_21-22-31/
+
+#####模拟数据库故障#####
+9、这里还是采用老方法直接删除所有的数据文件
+# service mysqld stop
+# rm -rf /mydata/data/*
+
+10、从完全备份中恢复数据库
+# innobackupex --user=root --password=123456 --copy-back /backup/2015-03-18_21-14-49/
+
+11、修改数据目录权限
+# chown -R mysql.mysql /mydata/data/
+ 
+12、启动mysqld服务
+# service mysqld start
+ 
+13、登陆mysql查看是否是否一致
+# mysql -e 'use jiaowu;select * from tutor;'
++------+---------------+--------+------+
+| TID  | Tname         | Gender | Age  |
++------+---------------+--------+------+
+|    1 | ZhengYansheng | M      |   25 |
+|    2 | LiJian        | M      |   26 |
+|    3 | OuYangyu      | M      |   27 |
+|    4 | LuoChenghui   | M      |   25 |
+|    5 | LiuYunbo      | M      |   25 |
+|    6 | FuJian        | M      |   24 |
+|    7 | LiMenglu      | F      |   23 |
+|    8 | BaoYintu      | M      |   28 |
+|    9 | WangYana      | F      |   25 |
+|   11 | NULL          | NULL   | NULL |
+|   12 | NULL          | NULL   | NULL |
+|   13 | NULL          | NULL   | NULL |
+|   21 | NULL          | NULL   | NULL |
+|   22 | NULL          | NULL   | NULL |
+|   23 | NULL          | NULL   | NULL |
++------+---------------+--------+------+
+
+#两次增量添加的数据也已经成功添加到数据库当中。恢复成功
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br></div></div><h1 id="六、xtrabackup的高级功能"><a href="#六、xtrabackup的高级功能" class="header-anchor">#</a> 六、Xtrabackup的高级功能</h1> <h2 id="流式压缩功能"><a href="#流式压缩功能" class="header-anchor">#</a> 流式压缩功能</h2> <p>Xtrabackup对备份的数据文件支持“流”功能，即可以将备份的数据通过STDOUT传输给tar程序进行归档，而不是默认的直接保存至某备份目录中。要使用此功能，仅需要使用--stream选项即可。如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># innobackupex --user=root --password=123456 --stream=tar  /backup | gzip &gt; /backup/`date +%F_%H-%M-%S`.tar.gz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>甚至也可以使用类似如下命令将数据备份至其它服务器：强烈推荐这种方式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>innobackupex --user=root --password=123456 --stream=tar  /backup | ssh root@192.168.1.100  'cat - &gt; /backup/`date +%F_%H-%M-%S`.tar'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>在执行本地备份时，还可以使用--parallel选项对多个文件进行并行复制（暂时还没有看懂此选项）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>此外，在执行本地备份时，还可以使用--parallel选项对多个文件进行并行复制。此选项用于指定在复制时启动的线程数目。当然，在实际进行备份时要利用此功能的便利性，也需要启用innodb_file_per_table选项或共享的表空间通过innodb_data_file_path选项存储在多个ibdata文件中。对某一数据库的多个文件的复制无法利用到此功能。其简单使用方法如下：
+
+# innobackupex --parallel  /path/to/backup
+
+同时，innobackupex备份的数据文件也可以存储至远程主机，这可以使用--remote-host选项来实现：
+
+# innobackupex --remote-host=root@www.magedu.com  /path/IN/REMOTE/HOST/to/backup
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h1 id="七、使用xtrabackup对数据库进行部分备份"><a href="#七、使用xtrabackup对数据库进行部分备份" class="header-anchor">#</a> 七、使用Xtrabackup对数据库进行部分备份</h1> <p>Xtrabackup也可以实现部分备份，即只备份某个或某些指定的数据库或某数据库中的某个或某些表。但要使用此功能，必须启用innodb_file_per_table选项，即每张表保存为一个独立的文件。同时，其也不支持--stream选项，即不支持将数据通过管道传输给其它程序进行处理。</p> <p>此外，还原部分备份跟还原全部数据的备份也有所不同，即你不能通过简单地将prepared的部分备份使用--copy-back选项直接复制回数据目录，而是要通过导入表的方向来实现还原。当然，有些情况下，部分备份也可以直接通过--copy-back进行还原，但这种方式还原而来的数据多数会产生数据不一致的问题，因此，无论如何不推荐使用这种方式。</p> <h3 id="_1-创建部分备份"><a href="#_1-创建部分备份" class="header-anchor">#</a> 1)创建部分备份</h3> <p>创建部分备份的方式有三种：</p> <p>正则表达式(--include)</p> <p>枚举表文件(--tables-file)</p> <p>列出要备份的数据库(--databases)。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(a)使用--include
+使用--include时，要求为其指定要备份的表的完整名称，即形如databasename.tablename，如：
+# innobackupex --include='^mageedu[.]tb1'  /path/to/backup
+
+(b)使用--tables-file
+此选项的参数需要是一个文件名，此文件中每行包含一个要备份的表的完整名称；如：
+# echo -e 'mageedu.tb1\nmageedu.tb2' &gt; /tmp/tables.txt
+# innobackupex --tables-file=/tmp/tables.txt  /path/to/backup
+
+(c)使用--databases
+此选项接受的参数为数据名，如果要指定多个数据库，彼此间需要以空格隔开；同时，在指定某数据库时，也可以只指定其中的某张表。此外，此选项也可以接受一个文件为参数，文件中每一行为一个要备份的对象。如：
+# innobackupex --databases=&quot;mageedu testdb&quot;  /path/to/backup
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="_2-整理-preparing-部分备份"><a href="#_2-整理-preparing-部分备份" class="header-anchor">#</a> 2)整理(preparing)部分备份</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>prepare部分备份的过程类似于导出表的过程，要使用--export选项进行：
+# innobackupex --apply-log --export  /pat/to/partial/backup
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>此命令执行过程中，innobackupex会调用xtrabackup命令从数据字典中移除缺失的表，因此，会显示出许多关于“表不存在”类的警告信息。同时，也会显示出为备份文件中存在的表创建.exp文件的相关信息。</p> <h3 id="_3-还原部分备份"><a href="#_3-还原部分备份" class="header-anchor">#</a> 3)还原部分备份</h3> <p>还原部分备份的过程跟导入表的过程相同。当然，也可以通过直接复制prepared状态的备份直接至数据目录中实现还原，不要此时要求数据目录处于一致状态。</p> <p>案列演示：</p> <p>对jiaowu数据库进行备份和还原</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>1、查看数据库和表
+mysql&gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| jiaowu             |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+5 rows in set (0.00 sec)
+mysql&gt; select * from jiaowu.tutor;
++------+---------------+--------+------+
+| TID  | Tname         | Gender | Age  |
++------+---------------+--------+------+
+|    1 | ZhengYansheng | M      |   25 |
+|    2 | LiJian        | M      |   26 |
+|    3 | OuYangyu      | M      |   27 |
+|    4 | LuoChenghui   | M      |   25 |
+|    5 | LiuYunbo      | M      |   25 |
+|    6 | FuJian        | M      |   24 |
+|    7 | LiMenglu      | F      |   23 |
+|    8 | BaoYintu      | M      |   28 |
+|    9 | WangYana      | F      |   25 |
+|   11 | NULL          | NULL   | NULL |
+|   12 | NULL          | NULL   | NULL |
+|   13 | NULL          | NULL   | NULL |
+|   21 | NULL          | NULL   | NULL |
+|   22 | NULL          | NULL   | NULL |
+|   23 | NULL          | NULL   | NULL |
++------+---------------+--------+------+
+
+2、innobackupex进行备份
+# innobackupex --user=root --password=123456 --databases='jiaowu' /opt/
+
+3、准备并导入jiaowu表
+# innobackupex --user=root --password=123456 --apply-log --export /opt/2015-03-18_22-46-47/
+
+4、删除jiaowu数据库
+# rm -rf /mydata/data/jiaowu
+
+5、登陆数据库查看是否还存在jiaowu数据库
+[root@localhost ~]# mysql -e 'show databases;'
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+#jiaowu数据库不存在了
+
+6、还原jiaowu数据库
+# cp -a /opt/2015-03-18_22-46-47/jiaowu/ /mydata/data/
+
+7、修改jiaowu权限
+# chown -R mysql.mysql /mydata/data/jiaowu
+
+8、再次查看jiaowu数据库是否存在
+[root@localhost ~]# mysql -e 'use jiaowu;show tables;'
++------------------+
+| Tables_in_jiaowu |
++------------------+
+| tutor            |
++------------------+
+
+#jiaowu数据库已经被还原并且表tutor还在。成功！！！
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br></div></div><h1 id="八、导入或导出单张表"><a href="#八、导入或导出单张表" class="header-anchor">#</a> 八、导入或导出单张表</h1> <p>默认情况下，InnoDB表不能通过直接复制表文件的方式在mysql服务器之间进行移植，即便使用了innodb_file_per_table选项。而使用Xtrabackup工具可以实现此种功能，</p> <p>不过，此时需要“导出”表的mysql服务器启用了innodb_file_per_table选项（严格来说，是要“导出”的表在其创建之前，mysql服务器就启用了innodb_file_per_table选项），</p> <p>并且“导入”表的服务器同时启用了innodb_file_per_table和innodb_expand_import选项。</p> <h3 id="_1-导出-表"><a href="#_1-导出-表" class="header-anchor">#</a> 1)“导出”表</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>导出表是在备份的prepare阶段进行的，因此，一旦完全备份完成，就可以在prepare过程中通过--export选项将某表导出了：
+# innobackupex --apply-log --export /path/to/backup
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>此命令会为每个innodb表的表空间创建一个以.exp结尾的文件，这些以.exp结尾的文件则可以用于导入至其它服务器。</p> <h3 id="_2-导入-表"><a href="#_2-导入-表" class="header-anchor">#</a> 2)“导入”表</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>要在mysql服务器上导入来自于其它服务器的某innodb表，需要先在当前服务器上创建一个跟原表表结构一致的表，而后才能实现将表导入：
+mysql&gt; CREATE TABLE mytable (...)  ENGINE=InnoDB;
+
+然后将此表的表空间删除：
+mysql&gt; ALTER TABLE mydatabase.mytable  DISCARD TABLESPACE;
+
+接下来，将来自于“导出”表的服务器的mytable表的mytable.ibd和mytable.exp文件复制到当前服务器的数据目录，然后使用如下命令将其“导入”：
+mysql&gt; ALTER TABLE mydatabase.mytable  IMPORT TABLESPACE;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>案列演示：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>1、查看表
+mysql&gt; use jiaowu;
+Database changed
+mysql&gt; show tables;
++------------------+
+| Tables_in_jiaowu |
++------------------+
+| tutor            |
++------------------+
+1 row in set (0.00 sec)
+
+2、修改表的存储引擎为InnoDB
+mysql&gt; alter table tutor engine=innodb;
+Query OK, 15 rows affected (0.05 sec)
+Records: 15  Duplicates: 0  Warnings: 0
+
+3、innobackupex对其进行备份
+# innobackupex --user=root --password=123456 --databases='jiaowu.tutor' /opt/
+
+4、准备并导出
+# innobackupex --user=root --password=123456 --apply-log --export /opt/2015-03-18_23-05-44/
+
+5、删除此表的表空间
+mysql&gt; ALTER TABLE jiaowu.tutor DISCARD TABLESPACE;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; use jiaowu;
+Database changed
+mysql&gt; select * from tutor;        #数据已经不存在了
+ERROR 1030 (HY000): Got error -1 from storage engine
+
+6、接下来，将来自于“导出”表的服务器的mytable表的mytable.ibd和mytable.exp文件复制到当前服务器的数据目录，然后使用如下命令将其“导入”：并修改权限
+# cp /opt/2015-03-18_23-24-23/jiaowu/{tutor.exp,tutor.ibd} /mydata/data/jiaowu/
+cp：是否覆盖&quot;/mydata/data/jiaowu/tutor.exp&quot;？ yes
+# chown -R mysql.mysql /mydata/data/jiaowu/*
+mysql&gt; ALTER TABLE jiaowu.tutor IMPORT TABLESPACE;
+Query OK, 0 rows affected (0.00 sec)
+mysql&gt; use jiaowu;
+Database changed
+mysql&gt; select * from tutor;
++------+---------------+--------+------+
+| TID  | Tname         | Gender | Age  |
++------+---------------+--------+------+
+|    1 | ZhengYansheng | M      |   25 |
+|    2 | LiJian        | M      |   26 |
+|    3 | OuYangyu      | M      |   27 |
+|    4 | LuoChenghui   | M      |   25 |
+|    5 | LiuYunbo      | M      |   25 |
+|    6 | FuJian        | M      |   24 |
+|    7 | LiMenglu      | F      |   23 |
+|    8 | BaoYintu      | M      |   28 |
+|    9 | WangYana      | F      |   25 |
+|   11 | NULL          | NULL   | NULL |
+|   12 | NULL          | NULL   | NULL |
+|   13 | NULL          | NULL   | NULL |
+|   21 | NULL          | NULL   | NULL |
+|   22 | NULL          | NULL   | NULL |
+|   23 | NULL          | NULL   | NULL |
++------+---------------+--------+------+
+15 rows in set (0.00 sec)
+
+#单表还原已经成功！结束。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br></div></div><p>参考：
+http://467754239.blog.51cto.com/4878013/1621711</p> <p>http://blog.51yip.com/mysql/1650.html</p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.44414999.js" defer></script><script src="/assets/js/3.dac1e8fe.js" defer></script><script src="/assets/js/1.2b084c82.js" defer></script><script src="/assets/js/203.bdbe048c.js" defer></script>
+  </body>
+</html>

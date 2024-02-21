@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nginx从入门到放弃06-Nginx的N种特别实用示例 | 星哥私有教程</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/images/logo.png">
+    <link rel="manifest" href="/images/logo.png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <meta name="description" content="星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍">
+    <meta http-quiv="pragma" cotent="no-cache">
+    <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
+    <meta http-quiv="expires" cotent="0">
+    
+    <link rel="preload" href="/assets/css/0.styles.aadc6af7.css" as="style"><link rel="preload" href="/assets/js/app.44414999.js" as="script"><link rel="preload" href="/assets/js/3.dac1e8fe.js" as="script"><link rel="preload" href="/assets/js/1.2b084c82.js" as="script"><link rel="preload" href="/assets/js/210.2559cb42.js" as="script"><link rel="prefetch" href="/assets/js/10.d948419f.js"><link rel="prefetch" href="/assets/js/100.fb8bbc91.js"><link rel="prefetch" href="/assets/js/101.23c6db11.js"><link rel="prefetch" href="/assets/js/102.f3e6e4bc.js"><link rel="prefetch" href="/assets/js/103.12c5752b.js"><link rel="prefetch" href="/assets/js/104.c514ca9d.js"><link rel="prefetch" href="/assets/js/105.5b525962.js"><link rel="prefetch" href="/assets/js/106.2bf777b3.js"><link rel="prefetch" href="/assets/js/107.3138603e.js"><link rel="prefetch" href="/assets/js/108.fd5bd233.js"><link rel="prefetch" href="/assets/js/109.8d0bfe38.js"><link rel="prefetch" href="/assets/js/11.2364fdb2.js"><link rel="prefetch" href="/assets/js/110.4237be6a.js"><link rel="prefetch" href="/assets/js/111.1f9cc2a6.js"><link rel="prefetch" href="/assets/js/112.21b17394.js"><link rel="prefetch" href="/assets/js/113.34bc511e.js"><link rel="prefetch" href="/assets/js/114.5a7dc0d9.js"><link rel="prefetch" href="/assets/js/115.28fdf540.js"><link rel="prefetch" href="/assets/js/116.80db10fc.js"><link rel="prefetch" href="/assets/js/117.f96ae1e4.js"><link rel="prefetch" href="/assets/js/118.687d1d39.js"><link rel="prefetch" href="/assets/js/119.9b96d881.js"><link rel="prefetch" href="/assets/js/12.dfbb0ebd.js"><link rel="prefetch" href="/assets/js/120.e8cff284.js"><link rel="prefetch" href="/assets/js/121.d9f2a059.js"><link rel="prefetch" href="/assets/js/122.27570364.js"><link rel="prefetch" href="/assets/js/123.d28be490.js"><link rel="prefetch" href="/assets/js/124.53e37b4c.js"><link rel="prefetch" href="/assets/js/125.f9322de8.js"><link rel="prefetch" href="/assets/js/126.eae0d779.js"><link rel="prefetch" href="/assets/js/127.5066d08e.js"><link rel="prefetch" href="/assets/js/128.d4843e2c.js"><link rel="prefetch" href="/assets/js/129.dfb557d2.js"><link rel="prefetch" href="/assets/js/13.2f339c60.js"><link rel="prefetch" href="/assets/js/130.adf01ff1.js"><link rel="prefetch" href="/assets/js/131.2e54b328.js"><link rel="prefetch" href="/assets/js/132.f17050a2.js"><link rel="prefetch" href="/assets/js/133.28c68e6a.js"><link rel="prefetch" href="/assets/js/134.8ab84102.js"><link rel="prefetch" href="/assets/js/135.d3c6db80.js"><link rel="prefetch" href="/assets/js/136.f98fda3f.js"><link rel="prefetch" href="/assets/js/137.a4fc31f5.js"><link rel="prefetch" href="/assets/js/138.c8850621.js"><link rel="prefetch" href="/assets/js/139.cc6cfd5d.js"><link rel="prefetch" href="/assets/js/14.970db6ab.js"><link rel="prefetch" href="/assets/js/140.dfa0903d.js"><link rel="prefetch" href="/assets/js/141.255ade94.js"><link rel="prefetch" href="/assets/js/142.5880752f.js"><link rel="prefetch" href="/assets/js/143.641717d3.js"><link rel="prefetch" href="/assets/js/144.807bcc92.js"><link rel="prefetch" href="/assets/js/145.4f6ec774.js"><link rel="prefetch" href="/assets/js/146.5e4b7c32.js"><link rel="prefetch" href="/assets/js/147.e3465f3e.js"><link rel="prefetch" href="/assets/js/148.1ad0d217.js"><link rel="prefetch" href="/assets/js/149.704e530b.js"><link rel="prefetch" href="/assets/js/15.cac89473.js"><link rel="prefetch" href="/assets/js/150.64302ed7.js"><link rel="prefetch" href="/assets/js/151.3077b142.js"><link rel="prefetch" href="/assets/js/152.cff06017.js"><link rel="prefetch" href="/assets/js/153.6953872f.js"><link rel="prefetch" href="/assets/js/154.53f2fee9.js"><link rel="prefetch" href="/assets/js/155.bdd12704.js"><link rel="prefetch" href="/assets/js/156.7299b83e.js"><link rel="prefetch" href="/assets/js/157.190eb90d.js"><link rel="prefetch" href="/assets/js/158.cdec71bf.js"><link rel="prefetch" href="/assets/js/159.f1928d2a.js"><link rel="prefetch" href="/assets/js/16.b02c5827.js"><link rel="prefetch" href="/assets/js/160.4352cf10.js"><link rel="prefetch" href="/assets/js/161.b9043a34.js"><link rel="prefetch" href="/assets/js/162.eeac6f07.js"><link rel="prefetch" href="/assets/js/163.72db20e7.js"><link rel="prefetch" href="/assets/js/164.6ed707d1.js"><link rel="prefetch" href="/assets/js/165.b48249f5.js"><link rel="prefetch" href="/assets/js/166.b9cf2e8a.js"><link rel="prefetch" href="/assets/js/167.f41650cd.js"><link rel="prefetch" href="/assets/js/168.25a54bc1.js"><link rel="prefetch" href="/assets/js/169.25357c41.js"><link rel="prefetch" href="/assets/js/17.f7cba118.js"><link rel="prefetch" href="/assets/js/170.02d046d1.js"><link rel="prefetch" href="/assets/js/171.dd3fba8e.js"><link rel="prefetch" href="/assets/js/172.46e2acc4.js"><link rel="prefetch" href="/assets/js/173.71a35500.js"><link rel="prefetch" href="/assets/js/174.71d545f7.js"><link rel="prefetch" href="/assets/js/175.ae1d5111.js"><link rel="prefetch" href="/assets/js/176.11f3b985.js"><link rel="prefetch" href="/assets/js/177.a768b1ba.js"><link rel="prefetch" href="/assets/js/178.9eb0db2c.js"><link rel="prefetch" href="/assets/js/179.9e385294.js"><link rel="prefetch" href="/assets/js/18.aec38902.js"><link rel="prefetch" href="/assets/js/180.47636ce4.js"><link rel="prefetch" href="/assets/js/181.f9182f2b.js"><link rel="prefetch" href="/assets/js/182.427e6786.js"><link rel="prefetch" href="/assets/js/183.dc3d5aef.js"><link rel="prefetch" href="/assets/js/184.ece0126e.js"><link rel="prefetch" href="/assets/js/185.0d201eea.js"><link rel="prefetch" href="/assets/js/186.2f5bdcec.js"><link rel="prefetch" href="/assets/js/187.564d8583.js"><link rel="prefetch" href="/assets/js/188.6224db09.js"><link rel="prefetch" href="/assets/js/189.0f4ec19d.js"><link rel="prefetch" href="/assets/js/19.f09be7d9.js"><link rel="prefetch" href="/assets/js/190.208f3310.js"><link rel="prefetch" href="/assets/js/191.87f1c1f9.js"><link rel="prefetch" href="/assets/js/192.22d6a11a.js"><link rel="prefetch" href="/assets/js/193.e15ff727.js"><link rel="prefetch" href="/assets/js/194.e7d8f87d.js"><link rel="prefetch" href="/assets/js/195.0169ba9c.js"><link rel="prefetch" href="/assets/js/196.bdbf7dff.js"><link rel="prefetch" href="/assets/js/197.9b76e6f5.js"><link rel="prefetch" href="/assets/js/198.0de047d6.js"><link rel="prefetch" href="/assets/js/199.b07dfa0a.js"><link rel="prefetch" href="/assets/js/20.a644b163.js"><link rel="prefetch" href="/assets/js/200.7b05aa86.js"><link rel="prefetch" href="/assets/js/201.97e83e9d.js"><link rel="prefetch" href="/assets/js/202.afecd374.js"><link rel="prefetch" href="/assets/js/203.bdbe048c.js"><link rel="prefetch" href="/assets/js/204.d0ef5791.js"><link rel="prefetch" href="/assets/js/205.3cfb1c56.js"><link rel="prefetch" href="/assets/js/206.568c53da.js"><link rel="prefetch" href="/assets/js/207.1feb163d.js"><link rel="prefetch" href="/assets/js/208.528acf43.js"><link rel="prefetch" href="/assets/js/209.4560f9d4.js"><link rel="prefetch" href="/assets/js/21.7f1728ea.js"><link rel="prefetch" href="/assets/js/211.2f723171.js"><link rel="prefetch" href="/assets/js/212.79628027.js"><link rel="prefetch" href="/assets/js/213.eeca0f4a.js"><link rel="prefetch" href="/assets/js/214.1fb41c81.js"><link rel="prefetch" href="/assets/js/215.b5f69040.js"><link rel="prefetch" href="/assets/js/216.c62dbfff.js"><link rel="prefetch" href="/assets/js/217.36f7e15b.js"><link rel="prefetch" href="/assets/js/218.15c61121.js"><link rel="prefetch" href="/assets/js/219.d427439e.js"><link rel="prefetch" href="/assets/js/22.6ac35747.js"><link rel="prefetch" href="/assets/js/220.d8bf0028.js"><link rel="prefetch" href="/assets/js/221.b186da86.js"><link rel="prefetch" href="/assets/js/222.dc35c353.js"><link rel="prefetch" href="/assets/js/223.17e32375.js"><link rel="prefetch" href="/assets/js/224.515f2539.js"><link rel="prefetch" href="/assets/js/225.070e6785.js"><link rel="prefetch" href="/assets/js/226.1ec07211.js"><link rel="prefetch" href="/assets/js/227.10babbd0.js"><link rel="prefetch" href="/assets/js/228.10d2322c.js"><link rel="prefetch" href="/assets/js/229.68fdfd8a.js"><link rel="prefetch" href="/assets/js/23.9d8529b4.js"><link rel="prefetch" href="/assets/js/230.ce705130.js"><link rel="prefetch" href="/assets/js/231.ef53390e.js"><link rel="prefetch" href="/assets/js/232.2f76c4b1.js"><link rel="prefetch" href="/assets/js/233.71cfd6a0.js"><link rel="prefetch" href="/assets/js/234.15d8793a.js"><link rel="prefetch" href="/assets/js/235.f5614898.js"><link rel="prefetch" href="/assets/js/236.7352b6f5.js"><link rel="prefetch" href="/assets/js/237.5add9e34.js"><link rel="prefetch" href="/assets/js/238.aada021b.js"><link rel="prefetch" href="/assets/js/239.4cf64d74.js"><link rel="prefetch" href="/assets/js/24.d2af7089.js"><link rel="prefetch" href="/assets/js/240.d66fe533.js"><link rel="prefetch" href="/assets/js/241.eb1a179f.js"><link rel="prefetch" href="/assets/js/242.8e0f2ae8.js"><link rel="prefetch" href="/assets/js/243.39980f52.js"><link rel="prefetch" href="/assets/js/244.b065ad4b.js"><link rel="prefetch" href="/assets/js/245.69c14157.js"><link rel="prefetch" href="/assets/js/246.3a51ce42.js"><link rel="prefetch" href="/assets/js/247.8b92c18d.js"><link rel="prefetch" href="/assets/js/248.e05d69c0.js"><link rel="prefetch" href="/assets/js/249.49e0b21f.js"><link rel="prefetch" href="/assets/js/25.771a511c.js"><link rel="prefetch" href="/assets/js/250.2b8e71b1.js"><link rel="prefetch" href="/assets/js/26.21923cbb.js"><link rel="prefetch" href="/assets/js/27.4cd350c4.js"><link rel="prefetch" href="/assets/js/28.3013c8f6.js"><link rel="prefetch" href="/assets/js/29.faf75556.js"><link rel="prefetch" href="/assets/js/30.2baec88b.js"><link rel="prefetch" href="/assets/js/31.fcbd28cc.js"><link rel="prefetch" href="/assets/js/32.297e1243.js"><link rel="prefetch" href="/assets/js/33.24d6a8d5.js"><link rel="prefetch" href="/assets/js/34.cba3788c.js"><link rel="prefetch" href="/assets/js/35.650a33fd.js"><link rel="prefetch" href="/assets/js/36.86ffd067.js"><link rel="prefetch" href="/assets/js/37.1085254f.js"><link rel="prefetch" href="/assets/js/38.f66b1e84.js"><link rel="prefetch" href="/assets/js/39.9051bd56.js"><link rel="prefetch" href="/assets/js/4.5096cd25.js"><link rel="prefetch" href="/assets/js/40.4a6eb2a9.js"><link rel="prefetch" href="/assets/js/41.d32f6ae2.js"><link rel="prefetch" href="/assets/js/42.1becbc16.js"><link rel="prefetch" href="/assets/js/43.398b6717.js"><link rel="prefetch" href="/assets/js/44.4ef5e13d.js"><link rel="prefetch" href="/assets/js/45.51cf0d90.js"><link rel="prefetch" href="/assets/js/46.37d929ac.js"><link rel="prefetch" href="/assets/js/47.03c5dd43.js"><link rel="prefetch" href="/assets/js/48.1a371346.js"><link rel="prefetch" href="/assets/js/49.d137766d.js"><link rel="prefetch" href="/assets/js/5.3869a340.js"><link rel="prefetch" href="/assets/js/50.82f518c8.js"><link rel="prefetch" href="/assets/js/51.67bfb3b8.js"><link rel="prefetch" href="/assets/js/52.7e422fc0.js"><link rel="prefetch" href="/assets/js/53.f8cbf830.js"><link rel="prefetch" href="/assets/js/54.8b776889.js"><link rel="prefetch" href="/assets/js/55.536f7b3e.js"><link rel="prefetch" href="/assets/js/56.48859523.js"><link rel="prefetch" href="/assets/js/57.3a540bd9.js"><link rel="prefetch" href="/assets/js/58.ec078fdc.js"><link rel="prefetch" href="/assets/js/59.3334a223.js"><link rel="prefetch" href="/assets/js/6.eb4dc413.js"><link rel="prefetch" href="/assets/js/60.91773eb2.js"><link rel="prefetch" href="/assets/js/61.100a3ac7.js"><link rel="prefetch" href="/assets/js/62.6b91e15c.js"><link rel="prefetch" href="/assets/js/63.728217c8.js"><link rel="prefetch" href="/assets/js/64.48bc35b2.js"><link rel="prefetch" href="/assets/js/65.334d1610.js"><link rel="prefetch" href="/assets/js/66.c7497965.js"><link rel="prefetch" href="/assets/js/67.6aa84f94.js"><link rel="prefetch" href="/assets/js/68.8fb349bc.js"><link rel="prefetch" href="/assets/js/69.db48cfc6.js"><link rel="prefetch" href="/assets/js/7.d8afdfd4.js"><link rel="prefetch" href="/assets/js/70.cccb423f.js"><link rel="prefetch" href="/assets/js/71.eaacc498.js"><link rel="prefetch" href="/assets/js/72.059b23ea.js"><link rel="prefetch" href="/assets/js/73.492b7e39.js"><link rel="prefetch" href="/assets/js/74.ec93b989.js"><link rel="prefetch" href="/assets/js/75.03f2bccc.js"><link rel="prefetch" href="/assets/js/76.e316fcbb.js"><link rel="prefetch" href="/assets/js/77.4aabc55a.js"><link rel="prefetch" href="/assets/js/78.4d060933.js"><link rel="prefetch" href="/assets/js/79.38b6cfbb.js"><link rel="prefetch" href="/assets/js/8.0f122f40.js"><link rel="prefetch" href="/assets/js/80.a9fadb32.js"><link rel="prefetch" href="/assets/js/81.2f17c316.js"><link rel="prefetch" href="/assets/js/82.65754408.js"><link rel="prefetch" href="/assets/js/83.c588ab80.js"><link rel="prefetch" href="/assets/js/84.0aa66359.js"><link rel="prefetch" href="/assets/js/85.33d6441e.js"><link rel="prefetch" href="/assets/js/86.9d898e56.js"><link rel="prefetch" href="/assets/js/87.86ef3cc9.js"><link rel="prefetch" href="/assets/js/88.33106010.js"><link rel="prefetch" href="/assets/js/89.59431d10.js"><link rel="prefetch" href="/assets/js/9.5aad96fe.js"><link rel="prefetch" href="/assets/js/90.d67b212b.js"><link rel="prefetch" href="/assets/js/91.47cd225f.js"><link rel="prefetch" href="/assets/js/92.781d57d8.js"><link rel="prefetch" href="/assets/js/93.18ad9b1f.js"><link rel="prefetch" href="/assets/js/94.a42bcb38.js"><link rel="prefetch" href="/assets/js/95.beb0c3bb.js"><link rel="prefetch" href="/assets/js/96.51751a73.js"><link rel="prefetch" href="/assets/js/97.dcf01d58.js"><link rel="prefetch" href="/assets/js/98.cb536506.js"><link rel="prefetch" href="/assets/js/99.d20576b5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aadc6af7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-130b300a><div data-v-130b300a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-130b300a data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>星哥私有教程</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2024
+        </a></span></div></div> <div class="hide" data-v-130b300a><header class="navbar" data-v-130b300a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">星哥私有教程</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link router-link-active"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/jumpserver/" class="nav-link"><i class="undefined"></i>
+  JumpServer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      云服务
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud/aliyun/" class="nav-link"><i class="undefined"></i>
+  阿里云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/tengxunyun/" class="nav-link"><i class="undefined"></i>
+  腾讯云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/aws/" class="nav-link"><i class="undefined"></i>
+  亚马逊云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/other/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-130b300a></div> <aside class="sidebar" data-v-130b300a><div class="personal-info-wrapper" data-v-39576ba9 data-v-130b300a><!----> <!----> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>240</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>0</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link router-link-active"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/jumpserver/" class="nav-link"><i class="undefined"></i>
+  JumpServer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      云服务
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud/aliyun/" class="nav-link"><i class="undefined"></i>
+  阿里云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/tengxunyun/" class="nav-link"><i class="undefined"></i>
+  腾讯云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/aws/" class="nav-link"><i class="undefined"></i>
+  亚马逊云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/other/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/linux-basis/" class="sidebar-link">基础知识</a></li><li><a href="/git/" class="sidebar-link">Git服务</a></li><li><a href="/safe/" class="sidebar-link">网络安全</a></li><li><a href="/kaiyuan/Open-Source-Software/" class="sidebar-link">开源软件</a></li><li><a href="/mysql/" class="sidebar-link">MySQL</a></li><li><a href="/nginx/" aria-current="page" class="sidebar-link">Nginx</a></li><li><a href="/chatgpt/" class="sidebar-link">ChatGPT</a></li><li><a href="/shell/" class="sidebar-link">Shell</a></li><li><a href="/Ubuntu/" class="sidebar-link">Ubuntu</a></li><li><a href="/hardware/" class="sidebar-link">硬件</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2></h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2024
+        </a></span></div></div> <div data-v-130b300a><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">Nginx从入门到放弃06-Nginx的N种特别实用示例</h1> <div data-v-f875f3fc><!----> <!----> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/nginx/Nginx%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%8306-Nginx%E7%9A%84N%E7%A7%8D%E7%89%B9%E5%88%AB%E5%AE%9E%E7%94%A8%E7%A4%BA%E4%BE%8B.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="nginx从入门到放弃06-nginx的n种特别实用示例"><a href="#nginx从入门到放弃06-nginx的n种特别实用示例" class="header-anchor">#</a> Nginx从入门到放弃06-Nginx的N种特别实用示例</h1> <p>从前面的几篇教程里面我们知道了nginx的安装和调优、负载均衡、反向代理等，这篇文档我们来介绍Nginx的N种特别实用示例</p> <p>笔者把自己总结的文档分为几遍，合集在 https://g.xgss.net/nginx/</p> <p><img src="https://imgoss.xgss.net/picgo/nginx06.jpg?aliyun" alt="nginx06"></p> <h1 id="一、location"><a href="#一、location" class="header-anchor">#</a> 一、location</h1> <p>location块负责匹配url，root指令负责将匹配到的url与服务器中某个具体目录对应起来。</p> <p>语法规则：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location [=|~|~*|^~] /uri/ { … }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>location优先级</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>(location =) &gt; (location 完整路径 ) &gt;(location ^~ 路径) &gt;(location ~*, ~ 正则) &gt;(location 部分起始路径) 正则表达式根据配置文件中的前后顺序影响匹配, 前面的优先匹配. 其它则根据匹配长度来优先匹配.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="精确匹配-开头"><a href="#精确匹配-开头" class="header-anchor">#</a> 精确匹配(=开头)</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>location = / {		
+   #规则A
+}
+location = /login {
+   #规则B
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="开头某个常规字符串"><a href="#开头某个常规字符串" class="header-anchor">#</a> ^~ 开头某个常规字符串</h3> <p>表示uri以某个常规字符串开头，理解为匹配url路径即可。nginx不对url做编码，因此请求为/static/20%/aa，可以被规则^~ /static/ /aa匹配到（注意是空格）。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location ^~ /static/ {	
+   #规则C
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="区分大小写-开头"><a href="#区分大小写-开头" class="header-anchor">#</a> 区分大小写(~ 开头)</h3> <p>表示区分大小写的正则匹配</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location ~ \.(gif|jpg|png|js|css)$ {
+   #规则D
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="不区分大小写-开头"><a href="#不区分大小写-开头" class="header-anchor">#</a> 不区分大小写(~*开头)</h3> <p>表示不区分大小写的正则匹配</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location ~* \.png$ {
+   #规则E
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="和-表示"><a href="#和-表示" class="header-anchor">#</a> !~和!~*表示</h3> <p>分别为区分大小写不匹配及不区分大小写不匹配 的正则</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location !~ \.xhtml$ {
+   #规则F
+}
+location !~* \.xhtml$ {
+   #规则G
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h3 id="通用匹配-开头"><a href="#通用匹配-开头" class="header-anchor">#</a> 通用匹配(/ 开头)</h3> <p>任何请求都会匹配到。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location / {
+   #规则H
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h1 id="二、nginx实用实例"><a href="#二、nginx实用实例" class="header-anchor">#</a> 二、Nginx实用实例</h1> <h3 id="_1-设置缓存时间"><a href="#_1-设置缓存时间" class="header-anchor">#</a> 1.设置缓存时间</h3> <p>控制图片、HTML等静态文件过期时间为30天，当然这个时间可以设置的更长。具体视情况而定</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location ~ .*\.(htm|html|css|js|jpg|jpeg|gif|png|ico|bmp|gz|xml|zip|rar|swf|txt|xls|xlsx|flv|mid|doc|ppt|pdf|mp3|wma|exe)?$ {
+                root /data/pic/;
+                expires     30d;
+                access_log /dev/null;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>expires设置缓存时间</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>expires [time|epoch|max|off]
+expires epoch 指定“Expires”的值为 1 January, 1970, 00:00:01 GMT。
+expires max 指定“Expires”的值为 31 December 2037 23:59:59 GMT，“Cache-Control”的值为10年。
+expires -1 指定“Expires”的值为 服务器当前时间 -1s,即永远过期
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_2-http跳转到https"><a href="#_2-http跳转到https" class="header-anchor">#</a> 2.HTTP跳转到HTTPS</h3> <p>如下http80端口项目301跳转到https</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>server {
+  listen       80;
+  server_name  www.test.com;
+  return 301   https://$host$request_uri;
+}
+
+if ($host = 'test.com') {
+        rewrite ^/(.*)$ https://www.test.com/$1 permanent;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>https配置，需要获取域名证书。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>server {
+        listen       443;
+        server_name  www.test.com;
+        root /data/wwwroot/www.test.com/;
+        access_log /data/wwwroot/log/ssl_www.test.com-access.log;
+        error_log /dev/null;
+
+		ssl on;
+		ssl_certificate /data/wwwroot/cert/www.test.com.pem;
+		ssl_certificate_key /data/wwwroot/cert/www.test.com.key;
+		ssl_session_timeout 5m;
+		ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+		ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+		ssl_prefer_server_ciphers on;
+
+        location / {
+                index  index.html index.htm index.php;
+        }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h3 id="_3-设置404页面"><a href="#_3-设置404页面" class="header-anchor">#</a> 3.设置404页面</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>error_page 404 = http://www.baidu.com/hot/jmb/?from=404_hlx&amp;404_url=$scheme://$host$request_uri&amp;404_from=$http_referer;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>解释：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>http://www.nginx01.com/1111?from=testpage
+如果是404则会跳转到：
+https://www.baidu.com/hot/jmb/?from=404_hlx&amp;404_url=http://www.nginx01.com/1111?from=testpage&amp;404_from=
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_4-配置php不缓存"><a href="#_4-配置php不缓存" class="header-anchor">#</a> 4.配置PHP不缓存</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>location ~ .*/.(php|php5)?$ {        
+	add_header Cache-Control no-cache;    
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_5-禁止特定用户代理-user-agents-访问"><a href="#_5-禁止特定用户代理-user-agents-访问" class="header-anchor">#</a> 5.禁止特定用户代理（User Agents）访问</h3> <p>禁止某些工具，或者搜索引擎蜘蛛爬取</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ($http_user_agent ~* (wget|curl|Firefox) ) {
+	return 404;
+}
+
+禁止神马搜索
+if ($http_user_agent ~* &quot;YisouSpider&quot;) {
+	return 403;
+}
+禁止useragent为空
+if ($http_user_agent ~ ^$){
+	return 403;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h3 id="_6-忽略favicon-ico文件的错误日志"><a href="#_6-忽略favicon-ico文件的错误日志" class="header-anchor">#</a> 6.忽略favicon.ico文件的错误日志</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>location = /favicon.ico {
+    log_not_found off;
+    access_log /dev/null;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_7-禁止某些目录php解析"><a href="#_7-禁止某些目录php解析" class="header-anchor">#</a> 7.禁止某些目录php解析</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>location ~ .*(diy|template|attachments|forumdata|attachment|image)/.*\.php$ {
+        deny all;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_8-日志不记录head方法"><a href="#_8-日志不记录head方法" class="header-anchor">#</a> 8.日志不记录HEAD方法</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>#日志不记录HEAD方法
+if ($request_method = HEAD) {
+    access_log off;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_9-nginx密码认证"><a href="#_9-nginx密码认证" class="header-anchor">#</a> 9.nginx密码认证</h3> <p>HTTP Basic Authentication协议验证的页面</p> <p>新建密码文件：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># yum -y install httpd-tools
+# printf &quot;admin:$(openssl passwd -crypt 123456)\n&quot; &gt;&gt;/data/conf/sites-available/htpasswd
+# cat /data/conf/sites-available/htpasswd
+admin:X2dW2ryA9hA7M
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>配置密码：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location /php {
+                #密码认证
+                auth_basic &quot;nginx basic auth&quot;;
+                auth_basic_user_file /data/conf/sites-available/htpasswd;
+                autoindex on;
+    }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>浏览器访问：</p> <p><img src="https://imgoss.xgss.net/picgo/image-20220624114045776.png?aliyun" alt="image-20220624114045776"></p> <p>输入 admin 和123456即可进入。</p> <p>对于这种有HTTP Basic Authentication协议验证的页面，如果使用curl抓取的话，可以加上账号密码进行请求：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>curl请求：
+# curl -u username:password URL
+例如：  curl -u admin:123456 http://www.nginx01.com/php
+如果用wget下载,可以用：
+# wget --http-user= --http-passwd=passwd URL
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h3 id="_10-nginx屏蔽ip方法"><a href="#_10-nginx屏蔽ip方法" class="header-anchor">#</a> 10.nginx屏蔽ip方法</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>deny 219.133.188.183; 
+deny 10.0.1.0/24;
+#屏蔽单个IP的命令是
+deny 123.45.6.7
+#封整个段即从123.0.0.1到123.255.255.254的命令
+deny 123.0.0.0/8
+#封IP段即从123.45.0.1到123.45.255.254的命令
+deny 124.45.0.0/16
+#封IP段即从 123.45.6.1到123.45.6.254的命令是
+deny 123.45.6.0/24
+allow 1.1.1.1; 
+allow 1.1.1.2;
+deny all; 
+location / {
+    allow 1.1.1.2;
+    deny all;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h3 id="_11-阿里云slb场景使用nginx封用户真实ip"><a href="#_11-阿里云slb场景使用nginx封用户真实ip" class="header-anchor">#</a> 11.阿里云SLB场景使用NGINX封用户真实IP</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>set $allow true;
+if ($http_x_forwarded_for ~ &quot;106.121.*.*|106.121.71.120|106.121.77.28|106.121.74.130|218.109.235.254&quot;){
+	set $allow false;
+}
+if ($allow = false){
+	return 404;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_12-禁止代理ip访问-http-x-forwarded-for"><a href="#_12-禁止代理ip访问-http-x-forwarded-for" class="header-anchor">#</a> 12.禁止代理IP访问（http_x_forwarded_for）</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ($http_x_forwarded_for ~ (^192\.168\.1\.2$)){
+         return 403;       
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_13-禁止ip段-192-168-3-142-192-168-3-147"><a href="#_13-禁止ip段-192-168-3-142-192-168-3-147" class="header-anchor">#</a> 13.禁止IP段：192.168.3.142~192.168.3.147</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ($http_x_forwarded_for ~ (^192\.168\.3\.14[2-7]$)){
+                return 403;
+}
+
+if ($http_x_forwarded_for ~ (^183\.61\.51\.[51-70])){
+                return 403;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="_14-禁止ip段-192-168-64-0-192-168-95-255"><a href="#_14-禁止ip段-192-168-64-0-192-168-95-255" class="header-anchor">#</a> 14.禁止IP段： 192.168.64.0~192.168.95.255</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ($http_x_forwarded_for ~ (^192\.168\.[7-8][0-9]\.\d+$|^192\.168\.[6][4-9]\.\d+$|^192\.168\.[9][0-5]\.\d+$)){
+                return 403;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_15-禁止多个ip"><a href="#_15-禁止多个ip" class="header-anchor">#</a> 15.禁止多个ip</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ($http_x_forwarded_for ~ &quot;223.128.4.250|91.200.12.93&quot;) {
+     return 403;     
+  }
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_16-禁止ip段-192-168-3-0-254"><a href="#_16-禁止ip段-192-168-3-0-254" class="header-anchor">#</a> 16.禁止IP段：192.168.3.0~254</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ($http_x_forwarded_for ~ (^192\.168\.3\.[0-254]$)){
+	return 403;
+}  
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_17-nginx允许跨域"><a href="#_17-nginx允许跨域" class="header-anchor">#</a> 17.nginx允许跨域</h3> <p>当出现403跨域错误的时候 No 'Access-Control-Allow-Origin' header is present on the requested resource，需要给Nginx服务器配置响应的header参数：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  add_header Access-Control-Allow-Origin *;
+  add_header Access-Control-Allow-Headers X-Requested-With;
+  add_header Access-Control-Allow-Methods GET,POST,OPTIONS;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>服务器默认是不被允许跨域的。给Nginx服务器配置<code>Access-Control-Allow-Origin *</code>后，表示服务器可以接受所有的请求源（Origin）,即接受所有跨域的请求。</p> <p>Access-Control-Allow-Headers 是为了防止出现以下错误：
+Request header field Content-Type is not allowed by Access-Control-Allow-Headers in preflight response.</p> <p>这个错误表示当前请求Content-Type的值不被支持。其实是我们发起了&quot;application/json&quot;的类型请求导致的。这里涉及到一个概念：预检请求（preflight request）,请看下面&quot;预检请求&quot;的介绍。</p> <p>Access-Control-Allow-Methods 是为了防止出现以下错误：
+Content-Type is not allowed by Access-Control-Allow-Headers in preflight response.</p> <p>给OPTIONS 添加 204的返回，是为了处理在发送POST请求时Nginx依然拒绝访问的错误
+发送&quot;预检请求&quot;时，需要用到方法 OPTIONS ,所以服务器需要允许该方法。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location / {  
+    add_header Access-Control-Allow-Origin *;
+    add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS';
+    add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
+
+    if ($request_method = 'OPTIONS') {
+        return 204;
+    }
+} 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="_18-nginx日志记录post参数"><a href="#_18-nginx日志记录post参数" class="header-anchor">#</a> 18.nginx日志记录post参数</h3> <p>其实我们只需要把 $request_body 参数加入自定义日志记录信息中即可。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>log_format  main_aliyun_post  '$request_time - RealIP:$clientRealIp - [$time_local] $request - $status - $http_user_agent - $host - from:$http_referer - Request_Body:$request_body';
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_19-根据域名设置root"><a href="#_19-根据域名设置root" class="header-anchor">#</a> 19.根据域名设置root</h3> <p>需求：多个域名使用相同的配置，需要指定到不同root目录</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>www.a.com
+www.b.com
+
+root /data/wwwroot/web/$host/; 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>解释：<code>/data/wwwroot/web/www.a.com/</code> 和 <code>/data/wwwroot/web/www.a.com/</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>set $host_pwd &quot;www.a.com&quot;;
+if ( $host = 'www.b.com' ) {
+	set $host_pwd &quot;www.b.com&quot;;
+}
+if ( $host = 'www.c.com' ) {
+	set $host_pwd &quot;www.c.com&quot;;
+}
+root /data/wwwroot/web/$host_pwd/;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="_20-判断二级域名"><a href="#_20-判断二级域名" class="header-anchor">#</a> 20.判断二级域名</h3> <p>判断二级域名指定到不同的root目录</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ( $host ~* (\b(?!www\b)\w+)\.\w+\.\w+ ) {
+	set $subdomain $1;
+}
+root /data/wwwroot/html/$subdomain/;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>server {
+        listen       80 default;
+        server_name _;
+        access_log /data/wwwroot/log/ios-check-access.log main_aliyun;
+        error_log /dev/null;
+        
+        location / {
+                root /data/wwwroot/html/$host/;
+                index index.html;
+                expires max;
+        }
+     }
+systemctl reload nginx
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="_21-nginx配置x-forwarded-for-防止伪造ip"><a href="#_21-nginx配置x-forwarded-for-防止伪造ip" class="header-anchor">#</a> 21.nginx配置X-Forwarded-For 防止伪造ip</h3> <p>网上常见nginx配置ip请求头</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>风险： 用户可以通过自己设置请求头来伪造ip，比如用户在发起http请求是自己测试请求头
+x-forwarded-for:192.168.0.151。那么服务器通过x-forwarded-for获取到的第一个ip就是用户伪造的ip。</p> <p>防止伪造方案：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>情况1: 在只有1层nginx代理的情况下，设置nginx配置“proxy_set_header X-Forwarded-For $remote_addr;”。（此时$remote_addr获取的是用户的真是ip）
+情况2：在有多层反向代理的情况下，
+1）设置“最外层”nginx配置和情况1一样“proxy_set_header X-Forwarded-For $remote_addr;”。
+2）除了“最外层”之外的nginx配置“proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;”。
+　　这样就防止了用户通过伪造请求头来伪造真实ip。后台只需要从x-forwarded-for请求头中取出第一个ip就是用户的真实ip。后面如果有多个ip，就是反向代理的ip
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>其他基础配置：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>location ^~ /apk/ {
+                access_log /data/wwwroot/log/www.test.com-access.log;
+                alias /data/wwwroot/web/apk/;
+                expires max;
+        }	
+
+location ~ /(resource|mediatorModule)/ {
+                root    /opt/demo;
+                expires max; 或者
+    		   expires off;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h1 id="三、nginx-if-判断多条件"><a href="#三、nginx-if-判断多条件" class="header-anchor">#</a> 三、nginx if 判断多条件</h1> <p>if指令该指令用来支持条件判断，并根据条件判断结果选择不同的Nginx配置。</p> <table><thead><tr><th>语法</th> <th>if (condition){...}</th></tr></thead> <tbody><tr><td>默认值</td> <td>—</td></tr> <tr><td>位置</td> <td>server、location</td></tr></tbody></table> <h3 id="_1-变量名"><a href="#_1-变量名" class="header-anchor">#</a> 1.变量名</h3> <p>如果变量名对应的值为空字符串或&quot;0&quot;，if都判断为false，其他条件为true。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ($param){
+
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="_2-使用-和-比较变量"><a href="#_2-使用-和-比较变量" class="header-anchor">#</a> 2.使用&quot;=&quot;和&quot;!=&quot;比较变量</h3> <p>使用&quot;=&quot;和&quot;!=&quot;比较变量和字符串是否相等，满足条件为true，不满足为false</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>如果请求的方法等于POST则返回 405。
+if ($request_method = POST){
+	return 405;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_3-使用正则表达式对变量进行匹配"><a href="#_3-使用正则表达式对变量进行匹配" class="header-anchor">#</a> 3.使用正则表达式对变量进行匹配，</h3> <p>匹配成功返回true，否则返回false。变量与正则表达式之间使用&quot;~&quot;,&quot;~<em>&quot;,&quot;!~&quot;,&quot;!~</em>&quot;来连接。</p> <p>&quot;~&quot;代表匹配正则表达式过程中区分大小写，&quot;~*&quot;代表匹配正则表达式过程中不区分大小写</p> <p>&quot;!~&quot;和&quot;!~*&quot;刚好和上面取相反值，如果匹配上返回false,匹配不上返回true</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>如果http_user_agent中包含MSIE则返回404
+if ($http_user_agent ~ MSIE){
+	#$http_user_agent的值中是否包含MSIE字符串，如果包含返回true
+	return 404;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>注意：正则表达式字符串一般不需要加引号，但是如果字符串中包含&quot;}&quot;或者是&quot;;&quot;等字符时，就需要把引号加上。</p> <h3 id="_4-判断请求的文件是否存在使用-f-和-f"><a href="#_4-判断请求的文件是否存在使用-f-和-f" class="header-anchor">#</a> 4. 判断请求的文件是否存在使用&quot;-f&quot;和&quot;!-f&quot;</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>if (-f $request_filename){
+	#判断请求的文件是否存在
+}
+if (!-f $request_filename){
+	#判断请求的文件是否不存在
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="5"><li><p>判断请求的目录是否存在使用&quot;-d&quot;和&quot;!-d&quot;</p></li> <li><p>判断请求的目录或者文件是否存在使用&quot;-e&quot;和&quot;!-e&quot;</p></li> <li><p>判断请求的文件是否可执行使用&quot;-x&quot;和&quot;!-x&quot;</p></li></ol> <p>获取地址中的某个参数</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ($query_string ~ &quot;.*(?:^|\?|&amp;)key=(.+?)(?:(?:&amp;.*)|$)&quot;) {
+       set $key &quot;$1&quot;;
+ }
+if ( $uid != $key ){
+       return 301 &quot;https://smartgate.baoan.gov.cn/kshfwpt/H5app/index.html?key=${uid}&quot;;
+}
+地址比如是：
+https://smartgate.baoan.gov.cn/kshfwpt/H5app/index.html?key=123&amp;method=256
+则$key的值为123
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h3 id="nginx-if配合set做判断"><a href="#nginx-if配合set做判断" class="header-anchor">#</a> nginx if配合set做判断</h3> <p>在nginx配置文件中，可以使用if语句，但是对于else语句其实是不支持的，并且and条件和or条件也是不支持的</p> <p>判断http_x_forwarded_for是否为空，如果为空则正常，如果不为空，则wordpress后台跳转。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>set $my_var '2';
+
+if ( $http_x_forwarded_for ~ ^$){
+    set $my_var 1;
+}
+if ( $my_var = 1) {
+   #如果http_x_forwarded_for为空
+   #rewrite ^/(.*)$ http://127.0.0.1/?11ab21s redirect;
+}
+if ( $my_var = 2) {
+    rewrite ^/wp-login.php(.*) http://127.0.0.1/?s1 redirect;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="nginx设置跳转rewrite"><a href="#nginx设置跳转rewrite" class="header-anchor">#</a> nginx设置跳转rewrite</h2> <p><strong>$1 $2 $3分别代表前面第一/二/三个()里的内容</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>http://www.nginx01.com/gm001 会跳转到  https://www.baidu.com/game?appid=001
+
+server {
+  listen       80;
+  server_name  www.nginx01.com;
+  
+  rewrite ^/gm(.*)  https://www.baidu.com/game?appid=$1 redirect;
+}
+
+
+其他：
+rewrite ^/game-tg/rxzg-g(.*)$ http://tg.test.com/game-tg/txhc-g$1 redirect;
+rewrite ^/game-tg/yg/gtjt-g(.*)/(.*)$ http://tg.test.com/game-tg/dhd-g6/$2 redirect;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h3 id="匹配链接参数跳转"><a href="#匹配链接参数跳转" class="header-anchor">#</a> 匹配链接参数跳转</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ( $query_string ~* ^from=dxw_a4$ ){
+        rewrite ^/cps/game/gid/66  http://www.test.com/html/game-tg/gcld-g13/;
+}
+
+http://www.nginx01.com/cps/game/gid/66?from=dxw_a4
+会跳转到：
+http://www.test.com/html/game-tg/gcld-g13/?from=dxw_a4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="屏蔽参数带gid-90的链接"><a href="#屏蔽参数带gid-90的链接" class="header-anchor">#</a> 屏蔽参数带gid=90的链接</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>if ( $query_string ~* (.*)gid=90(.*) ){
+	return 403;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>aaa.com/*.html的链接全部重定向到aaa.com/aaa/index.html;</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>rewrite &quot;^/(.*)\.html$&quot; /aaa/$1.html break;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>/123456/xxxx 跳转 /xxxx?id=123456</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>rewrite ^/(/d+)/(.+)/ /$2?id=$1 last;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="rewrite指令-break-last-redirect-permanent"><a href="#rewrite指令-break-last-redirect-permanent" class="header-anchor">#</a> rewrite指令(break,last,redirect,permanent)</h2> <p>不写last和break - 那么流程就是依次执行这些rewrite</p> <h3 id="_1-rewrite-break"><a href="#_1-rewrite-break" class="header-anchor">#</a> 1.rewrite break</h3> <p>url重写后，直接使用当前资源，不再执行location里余下的语句，完成本次请求，地址栏url不变</p> <p>break 终止匹配, 不再匹配后面的规则</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>if (!-e $request_filename) {
+	rewrite ^(.*)$ /index.php?s=$1 last;
+	break;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_2-rewrite-last"><a href="#_2-rewrite-last" class="header-anchor">#</a> 2.rewrite last</h3> <p>url重写后，马上发起一个新的请求，再次进入server块，重试location匹配，超过10次匹配不到报500错误，地址栏url不变</p> <p>last 相当于Apache里的[L]标记，表示完成rewrite</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>rewrite &quot;/category/(.*).html$&quot; /category/?cd=$1 last;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_3-rewrite-redirect"><a href="#_3-rewrite-redirect" class="header-anchor">#</a> 3.rewrite redirect</h3> <p>返回302临时重定向，地址栏显示重定向后的url，爬虫不会更新url（因为是临时）</p> <h3 id="_4-rewrite-permanent"><a href="#_4-rewrite-permanent" class="header-anchor">#</a> 4.rewrite permanent</h3> <p>返回301永久重定向, 地址栏显示重定向后的url，爬虫更新url</p> <h1 id="四、location中使用root和alias"><a href="#四、location中使用root和alias" class="header-anchor">#</a> 四、location中使用root和alias</h1> <p>区别</p> <h3 id="_1-alias指令只能在location块中使用-而root指令则不然"><a href="#_1-alias指令只能在location块中使用-而root指令则不然" class="header-anchor">#</a> 1.alias指令只能在location块中使用，而root指令则不然</h3> <h3 id="_2-root指令会将location块的-url路径-带入到-root指令路径-中-将带入后的路径作为-最终路径-使用-最终路径-与url建立对应关系-alias指令则直接将location块的-url路径-与-alias指令路径-建立对应关系。"><a href="#_2-root指令会将location块的-url路径-带入到-root指令路径-中-将带入后的路径作为-最终路径-使用-最终路径-与url建立对应关系-alias指令则直接将location块的-url路径-与-alias指令路径-建立对应关系。" class="header-anchor">#</a> 2.root指令会将location块的”url路径”带入到”root指令路径”中，将带入后的路径作为”最终路径”，使用”最终路径”与url建立对应关系，alias指令则直接将location块的”url路径”与”alias指令路径”建立对应关系。</h3> <h2 id="root示例1"><a href="#root示例1" class="header-anchor">#</a> root示例1</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>location /demo {
+    root /opt/test;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>location块匹配的url为”/demo”，root指令的路径为”/opt/test”，那么，根据上述配置，当我们访问”/demo”这个url时，实际上访问的到底是服务器中的哪个路径呢？答案是”/opt/test/demo”路径</p> <p>实验一下</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir -p /opt/test/demo
+echo 'test' &gt; /opt/test/index.html
+echo 'demo' &gt;/opt/test/demo/index.html
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>访问</p> <p><img src="https://imgoss.xgss.net/picgo/image-20220624140721523.png?aliyun" alt="image-20220624140721523"></p> <p>访问 /demo/ 实际是在访问 ‘/opt/test/demo/’。</p> <h2 id="alias示例2"><a href="#alias示例2" class="header-anchor">#</a> alias示例2</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>location /demo1 {
+    alias /opt/test;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>访问</p> <p><img src="https://imgoss.xgss.net/picgo/image-20220624140949024.png?aliyun" alt="image-20220624140949024"></p> <p>访问 /demo1/ 实际是在访问 ‘/opt/test/’。 location的url是与alias的路径完全对等的。</p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.44414999.js" defer></script><script src="/assets/js/3.dac1e8fe.js" defer></script><script src="/assets/js/1.2b084c82.js" defer></script><script src="/assets/js/210.2559cb42.js" defer></script>
+  </body>
+</html>

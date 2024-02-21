@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>玩客云刷机Armbian系统之后安装宝塔、可道云等软件 | 星哥私有教程</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/images/logo.png">
+    <link rel="manifest" href="/images/logo.png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <meta name="description" content="星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍">
+    <meta http-quiv="pragma" cotent="no-cache">
+    <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
+    <meta http-quiv="expires" cotent="0">
+    
+    <link rel="preload" href="/assets/css/0.styles.aadc6af7.css" as="style"><link rel="preload" href="/assets/js/app.44414999.js" as="script"><link rel="preload" href="/assets/js/3.dac1e8fe.js" as="script"><link rel="preload" href="/assets/js/1.2b084c82.js" as="script"><link rel="preload" href="/assets/js/85.33d6441e.js" as="script"><link rel="prefetch" href="/assets/js/10.d948419f.js"><link rel="prefetch" href="/assets/js/100.fb8bbc91.js"><link rel="prefetch" href="/assets/js/101.23c6db11.js"><link rel="prefetch" href="/assets/js/102.f3e6e4bc.js"><link rel="prefetch" href="/assets/js/103.12c5752b.js"><link rel="prefetch" href="/assets/js/104.c514ca9d.js"><link rel="prefetch" href="/assets/js/105.5b525962.js"><link rel="prefetch" href="/assets/js/106.2bf777b3.js"><link rel="prefetch" href="/assets/js/107.3138603e.js"><link rel="prefetch" href="/assets/js/108.fd5bd233.js"><link rel="prefetch" href="/assets/js/109.8d0bfe38.js"><link rel="prefetch" href="/assets/js/11.2364fdb2.js"><link rel="prefetch" href="/assets/js/110.4237be6a.js"><link rel="prefetch" href="/assets/js/111.1f9cc2a6.js"><link rel="prefetch" href="/assets/js/112.21b17394.js"><link rel="prefetch" href="/assets/js/113.34bc511e.js"><link rel="prefetch" href="/assets/js/114.5a7dc0d9.js"><link rel="prefetch" href="/assets/js/115.28fdf540.js"><link rel="prefetch" href="/assets/js/116.80db10fc.js"><link rel="prefetch" href="/assets/js/117.f96ae1e4.js"><link rel="prefetch" href="/assets/js/118.687d1d39.js"><link rel="prefetch" href="/assets/js/119.9b96d881.js"><link rel="prefetch" href="/assets/js/12.dfbb0ebd.js"><link rel="prefetch" href="/assets/js/120.e8cff284.js"><link rel="prefetch" href="/assets/js/121.d9f2a059.js"><link rel="prefetch" href="/assets/js/122.27570364.js"><link rel="prefetch" href="/assets/js/123.d28be490.js"><link rel="prefetch" href="/assets/js/124.53e37b4c.js"><link rel="prefetch" href="/assets/js/125.f9322de8.js"><link rel="prefetch" href="/assets/js/126.eae0d779.js"><link rel="prefetch" href="/assets/js/127.5066d08e.js"><link rel="prefetch" href="/assets/js/128.d4843e2c.js"><link rel="prefetch" href="/assets/js/129.dfb557d2.js"><link rel="prefetch" href="/assets/js/13.2f339c60.js"><link rel="prefetch" href="/assets/js/130.adf01ff1.js"><link rel="prefetch" href="/assets/js/131.2e54b328.js"><link rel="prefetch" href="/assets/js/132.f17050a2.js"><link rel="prefetch" href="/assets/js/133.28c68e6a.js"><link rel="prefetch" href="/assets/js/134.8ab84102.js"><link rel="prefetch" href="/assets/js/135.d3c6db80.js"><link rel="prefetch" href="/assets/js/136.f98fda3f.js"><link rel="prefetch" href="/assets/js/137.a4fc31f5.js"><link rel="prefetch" href="/assets/js/138.c8850621.js"><link rel="prefetch" href="/assets/js/139.cc6cfd5d.js"><link rel="prefetch" href="/assets/js/14.970db6ab.js"><link rel="prefetch" href="/assets/js/140.dfa0903d.js"><link rel="prefetch" href="/assets/js/141.255ade94.js"><link rel="prefetch" href="/assets/js/142.5880752f.js"><link rel="prefetch" href="/assets/js/143.641717d3.js"><link rel="prefetch" href="/assets/js/144.807bcc92.js"><link rel="prefetch" href="/assets/js/145.4f6ec774.js"><link rel="prefetch" href="/assets/js/146.5e4b7c32.js"><link rel="prefetch" href="/assets/js/147.e3465f3e.js"><link rel="prefetch" href="/assets/js/148.1ad0d217.js"><link rel="prefetch" href="/assets/js/149.704e530b.js"><link rel="prefetch" href="/assets/js/15.cac89473.js"><link rel="prefetch" href="/assets/js/150.64302ed7.js"><link rel="prefetch" href="/assets/js/151.3077b142.js"><link rel="prefetch" href="/assets/js/152.cff06017.js"><link rel="prefetch" href="/assets/js/153.6953872f.js"><link rel="prefetch" href="/assets/js/154.53f2fee9.js"><link rel="prefetch" href="/assets/js/155.bdd12704.js"><link rel="prefetch" href="/assets/js/156.7299b83e.js"><link rel="prefetch" href="/assets/js/157.190eb90d.js"><link rel="prefetch" href="/assets/js/158.cdec71bf.js"><link rel="prefetch" href="/assets/js/159.f1928d2a.js"><link rel="prefetch" href="/assets/js/16.b02c5827.js"><link rel="prefetch" href="/assets/js/160.4352cf10.js"><link rel="prefetch" href="/assets/js/161.b9043a34.js"><link rel="prefetch" href="/assets/js/162.eeac6f07.js"><link rel="prefetch" href="/assets/js/163.72db20e7.js"><link rel="prefetch" href="/assets/js/164.6ed707d1.js"><link rel="prefetch" href="/assets/js/165.b48249f5.js"><link rel="prefetch" href="/assets/js/166.b9cf2e8a.js"><link rel="prefetch" href="/assets/js/167.f41650cd.js"><link rel="prefetch" href="/assets/js/168.25a54bc1.js"><link rel="prefetch" href="/assets/js/169.25357c41.js"><link rel="prefetch" href="/assets/js/17.f7cba118.js"><link rel="prefetch" href="/assets/js/170.02d046d1.js"><link rel="prefetch" href="/assets/js/171.dd3fba8e.js"><link rel="prefetch" href="/assets/js/172.46e2acc4.js"><link rel="prefetch" href="/assets/js/173.71a35500.js"><link rel="prefetch" href="/assets/js/174.71d545f7.js"><link rel="prefetch" href="/assets/js/175.ae1d5111.js"><link rel="prefetch" href="/assets/js/176.11f3b985.js"><link rel="prefetch" href="/assets/js/177.a768b1ba.js"><link rel="prefetch" href="/assets/js/178.9eb0db2c.js"><link rel="prefetch" href="/assets/js/179.9e385294.js"><link rel="prefetch" href="/assets/js/18.aec38902.js"><link rel="prefetch" href="/assets/js/180.47636ce4.js"><link rel="prefetch" href="/assets/js/181.f9182f2b.js"><link rel="prefetch" href="/assets/js/182.427e6786.js"><link rel="prefetch" href="/assets/js/183.dc3d5aef.js"><link rel="prefetch" href="/assets/js/184.ece0126e.js"><link rel="prefetch" href="/assets/js/185.0d201eea.js"><link rel="prefetch" href="/assets/js/186.2f5bdcec.js"><link rel="prefetch" href="/assets/js/187.564d8583.js"><link rel="prefetch" href="/assets/js/188.6224db09.js"><link rel="prefetch" href="/assets/js/189.0f4ec19d.js"><link rel="prefetch" href="/assets/js/19.f09be7d9.js"><link rel="prefetch" href="/assets/js/190.208f3310.js"><link rel="prefetch" href="/assets/js/191.87f1c1f9.js"><link rel="prefetch" href="/assets/js/192.22d6a11a.js"><link rel="prefetch" href="/assets/js/193.e15ff727.js"><link rel="prefetch" href="/assets/js/194.e7d8f87d.js"><link rel="prefetch" href="/assets/js/195.0169ba9c.js"><link rel="prefetch" href="/assets/js/196.bdbf7dff.js"><link rel="prefetch" href="/assets/js/197.9b76e6f5.js"><link rel="prefetch" href="/assets/js/198.0de047d6.js"><link rel="prefetch" href="/assets/js/199.b07dfa0a.js"><link rel="prefetch" href="/assets/js/20.a644b163.js"><link rel="prefetch" href="/assets/js/200.7b05aa86.js"><link rel="prefetch" href="/assets/js/201.97e83e9d.js"><link rel="prefetch" href="/assets/js/202.afecd374.js"><link rel="prefetch" href="/assets/js/203.bdbe048c.js"><link rel="prefetch" href="/assets/js/204.d0ef5791.js"><link rel="prefetch" href="/assets/js/205.3cfb1c56.js"><link rel="prefetch" href="/assets/js/206.568c53da.js"><link rel="prefetch" href="/assets/js/207.1feb163d.js"><link rel="prefetch" href="/assets/js/208.528acf43.js"><link rel="prefetch" href="/assets/js/209.4560f9d4.js"><link rel="prefetch" href="/assets/js/21.7f1728ea.js"><link rel="prefetch" href="/assets/js/210.2559cb42.js"><link rel="prefetch" href="/assets/js/211.2f723171.js"><link rel="prefetch" href="/assets/js/212.79628027.js"><link rel="prefetch" href="/assets/js/213.eeca0f4a.js"><link rel="prefetch" href="/assets/js/214.1fb41c81.js"><link rel="prefetch" href="/assets/js/215.b5f69040.js"><link rel="prefetch" href="/assets/js/216.c62dbfff.js"><link rel="prefetch" href="/assets/js/217.36f7e15b.js"><link rel="prefetch" href="/assets/js/218.15c61121.js"><link rel="prefetch" href="/assets/js/219.d427439e.js"><link rel="prefetch" href="/assets/js/22.6ac35747.js"><link rel="prefetch" href="/assets/js/220.d8bf0028.js"><link rel="prefetch" href="/assets/js/221.b186da86.js"><link rel="prefetch" href="/assets/js/222.dc35c353.js"><link rel="prefetch" href="/assets/js/223.17e32375.js"><link rel="prefetch" href="/assets/js/224.515f2539.js"><link rel="prefetch" href="/assets/js/225.070e6785.js"><link rel="prefetch" href="/assets/js/226.1ec07211.js"><link rel="prefetch" href="/assets/js/227.10babbd0.js"><link rel="prefetch" href="/assets/js/228.10d2322c.js"><link rel="prefetch" href="/assets/js/229.68fdfd8a.js"><link rel="prefetch" href="/assets/js/23.9d8529b4.js"><link rel="prefetch" href="/assets/js/230.ce705130.js"><link rel="prefetch" href="/assets/js/231.ef53390e.js"><link rel="prefetch" href="/assets/js/232.2f76c4b1.js"><link rel="prefetch" href="/assets/js/233.71cfd6a0.js"><link rel="prefetch" href="/assets/js/234.15d8793a.js"><link rel="prefetch" href="/assets/js/235.f5614898.js"><link rel="prefetch" href="/assets/js/236.7352b6f5.js"><link rel="prefetch" href="/assets/js/237.5add9e34.js"><link rel="prefetch" href="/assets/js/238.aada021b.js"><link rel="prefetch" href="/assets/js/239.4cf64d74.js"><link rel="prefetch" href="/assets/js/24.d2af7089.js"><link rel="prefetch" href="/assets/js/240.d66fe533.js"><link rel="prefetch" href="/assets/js/241.eb1a179f.js"><link rel="prefetch" href="/assets/js/242.8e0f2ae8.js"><link rel="prefetch" href="/assets/js/243.39980f52.js"><link rel="prefetch" href="/assets/js/244.b065ad4b.js"><link rel="prefetch" href="/assets/js/245.69c14157.js"><link rel="prefetch" href="/assets/js/246.3a51ce42.js"><link rel="prefetch" href="/assets/js/247.8b92c18d.js"><link rel="prefetch" href="/assets/js/248.e05d69c0.js"><link rel="prefetch" href="/assets/js/249.49e0b21f.js"><link rel="prefetch" href="/assets/js/25.771a511c.js"><link rel="prefetch" href="/assets/js/250.2b8e71b1.js"><link rel="prefetch" href="/assets/js/26.21923cbb.js"><link rel="prefetch" href="/assets/js/27.4cd350c4.js"><link rel="prefetch" href="/assets/js/28.3013c8f6.js"><link rel="prefetch" href="/assets/js/29.faf75556.js"><link rel="prefetch" href="/assets/js/30.2baec88b.js"><link rel="prefetch" href="/assets/js/31.fcbd28cc.js"><link rel="prefetch" href="/assets/js/32.297e1243.js"><link rel="prefetch" href="/assets/js/33.24d6a8d5.js"><link rel="prefetch" href="/assets/js/34.cba3788c.js"><link rel="prefetch" href="/assets/js/35.650a33fd.js"><link rel="prefetch" href="/assets/js/36.86ffd067.js"><link rel="prefetch" href="/assets/js/37.1085254f.js"><link rel="prefetch" href="/assets/js/38.f66b1e84.js"><link rel="prefetch" href="/assets/js/39.9051bd56.js"><link rel="prefetch" href="/assets/js/4.5096cd25.js"><link rel="prefetch" href="/assets/js/40.4a6eb2a9.js"><link rel="prefetch" href="/assets/js/41.d32f6ae2.js"><link rel="prefetch" href="/assets/js/42.1becbc16.js"><link rel="prefetch" href="/assets/js/43.398b6717.js"><link rel="prefetch" href="/assets/js/44.4ef5e13d.js"><link rel="prefetch" href="/assets/js/45.51cf0d90.js"><link rel="prefetch" href="/assets/js/46.37d929ac.js"><link rel="prefetch" href="/assets/js/47.03c5dd43.js"><link rel="prefetch" href="/assets/js/48.1a371346.js"><link rel="prefetch" href="/assets/js/49.d137766d.js"><link rel="prefetch" href="/assets/js/5.3869a340.js"><link rel="prefetch" href="/assets/js/50.82f518c8.js"><link rel="prefetch" href="/assets/js/51.67bfb3b8.js"><link rel="prefetch" href="/assets/js/52.7e422fc0.js"><link rel="prefetch" href="/assets/js/53.f8cbf830.js"><link rel="prefetch" href="/assets/js/54.8b776889.js"><link rel="prefetch" href="/assets/js/55.536f7b3e.js"><link rel="prefetch" href="/assets/js/56.48859523.js"><link rel="prefetch" href="/assets/js/57.3a540bd9.js"><link rel="prefetch" href="/assets/js/58.ec078fdc.js"><link rel="prefetch" href="/assets/js/59.3334a223.js"><link rel="prefetch" href="/assets/js/6.eb4dc413.js"><link rel="prefetch" href="/assets/js/60.91773eb2.js"><link rel="prefetch" href="/assets/js/61.100a3ac7.js"><link rel="prefetch" href="/assets/js/62.6b91e15c.js"><link rel="prefetch" href="/assets/js/63.728217c8.js"><link rel="prefetch" href="/assets/js/64.48bc35b2.js"><link rel="prefetch" href="/assets/js/65.334d1610.js"><link rel="prefetch" href="/assets/js/66.c7497965.js"><link rel="prefetch" href="/assets/js/67.6aa84f94.js"><link rel="prefetch" href="/assets/js/68.8fb349bc.js"><link rel="prefetch" href="/assets/js/69.db48cfc6.js"><link rel="prefetch" href="/assets/js/7.d8afdfd4.js"><link rel="prefetch" href="/assets/js/70.cccb423f.js"><link rel="prefetch" href="/assets/js/71.eaacc498.js"><link rel="prefetch" href="/assets/js/72.059b23ea.js"><link rel="prefetch" href="/assets/js/73.492b7e39.js"><link rel="prefetch" href="/assets/js/74.ec93b989.js"><link rel="prefetch" href="/assets/js/75.03f2bccc.js"><link rel="prefetch" href="/assets/js/76.e316fcbb.js"><link rel="prefetch" href="/assets/js/77.4aabc55a.js"><link rel="prefetch" href="/assets/js/78.4d060933.js"><link rel="prefetch" href="/assets/js/79.38b6cfbb.js"><link rel="prefetch" href="/assets/js/8.0f122f40.js"><link rel="prefetch" href="/assets/js/80.a9fadb32.js"><link rel="prefetch" href="/assets/js/81.2f17c316.js"><link rel="prefetch" href="/assets/js/82.65754408.js"><link rel="prefetch" href="/assets/js/83.c588ab80.js"><link rel="prefetch" href="/assets/js/84.0aa66359.js"><link rel="prefetch" href="/assets/js/86.9d898e56.js"><link rel="prefetch" href="/assets/js/87.86ef3cc9.js"><link rel="prefetch" href="/assets/js/88.33106010.js"><link rel="prefetch" href="/assets/js/89.59431d10.js"><link rel="prefetch" href="/assets/js/9.5aad96fe.js"><link rel="prefetch" href="/assets/js/90.d67b212b.js"><link rel="prefetch" href="/assets/js/91.47cd225f.js"><link rel="prefetch" href="/assets/js/92.781d57d8.js"><link rel="prefetch" href="/assets/js/93.18ad9b1f.js"><link rel="prefetch" href="/assets/js/94.a42bcb38.js"><link rel="prefetch" href="/assets/js/95.beb0c3bb.js"><link rel="prefetch" href="/assets/js/96.51751a73.js"><link rel="prefetch" href="/assets/js/97.dcf01d58.js"><link rel="prefetch" href="/assets/js/98.cb536506.js"><link rel="prefetch" href="/assets/js/99.d20576b5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.aadc6af7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-130b300a><div data-v-130b300a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-130b300a data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>星哥私有教程</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2024
+        </a></span></div></div> <div class="hide" data-v-130b300a><header class="navbar" data-v-130b300a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">星哥私有教程</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/jumpserver/" class="nav-link"><i class="undefined"></i>
+  JumpServer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      云服务
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud/aliyun/" class="nav-link"><i class="undefined"></i>
+  阿里云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/tengxunyun/" class="nav-link"><i class="undefined"></i>
+  腾讯云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/aws/" class="nav-link"><i class="undefined"></i>
+  亚马逊云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/other/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-130b300a></div> <aside class="sidebar" data-v-130b300a><div class="personal-info-wrapper" data-v-39576ba9 data-v-130b300a><!----> <!----> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>240</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>0</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/jumpserver/" class="nav-link"><i class="undefined"></i>
+  JumpServer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      云服务
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud/aliyun/" class="nav-link"><i class="undefined"></i>
+  阿里云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/tengxunyun/" class="nav-link"><i class="undefined"></i>
+  腾讯云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/aws/" class="nav-link"><i class="undefined"></i>
+  亚马逊云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/other/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/linux-basis/" class="sidebar-link">基础知识</a></li><li><a href="/git/" class="sidebar-link">Git服务</a></li><li><a href="/safe/" class="sidebar-link">网络安全</a></li><li><a href="/kaiyuan/Open-Source-Software/" class="sidebar-link">开源软件</a></li><li><a href="/mysql/" class="sidebar-link">MySQL</a></li><li><a href="/nginx/" class="sidebar-link">Nginx</a></li><li><a href="/chatgpt/" class="sidebar-link">ChatGPT</a></li><li><a href="/shell/" class="sidebar-link">Shell</a></li><li><a href="/Ubuntu/" class="sidebar-link">Ubuntu</a></li><li><a href="/hardware/" aria-current="page" class="sidebar-link">硬件</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2></h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2024
+        </a></span></div></div> <div data-v-130b300a><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">玩客云刷机Armbian系统之后安装宝塔、可道云等软件</h1> <div data-v-f875f3fc><!----> <!----> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/hardware/%E7%8E%A9%E5%AE%A2%E4%BA%91%E5%88%B7%E6%9C%BAArmbian%E7%B3%BB%E7%BB%9F%E4%B9%8B%E5%90%8E%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E3%80%81%E5%8F%AF%E9%81%93%E4%BA%91%E7%AD%89%E8%BD%AF%E4%BB%B6.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="玩客云刷机armbian系统之后安装宝塔、可道云等软件"><a href="#玩客云刷机armbian系统之后安装宝塔、可道云等软件" class="header-anchor">#</a> 玩客云刷机Armbian系统之后安装宝塔、可道云等软件</h1> <h2 id="系统优化"><a href="#系统优化" class="header-anchor">#</a> 系统优化</h2> <p>Armbian刷好后，我们对其进行一些优化操作。首次登录需要更改密码和创建用户。默认root用户,密码：1234</p> <h3 id="_1-修改密码"><a href="#_1-修改密码" class="header-anchor">#</a> 1.修改密码</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>passwd root
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="_2-修改时区"><a href="#_2-修改时区" class="header-anchor">#</a> 2.修改时区</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>rm -rf /etc/localtime
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+echo Etc/UTC &gt; /etc/timezone
+date 查看时间
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="_3-换软件源"><a href="#_3-换软件源" class="header-anchor">#</a> 3.换软件源</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code># 备份原文件
+cp /etc/apt/sources.list.d/armbian.list /etc/apt/sources.list.d/armbian.list.bak
+
+# 清华源(以下是一条命令复制完整)
+sudo tee /etc/apt/sources.list.d/armbian.list &lt;&lt;-'EOF'
+deb https://mirrors.tuna.tsinghua.edu.cn/armbian/ stretch main stretch-utils stretch-desktop
+EOF
+
+
+# 备份原文件
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+
+# 中科大源(以下是一条命令复制完整)
+sudo tee /etc/apt/sources.list &lt;&lt;-'EOF'
+deb http://mirrors.ustc.edu.cn/debian stretch main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian stretch-updates main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian stretch-backports main contrib non-free
+deb http://mirrors.ustc.edu.cn/debian-security/ stretch/updates main contrib non-free
+EOF
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h3 id="_4-更新软件"><a href="#_4-更新软件" class="header-anchor">#</a> 4.更新软件</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>apt-get update &amp;&amp; apt-get upgrade
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><img src="https://imgoss.xgss.net/picgo/image-20221020233903873.png?aliyun" alt="image-20221020233903873"></p> <h2 id="固定ip"><a href="#固定ip" class="header-anchor">#</a> 固定IP</h2> <p>由于安装完成之后玩客云的IP（192.168.124.7）是路由器自动获取的，这里在把玩客云的ip改成固定的，方便管理。</p> <p><img src="https://imgoss.xgss.net/picgo/image-20221020112103701.png?aliyun" alt="image-20221020112103701"></p> <p>参考： https://zhuanlan.zhihu.com/p/556064376</p> <p>1.输入 ifconfig 命令并回车，主要看看系统这次开机之后生成的mac地址是什么：</p> <p>记下这个mac地址： 00:22:82:4f:7c:e9</p> <p>2.输入这个命令并回车，就是打开并修改网络配置文件interfaces：</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>nano /etc/network/interfaces
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>修改如下</p> <p>修改成我这个样子，静态IP、网关、默认dns需要你自己根据情况修改，然后mac地址要改成前面查到的。</p> <p>有一行必须需要加上：pre-up /sbin/ifconfig eth0 mtu 3838</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>allow-hotplug eth0
+no-auto-down eth0
+iface eth0 inet static
+hwaddress ether 00:22:82:4f:7c:e9
+pre-up ifconfig eth0 hw ether 00:22:82:4f:7c:e9
+address 192.168.124.7
+netmask 255.255.255.0
+gateway 192.168.124.1
+dns-nameservers 192.168.124.1 114.114.114.114
+pre-up /sbin/ifconfig eth0 mtu 3838
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><img src="https://imgoss.xgss.net/picgo/image-20221020135619450.png?aliyun" alt="image-20221020135619450"></p> <p>四、还有个默认的配置文件interfaces.default也需要修改成上面那个一样
+输入命令并回车：</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">nano</span> /etc/network/interfaces.default
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>把内容修改成和上面那个文件一样：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>allow-hotplug eth0 
+no-auto-down eth0 
+iface eth0 inet static
+hwaddress ether 00:22:82:4f:7c:e9
+pre-up ifconfig eth0 hw ether 00:22:82:4f:7c:e9
+address 192.168.124.7
+netmask 255.255.255.0
+gateway 192.168.124.1
+dns-nameservers 192.168.124.1 114.114.114.114
+pre-up /sbin/ifconfig eth0 mtu 3838
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>修改完后按Ctrl+O保存，再按Ctrl+X退出</p> <p>再重启玩客云</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>reboot
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>待玩客云开机后，输入命令并回车查看mac地址和ip地址是否变化，没变化就成功了</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>ifconfig
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="查看系统版本"><a href="#查看系统版本" class="header-anchor">#</a> 查看系统版本</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code># cat /etc/debian_version 
+9.9
+# cat /etc/issue
+Debian GNU/Linux 9 \n \l
+
+# cat /etc/os-release 
+
+安装工具软件也行，# apt-get install -y lsb-release 此处略过
+# lsb_release -a
+
+# uname -a
+
+# arch
+
+# dpkg
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="挂载硬盘"><a href="#挂载硬盘" class="header-anchor">#</a> 挂载硬盘</h2> <p>为什么要挂载硬盘，因为玩客云自带存储只有8G,系统已经用掉30%，所剩空间不多。安装可道云就是为了下载和存文件，不通过外置硬盘扩大存储空间的话还能叫云盘吗？这里我准备了一张64GB的TF卡，让玩客云开机自动挂载硬盘。
+SSH连上玩客云，输入fdisk -l命令查看</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># 显示如下内容，其中/dev/mmcblk0是我64G的TF卡
+
+root@OneCloud:/etc/apt# fdisk -l
+Disk /dev/mmcblk0: 58.6 GiB, 62914560000 bytes, 122880000 sectors
+Device              Boot Start     End Sectors  Size Id Type
+/dev/mmcblk1p1      16065 14964479 14948415  7.1G 83 Linux
+/dev/mmcblk1boot1p1      16065 7727264 7711200  3.7G  b W95 FAT32
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>我需要将TF卡存储空间给可道云用，先将它格式化成ext4格式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkfs.ext4 /dev/mmcblk0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>格式化执行完成后，然后得到它的UUID准备做自动挂载工作，输入命令</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>blkid /dev/mmcblk0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>得到的内容如下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/dev/mmcblk0: UUID=&quot;9495d4d6-c0a1-457a-8345-af6242502a82&quot; TYPE=&quot;ext4&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>其中的UUID就是我们需要用的，将硬盘挂载到/www/wwwroot下，用VI命令编辑/etc/fstab文件，在最后行追加下面内容,保存，下次重启就自动挂载了硬盘。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vi /etc/fstab
+填写：
+UUID=9495d4d6-c0a1-457a-8345-af6242502a82   /www/wwwroot   ext4    defaults    0 0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="挂载ntfs格式硬盘"><a href="#挂载ntfs格式硬盘" class="header-anchor">#</a> 挂载NTFS格式硬盘</h2> <p>我这里有一块闲置的ntfs格式的移动硬盘，不想格式化数据。直接挂载到 /www目录下，挂载方法跟上面类似，最主要是不格式化硬盘直接挂载，后续可能会出现什么问题。</p> <p>查看系统所检测到的外置磁盘名称(这里用sda1):</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># lsblk
+NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda            8:0    0 298.1G  0 disk 
+`-sda1         8:1    0 298.1G  0 part 
+sdb            8:16   1    15G  0 disk 
+mmcblk0      179:0    0   7.3G  0 disk 
+|-mmcblk0p1  179:1    0   122M  0 part /boot
+`-mmcblk0p2  179:2    0   6.5G  0 part /
+mmcblk0boot0 179:16   0     4M  1 disk 
+mmcblk0boot1 179:32   0     4M  1 disk 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>其中sda1为我的移动硬盘</p> <p>在根目录新建一个目录用于挂载硬盘:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir /www
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>将新增的外置硬盘挂载映射到新建的目录中：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># mount /dev/sda1 /www
+The disk contains an unclean file system (0, 0).
+The file system wasn't safely closed on Windows. Fixing.
+
+# df -h|grep www
+/dev/sda1       299G   79G  220G  27% /www
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>挂载成功。</p> <p>设置开机自动启动挂载：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vi  /etc/fstab
+提现写
+/dev/sda1 /www  ntfs defaults 0 0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>修改填好好后，按: 键，输入 wq! 强制保存退出，然后输入命令强制刷新即可</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># mount  -a
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h1 id="docker相关"><a href="#docker相关" class="header-anchor">#</a> docker相关</h1> <h2 id="使用docker安装脚本"><a href="#使用docker安装脚本" class="header-anchor">#</a> 使用docker安装脚本</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh --mirror Aliyun
+或者
+apt-get install docker.io
+apt install docker.io
+
+或者
+wget -qO- https://get.docker.com/ | sh
+启动：
+service docker start
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="安装可视面板"><a href="#安装可视面板" class="header-anchor">#</a> 安装可视面板</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker run --restart always --name fast -p 8081:8081 -d -v /var/run/docker.sock:/var/run/docker.sock wangbinxingkong/fast
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>安装完成后在浏览器访问 http://服务器IP地址或域名:8081</p> <p>首次登录需要注册，注册成功后即可正常使用。</p> <h3 id="装宝塔"><a href="#装宝塔" class="header-anchor">#</a> 装宝塔</h3> <p>拉取镜像,ssh里面执行</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker pull centos:centos7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>创建容器</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker run -tid --name baota -p 88:80 -p 8888:8888 --restart always centos:centos7
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>需要开放的端口自行拉回 -p 80:80 --name=baota其中baota是容器名称，可以更改成你想要的，容器名称注意不要和其他容器一样，会冲突</p> <p>进入容器</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker exec -it baota /bin/bash
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>装宝塔</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install.sh&amp;&amp; sh install.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="青龙面板"><a href="#青龙面板" class="header-anchor">#</a> 青龙面板</h3> <p>ssh里面执行</p> <p>1.拉取镜像</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker pull whyour/qinglong:latest
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>2.创建容器</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker run -tid --name qinglong -p 5700:5700 --restart always whyour/qinglong:latest
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>然后就可以通过http://ip:5700访问面板了</p> <p>默认账号：admin 密码：admin</p> <h3 id="装-openwrt"><a href="#装-openwrt" class="header-anchor">#</a> 装 openwrt</h3> <p>ssh里面执行</p> <p>1.拉取镜像</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker pull xuanaimai/onecloud:21-05-29
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>2.创建容器</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker run -tid --name openwrt -p 80:80 --restart always xuanaimai/onecloud:21-05-29
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>启动成功后使用IP访问即可 密码是 password</p> <p>需要开放的端口自行拉回 -p 80:80 --name=openwrt其中openwrt是容器名称，可以更改成你想要的，容器名称注意不要和其他容器一样，会冲突</p> <h3 id="docker装openwrt"><a href="#docker装openwrt" class="header-anchor">#</a> docker装openwrt</h3> <p>下面是我找的别人docker装openwrt的教程
+更新软件（非必要）</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>apt-get update &amp;&amp; apt-get upgrade
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>安装 Docker</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>apt install docker.io
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>打开网卡混杂模式</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>ip link set eth0 promisc on
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>创建网络</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker network create -d macvlan --subnet=192.168.0.0/24 --gateway=192.168.0.1 -o parent=eth0 macnet
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>[↑自己根据 玩客云 所在网段修改，如：玩客云IP:192.168.2.175，则192.168.1.0/24 改成 192.168.2.0/24，192.168.1.1改成主路由地址]
+拉取 OpenWRT 镜像</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker pull xuanaimai/onecloud:21-05-29
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>创建容器</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>docker run -itd --name=OneCloud --restart=always --network=macnet --privileged=true xuanaimai/onecloud:21-05-29 /sbin/init
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>–name=OneCloud 其中OneCloud是容器名称，可以更改成你想要的，容器名称注意不要和其他容器一样，会冲突根据主路由 DHCP 分配里找到一个主机名叫 OpenWRT 的，复制它的IPv4 地址粘贴到浏览器就能进入 OpenWRT 了密码是 password</p> <h1 id="宝塔面板"><a href="#宝塔面板" class="header-anchor">#</a> 宝塔面板</h1> <p>为了省点内存这里我安装了5.9版本的宝塔面板，当然也可以安装7.0以上的版本。面板安装完大概要1个小时，进入面板安装LNMP服务更有长达4小时的等待时间。中途可能面板还无法访问，安装完就可以打开了，建议这个时候睡一觉醒来就好了。哈哈</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># 宝塔面板5.9版本
+wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh &amp;&amp; bash install.sh
+
+
+# 宝塔面板7.0版本
+wget -O install.sh http://yangwenqing.com/files/Source/install_bt_ubuntu_7.0.sh &amp;&amp; bash install.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>或者安装最新版的</p> <p>官网：https://bt.cn/new/download.html</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; bash install.sh ed8484bec
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><img src="https://imgoss.xgss.net/picgo/image-20221020212618447.png?aliyun" alt="image-20221020212618447"></p> <p>安装：</p> <p><img src="https://imgoss.xgss.net/picgo/image-20221020212911224.png?aliyun" alt="image-20221020212911224"></p> <p>启动失败！</p> <p><img src="https://imgoss.xgss.net/picgo/image-20221020221124897.png?aliyun" alt="image-20221020221124897"></p> <p>玩客云IP:8888 即可访问宝塔面板
+安装宝塔面板中SSH可能会卡掉线，看不到宝塔面板的账号和密码，可以对面板进行重置密码</p> <p>一步：<a href="https://www.bt.cn/btcode.html" target="_blank" rel="noopener noreferrer">宝塔Linux面板命令大全<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <div class="language- line-numbers-mode"><pre class="language-text"><code># 修改面板密码，如要改成123456
+cd /www/server/panel &amp;&amp; python tools.py panel 123456
+
+# 执行重置密码后会显示用户名，复制登录即可
+a4zpobgr
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><img src="https://imgoss.xgss.net/picgo/fd78cf95b2132ad7bec71403cf29693e.png?aliyun" alt="img"></p> <p>进入面板后将 Nginx PHP MySQL 三大服务安装上去,Nginx我安装了2次才安装成功，安装完就可以进行下一步的可道云安装</p> <p><img src="https://imgoss.xgss.net/picgo/b4c9382d1c047089da4f1a1b204f3fe1.png?aliyun" alt="img"></p> <h2 id="安装可道云"><a href="#安装可道云" class="header-anchor">#</a> 安装可道云</h2> <p>宝塔面板一键部署源码内置有可道云，可以从这里进去安装。</p> <p><img src="https://imgoss.xgss.net/picgo/12c71aaecd97e91631b1ed82a89f8360.png?aliyun" alt="img"></p> <p>效果如下，嗯！还是挺流畅的。</p> <h2 id="安装aria2"><a href="#安装aria2" class="header-anchor">#</a> 安装Aria2</h2> <p>Aria2是一款自由、跨平台命令行界面的下载管理器，该软件根据GPLv2许可证进行分发。支持的下载协议有：HTTP、HTTPS、FTP、Bittorrent和Metalink。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#逗比的Aria2脚本
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh
+
+#备用脚本
+wget -N --no-check-certificate https://yangwenqing.com/files/Source/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>安装完成后，如果我们想修改密码、下载文件位置、端口的话，可以使用命令bash aria2.sh，再选择修改配置即可，这里建议使用该脚本配置自动更新BT-Tracker服务器，对下载BT有加成。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>root@OneCloud:~# bash aria2.sh
+
+ Aria2 一键安装管理脚本 [v1.1.9]
+  -- Toyo | doub.io/shell-jc4 --
+
+    0. 升级脚本
+       ————————————
+    1. 安装 Aria2
+    2. 更新 Aria2
+    3. 卸载 Aria2
+       ————————————
+    4. 启动 Aria2
+    5. 停止 Aria2
+    6. 重启 Aria2
+       ————————————
+    7. 修改 配置文件
+    8. 查看 配置信息
+    9. 查看 日志信息
+   10. 配置 自动更新 BT-Tracker服务器
+       ————————————
+
+ 当前状态: 已安装 并 已启动
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><h3 id="配置aria2"><a href="#配置aria2" class="header-anchor">#</a> 配置Aria2</h3> <p>去配置玩客云Aria2 将IP,端口跟密码填入</p> <p><img src="https://imgoss.xgss.net/picgo/f66ab69d0aa494dcd259e04997089ab1.png?aliyun" alt="img"></p> <p>测试下载
+下载OneDrive上面的资源</p> <p><img src="https://imgoss.xgss.net/picgo/aaebf39652010ef100fbad6d6ccda00b.png?aliyun" alt="img"></p> <p><img src="https://imgoss.xgss.net/picgo/cee2a4055a01d2f452bda80f12ed955a.png?aliyun" alt="img"></p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.44414999.js" defer></script><script src="/assets/js/3.dac1e8fe.js" defer></script><script src="/assets/js/1.2b084c82.js" defer></script><script src="/assets/js/85.33d6441e.js" defer></script>
+  </body>
+</html>
