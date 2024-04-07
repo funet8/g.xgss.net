@@ -19,3 +19,6 @@
 ## [httpd无法启动，报错No space left on device](httpd无法启动报错No-space-left-on-device.md)
 
 ## [Linux开机出现welcome to emergency mode!](emergency-mode.md)
+
+## [邮箱给谷歌Gmail报错550-5.7.25解决方案](邮箱给谷歌Gmail报错550解决方案.md)
+
