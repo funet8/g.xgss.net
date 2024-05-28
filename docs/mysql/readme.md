@@ -14,6 +14,10 @@
 
 ## [使用XtraBackup将阿里云的MySQL5.7备份文件恢复到自建服务器](使用XtraBackup将阿里云的MySQL5.7备份文件恢复到自建服务器.md)
 
+## [使用Mydumper备份和恢复mysql数据库](使用Mydumper备份和恢复mysql数据库.md)
+
+
+
 # DataX
 
 ## [阿里巴巴高效的离线数据同步工具DataX](alibaba-datax.md)

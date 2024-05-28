@@ -118,7 +118,7 @@ The push refers to a repository [docker.io/newtag/webapp]
 ## 1.登录阿里云docker registry:
 
 ```
-$ sudo docker login --username=funet8@163.com registry.cn-hangzhou.aliyuncs.com
+$ sudo docker login --username=funet8@163.com registry.cn-shenzhen.aliyuncs.com
 ```
 
 登录registry的用户名是您的阿里云账号全名，密码是您开通服务时设置的密码。
@@ -128,15 +128,15 @@ $ sudo docker login --username=funet8@163.com registry.cn-hangzhou.aliyuncs.com
 ## 2.从registry中拉取镜像：
 
 ```
-$ sudo docker pull registry.cn-hangzhou.aliyuncs.com/funetcentos6/centos7.1:[镜像版本号]
+$ sudo docker pull registry.cn-shenzhen.aliyuncs.com/funet8/centos7.1:[镜像版本号]
 ```
 
 ## 3.将镜像推送到registry：
 
 ```
-$ sudo docker login --username=funet8@163.com registry.cn-hangzhou.aliyuncs.com
-$ sudo docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/funetcentos6/centos7.1:[镜像版本号]
-$ sudo docker push registry.cn-hangzhou.aliyuncs.com/funetcentos6/centos7.1:[镜像版本号]
+$ sudo docker login --username=funet8@163.com registry.cn-shenzhen.aliyuncs.com
+$ sudo docker tag [ImageId] registry.cn-shenzhen.aliyuncs.com/funet8/centos7.1:[镜像版本号]
+$ sudo docker push registry.cn-shenzhen.aliyuncs.com/funet8/centos7.1:[镜像版本号]
 ```
 
 

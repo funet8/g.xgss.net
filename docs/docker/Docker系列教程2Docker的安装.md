@@ -76,15 +76,18 @@ sudo systemctl restart docker
 ## yum安装高版本
 
 ```
-# 安装yum -y install yum-utils device-mapper-persistent-data lvm2
+# 安装
+yum -y install yum-utils device-mapper-persistent-data lvm2
 yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-yum -y install docker-ce docker-ce-cli containerd.io# 配置
+yum -y install docker-ce docker-ce-cli containerd.io
+# 配置
 mkdir /etc/docker
 vim /etc/docker/daemon.json
 {
     "exec-opts": ["native.cgroupdriver=systemd"],
     "graph": "/data/docker"
-}# 启动
+}
+# 启动
 systemctl enable docker --now
 docker info
 ```

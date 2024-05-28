@@ -56,8 +56,6 @@ $ sudo update-manager -d
 
 
 
-![img](images/hqwltg0px4.png)
-
 **Ubuntu系统使用指南 - 图形化方式升级**
 
 
@@ -70,8 +68,6 @@ $ sudo update-manager -d
   - [ubuntu 22.04](https://releases.ubuntu.com/22.04/)
   - [ubuntu 20.04](https://releases.ubuntu.com/20.04/)
   - [ubuntu 18.04](https://releases.ubuntu.com/18.04/)
-
-bash
 
 ```javascript
 # 安装升级工具
@@ -99,8 +95,6 @@ $ sudo do-release-upgrade -d
 
 > **系统升级完成之后，需要对没有的工具或者服务进行清理！**
 
-bash
-
 ```javascript
 # 清理所有软件缓存
 $ sudo apt clean
@@ -112,7 +106,7 @@ $ sudo apt autoclean
 $ sudo apt autoremove
 ```
 
-bash
+
 
 ```javascript
 # 删除不用的老版本内核(默认不会删除)

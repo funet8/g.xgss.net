@@ -22,7 +22,7 @@ alist开源地址： https://github.com/alist-org/alist
 
 ![image-20230815160529357](https://imgoss.xgss.net/picgo/image-20230815160529357.png?aliyun)
 
-支持存储
+## 支持存储
 
 ```
 本地存储
@@ -130,6 +130,37 @@ chmod +x alist
 ./alist admin set NEW_PASSWORD
 
 ```
+
+### 3.Docker部署alist
+
+安装docker：略
+
+系统：linux
+
+```
+docker 安装alist
+# docker run -itd \
+--name alist \
+-p 5244:5244 \
+--restart unless-stopped \
+-v /data/docker/alist:/opt/alist/data \
+xhofe/alist
+
+查看密码： 
+# docker logs alist
+INFO[2024-04-26 03:26:18] reading config file: data/config.json        
+INFO[2024-04-26 03:26:18] config file not exists, creating default config file 
+INFO[2024-04-26 03:26:18] load config from env with prefix:            
+INFO[2024-04-26 03:26:18] init logrus...                               
+INFO[2024-04-26 03:26:18] Successfully created the admin user and the initial password is: JF218P6X 
+
+查看到
+用户名： admin
+密码： JF218P6X
+
+```
+
+访问 IP+端口
 
 
 

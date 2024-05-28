@@ -26,6 +26,20 @@
 
 ## [ChatHub一款开源全能整合AI各大聊天机器人客户端](13.ChatHub一款开源全能整合AI各大聊天机器人客户端.md)
 
+## [免费使用GPT-4的3种方法，白嫖大模型](15.免费使用GPT-4的3种方法，白嫖大模型.md)
+
+## [Windows系统下部署本地大语言模型Ollama和OpenWebUI实现Web交互界面](16.Windows系统下部署本地大语言模型：Ollama和OpenWebUI实现Web交互界面.md)
+
+## [Ubuntu系统下部署本地大语言模型Ollama和OpenWebUI实现Web交互界面](16.Ubuntu系统下部署大语言模型：Ollama和OpenWebUI实现各大模型的人工智能自由.md)
+
+## [本地使用GPT4All和LMstudio实现各大模型的人工智能自由](17.本地使用GPT4All和LMstudio实现各大模型的人工智能自由.md)
+
+## [Ubuntu系统安装StableDiffusion](18.Ubuntu系统安装StableDiffusion.md)
+
+
+
+
+
 # [AI工具]
 
 ## [AI工具合集](1.AI工具合集.md)
