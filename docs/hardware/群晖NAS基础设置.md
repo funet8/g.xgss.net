@@ -42,19 +42,18 @@ root
 ```
 chmod u+w /etc/sudoers
 vim /etc/sudoers
-"root ALL=(ALL) ALL"在起下面添加"xxx ALL=(ALL) ALL"(这里的xxx是你的用户名)，然后保存退出
-添加： star ALL=(ALL) ALL
+"root ALL=(ALL) ALL"在起下面添加"xxx ALL=(ALL) NOPASSWD:ALL"(这里的xxx是你的用户名)，然后保存退出
+例如添加： 
+star ALL=(ALL) NOPASSWD:ALL
 chmod u-w /etc/sudoers
 ```
 
 
 
-![image-20231120180514656](https://imgoss.xgss.net/picgo/image-20231120180514656.png?aliyun)
-
 ### 测试
 
 ```
-star@star-nas:~$ sudo su -l root
+star@star-nas:~$ sudo -i
 root@star-nas:~# 
 ```
 
@@ -157,7 +156,11 @@ root@star-nas:~#
 
 防火墙是一个虚拟屏障，通过自定义规则可以防止未授权的登录和控制服务访问。用户可以决定是否允许或拒绝通过特定IP地址访问特定的网络端口。例如：允许从特定的办公室进行远程访问，或是只允许访问特定的服务或协议。
 
+# 将http连接重定向到https
 
+如果开启，则会 `http://IP:5000/` 会自动跳转到 `https://IP:5001/` ，谨慎选择。
+
+![image-20240702193200012](https://imgoss.xgss.net/picgo/image-20240702193200012.png?aliyun)
 
 
 

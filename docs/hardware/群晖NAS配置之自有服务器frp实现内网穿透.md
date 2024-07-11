@@ -21,6 +21,8 @@ frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP
 
 开源地址： https://github.com/fatedier/frp
 
+FRP文档： https://gofrp.org
+
 # 安装frp
 
 ## 下载frp
@@ -281,6 +283,8 @@ nas.frp.xgss.net:80
 
 ```
 https://github.com/fatedier/frp/releases/download/v0.52.3/frp_0.52.3_windows_amd64.zip
+或者
+http://js.funet8.com/centos_software/frp/frp_0.52.3_windows_amd64.zip
 ```
 
 下载解压到桌面位置
@@ -323,7 +327,52 @@ frpc.exe -c frpc.toml
 
 
 
+# 设置开机启动
 
+## 开机启动方法1
+
+此设置需要用户登录才可以运行脚本
+
+```
+在 Windows 10 中可以通过以下步骤来设置 bat 文件开机自动运行：
+
+1、打开“运行”对话框，按 Win + R 键。
+
+2、输入 shell:startup
+
+3、在“启动”文件夹中创建一个快捷方式，指向要运行的 bat 文件。
+
+4、重启电脑，bat 文件就会在系统启动时自动运行。
+
+```
+
+bat批处理脚本解决Windows10开机后桌面频繁启动:https://blog.csdn.net/FisrtBqy/article/details/130077994
+
+## 开机启动方法2
+
+设置开机启动
+
+右击此电脑→管理→任务计划程序→右侧的“创建任务”
+
+![image-20240702111819150](https://imgoss.xgss.net/picgo/image-20240702111819150.png?aliyun)
+
+### 常规
+
+![image-20240702111906733](H:/typora_images/image-20240702111906733.png)
+
+### 触发器
+
+开始任务选择启动时。
+
+![image-20240702111958454](H:/typora_images/image-20240702111958454.png)
+
+### 操作
+
+选择启动frp的脚本。
+
+![image-20240702112045284](https://imgoss.xgss.net/picgo/image-20240702112045284.png?aliyun)
+
+重启测试是否能开机启动。
 
 # 配置校验
 
@@ -376,11 +425,57 @@ auth.token = "abc"
 
 
 
+# 配置HTTPS
+
+文档： https://gofrp.org/zh-cn/docs/examples/https2http/
+
+使用 https2http 插件将本地 HTTP 服务转换为 HTTPS 服务，以供外部访问。
+
+## 配置 frps.toml
+
+```
+bindPort = 7000
+vhostHTTPSPort = 443
+```
+
+## 配置 frpc.toml
+
+```
+serverAddr = "x.x.x.x"
+serverPort = 7000
+
+[[proxies]]
+name = "test_htts2http"
+type = "https"
+customDomains = ["test.yourdomain.com"]
+
+[proxies.plugin]
+type = "https2http"
+localAddr = "127.0.0.1:80"
+
+# HTTPS 证书相关的配置
+crtPath = "./server.crt"
+keyPath = "./server.key"
+hostHeaderRewrite = "127.0.0.1"
+requestHeaders.set.x-from-where = "frp"
+
+```
+
+## 获取HTTPS证书
+
+
+
+## 访问 HTTPS 服务
+
+打开您的 Web 浏览器，访问域名
+
+
+
 # 总结
 
 ngrok和frp的各有优缺点
 
-## ngrok 的优点：
+## ngrok 的优点
 
 简单易用：ngrok拥有非常简洁的用户界面和易于使用的命令行工具，使得内网穿透变得非常容易。
 
@@ -392,7 +487,7 @@ ngrok和frp的各有优缺点
 
 
 
-## ngrok 的缺点：
+## ngrok 的缺点
 
 限制版和付费版：ngrok提供了免费版，但其功能有限，如并发连接数和隧道数量的限制。付费版则提供更多高级功能。
 

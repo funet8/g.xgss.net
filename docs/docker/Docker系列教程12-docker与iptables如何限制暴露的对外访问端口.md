@@ -102,7 +102,6 @@ iptables -I DOCKER-USER -i eth0 -j DROP
 #由于外网网卡提供业务，而业务回包也是从外网网卡走的，因此需要增加连接状态，如果是回包的话也允许通过
 iptables -I DOCKER-USER -i eth1 -p tcp -m state --state RELATED,ESTABLISHED -j ACCEPT
  
- 
 #这样做的优点是
 #1、符合官方文档，只操作DOCKER-USER链，相对优雅
 #2、不用处理复杂的SNAT或DNAT规则

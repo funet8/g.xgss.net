@@ -35,6 +35,8 @@
 
 ## [群晖NAS配置之搭建WordPress个人博客站点](群晖NAS配置之搭建WordPress个人博客站点.md)
 
+## [群晖NAS配置之安装Windows虚拟机](群晖NAS配置之安装Windows虚拟机.md)
+
 
 
 # Openwrt玩法
