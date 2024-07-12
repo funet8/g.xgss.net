@@ -20,11 +20,13 @@
 
 # VuePress
 
-## [VuePress基础知识](/README-vuepress.md)
+## [vuepress的安装和使用](vuepress的安装和使用.md)
 
 ## [vuepress主题与插件](vuepress主题与插件.md)
 
 ## [使用 vuepress-theme-vdoing 搭建知识管理博客主题](vuepress-theme-vdoing.md)
+
+## [重装系统之后VuePress出现问题.md](Vuepress-重装系统之后VuePress出现问题.md)
 
 
 
