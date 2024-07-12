@@ -2,9 +2,9 @@
 
 
 
-# 如标题所示
+# 前言
 
-上次的办公电脑是2021年
+记录更换办公电脑之后的操作。
 
 
 
@@ -14,11 +14,7 @@
 
 开源地址： https://github.com/massgravel/Microsoft-Activation-Scripts
 
-
-
 ## PowerShell（推荐）
-
-
 
 打开你的 Windows，右键单击 Windows 开始菜单并选择 PowerShell 或终端（不是 CMD）。复制并粘贴如下代码，然后按回车键。
 
@@ -66,13 +62,13 @@ DiskGenius
 
 # 安装常用软件
 
-## 聊天软件 or 办公
+# 聊天软件 or 办公
 
 - [x] 微信
 
-  微信的文件管理
+微信的文件管理路径
 
-  ![image-20240711140237497](https://imgoss.xgss.net/picgo/image-20240711140237497.png?aliyun)
+![image-20240711140237497](https://imgoss.xgss.net/picgo/image-20240711140237497.png?aliyun)
 
 - [x] QQ（或者腾讯TIM）
 
@@ -104,26 +100,23 @@ DiskGenius
 - [x] v2（敏感）rayN
 - [x] 格式工厂
 - [x] Tiny RDM （导出旧数据，导入数据）
+- [x] PotPlayer
 
-## 浏览器
+# 浏览器
 
 - [x] Chrome浏览器，登录账号同步信息
+
 - [x] 火狐浏览器，登录账号同步信息
+
 - [x] 360浏览器，登录账号同步信息
 
-
+  
 
 由于阿里云换了浏览器登录账号，需要使用手机号或者刷脸验证，这时候就要从旧的电脑导出cookie导入到新的电脑浏览器中
 
 使用火狐浏览器的cookie-editor在阿里云的登录页导出cookie，再在新电脑的浏览器中导入cookie。
 
 
-
-## 常用软件
-
-- [x] PotPlayer
-
-  
 
 # 编程软件
 
@@ -143,8 +136,6 @@ DiskGenius
 
 ```
 
-  
-
 - [x] Sourcetree  。  https://www.sourcetreeapp.com/  
 
 - [x] VS Code  https://code.visualstudio.com/
@@ -158,10 +149,6 @@ DiskGenius
   
   ```
 
-  
-
-  
-
 - [x] BCompare
 
 - [x] SwitchHosts
@@ -174,52 +161,66 @@ DiskGenius
 
 - [x] SecureCRT
 
+- [x] python3.10  https://www.python.org/downloads/
+
+  ```
+  或者直接在命令行中输入 python
+  调出 Microsoft Store 
+  再安装
+  ```
+
 - [x] 加密软件 -V3.8S_Client
 
   ```
   地址： 192.168.1.254
   端口： 8020
-  yxkj_liuxingxing
-  
+  用户名： yxkj_****
+  密码： *****
   ```
 
   
 
-  
-
-
 
 # 文件同步
 
-- [ ] FreeFileSync 定时将重要文件夹备份到移动硬盘，添加定时任务
+- [x] FreeFileSync  https://freefilesync.org/ 定时将重要文件夹备份到移动硬盘，添加定时任务
 
-- [x] ngrok 内网穿透
+  
+
+- [x] ngrok 内网穿透，并且设置开机启动。
+
+  
 
 - [x] 连接 共享
 
   ```
   \\192.168.1.10\落地页资源共享
   输入用户名和密码
+  用户名： www
+  密码: 74**
   
   \\192.168.1.50\技术部
   
   账号：jishubu
   密码：ch****jsb74**
-  
+
   ```
-
   
-
-
+  
 
 # 文档编辑
 
+- [x] Typora+PicGo  配置图床并且可以上传图片到云端。  https://g.xgss.net/software/Typora_PicGo_Gitee_markdown_pic.html
 
-
-- [x] Typora+PicGo  配置图床  https://g.xgss.net/software/Typora_PicGo_Gitee_markdown_pic.html
-
+  ```
+文件->偏好设置，
+  路径为：C:\Users\用户名\AppData\Roaming\Typora\themes
+  ```
+  
 - [x] nodepad--
+
 - [x] WPS
+
 - [x] 有道云笔记
 
 # 其他软件
@@ -231,10 +232,6 @@ DiskGenius
   将之前旧的虚拟机移动到新的
 
 - [x] Billfish 和 Eagle（收费）  https://www.billfish.cn/
-
-  
-
-- [ ] python3.10
 
 - [x] PotPlayer   http://potplayer.tv/?lang=zh_CN
 
@@ -248,5 +245,15 @@ DiskGenius
 在语言选项中，找到你想要删除的输入法，点击其右侧的三个点，然后选择“删除”。
 如果你电脑只有一个输入法，需要先添加一个其他的输入法，然后再删除不需要的输入法。
 
+# 添加一个网络
 
+由于需要管理一个网关，需要添加一个ip 192.168.10.251
+
+网络连接
+
+![image-20240711181045705](https://imgoss.xgss.net/picgo/image-20240711181045705.png?aliyun)
+
+
+
+![image-20240711181120390](https://imgoss.xgss.net/picgo/image-20240711181120390.png?aliyun)
 
