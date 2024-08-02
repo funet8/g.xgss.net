@@ -25,8 +25,6 @@
 ```
 star@star-nas:~$ sudo su -l root
 Password: 
-root@star-nas:~# whoam i
--ash: whoam: command not found
 root@star-nas:~# whoami
 root
 ```

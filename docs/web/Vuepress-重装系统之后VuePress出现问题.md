@@ -50,3 +50,21 @@ info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this comm
 
 ```
 
+## 版本区别
+
+```
+新的系统
+node -v
+v20.15.1
+
+服务器
+node -v
+v16.14.0
+
+旧的电脑
+node -v
+v16.14.0
+
+
+```
+

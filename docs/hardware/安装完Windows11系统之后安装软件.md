@@ -20,7 +20,6 @@
 
 ```
 irm https://get.activated.win | iex
-
 ```
 
 
@@ -37,8 +36,6 @@ irm https://get.activated.win | iex
 方法一：使用命令提示符
 
   1. 打开开始菜单，搜索“命令提示符”并右键点击“以管理员身份运行”。
-
-     
 
   2. 在命令提示符窗口中，输入以下命令并按下回车键：
 
@@ -84,22 +81,34 @@ DiskGenius
 
 - [x] RaiDrive  https://www.raidrive.com/
 
-- [x] xmind
+- [x] Xmind
 
 - [x] 迅雷   https://www.xunlei.com/
 
 # mysoft 目录的软件
 
 - [x] Photoshop
+
 - [x] BCompare
+
 - [x] FlashFXP.exe
+
 - [x] MobaXterm
+
 - [x] Nox
+
 - [x] OfficeBox官方绿色版
+
 - [x] scrcpy
+
 - [x] v2（敏感）rayN
+
 - [x] 格式工厂
+
 - [x] Tiny RDM （导出旧数据，导入数据）
+
+  软件自带导出导入功能。
+
 - [x] PotPlayer
 
 # 浏览器
