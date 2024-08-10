@@ -295,8 +295,10 @@ sudo tee /etc/docker/daemon.json <<-'EOF'
   "registry-mirrors": ["https://docker.fxxk.dedyn.io"]  # 请替换为您自己的Worker自定义域名
 }
 EOF
+
 sudo systemctl daemon-reload
 sudo systemctl restart docker
+sudo docker info
 
 ```
 

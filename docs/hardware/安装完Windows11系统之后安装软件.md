@@ -4,9 +4,7 @@
 
 # 前言
 
-记录更换办公电脑之后的操作。
-
-
+记录更换办公电脑之后的操作，做个记录以免下次忘记。
 
 # 系统激活
 
@@ -29,7 +27,7 @@ irm https://get.activated.win | iex
 
 
 
-# win11启动administrator账号
+# 启动administrator账号
 
 由于安装的时候没有启动administrator账号，需要启用管理员账号
 
@@ -51,7 +49,9 @@ irm https://get.activated.win | iex
 
 DiskGenius
 
-重新分区等，
+进行磁盘重新分区等操作。
+
+
 
 基础配置：
 
@@ -63,7 +63,7 @@ DiskGenius
 
 - [x] 微信
 
-微信的文件管理路径
+微信的文件管理路径，把旧电脑中的文件拷贝过来，聊天记录依然还在。
 
 ![image-20240711140237497](https://imgoss.xgss.net/picgo/image-20240711140237497.png?aliyun)
 
@@ -85,7 +85,7 @@ DiskGenius
 
 - [x] 迅雷   https://www.xunlei.com/
 
-# mysoft 目录的软件
+# mysoft 目录的软件，免安装
 
 - [x] Photoshop
 
@@ -94,8 +94,6 @@ DiskGenius
 - [x] FlashFXP.exe
 
 - [x] MobaXterm
-
-- [x] Nox
 
 - [x] OfficeBox官方绿色版
 
@@ -114,12 +112,12 @@ DiskGenius
 # 浏览器
 
 - [x] Chrome浏览器，登录账号同步信息
-
 - [x] 火狐浏览器，登录账号同步信息
-
 - [x] 360浏览器，登录账号同步信息
 
-  
+
+
+备注：
 
 由于阿里云换了浏览器登录账号，需要使用手机号或者刷脸验证，这时候就要从旧的电脑导出cookie导入到新的电脑浏览器中
 
@@ -221,12 +219,9 @@ DiskGenius
 
 - [x] Typora+PicGo  配置图床并且可以上传图片到云端。  https://g.xgss.net/software/Typora_PicGo_Gitee_markdown_pic.html
 
-  ```
-文件->偏好设置，
-  路径为：C:\Users\用户名\AppData\Roaming\Typora\themes
-  ```
-  
-- [x] nodepad--
+  主题设置： 打开Typora，文件->偏好设置，路径为：C:\Users\用户名\AppData\Roaming\Typora\themes
+
+- [x] nodepad++
 
 - [x] WPS
 
@@ -234,7 +229,7 @@ DiskGenius
 
 # 其他软件
 
-- [x] Nox
+- [x] Nox 或 MuMu
 
 - [x] vmware  VMware 虚拟机正式对个人免费  https://www.iplaysoft.com/vwmare-free.html
 
@@ -256,7 +251,7 @@ DiskGenius
 
 # 添加一个网络
 
-由于需要管理一个网关，需要添加一个ip 192.168.10.251
+由于需要管理一个网关（IP: 192.168.10.100），内网的IP段是192.168.1.1/24， 所以需要添加一个ip 192.168.10.251
 
 网络连接
 
