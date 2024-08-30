@@ -67,6 +67,7 @@ module.exports = {
 	  ['/shell/', 'Shell'],
 	  ['/Ubuntu/', 'Ubuntu'],
 	  ['/hardware/', '硬件'],
+	  ['/NAS/', 'NAS'],
     ],
 	//sidebar: 'auto', // 侧边栏配置
     //sidebarDepth: 3,
@@ -80,7 +81,7 @@ module.exports = {
      * 'solarizedlight'
      * 'tomorrow'
      */
-    codeTheme: 'okaidia', // default 'tomorrow'
+    codeTheme: 'tomorrow', // default 'tomorrow'
 	socialLinks: [     // 信息栏展示社交信息
         { icon: 'reco-github', link: 'https://github.com/funet8' },
         { icon: 'reco-npm', link: 'https://www.npmjs.com/~reco_luan' }
