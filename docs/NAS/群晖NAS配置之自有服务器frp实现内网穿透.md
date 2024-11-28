@@ -358,13 +358,13 @@ bat批处理脚本解决Windows10开机后桌面频繁启动:https://blog.csdn.n
 
 ### 常规
 
-![image-20240702111906733](H:/typora_images/image-20240702111906733.png)
+![image-20240702111906733](https://imgoss.xgss.net/picgo/image-20240702111906733.png?aliyun)
 
 ### 触发器
 
 开始任务选择启动时。
 
-![image-20240702111958454](H:/typora_images/image-20240702111958454.png)
+![image-20240702111958454](https://imgoss.xgss.net/picgo/image-20240702111958454.png?aliyun)
 
 ### 操作
 
