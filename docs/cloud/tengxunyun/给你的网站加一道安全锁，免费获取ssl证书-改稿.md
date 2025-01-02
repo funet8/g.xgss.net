@@ -1,22 +1,40 @@
 
 
-# 给你的网站加一道安全锁，免费获取ssl证书
+# 双十一购腾讯云轻量云免费申请ssl证书，给你的网站加一道安全锁
 
+# 前言
 
-
-之前介绍了《[腾讯云轻量应用服务器部署私有笔记](https://cloud.tencent.com/developer/article/2466047)》搭建了自己的私有笔记系统，但是没有申请ssl证书，今天来讲一下如何获取免费的ssl证书。
+之前介绍了《[腾讯云轻量应用服务器部署私有笔记](https://cloud.tencent.com/developer/article/2466047)》，https://cloud.tencent.com/developer/article/2466047 搭建了自己的私有笔记系统，但是没有申请ssl证书，没有SSL证书的网站数据传输不被加密，这使得登录凭证、个人信息、支付详情等敏感信息容易被第三方拦截和窃取，增加了数据泄露的风险。
 
 SSL证书不仅能提升网站的安全性，还能增强用户对网站的信任度，提高网站的转化率。赶快行动起来，为你的网站添加这把安全锁吧！
 
+今天来讲一下如何利用腾讯轻量云来申请免费的SSL证书。
+
+# 前期准备
+
+1.需要一个域名（国内服务器需要备案）
+
+2.需要一个腾讯云服务器或者腾讯云轻量云
+
 当然腾讯云的双十一活动还在继续，可以访问链接： [https://mc.tencent.com/Ijay4BNd](https://mc.tencent.com/Ijay4BNd) 选择合适的产品。
+
+每日两场秒杀（上午10:00、下午15:00），爆款折扣享不停 。
+
+![image-20241115112916561](https://imgoss.xgss.net/picgo/image-20241115112916561.png?aliyun)
+
+
+
+这里推荐99元/年的2核2G4M轻量云。 
+
+![image-20241115114121700](https://imgoss.xgss.net/picgo/image-20241115114121700.png?aliyun)
+
+# 什么是SSL证书
 
 
 
 ![image-20241118202323805](https://imgoss.xgss.net/picgo/image-20241118202323805.png?aliyun)
 
 
-
-# 什么是SSL证书
 
 SSL（Secure Sockets Layer）证书是一种安全技术，用于加密互联网通信，确保数据在客户端（如浏览器）和服务器之间传输时的安全性和隐私性。它通过加密技术保护网站用户的敏感信息（如密码、信用卡信息等），防止数据在传输过程中被窃取或篡改。
 
@@ -36,7 +54,7 @@ SSL（Secure Sockets Layer）证书是一种安全技术，用于加密互联网
 
 今天主要讲两种方式获取，第一种是在宝塔后台可以申请免费的三个月证书，第二种是acme.sh开源工具来获取
 
-# 宝塔获取免费的SSL证书
+# 方法一、宝塔获取免费的SSL证书
 
 ## 1.在宝塔后台
 
@@ -54,9 +72,9 @@ SSL（Secure Sockets Layer）证书是一种安全技术，用于加密互联网
 
 ![image-20241119092612216](https://imgoss.xgss.net/picgo/image-20241119092612216.png?aliyun)
 
-# 通过acme.sh开源工具申请泛解析SSL证书
+# 方法二、通过acme.sh开源工具申请泛解析SSL证书
 
-acme.sh 是一个开源的、基于Shell脚本的工具，用于自动申请、安装和更新SSL/TLS证书。它通过实现ACME协议来与Let's Encrypt等证书颁发机构（CA）进行交互，从而实现自动化管理SSL证书。
+acme.sh 是一个开源的、基于Shell脚本的工具，用于自动申请、安装和更新SSL/TLS证书。它通过实现ACME协议来与Let's Encrypt等证书颁发机构（CA）进行交互，从而实现自动化管理SSL证书，最主要是可以获取
 
 # 前期准备
 
@@ -265,7 +283,7 @@ openssl dhparam -out /data/wwwroot/web/ssl/dhparam.pem     2048
 
 证书信息
 
-![image-20220627161910298](https://imgoss.xgss.net/picgo/image-20220627161910298.png?aliyun)
+![image-20241202154546918](https://imgoss.xgss.net/picgo/image-20241202154546918.png?aliyun)
 
 
 
@@ -313,23 +331,6 @@ dns 方式的真正强大之处在于可以使用域名解析商提供的 api �
 
   登录DNSPod,进入顶部导航栏里的用户中心,在左侧的导航栏里,找到`安全设置`,看到页面的最下面,有个`API Token`.点击`查看`->`创建API Token`->填写`Tokens名称`,复制好ID与Token即可.保存待用。
 
-- 某里云域名
-
-  需要登录到某里云官网获取Ali_Key和Ali_Secret。[点击此处跳转](https://usercenter.console.aliyun.com/#/manage/ak) | https://usercenter.console.aliyun.com/#/manage/ak
-
-  当然可以直接使用accessKey
-
-![image-20220627170505702](https://imgoss.xgss.net/picgo/image-20220627170505702.png?aliyun)
-
-## 某里云API Token申请
-
-申请子账户来申请。
-
-![image-20220627170734108](https://imgoss.xgss.net/picgo/image-20220627170734108.png?aliyun)
-
-![image-20220627170621178](https://imgoss.xgss.net/picgo/image-20220627170621178.png?aliyun)
-
-详细就不列举了，有疑问可以后台提交工单。
 
 ## 申请泛解析域名证书
 
@@ -466,4 +467,8 @@ acme.sh --upgrade  --auto-upgrade  0
 # 结尾
 
 SSL证书是保障网站安全的重要工具，它不仅可以保护网站和用户的数据，还可以提升网站的信任度和搜索引擎排名。如果你还没有为你的网站配置SSL证书，建议尽快办理。
+
+双十一购物狂欢节还在继续，腾讯云推出了诱人的优惠活动。对于网站运营者、个人开发者来说，这无疑是一个提升网站性能和安全的绝佳时机。 可以点击：[https://mc.tencent.com/Ijay4BNd](https://mc.tencent.com/Ijay4BNd) 选择合适的产品。
+
+
 

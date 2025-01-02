@@ -26,5 +26,5 @@
 
 ## [Docker系列教程13-国内无法拉取Docker镜像了？这些方法拯救你的Docker](Docker系列教程13-国内无法拉取Docker镜像了？这些方法拯救你的Docker.md)
 
-
+## [配置Docker配置镜像加速地址](配置Docker配置镜像加速器.md)
 

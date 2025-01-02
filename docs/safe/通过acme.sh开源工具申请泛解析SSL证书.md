@@ -51,7 +51,6 @@ echo 'alias acme.sh=~/.acme.sh/acme.sh' >>/etc/profile
 ```
 acme.sh --help     #获取帮助
 acme.sh --version  # 查看版本
-
 ```
 
 ## 关联 ZeroSSL
@@ -61,10 +60,6 @@ acme.sh --version  # 查看版本
 ```
 acme.sh --set-default-ca --server zerossl
 ```
-
-
-
-
 
 ## 生成证书
 

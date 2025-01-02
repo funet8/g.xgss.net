@@ -38,3 +38,11 @@
 
 ## [搭建开源美观的数据库监控系统-Lepus](搭建开源美观的数据库监控系统-Lepus.md)
 
+
+
+# Redis
+
+## [星哥自用的Redis的常用操作.md](redis-星哥自用的Redis的常用操作.md)
+
+## [Redis中的数据结构](redis-Redis中的数据结构.md)
+

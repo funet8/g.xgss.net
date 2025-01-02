@@ -42,6 +42,8 @@
 
 ## [手把手教拥有你自己的大模型ChatGPT和Gemini等应用.md](24.手把手教拥有你自己的大模型ChatGPT和Gemini等应用.md)
 
+## [申请腾讯混元的API-Key并且使用LobeChat调用混元AI](20.申请腾讯混元的API-Key并且使用LobeChat调用混元AI.md)
+
 
 
 # [AI工具]
@@ -54,7 +56,7 @@
 
 ## [再介绍两款开源人工智能客户端工具.md](23.再介绍两款人工智能客户端工具.md)
 
-
+## [如何安装官方ChatGPT桌面软件，支持Windows和MacOS系统](25.如何安装官方ChatGPT桌面软件，支持Windows和MacOS系统.md)
 
 # [视频AI]
 
