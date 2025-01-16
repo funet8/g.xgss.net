@@ -34,11 +34,17 @@
 
 本文完整的方案会用到域名 DNSPod、腾讯云CDN、CVM 以及 COS 4 个云服务，因此我们先登录腾讯云控制台购买或激活服务：
 
-- 云服务器、NAS、虚拟机等（必须，安装 Centos7.2 以上版本系统，http://y.xgss.net/aliyun 或 https://y.xgss.net/tx）
+- 云服务器、NAS、虚拟机等  【 阿里云优惠： [https://y.xgss.net/aliyun](https://y.xgss.net/aliyun) 或 腾讯云优惠： [https://y.xgss.net/tx](https://y.xgss.net/tx) 】
+- 本篇文章在Centos7.9系统下演示，当然其他支持Docker系统亦可
+- 安装docker和docker-compose 【本篇文章不细讲，可以看星哥之前的教程或者官方文档】
 - 域名一个，下文以 passwd.xgss.net 代替（非必须，最好是备案过的域名，如果没有可以新注册个，**如果没有备案域名请购买香港或海外区域**）
-- SSL 证书一个（必须，可以申请腾讯云、阿里云免费证书）
-- 阿里或腾讯CDN 服务（可选/推荐 ）
-- 对象存储服务（可选/推荐）
+- SSL 证书一个（非必须，本篇演示用宝塔申请免费的Let's Encrypt）
+- 阿里或腾讯CDN 服务（可选/[推荐](https://y.xgss.net/acdn)  阿里云： https://y.xgss.net/acdn）
+- 对象存储服务（可选/推荐 阿里云：https://y.xgss.net/aoss）
+
+
+
+写文不易，如果你都看到了这里，请点个赞和在看，分享给更多的朋友；也别忘了关注星哥玩云！这里有满满的干货分享，还有轻松有趣的技术交流～点个赞、分享给身边的小伙伴，一起成长，一起玩转技术世界吧！ 😊
 
 
 
