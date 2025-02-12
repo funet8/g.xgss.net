@@ -37,7 +37,7 @@ XMR其实正规叫法是：门罗币 (Monero)。诞生比较晚（2014年）但�
 
 https://web.getmonero.org/zh-cn/downloads/#gui
 
-[![根据系统选择下载](images/downloadWallet.jpg)](https://imagehost.mintimate.cn/post_miner/downloadWallet.jpg)
+![img](https://imgoss.xgss.net/picgo/downloadWallet.jpg?aliyun)
 
 我这里下载Windows 64-bit (zip) 文件，解压
 
@@ -184,8 +184,6 @@ nohup ./xmrig >/dev/null 2>&1 &
 另外，经过算力测试，腾讯云的服务器实测确实不错。尤其是轻量应用服务器，2核CPU算力可以达到1k+，**同等价位的Vultr、阿里云服务器的CPU算力均不能达到**。另外最近还有活动可以低价买服务器：
 
 - [腾讯云服务器](https://y.xgss.net/tx)
-
-  
 
 - [学生轻量学生服务器(24岁免认证购买)](https://y.xgss.net/tx)
 

@@ -24,3 +24,13 @@
 
 # jumpserver
 
+## [如何安装JumpServer堡垒机](jumpserver01.md)
+
+## [开源堡垒机JumpServer配置教程：使用步骤与配置](jumpserver02.md)
+
+
+
+# 运维事故
+
+## [2025年第一起运维事故-江教在线网传删库跑路](2025年第一起运维事故-江教在线网传删库跑路.md)
+

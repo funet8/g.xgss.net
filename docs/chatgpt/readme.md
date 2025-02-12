@@ -1,5 +1,7 @@
 # 目录
 
+# ChatGPT相关
+
 ## [ChatGPT是什么、ChatGPT可以做什么](1.ChatGPT是什么、ChatGPT可以做什么.md)
 
 ## [国内如何注册ChatGPT手把手亲测可用](2.国内如何注册ChatGPT手把手亲测可用.md)
@@ -22,19 +24,31 @@
 
 ## [搭建基于Github开源项目ChatGPT的微信聊天机器人教程](11.搭建基于Github开源项目ChatGPT的微信聊天机器人教程.md)
 
-## [使用开源免费AI绘图工具神器-Stable Diffusion懒人整合包](12.试用开源免费AI绘图工具神器-StableDiffusion懒人整合包.md)
-
 ## [ChatHub一款开源全能整合AI各大聊天机器人客户端](13.ChatHub一款开源全能整合AI各大聊天机器人客户端.md)
 
 ## [免费使用GPT-4的3种方法，白嫖大模型](15.免费使用GPT-4的3种方法，白嫖大模型.md)
+
+## [本地使用GPT4All和LMstudio实现各大模型的人工智能自由](17.本地使用GPT4All和LMstudio实现各大模型的人工智能自由.md)
+
+# AI本地部署
+
+## [使用开源免费AI绘图工具神器-Stable Diffusion懒人整合包](12.试用开源免费AI绘图工具神器-StableDiffusion懒人整合包.md)
 
 ## [Windows系统下部署本地大语言模型Ollama和OpenWebUI实现Web交互界面](16.Windows系统下部署本地大语言模型：Ollama和OpenWebUI实现Web交互界面.md)
 
 ## [Ubuntu系统下部署本地大语言模型Ollama和OpenWebUI实现Web交互界面](16.Ubuntu系统下部署大语言模型：Ollama和OpenWebUI实现各大模型的人工智能自由.md)
 
-## [本地使用GPT4All和LMstudio实现各大模型的人工智能自由](17.本地使用GPT4All和LMstudio实现各大模型的人工智能自由.md)
-
 ## [Ubuntu系统安装StableDiffusion](18.Ubuntu系统安装StableDiffusion.md)
+
+## [简单3步部署本地国产大模型DeepSeek](26.简单3步部署本地国产大模型DeepSeek大模型.md)
+
+## [Ollama模型导入指南，从HuggingFace下载模型轻松上手](27.Ollama模型导入指南，从HuggingFace下载模型轻松上手.md)
+
+## [使用Ollama+Open-Webui把DeepSeek大模型分享给局域网的童鞋使用](使用Ollama+Open-Webui把DeepSeek大模型分享给局域网的童鞋使用.md)
+
+
+
+# AI开源工具部署
 
 ## [各大人工智能通过API和KEY访问的方法.md](20.各大人工智能通过API和KEY访问的方法.md)
 
@@ -61,6 +75,14 @@
 # [视频AI]
 
 ## [开源AI视频生成项目Open-Sora](14.开源AI视频生成项目Open-Sora.md)
+
+
+
+# [AI使用]
+
+## [别再说人工智能、deepseek不好用了，那是你不会这样用，赶紧收藏起来！](30.别再说人工智能、deepseek不好用了，那是你不会这样用，赶紧收藏起来！.md)
+
+
 
 
 
