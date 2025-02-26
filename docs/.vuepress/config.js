@@ -81,7 +81,7 @@ module.exports = {
      * 'solarizedlight'
      * 'tomorrow'
      */
-    codeTheme: 'tomorrow', // default 'tomorrow'
+    codeTheme: 'solarizedlight', // default 'tomorrow'
 	socialLinks: [     // 信息栏展示社交信息
         { icon: 'reco-github', link: 'https://github.com/funet8' },
         { icon: 'reco-npm', link: 'https://www.npmjs.com/~reco_luan' }
