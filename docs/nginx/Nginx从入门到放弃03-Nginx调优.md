@@ -247,7 +247,7 @@ location ~*  \.(png|gif)$ {
 
 ### 隐藏版本号
 
- 隐藏nginx的版本显示，响应头信息可以看到nginx的版本号，版本号暴露是不安全的，所以需要隐藏下nginx的版本号，配置server_tokens off;下面就看不到了。
+隐藏nginx的版本显示，响应头信息可以看到nginx的版本号，版本号暴露是不安全的，所以需要隐藏下nginx的版本号，配置server_tokens off;下面就看不到了。
 
 ```
 server_tokens off;
