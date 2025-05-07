@@ -16,6 +16,8 @@
 
 ## [大型语言模型智能应用Coze、Dify、FastGPT、MaxKB 对比，选择合适自己的LLM工具](11.大型语言模型智能应用Coze、Dify、FastGPT、MaxKB 对比，选择合适自己的LLM工具.md)
 
+## [有这好事？DeepSeek-R1-70B的大模型免费用](12.有这好事？DeepSeek-R1-70B的大模型免费用.md)
+
 
 
 # 开源
@@ -25,6 +27,14 @@
 ## [开源项目利用browser-use-webui和DeepSeek把浏览器打造成一个AI Agent智能体!](8.开源项目利用browser-use-webui和DeepSeek把浏览器打造成一个AI Agent智能体!.md)
 
 ## [介绍两款免费开源的声音克隆文本转语音整软件、一键本地安装！](10.介绍两款免费开源的声音克隆文本转语音整软件、一键本地安装！)
+
+
+
+# Dify
+
+## [Dify教程01-Dify是什么、应用场景、如何安装.md](100.Dify教程01-Dify是什么、应用场景、如何安装.md)
+
+## [Dify教程02-Dify+Deepseek零代码赋能，普通人也能开发AI应用](101.Dify教程02-Dify+Deepseek零代码赋能，普通人也能开发AI应用.md)
 
 
 
