@@ -24,7 +24,7 @@
 
 ## [最近大火的Manus是什么，本地部署开源版的OpenManus能代替Manus？](4.最近大火的Manus是什么，本地部署开源版的OpenManus能代替Manus？)
 
-## [开源项目利用browser-use-webui和DeepSeek把浏览器打造成一个AI Agent智能体!](8.开源项目利用browser-use-webui和DeepSeek把浏览器打造成一个AI Agent智能体!.md)
+## [开源项目利用browser-use-webui和DeepSeek把浏览器打造成一个AI Agent智能体!](8.开源项目利用browser-use-webui和DeepSeek.md)
 
 ## [介绍两款免费开源的声音克隆文本转语音整软件、一键本地安装！](10.介绍两款免费开源的声音克隆文本转语音整软件、一键本地安装！)
 
