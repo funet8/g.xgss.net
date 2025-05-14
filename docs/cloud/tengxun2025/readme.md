@@ -62,5 +62,10 @@
 
 ## [借助腾讯云EdgeOne Pages快速搭建DeepSeek等模板网站](7.借助腾讯云EdgeOne Pages快速搭建DeepSeek等模板网站.md)
 
+# 重磅！CodeBuddy腾讯云代码助手「首席试玩官」内容创作大赛，好礼送不停
+
+https://cloud.tencent.com/developer/article/2516978
 
 
+
+## [中国人自己的Cursor？腾讯CodeBuddy让人人都能成为程序员](8.中国人自己的Cursor？腾讯CodeBuddy让人人都能成为程序员.md)
