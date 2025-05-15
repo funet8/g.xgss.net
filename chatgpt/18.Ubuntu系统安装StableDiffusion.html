@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ubuntu系统安装开源绘图工具Stable Diffusion | 星哥私有教程</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/images/logo.png">
+    <link rel="manifest" href="/images/logo.png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <meta name="description" content="星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍">
+    <meta http-quiv="pragma" cotent="no-cache">
+    <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
+    <meta http-quiv="expires" cotent="0">
+    
+    <link rel="preload" href="/assets/css/0.styles.02e500f3.css" as="style"><link rel="preload" href="/assets/js/app.5d560444.js" as="script"><link rel="preload" href="/assets/js/6.69b26328.js" as="script"><link rel="preload" href="/assets/js/2.27d09e23.js" as="script"><link rel="preload" href="/assets/js/1.a642877b.js" as="script"><link rel="preload" href="/assets/js/92.5e7a910a.js" as="script"><link rel="prefetch" href="/assets/js/10.4293e5b2.js"><link rel="prefetch" href="/assets/js/100.792a1b82.js"><link rel="prefetch" href="/assets/js/101.4b361b34.js"><link rel="prefetch" href="/assets/js/102.bfedb260.js"><link rel="prefetch" href="/assets/js/103.7ede9f66.js"><link rel="prefetch" href="/assets/js/104.f8b37c27.js"><link rel="prefetch" href="/assets/js/105.761166b7.js"><link rel="prefetch" href="/assets/js/106.45b173d4.js"><link rel="prefetch" href="/assets/js/107.8eb4a5fd.js"><link rel="prefetch" href="/assets/js/108.1d114369.js"><link rel="prefetch" href="/assets/js/109.a0ca5105.js"><link rel="prefetch" href="/assets/js/11.91197e6c.js"><link rel="prefetch" href="/assets/js/110.bdc93256.js"><link rel="prefetch" href="/assets/js/111.2b502ecc.js"><link rel="prefetch" href="/assets/js/112.c361bbe3.js"><link rel="prefetch" href="/assets/js/113.a7d627e7.js"><link rel="prefetch" href="/assets/js/114.91ac63e6.js"><link rel="prefetch" href="/assets/js/115.f7080da5.js"><link rel="prefetch" href="/assets/js/116.8b1df51b.js"><link rel="prefetch" href="/assets/js/117.c5501faa.js"><link rel="prefetch" href="/assets/js/118.d2a512b0.js"><link rel="prefetch" href="/assets/js/119.3f97a07a.js"><link rel="prefetch" href="/assets/js/120.fc99a8d6.js"><link rel="prefetch" href="/assets/js/121.f87b308c.js"><link rel="prefetch" href="/assets/js/122.48298c49.js"><link rel="prefetch" href="/assets/js/123.0cf03db2.js"><link rel="prefetch" href="/assets/js/124.84cee958.js"><link rel="prefetch" href="/assets/js/125.0da87cc5.js"><link rel="prefetch" href="/assets/js/126.02e20e3e.js"><link rel="prefetch" href="/assets/js/127.4f2db4cc.js"><link rel="prefetch" href="/assets/js/128.1b79d270.js"><link rel="prefetch" href="/assets/js/129.2b1640e5.js"><link rel="prefetch" href="/assets/js/130.624e9af6.js"><link rel="prefetch" href="/assets/js/131.fb28f9be.js"><link rel="prefetch" href="/assets/js/132.8810ca47.js"><link rel="prefetch" href="/assets/js/133.3f843a2a.js"><link rel="prefetch" href="/assets/js/134.bb33d65d.js"><link rel="prefetch" href="/assets/js/135.330a07f5.js"><link rel="prefetch" href="/assets/js/136.30128d85.js"><link rel="prefetch" href="/assets/js/137.94c101d1.js"><link rel="prefetch" href="/assets/js/138.6364db02.js"><link rel="prefetch" href="/assets/js/139.a755ac86.js"><link rel="prefetch" href="/assets/js/14.92837d66.js"><link rel="prefetch" href="/assets/js/140.5ed9032f.js"><link rel="prefetch" href="/assets/js/141.eaa4e6f4.js"><link rel="prefetch" href="/assets/js/142.27bc9ded.js"><link rel="prefetch" href="/assets/js/143.675699cf.js"><link rel="prefetch" href="/assets/js/144.1a87609d.js"><link rel="prefetch" href="/assets/js/145.d7775c38.js"><link rel="prefetch" href="/assets/js/146.ab3f3992.js"><link rel="prefetch" href="/assets/js/147.a4514789.js"><link rel="prefetch" href="/assets/js/148.49872adb.js"><link rel="prefetch" href="/assets/js/149.d321b934.js"><link rel="prefetch" href="/assets/js/15.8ba68651.js"><link rel="prefetch" href="/assets/js/150.5f114311.js"><link rel="prefetch" href="/assets/js/151.29a059b1.js"><link rel="prefetch" href="/assets/js/152.7c7d9f71.js"><link rel="prefetch" href="/assets/js/153.0e8f67d7.js"><link rel="prefetch" href="/assets/js/154.ad2a0c93.js"><link rel="prefetch" href="/assets/js/155.3bcc40be.js"><link rel="prefetch" href="/assets/js/156.f508661e.js"><link rel="prefetch" href="/assets/js/157.894bdd06.js"><link rel="prefetch" href="/assets/js/158.fa185dc3.js"><link rel="prefetch" href="/assets/js/159.5028de78.js"><link rel="prefetch" href="/assets/js/16.5f312bee.js"><link rel="prefetch" href="/assets/js/160.07ab0450.js"><link rel="prefetch" href="/assets/js/161.7cbc6b67.js"><link rel="prefetch" href="/assets/js/162.2c765d9a.js"><link rel="prefetch" href="/assets/js/163.941b5a9e.js"><link rel="prefetch" href="/assets/js/164.68ecf760.js"><link rel="prefetch" href="/assets/js/165.26e7c433.js"><link rel="prefetch" href="/assets/js/166.eb710470.js"><link rel="prefetch" href="/assets/js/167.7928a28f.js"><link rel="prefetch" href="/assets/js/168.5b5aee83.js"><link rel="prefetch" href="/assets/js/169.2a2444c7.js"><link rel="prefetch" href="/assets/js/17.0a22b64c.js"><link rel="prefetch" href="/assets/js/170.e61251b8.js"><link rel="prefetch" href="/assets/js/171.318a2d6c.js"><link rel="prefetch" href="/assets/js/172.eff9b76b.js"><link rel="prefetch" href="/assets/js/173.74ccafa7.js"><link rel="prefetch" href="/assets/js/174.a09ed58c.js"><link rel="prefetch" href="/assets/js/175.187726b1.js"><link rel="prefetch" href="/assets/js/176.0d14c7e9.js"><link rel="prefetch" href="/assets/js/177.1743bc5c.js"><link rel="prefetch" href="/assets/js/178.cb80b8d8.js"><link rel="prefetch" href="/assets/js/179.2836a122.js"><link rel="prefetch" href="/assets/js/18.d54653ac.js"><link rel="prefetch" href="/assets/js/180.77a5f79c.js"><link rel="prefetch" href="/assets/js/181.9c77d6e3.js"><link rel="prefetch" href="/assets/js/182.3b3157e4.js"><link rel="prefetch" href="/assets/js/183.14db849d.js"><link rel="prefetch" href="/assets/js/184.17e02c8c.js"><link rel="prefetch" href="/assets/js/185.18047087.js"><link rel="prefetch" href="/assets/js/186.874151d4.js"><link rel="prefetch" href="/assets/js/187.a9850a08.js"><link rel="prefetch" href="/assets/js/188.af4db261.js"><link rel="prefetch" href="/assets/js/189.627163a2.js"><link rel="prefetch" href="/assets/js/19.7f9ba119.js"><link rel="prefetch" href="/assets/js/190.51a13f94.js"><link rel="prefetch" href="/assets/js/191.a78024ab.js"><link rel="prefetch" href="/assets/js/192.f7986146.js"><link rel="prefetch" href="/assets/js/193.0c53873a.js"><link rel="prefetch" href="/assets/js/194.a88fc7e3.js"><link rel="prefetch" href="/assets/js/195.113057f8.js"><link rel="prefetch" href="/assets/js/196.4ec9ed36.js"><link rel="prefetch" href="/assets/js/197.78020546.js"><link rel="prefetch" href="/assets/js/198.f3201318.js"><link rel="prefetch" href="/assets/js/199.6602b442.js"><link rel="prefetch" href="/assets/js/20.33ce33e3.js"><link rel="prefetch" href="/assets/js/200.b7c5a578.js"><link rel="prefetch" href="/assets/js/201.30ac55fe.js"><link rel="prefetch" href="/assets/js/202.9ddf4abe.js"><link rel="prefetch" href="/assets/js/203.7c9bab25.js"><link rel="prefetch" href="/assets/js/204.a7c192a2.js"><link rel="prefetch" href="/assets/js/205.44799dd4.js"><link rel="prefetch" href="/assets/js/206.7d3b0340.js"><link rel="prefetch" href="/assets/js/207.9368002d.js"><link rel="prefetch" href="/assets/js/208.81129442.js"><link rel="prefetch" href="/assets/js/209.e61b4a77.js"><link rel="prefetch" href="/assets/js/21.399b4e0f.js"><link rel="prefetch" href="/assets/js/210.e2b382b1.js"><link rel="prefetch" href="/assets/js/211.ff3b2fc4.js"><link rel="prefetch" href="/assets/js/212.4497e808.js"><link rel="prefetch" href="/assets/js/213.8c37b6dc.js"><link rel="prefetch" href="/assets/js/214.33f2427e.js"><link rel="prefetch" href="/assets/js/215.e3e13431.js"><link rel="prefetch" href="/assets/js/216.c851461b.js"><link rel="prefetch" href="/assets/js/217.20e44682.js"><link rel="prefetch" href="/assets/js/218.6b48096e.js"><link rel="prefetch" href="/assets/js/219.0f101e0c.js"><link rel="prefetch" href="/assets/js/22.c5f8744d.js"><link rel="prefetch" href="/assets/js/220.861f9406.js"><link rel="prefetch" href="/assets/js/221.edb6e35b.js"><link rel="prefetch" href="/assets/js/222.123aea6a.js"><link rel="prefetch" href="/assets/js/223.ee471ec2.js"><link rel="prefetch" href="/assets/js/224.39f38ade.js"><link rel="prefetch" href="/assets/js/225.729e18e5.js"><link rel="prefetch" href="/assets/js/226.7b9e92ab.js"><link rel="prefetch" href="/assets/js/227.5879e77e.js"><link rel="prefetch" href="/assets/js/228.066ad5b4.js"><link rel="prefetch" href="/assets/js/229.35323cfe.js"><link rel="prefetch" href="/assets/js/23.a46f22a6.js"><link rel="prefetch" href="/assets/js/230.d13c7a87.js"><link rel="prefetch" href="/assets/js/231.967ae2eb.js"><link rel="prefetch" href="/assets/js/232.90e9c8b0.js"><link rel="prefetch" href="/assets/js/233.73500a3e.js"><link rel="prefetch" href="/assets/js/234.70e4bfba.js"><link rel="prefetch" href="/assets/js/235.929194ec.js"><link rel="prefetch" href="/assets/js/236.556576ad.js"><link rel="prefetch" href="/assets/js/237.e8d316e6.js"><link rel="prefetch" href="/assets/js/238.040ce61c.js"><link rel="prefetch" href="/assets/js/239.cab31d8f.js"><link rel="prefetch" href="/assets/js/24.7b901163.js"><link rel="prefetch" href="/assets/js/240.58ca94f2.js"><link rel="prefetch" href="/assets/js/241.675af7e3.js"><link rel="prefetch" href="/assets/js/242.cb46b728.js"><link rel="prefetch" href="/assets/js/243.b36196f0.js"><link rel="prefetch" href="/assets/js/244.4434881b.js"><link rel="prefetch" href="/assets/js/245.730e9b94.js"><link rel="prefetch" href="/assets/js/246.170bc6a6.js"><link rel="prefetch" href="/assets/js/247.7d496766.js"><link rel="prefetch" href="/assets/js/248.53a79d30.js"><link rel="prefetch" href="/assets/js/249.c656f428.js"><link rel="prefetch" href="/assets/js/25.6721ba75.js"><link rel="prefetch" href="/assets/js/250.937c9618.js"><link rel="prefetch" href="/assets/js/251.45d47370.js"><link rel="prefetch" href="/assets/js/252.31586cac.js"><link rel="prefetch" href="/assets/js/253.4c5f1c56.js"><link rel="prefetch" href="/assets/js/254.b55d061f.js"><link rel="prefetch" href="/assets/js/255.430a5205.js"><link rel="prefetch" href="/assets/js/256.b8f0c210.js"><link rel="prefetch" href="/assets/js/257.444fbfce.js"><link rel="prefetch" href="/assets/js/258.2aea2fdf.js"><link rel="prefetch" href="/assets/js/259.a55d7e97.js"><link rel="prefetch" href="/assets/js/26.b8e268ff.js"><link rel="prefetch" href="/assets/js/260.1d978212.js"><link rel="prefetch" href="/assets/js/261.9dc8e2d0.js"><link rel="prefetch" href="/assets/js/262.106e52d7.js"><link rel="prefetch" href="/assets/js/263.33d96f41.js"><link rel="prefetch" href="/assets/js/264.6b1670a2.js"><link rel="prefetch" href="/assets/js/265.3d14ef0c.js"><link rel="prefetch" href="/assets/js/266.987d548d.js"><link rel="prefetch" href="/assets/js/267.a820b9ff.js"><link rel="prefetch" href="/assets/js/268.a269de66.js"><link rel="prefetch" href="/assets/js/269.6d654a9c.js"><link rel="prefetch" href="/assets/js/27.c5acc2c6.js"><link rel="prefetch" href="/assets/js/270.03405f8d.js"><link rel="prefetch" href="/assets/js/271.27ab2828.js"><link rel="prefetch" href="/assets/js/272.b68d6a86.js"><link rel="prefetch" href="/assets/js/273.19422139.js"><link rel="prefetch" href="/assets/js/274.7bf021c3.js"><link rel="prefetch" href="/assets/js/275.ef57cf40.js"><link rel="prefetch" href="/assets/js/276.07a8661c.js"><link rel="prefetch" href="/assets/js/277.f02f8f08.js"><link rel="prefetch" href="/assets/js/278.f994b3e0.js"><link rel="prefetch" href="/assets/js/279.a3baf49e.js"><link rel="prefetch" href="/assets/js/28.69807ec0.js"><link rel="prefetch" href="/assets/js/280.626abee7.js"><link rel="prefetch" href="/assets/js/281.add2b3e4.js"><link rel="prefetch" href="/assets/js/282.948879f0.js"><link rel="prefetch" href="/assets/js/283.ee09f985.js"><link rel="prefetch" href="/assets/js/284.81950efe.js"><link rel="prefetch" href="/assets/js/285.1353807d.js"><link rel="prefetch" href="/assets/js/286.0f72007b.js"><link rel="prefetch" href="/assets/js/287.d40eddf7.js"><link rel="prefetch" href="/assets/js/288.5f7638b8.js"><link rel="prefetch" href="/assets/js/289.b26d1d7b.js"><link rel="prefetch" href="/assets/js/29.14d56b2b.js"><link rel="prefetch" href="/assets/js/290.15584b13.js"><link rel="prefetch" href="/assets/js/291.72345897.js"><link rel="prefetch" href="/assets/js/292.fdd2e053.js"><link rel="prefetch" href="/assets/js/293.d4487201.js"><link rel="prefetch" href="/assets/js/294.b480449f.js"><link rel="prefetch" href="/assets/js/295.a1b490f4.js"><link rel="prefetch" href="/assets/js/296.180c182d.js"><link rel="prefetch" href="/assets/js/297.b0672705.js"><link rel="prefetch" href="/assets/js/298.f8be3ac3.js"><link rel="prefetch" href="/assets/js/299.f67fe965.js"><link rel="prefetch" href="/assets/js/3.2a7d62d9.js"><link rel="prefetch" href="/assets/js/30.32cce164.js"><link rel="prefetch" href="/assets/js/300.d10c5f67.js"><link rel="prefetch" href="/assets/js/301.51795ccf.js"><link rel="prefetch" href="/assets/js/302.d46db625.js"><link rel="prefetch" href="/assets/js/303.b5d1b61b.js"><link rel="prefetch" href="/assets/js/304.c0b02a34.js"><link rel="prefetch" href="/assets/js/305.75499e05.js"><link rel="prefetch" href="/assets/js/306.26a32284.js"><link rel="prefetch" href="/assets/js/307.f501c205.js"><link rel="prefetch" href="/assets/js/308.1791416f.js"><link rel="prefetch" href="/assets/js/309.3a52afb0.js"><link rel="prefetch" href="/assets/js/31.0edd9cdf.js"><link rel="prefetch" href="/assets/js/310.c26262e6.js"><link rel="prefetch" href="/assets/js/311.a183e375.js"><link rel="prefetch" href="/assets/js/312.24ce1803.js"><link rel="prefetch" href="/assets/js/313.2c136fb1.js"><link rel="prefetch" href="/assets/js/314.2abfff90.js"><link rel="prefetch" href="/assets/js/315.fe6181cc.js"><link rel="prefetch" href="/assets/js/316.8957412d.js"><link rel="prefetch" href="/assets/js/317.4190bc51.js"><link rel="prefetch" href="/assets/js/318.3f2dedf3.js"><link rel="prefetch" href="/assets/js/319.8ad9eebf.js"><link rel="prefetch" href="/assets/js/32.f61d9027.js"><link rel="prefetch" href="/assets/js/320.15fbc739.js"><link rel="prefetch" href="/assets/js/321.b99e8db1.js"><link rel="prefetch" href="/assets/js/322.a4c8fc30.js"><link rel="prefetch" href="/assets/js/323.569a1cef.js"><link rel="prefetch" href="/assets/js/324.783a5819.js"><link rel="prefetch" href="/assets/js/325.52af8c29.js"><link rel="prefetch" href="/assets/js/326.6ebffdbf.js"><link rel="prefetch" href="/assets/js/327.419390c8.js"><link rel="prefetch" href="/assets/js/328.42057c23.js"><link rel="prefetch" href="/assets/js/329.f07ac3aa.js"><link rel="prefetch" href="/assets/js/33.0f4f1d17.js"><link rel="prefetch" href="/assets/js/330.2c391f65.js"><link rel="prefetch" href="/assets/js/331.59d12871.js"><link rel="prefetch" href="/assets/js/332.93575003.js"><link rel="prefetch" href="/assets/js/333.50b52d22.js"><link rel="prefetch" href="/assets/js/334.65683d98.js"><link rel="prefetch" href="/assets/js/335.ee338089.js"><link rel="prefetch" href="/assets/js/336.600867c4.js"><link rel="prefetch" href="/assets/js/337.5d62acdc.js"><link rel="prefetch" href="/assets/js/338.f60fb5d4.js"><link rel="prefetch" href="/assets/js/339.7930a5db.js"><link rel="prefetch" href="/assets/js/34.5d0cacb8.js"><link rel="prefetch" href="/assets/js/340.9df49c80.js"><link rel="prefetch" href="/assets/js/341.889eb58d.js"><link rel="prefetch" href="/assets/js/342.9e97e534.js"><link rel="prefetch" href="/assets/js/343.d7efc8e1.js"><link rel="prefetch" href="/assets/js/344.e69a20e6.js"><link rel="prefetch" href="/assets/js/345.94546cf9.js"><link rel="prefetch" href="/assets/js/346.a21e125e.js"><link rel="prefetch" href="/assets/js/347.a3ce83aa.js"><link rel="prefetch" href="/assets/js/348.826ea2b2.js"><link rel="prefetch" href="/assets/js/349.7853d4a3.js"><link rel="prefetch" href="/assets/js/35.3391178c.js"><link rel="prefetch" href="/assets/js/350.98fd6dda.js"><link rel="prefetch" href="/assets/js/351.12b1ae60.js"><link rel="prefetch" href="/assets/js/352.cfcc4bd2.js"><link rel="prefetch" href="/assets/js/353.619c3e77.js"><link rel="prefetch" href="/assets/js/354.53ad1f43.js"><link rel="prefetch" href="/assets/js/355.b983e8ad.js"><link rel="prefetch" href="/assets/js/356.7c115748.js"><link rel="prefetch" href="/assets/js/357.e0b1e970.js"><link rel="prefetch" href="/assets/js/358.e5a2345e.js"><link rel="prefetch" href="/assets/js/359.24f05e78.js"><link rel="prefetch" href="/assets/js/36.1736c4ac.js"><link rel="prefetch" href="/assets/js/360.81c37678.js"><link rel="prefetch" href="/assets/js/361.e7419a44.js"><link rel="prefetch" href="/assets/js/362.ace12cc8.js"><link rel="prefetch" href="/assets/js/363.56e567c8.js"><link rel="prefetch" href="/assets/js/364.bf992048.js"><link rel="prefetch" href="/assets/js/365.b758ba83.js"><link rel="prefetch" href="/assets/js/366.cbf670c9.js"><link rel="prefetch" href="/assets/js/367.625e994c.js"><link rel="prefetch" href="/assets/js/368.86243716.js"><link rel="prefetch" href="/assets/js/369.0acd74d9.js"><link rel="prefetch" href="/assets/js/37.5fa1565f.js"><link rel="prefetch" href="/assets/js/370.303fd9e7.js"><link rel="prefetch" href="/assets/js/371.db1b626d.js"><link rel="prefetch" href="/assets/js/372.30237839.js"><link rel="prefetch" href="/assets/js/373.9546efef.js"><link rel="prefetch" href="/assets/js/374.1dfa20f3.js"><link rel="prefetch" href="/assets/js/375.9b22e2b0.js"><link rel="prefetch" href="/assets/js/376.ba1ee8e0.js"><link rel="prefetch" href="/assets/js/377.866305db.js"><link rel="prefetch" href="/assets/js/378.8383d05c.js"><link rel="prefetch" href="/assets/js/379.98d9c4cf.js"><link rel="prefetch" href="/assets/js/38.31e00ff5.js"><link rel="prefetch" href="/assets/js/380.4e89acd5.js"><link rel="prefetch" href="/assets/js/381.687da0bf.js"><link rel="prefetch" href="/assets/js/382.16713d62.js"><link rel="prefetch" href="/assets/js/383.a0c1cb8d.js"><link rel="prefetch" href="/assets/js/384.0838cb84.js"><link rel="prefetch" href="/assets/js/385.d6f2acd1.js"><link rel="prefetch" href="/assets/js/386.325369d6.js"><link rel="prefetch" href="/assets/js/387.46007650.js"><link rel="prefetch" href="/assets/js/388.31d6b55b.js"><link rel="prefetch" href="/assets/js/389.3104a291.js"><link rel="prefetch" href="/assets/js/39.ed773dcc.js"><link rel="prefetch" href="/assets/js/390.e50a908d.js"><link rel="prefetch" href="/assets/js/391.b611ca6c.js"><link rel="prefetch" href="/assets/js/392.67e4359c.js"><link rel="prefetch" href="/assets/js/393.fafbe589.js"><link rel="prefetch" href="/assets/js/394.fbd63805.js"><link rel="prefetch" href="/assets/js/395.1e75fb04.js"><link rel="prefetch" href="/assets/js/396.eebdcdb3.js"><link rel="prefetch" href="/assets/js/4.de636e58.js"><link rel="prefetch" href="/assets/js/40.75ce6b0e.js"><link rel="prefetch" href="/assets/js/41.cb560de0.js"><link rel="prefetch" href="/assets/js/42.fb0cfc41.js"><link rel="prefetch" href="/assets/js/43.6b0840bf.js"><link rel="prefetch" href="/assets/js/44.8d09cfb5.js"><link rel="prefetch" href="/assets/js/45.51240e62.js"><link rel="prefetch" href="/assets/js/46.211f6323.js"><link rel="prefetch" href="/assets/js/47.be16052c.js"><link rel="prefetch" href="/assets/js/48.c527e880.js"><link rel="prefetch" href="/assets/js/49.f6bd1944.js"><link rel="prefetch" href="/assets/js/5.8ed6d450.js"><link rel="prefetch" href="/assets/js/50.c23981ea.js"><link rel="prefetch" href="/assets/js/51.b15fe314.js"><link rel="prefetch" href="/assets/js/52.7639ea49.js"><link rel="prefetch" href="/assets/js/53.0eb86ad7.js"><link rel="prefetch" href="/assets/js/54.ed3edd59.js"><link rel="prefetch" href="/assets/js/55.6603a455.js"><link rel="prefetch" href="/assets/js/56.bb58d4b6.js"><link rel="prefetch" href="/assets/js/57.ea5b296d.js"><link rel="prefetch" href="/assets/js/58.a632b145.js"><link rel="prefetch" href="/assets/js/59.8c1a4402.js"><link rel="prefetch" href="/assets/js/60.b36489f9.js"><link rel="prefetch" href="/assets/js/61.1c5762b6.js"><link rel="prefetch" href="/assets/js/62.5ad8a56f.js"><link rel="prefetch" href="/assets/js/63.93cb6a04.js"><link rel="prefetch" href="/assets/js/64.618da899.js"><link rel="prefetch" href="/assets/js/65.796cb868.js"><link rel="prefetch" href="/assets/js/66.210dbf6f.js"><link rel="prefetch" href="/assets/js/67.5cb4fa40.js"><link rel="prefetch" href="/assets/js/68.c9a2e237.js"><link rel="prefetch" href="/assets/js/69.09f7dfc5.js"><link rel="prefetch" href="/assets/js/7.3071659c.js"><link rel="prefetch" href="/assets/js/70.9177084f.js"><link rel="prefetch" href="/assets/js/71.ed961fe5.js"><link rel="prefetch" href="/assets/js/72.d0b57308.js"><link rel="prefetch" href="/assets/js/73.77c42cc9.js"><link rel="prefetch" href="/assets/js/74.54d084d8.js"><link rel="prefetch" href="/assets/js/75.991bd29c.js"><link rel="prefetch" href="/assets/js/76.545ee447.js"><link rel="prefetch" href="/assets/js/77.54639f8d.js"><link rel="prefetch" href="/assets/js/78.32ce8f94.js"><link rel="prefetch" href="/assets/js/79.af1dc28a.js"><link rel="prefetch" href="/assets/js/8.95745524.js"><link rel="prefetch" href="/assets/js/80.8cb87fe1.js"><link rel="prefetch" href="/assets/js/81.391fb58d.js"><link rel="prefetch" href="/assets/js/82.6f91a95d.js"><link rel="prefetch" href="/assets/js/83.d064b0b6.js"><link rel="prefetch" href="/assets/js/84.95b8c015.js"><link rel="prefetch" href="/assets/js/85.f08e2457.js"><link rel="prefetch" href="/assets/js/86.6bf7dd17.js"><link rel="prefetch" href="/assets/js/87.2e205aa0.js"><link rel="prefetch" href="/assets/js/88.237e8561.js"><link rel="prefetch" href="/assets/js/89.68aa61b1.js"><link rel="prefetch" href="/assets/js/9.0ffa89b7.js"><link rel="prefetch" href="/assets/js/90.5ebf528f.js"><link rel="prefetch" href="/assets/js/91.73119cce.js"><link rel="prefetch" href="/assets/js/93.3d23bb54.js"><link rel="prefetch" href="/assets/js/94.cd7cf047.js"><link rel="prefetch" href="/assets/js/95.4f2f86be.js"><link rel="prefetch" href="/assets/js/96.946d4800.js"><link rel="prefetch" href="/assets/js/97.60d85d7e.js"><link rel="prefetch" href="/assets/js/98.16d86374.js"><link rel="prefetch" href="/assets/js/99.83a8364f.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.fd160284.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.02e500f3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-130b300a><div data-v-130b300a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-130b300a data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>星哥私有教程</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2025
+        </a></span></div></div> <div class="hide" data-v-130b300a><header class="navbar" data-v-130b300a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">星哥私有教程</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/jumpserver/" class="nav-link"><i class="undefined"></i>
+  JumpServer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      云服务
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud/aliyun/" class="nav-link"><i class="undefined"></i>
+  阿里云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/tengxunyun/" class="nav-link"><i class="undefined"></i>
+  腾讯云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/aws/" class="nav-link"><i class="undefined"></i>
+  亚马逊云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/other/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-130b300a></div> <aside class="sidebar" data-v-130b300a><div class="personal-info-wrapper" data-v-39576ba9 data-v-130b300a><!----> <!----> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>357</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>0</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/jumpserver/" class="nav-link"><i class="undefined"></i>
+  JumpServer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      云服务
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud/aliyun/" class="nav-link"><i class="undefined"></i>
+  阿里云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/tengxunyun/" class="nav-link"><i class="undefined"></i>
+  腾讯云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/aws/" class="nav-link"><i class="undefined"></i>
+  亚马逊云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/other/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/linux-basis/" class="sidebar-link">基础知识</a></li><li><a href="/git/" class="sidebar-link">Git服务</a></li><li><a href="/safe/" class="sidebar-link">网络安全</a></li><li><a href="/kaiyuan/Open-Source-Software/" class="sidebar-link">开源软件</a></li><li><a href="/mysql/" class="sidebar-link">MySQL</a></li><li><a href="/nginx/" class="sidebar-link">Nginx</a></li><li><a href="/chatgpt/" aria-current="page" class="sidebar-link">ChatGPT</a></li><li><a href="/shell/" class="sidebar-link">Shell</a></li><li><a href="/Ubuntu/" class="sidebar-link">Ubuntu</a></li><li><a href="/hardware/" class="sidebar-link">硬件</a></li><li><a href="/NAS/" class="sidebar-link">NAS</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2></h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2025
+        </a></span></div></div> <div data-v-130b300a><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">Ubuntu系统安装开源绘图工具Stable Diffusion</h1> <div data-v-f875f3fc><!----> <!----> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/chatgpt/18.Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85StableDiffusion.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="ubuntu系统安装开源绘图工具stable-diffusion"><a href="#ubuntu系统安装开源绘图工具stable-diffusion" class="header-anchor">#</a> Ubuntu系统安装开源绘图工具Stable Diffusion</h1> <h1 id="系统环境"><a href="#系统环境" class="header-anchor">#</a> 系统环境</h1> <p>操作系统：Ubuntu 22.04.2 LTS</p> <p>Ubuntu 22.04.4 LTS</p> <p>CPU: i5-10400F</p> <p>内存：32G</p> <p>硬盘： 512G SSD</p> <p>显卡： NVIDIA GeForce GTX 1060 6GB</p> <p>内网IP: 192.168.1.21</p> <h1 id="docker安装"><a href="#docker安装" class="header-anchor">#</a> Docker安装</h1> <h2 id="安装docker"><a href="#安装docker" class="header-anchor">#</a> 安装docker</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>curl -sSL https://get.docker.com/ | sh
+
+systemctl start docker
+
+systemctl enable docker.service
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h1 id="基于docker安装diffusion-webui-安装失败"><a href="#基于docker安装diffusion-webui-安装失败" class="header-anchor">#</a> 基于Docker安装Diffusion Webui（安装失败）</h1> <p>参考： https://hub.docker.com/r/siutin/stable-diffusion-webui-docker</p> <h2 id="run-with-cuda"><a href="#run-with-cuda" class="header-anchor">#</a> Run with CUDA</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>拉取镜像：
+
+# docker pull siutin/stable-diffusion-webui-docker
+
+创建目录：
+# mkdir /root/stable-diffusion
+
+# docker run -itd --name sdw --gpus all --network host   -v /root/stable-diffusion/models:/app/stable-diffusion-webui/models   -v /root/stable-diffusion/outputs:/app/stable-diffusion-webui/outputs   --rm siutin/stable-diffusion-webui-docker:latest-cuda   bash webui.sh --share
+ 
+ 
+输出消息： 
+Stable diffusion model failed to load
+Applying attention optimization: Doggettx... done.
+Running on local URL:  http://127.0.0.1:7860
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="模型下载失败报错"><a href="#模型下载失败报错" class="header-anchor">#</a> 模型下载失败报错：</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>Stable diffusion model failed to load
+Applying attention optimization: Doggettx... done.
+Running on local URL:  http://127.0.0.1:7860
+
+Could not create share link. Missing file: /app/stable-diffusion-webui/venv/lib/python3.10/site-packages/gradio/frpc_linux_amd64_v0.2. 
+
+Please check your internet connection. This can happen if your antivirus software blocks the download of this file. You can install manually by following these steps: 
+
+1. Download this file: https://cdn-media.huggingface.co/frpc-gradio-0.2/frpc_linux_amd64
+2. Rename the downloaded file to: frpc_linux_amd64_v0.2
+3. Move the file to this location: /app/stable-diffusion-webui/venv/lib/python3.10/site-packages/gradio
+Startup time: 279.3s (prepare environment: 1.7s, import torch: 3.1s, import gradio: 0.7s, setup paths: 0.8s, initialize shared: 0.1s, other imports: 0.5s, list SD models: 135.2s, load scripts: 0.4s, create ui: 0.5s, gradio launch: 136.3s).
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>由于网络问题，模型下载失败。</p> <p>查看镜像</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># docker ps
+CONTAINER ID   IMAGE                                                      COMMAND                   CREATED         STATUS         PORTS                                       NAMES
+12f384716f6d   siutin/stable-diffusion-webui-docker:latest-cuda           &quot;/opt/nvidia/nvidia_…&quot;   4 minutes ago   Up 4 minutes                                               sdw
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>使用浏览器访问：IP+端口，http://127.0.0.1:7860</p> <p><img src="https://imgoss.xgss.net/picgo/image-20240522160449325.png?aliyun" alt="image-20240522160449325"></p> <h1 id="普通安装-stable-diffusion-安装失败"><a href="#普通安装-stable-diffusion-安装失败" class="header-anchor">#</a> 普通安装 Stable Diffusion（安装失败）</h1> <p>如果通过docker安装成功之后，这步可以不用操作。</p> <h2 id="一、建立安装空间和python虚拟环境"><a href="#一、建立安装空间和python虚拟环境" class="header-anchor">#</a> 一、建立安装空间和python虚拟环境</h2> <p>在硬盘上建立一个AiSpace的文件夹，未来所有的安装和配置都在这个文件夹下进行。</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>$ sudo -i
+在root用户下操作
+# mkdir StableDiffusion
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>在StableDiffusion文件里建立虚拟环境。</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>cd   StableDiffusion
+apt install python3.10-venv
+python3.10 -m venv .
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>进入到Python虚拟环境</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>source bin/activate
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="二、在python虚拟环境下-进行stable-diffusion的基础安装"><a href="#二、在python虚拟环境下-进行stable-diffusion的基础安装" class="header-anchor">#</a> 二、在Python虚拟环境下，进行Stable Diffusion的基础安装</h2> <p>在StableDiffusion目录下，clone到Stable Diffusion文件。直接stable-diffusion-webui，省点事儿。</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>进入到stable-diffusion-webui，安装运行需要的包。</p> <div class="language-text line-numbers-mode"><pre class="language-text"><code>cd stable-diffusion-webui
+
+修改pip源为阿里:
+step1 设置pip的全局安装源为阿里云镜像
+pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
+step2 设置pip安装时信任的主机地址
+pip config set install.trusted-host mirrors.aliyun.com
+
+
+升级pip：
+python3 -m pip install --upgrade pip 
+
+pip3 install -r requirements_versions.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>小提示：</p> <p>1、pip一开始用的清华的源，不知道为什么有一些包找不到或者不兼容，很费解。换成阿里的就好用了。</p> <p>2、basicsr安装的及其费尽，耗时特别长，没找到什么好的解决办法。</p> <p>3、如果cache里面有了以前的包，如果没什么其他项目的关联，可以考虑先删除干净。目录是～/.cacha/pip</p> <h2 id="三、启动stable-diffusion"><a href="#三、启动stable-diffusion" class="header-anchor">#</a> 三、启动Stable Diffusion</h2> <div class="language-text line-numbers-mode"><pre class="language-text"><code>python launch.py
+
+运行的时候，还会安装很多的包。一定要保证github的访问畅通。如果连接断开了，就再次执行命令，直到运行成功
+
+Running on local URL:  http://127.0.0.1:7860
+
+To create a public link, set `share=True` in `launch()`.
+Startup time: 227.0s (prepare environment: 85.5s, import torch: 3.6s, import gradio: 0.6s, setup paths: 0.7s, initialize shared: 0.1s, other imports: 0.6s, list SD models: 135.0s, load scripts: 0.3s, create ui: 0.4s, add APIs: 0.1s).
+
+有报错：no module 'xformers'. Processing without
+
+pip3 install transformers
+
+
+
+后台运行，并且把错误日志输出到文件中：
+source /home/star/StableDiffusion/bin/activate
+nohup python launch.py &gt;/dev/null 2&gt; stable-diffusion-webui.log &amp;amp;
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>在浏览器中输入IP+7860 端口访问 Stable Diffusion</p> <p><img src="https://imgoss.xgss.net/picgo/image-20240521182607668.png?aliyun" alt="image-20240521182607668"></p> <h1 id="利用anaconda进行安装-安装失败"><a href="#利用anaconda进行安装-安装失败" class="header-anchor">#</a> 利用Anaconda进行安装（安装失败）</h1> <h2 id="_1-下载安装包"><a href="#_1-下载安装包" class="header-anchor">#</a> 1.下载安装包</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir sd
+cd sd
+wget http://repo.continuum.io/archive/Anaconda3-5.3.1-Linux-x86_64.sh
+
+wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-5.3.1-Linux-x86_64.sh
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>除了上面的下载方式，也可到<a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener noreferrer">清华软件镜像站<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>直接下载安装包，并上传到主机上</p> <h2 id="_2-安装anaconda"><a href="#_2-安装anaconda" class="header-anchor">#</a> 2.安装Anaconda</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>bash Anaconda3-5.3.1-Linux-x86_64.sh 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><img src="https://imgoss.xgss.net/picgo/image-20240529170446192.png?aliyun" alt="image-20240529170446192"></p> <h2 id="_3-安装完成"><a href="#_3-安装完成" class="header-anchor">#</a> 3.安装完成</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ conda info
+     active environment : base
+    active env location : /home/star/anaconda3
+            shell level : 1
+       user config file : /home/star/.condarc
+ populated config files : 
+          conda version : 4.5.11
+    conda-build version : 3.15.1
+         python version : 3.7.0.final.0
+       base environment : /home/star/anaconda3  (writable)
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/free/linux-64
+                          https://repo.anaconda.com/pkgs/free/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+                          https://repo.anaconda.com/pkgs/pro/linux-64
+                          https://repo.anaconda.com/pkgs/pro/noarch
+          package cache : /home/star/anaconda3/pkgs
+                          /home/star/.conda/pkgs
+       envs directories : /home/star/anaconda3/envs
+                          /home/star/.conda/envs
+               platform : linux-64
+             user-agent : conda/4.5.11 requests/2.19.1 CPython/3.7.0 Linux/6.5.0-35-generic ubuntu/22.04 glibc/2.35
+                UID:GID : 1000:1000
+             netrc file : None
+           offline mode : False
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h2 id="_4-anaconda简单使用"><a href="#_4-anaconda简单使用" class="header-anchor">#</a> 4.Anaconda简单使用</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+1、创建环境：conda create -n &lt;env_name&gt; &lt;packages&gt;
+例如：conda create -n python3.10.9 python==3.10.9
+
+2、激活环境：conda activate &lt;env_name&gt;
+
+3、退出环境：conda deactivate &lt;env_name&gt;
+
+4、查看已安装的环境信息：conda env list
+
+5、复制环境：conda create -n &lt;new_env_name&gt; --clone &lt;origin_env_name&gt;
+
+6、删除环境：conda env remove -n &lt;env_name&gt;
+
+7、保存环境信息到environment.yaml文件中：conda env export &gt; environment.yaml
+
+8、通过environment.yaml环境文件创建文件： conda env create -f environment.yaml
+
+9、查看已安装的包：conda list
+
+10、搜索包：conda search &lt;package_name1&gt;
+
+11、安装包：conda install &lt;package_name1&gt; &lt;package_name2&gt;
+
+12、卸载包：conda remove &lt;package_name&gt;
+
+5).虚拟环境创建好之后建议：升级 pip 到最新的版本 (&gt;=10.0.0) 后进行配置：
+
+python -m pip install --upgrade pip
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><h2 id="_5-克隆-stable-diffusion-webui-项目"><a href="#_5-克隆-stable-diffusion-webui-项目" class="header-anchor">#</a> 5.克隆 stable-diffusion-webui 项目</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h1 id="激活你的python3-10的虚拟环境"><a href="#激活你的python3-10的虚拟环境" class="header-anchor">#</a> 激活你的python3.10的虚拟环境</h1> <h2 id="_1-安装pytorch"><a href="#_1-安装pytorch" class="header-anchor">#</a> 1.安装pytorch</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>$ nvcc --version
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Thu_Nov_18_09:45:30_PST_2021
+Cuda compilation tools, release 11.5, V11.5.119
+Build cuda_11.5.r11.5/compiler.30672275_0
+
+具体需要根据你们自己的cuda version版本去对应下载
+
+
+阿里云的命令，因为cuda version是10.2
+pip install torch==1.11.0+cu102 torchvision==0.12.0+cu102 --extra-index-url https://download.pytorch.org/whl/cu116
+
+华为云上的命令，cuda version是11.2
+pip install torch==1.12.1+cu116 torchvision==0.13.1+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="_2-安装webui依赖"><a href="#_2-安装webui依赖" class="header-anchor">#</a> 2.安装webui依赖</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+cd stable-diffusion-webui
+
+先执行：
+pip install -r requirements_versions.txt
+再执行：
+pip install -r requirements.txt
+
+这边有可能有一些小坑需要注意:如果有一些包安装不上，你可以自己pip install 对应包，还有就是我在华为云上安装的时候，一开始一直有问题，发现是因为华为云pip直接调用的是https://repo.huaweicloud.com/repository/pypi/simple，导致很多包装不上，这边你可以切换到清华源上https://pypi.tuna.tsinghua.edu.cn/simple/。
+
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h1 id="更换中文"><a href="#更换中文" class="header-anchor">#</a> 更换中文</h1> <p>选择Extensions菜单 ---&gt; 选择Available ---&gt;Extension index URL使用默认的地址就可以</p> <p>将ads，localization，installed勾选掉</p> <p>点击 Load from</p> <p><img src="https://imgoss.xgss.net/picgo/image-20240521183027534.png?aliyun" alt="image-20240521183027534"></p> <p>在列表里面找到“Zh_CN Localization”，点击Install</p> <p><img src="https://imgoss.xgss.net/picgo/image-20240521183152776.png?aliyun" alt="image-20240521183152776"></p> <p>选择Settings→User interface，下拉找到Localization栏，选择zh_CN</p> <p>点击保存设置，并重启</p> <p><img src="https://imgoss.xgss.net/picgo/d18b6c7d0b2946b3abb7eec96e63d7a6.png?aliyun" alt="img"></p> <p>更换中文成功</p> <p><img src="https://imgoss.xgss.net/picgo/image-20240522110859139.png?aliyun" alt="image-20240522110859139"></p> <h1 id="下载模型"><a href="#下载模型" class="header-anchor">#</a> 下载模型</h1> <p>由于我的系统是国内网络，下载模型会很慢，报错。在其他电脑（有科学上网）上浏览器输入 https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors 这个地址下载，在上传到 stable-diffusion-webui 目录中。</p> <p>或者用国内的网站下载</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>启动Stable Diffusion时会
+
+Downloading: &quot;https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors&quot; to /home/star/StableDiffusion/stable-diffusion-webui/models/Stable-diffusion/v1-5-pruned-emaonly.safetensors
+Stable diffusion model failed to load
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><img src="https://imgoss.xgss.net/picgo/image-20240522094645052.png?aliyun" alt="image-20240522094645052"></p> <p>这时：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># ll /home/star/StableDiffusion/stable-diffusion-webui/models/Stable-diffusion/v1-5-pruned-emaonly.safetensors
+-rw-r--r-- 1 root root 4265146304  5月 22 10:04 /home/star/StableDiffusion/stable-diffusion-webui/models/Stable-diffusion/v1-5-pruned-emaonly.safetensors
+
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="国内下载模型"><a href="#国内下载模型" class="header-anchor">#</a> 国内下载模型</h2> <p>由于huggingface连不上，所以需要使用huggingface的镜像地址来下载。考虑到下载过程比较慢，所以考虑先下载到本地再使用。</p> <p>模型文件：v1-5-pruned-emaonly.ckpt，v1-5-pruned-emaonly.safetensors</p> <p>模型下载地址：<a href="https://aliendao.cn/models/runwayml/stable-diffusion-v1-5#/" target="_blank" rel="noopener noreferrer">互链高科<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> https://aliendao.cn/models/runwayml/stable-diffusion-v1-5#/</p> <p>把模型下载到\models\Stable-diffusion目录中</p> <p>在项目的目录下，创建.cache/huggingface/openai/clip-vit-large-patch14文件夹，然后下载参数文件放在里面</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>cd /home/star/StableDiffusion/stable-diffusion-webui
+mkdir -p .cache/huggingface/openai/clip-vit-large-patch14
+cd .cache/huggingface/openai/clip-vit-large-patch14
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>参数文件：vocab.json，tokenizer_config.json，special_tokens_map.json，merges.txt，config.json</p> <p>参数文件下载地址：<a href="https://aliendao.cn/models/openai/clip-vit-large-patch14#/" target="_blank" rel="noopener noreferrer">互链高科<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> https://aliendao.cn/models/openai/clip-vit-large-patch14#/</p> <p><img src="https://imgoss.xgss.net/picgo/image-20240522112805799.png?aliyun" alt="image-20240522112805799"></p> <h2 id="修改项目代码"><a href="#修改项目代码" class="header-anchor">#</a> 修改项目代码</h2> <p>文件：repositories/stable-diffusion-stability-ai/ldm/modules/encoders/modules.py</p> <p>第100行的__init__方法中，version是openai/clip-vit-large-patch14，把这个值改为自己的保存参数文件的目录</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>vim repositories/stable-diffusion-stability-ai/ldm/modules/encoders/modules.py
+
+把 def __init__(self, version=&quot;openai/clip-vit-large-patch14&quot;, device=&quot;cuda&quot;, max_length=77,
+
+改成你自己的地址：
+
+def __init__(self, version=&quot;/home/star/StableDiffusion/stable-diffusion-webui/.cache/huggingface/openai/clip-vit-large-patch14&quot;, device=&quot;cuda&quot;, max_length=77,
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><img src="https://imgoss.xgss.net/picgo/image-20240522133648589.png?aliyun" alt="image-20240522133648589"></p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.5d560444.js" defer></script><script src="/assets/js/6.69b26328.js" defer></script><script src="/assets/js/2.27d09e23.js" defer></script><script src="/assets/js/1.a642877b.js" defer></script><script src="/assets/js/92.5e7a910a.js" defer></script>
+  </body>
+</html>

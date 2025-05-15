@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>中国人自己的Cursor？腾讯CodeBuddy从零打造家庭相册 | 星哥私有教程</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/images/logo.png">
+    <link rel="manifest" href="/images/logo.png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
+    <meta name="description" content="星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍">
+    <meta http-quiv="pragma" cotent="no-cache">
+    <meta http-quiv="pragma" cotent="no-cache,must-revalidate">
+    <meta http-quiv="expires" cotent="0">
+    
+    <link rel="preload" href="/assets/css/0.styles.02e500f3.css" as="style"><link rel="preload" href="/assets/js/app.5d560444.js" as="script"><link rel="preload" href="/assets/js/6.69b26328.js" as="script"><link rel="preload" href="/assets/js/2.27d09e23.js" as="script"><link rel="preload" href="/assets/js/1.a642877b.js" as="script"><link rel="preload" href="/assets/js/133.3f843a2a.js" as="script"><link rel="prefetch" href="/assets/js/10.4293e5b2.js"><link rel="prefetch" href="/assets/js/100.792a1b82.js"><link rel="prefetch" href="/assets/js/101.4b361b34.js"><link rel="prefetch" href="/assets/js/102.bfedb260.js"><link rel="prefetch" href="/assets/js/103.7ede9f66.js"><link rel="prefetch" href="/assets/js/104.f8b37c27.js"><link rel="prefetch" href="/assets/js/105.761166b7.js"><link rel="prefetch" href="/assets/js/106.45b173d4.js"><link rel="prefetch" href="/assets/js/107.8eb4a5fd.js"><link rel="prefetch" href="/assets/js/108.1d114369.js"><link rel="prefetch" href="/assets/js/109.a0ca5105.js"><link rel="prefetch" href="/assets/js/11.91197e6c.js"><link rel="prefetch" href="/assets/js/110.bdc93256.js"><link rel="prefetch" href="/assets/js/111.2b502ecc.js"><link rel="prefetch" href="/assets/js/112.c361bbe3.js"><link rel="prefetch" href="/assets/js/113.a7d627e7.js"><link rel="prefetch" href="/assets/js/114.91ac63e6.js"><link rel="prefetch" href="/assets/js/115.f7080da5.js"><link rel="prefetch" href="/assets/js/116.8b1df51b.js"><link rel="prefetch" href="/assets/js/117.c5501faa.js"><link rel="prefetch" href="/assets/js/118.d2a512b0.js"><link rel="prefetch" href="/assets/js/119.3f97a07a.js"><link rel="prefetch" href="/assets/js/120.fc99a8d6.js"><link rel="prefetch" href="/assets/js/121.f87b308c.js"><link rel="prefetch" href="/assets/js/122.48298c49.js"><link rel="prefetch" href="/assets/js/123.0cf03db2.js"><link rel="prefetch" href="/assets/js/124.84cee958.js"><link rel="prefetch" href="/assets/js/125.0da87cc5.js"><link rel="prefetch" href="/assets/js/126.02e20e3e.js"><link rel="prefetch" href="/assets/js/127.4f2db4cc.js"><link rel="prefetch" href="/assets/js/128.1b79d270.js"><link rel="prefetch" href="/assets/js/129.2b1640e5.js"><link rel="prefetch" href="/assets/js/130.624e9af6.js"><link rel="prefetch" href="/assets/js/131.fb28f9be.js"><link rel="prefetch" href="/assets/js/132.8810ca47.js"><link rel="prefetch" href="/assets/js/134.bb33d65d.js"><link rel="prefetch" href="/assets/js/135.330a07f5.js"><link rel="prefetch" href="/assets/js/136.30128d85.js"><link rel="prefetch" href="/assets/js/137.94c101d1.js"><link rel="prefetch" href="/assets/js/138.6364db02.js"><link rel="prefetch" href="/assets/js/139.a755ac86.js"><link rel="prefetch" href="/assets/js/14.92837d66.js"><link rel="prefetch" href="/assets/js/140.5ed9032f.js"><link rel="prefetch" href="/assets/js/141.eaa4e6f4.js"><link rel="prefetch" href="/assets/js/142.27bc9ded.js"><link rel="prefetch" href="/assets/js/143.675699cf.js"><link rel="prefetch" href="/assets/js/144.1a87609d.js"><link rel="prefetch" href="/assets/js/145.d7775c38.js"><link rel="prefetch" href="/assets/js/146.ab3f3992.js"><link rel="prefetch" href="/assets/js/147.a4514789.js"><link rel="prefetch" href="/assets/js/148.49872adb.js"><link rel="prefetch" href="/assets/js/149.d321b934.js"><link rel="prefetch" href="/assets/js/15.8ba68651.js"><link rel="prefetch" href="/assets/js/150.5f114311.js"><link rel="prefetch" href="/assets/js/151.29a059b1.js"><link rel="prefetch" href="/assets/js/152.7c7d9f71.js"><link rel="prefetch" href="/assets/js/153.0e8f67d7.js"><link rel="prefetch" href="/assets/js/154.ad2a0c93.js"><link rel="prefetch" href="/assets/js/155.3bcc40be.js"><link rel="prefetch" href="/assets/js/156.f508661e.js"><link rel="prefetch" href="/assets/js/157.894bdd06.js"><link rel="prefetch" href="/assets/js/158.fa185dc3.js"><link rel="prefetch" href="/assets/js/159.5028de78.js"><link rel="prefetch" href="/assets/js/16.5f312bee.js"><link rel="prefetch" href="/assets/js/160.07ab0450.js"><link rel="prefetch" href="/assets/js/161.7cbc6b67.js"><link rel="prefetch" href="/assets/js/162.2c765d9a.js"><link rel="prefetch" href="/assets/js/163.941b5a9e.js"><link rel="prefetch" href="/assets/js/164.68ecf760.js"><link rel="prefetch" href="/assets/js/165.26e7c433.js"><link rel="prefetch" href="/assets/js/166.eb710470.js"><link rel="prefetch" href="/assets/js/167.7928a28f.js"><link rel="prefetch" href="/assets/js/168.5b5aee83.js"><link rel="prefetch" href="/assets/js/169.2a2444c7.js"><link rel="prefetch" href="/assets/js/17.0a22b64c.js"><link rel="prefetch" href="/assets/js/170.e61251b8.js"><link rel="prefetch" href="/assets/js/171.318a2d6c.js"><link rel="prefetch" href="/assets/js/172.eff9b76b.js"><link rel="prefetch" href="/assets/js/173.74ccafa7.js"><link rel="prefetch" href="/assets/js/174.a09ed58c.js"><link rel="prefetch" href="/assets/js/175.187726b1.js"><link rel="prefetch" href="/assets/js/176.0d14c7e9.js"><link rel="prefetch" href="/assets/js/177.1743bc5c.js"><link rel="prefetch" href="/assets/js/178.cb80b8d8.js"><link rel="prefetch" href="/assets/js/179.2836a122.js"><link rel="prefetch" href="/assets/js/18.d54653ac.js"><link rel="prefetch" href="/assets/js/180.77a5f79c.js"><link rel="prefetch" href="/assets/js/181.9c77d6e3.js"><link rel="prefetch" href="/assets/js/182.3b3157e4.js"><link rel="prefetch" href="/assets/js/183.14db849d.js"><link rel="prefetch" href="/assets/js/184.17e02c8c.js"><link rel="prefetch" href="/assets/js/185.18047087.js"><link rel="prefetch" href="/assets/js/186.874151d4.js"><link rel="prefetch" href="/assets/js/187.a9850a08.js"><link rel="prefetch" href="/assets/js/188.af4db261.js"><link rel="prefetch" href="/assets/js/189.627163a2.js"><link rel="prefetch" href="/assets/js/19.7f9ba119.js"><link rel="prefetch" href="/assets/js/190.51a13f94.js"><link rel="prefetch" href="/assets/js/191.a78024ab.js"><link rel="prefetch" href="/assets/js/192.f7986146.js"><link rel="prefetch" href="/assets/js/193.0c53873a.js"><link rel="prefetch" href="/assets/js/194.a88fc7e3.js"><link rel="prefetch" href="/assets/js/195.113057f8.js"><link rel="prefetch" href="/assets/js/196.4ec9ed36.js"><link rel="prefetch" href="/assets/js/197.78020546.js"><link rel="prefetch" href="/assets/js/198.f3201318.js"><link rel="prefetch" href="/assets/js/199.6602b442.js"><link rel="prefetch" href="/assets/js/20.33ce33e3.js"><link rel="prefetch" href="/assets/js/200.b7c5a578.js"><link rel="prefetch" href="/assets/js/201.30ac55fe.js"><link rel="prefetch" href="/assets/js/202.9ddf4abe.js"><link rel="prefetch" href="/assets/js/203.7c9bab25.js"><link rel="prefetch" href="/assets/js/204.a7c192a2.js"><link rel="prefetch" href="/assets/js/205.44799dd4.js"><link rel="prefetch" href="/assets/js/206.7d3b0340.js"><link rel="prefetch" href="/assets/js/207.9368002d.js"><link rel="prefetch" href="/assets/js/208.81129442.js"><link rel="prefetch" href="/assets/js/209.e61b4a77.js"><link rel="prefetch" href="/assets/js/21.399b4e0f.js"><link rel="prefetch" href="/assets/js/210.e2b382b1.js"><link rel="prefetch" href="/assets/js/211.ff3b2fc4.js"><link rel="prefetch" href="/assets/js/212.4497e808.js"><link rel="prefetch" href="/assets/js/213.8c37b6dc.js"><link rel="prefetch" href="/assets/js/214.33f2427e.js"><link rel="prefetch" href="/assets/js/215.e3e13431.js"><link rel="prefetch" href="/assets/js/216.c851461b.js"><link rel="prefetch" href="/assets/js/217.20e44682.js"><link rel="prefetch" href="/assets/js/218.6b48096e.js"><link rel="prefetch" href="/assets/js/219.0f101e0c.js"><link rel="prefetch" href="/assets/js/22.c5f8744d.js"><link rel="prefetch" href="/assets/js/220.861f9406.js"><link rel="prefetch" href="/assets/js/221.edb6e35b.js"><link rel="prefetch" href="/assets/js/222.123aea6a.js"><link rel="prefetch" href="/assets/js/223.ee471ec2.js"><link rel="prefetch" href="/assets/js/224.39f38ade.js"><link rel="prefetch" href="/assets/js/225.729e18e5.js"><link rel="prefetch" href="/assets/js/226.7b9e92ab.js"><link rel="prefetch" href="/assets/js/227.5879e77e.js"><link rel="prefetch" href="/assets/js/228.066ad5b4.js"><link rel="prefetch" href="/assets/js/229.35323cfe.js"><link rel="prefetch" href="/assets/js/23.a46f22a6.js"><link rel="prefetch" href="/assets/js/230.d13c7a87.js"><link rel="prefetch" href="/assets/js/231.967ae2eb.js"><link rel="prefetch" href="/assets/js/232.90e9c8b0.js"><link rel="prefetch" href="/assets/js/233.73500a3e.js"><link rel="prefetch" href="/assets/js/234.70e4bfba.js"><link rel="prefetch" href="/assets/js/235.929194ec.js"><link rel="prefetch" href="/assets/js/236.556576ad.js"><link rel="prefetch" href="/assets/js/237.e8d316e6.js"><link rel="prefetch" href="/assets/js/238.040ce61c.js"><link rel="prefetch" href="/assets/js/239.cab31d8f.js"><link rel="prefetch" href="/assets/js/24.7b901163.js"><link rel="prefetch" href="/assets/js/240.58ca94f2.js"><link rel="prefetch" href="/assets/js/241.675af7e3.js"><link rel="prefetch" href="/assets/js/242.cb46b728.js"><link rel="prefetch" href="/assets/js/243.b36196f0.js"><link rel="prefetch" href="/assets/js/244.4434881b.js"><link rel="prefetch" href="/assets/js/245.730e9b94.js"><link rel="prefetch" href="/assets/js/246.170bc6a6.js"><link rel="prefetch" href="/assets/js/247.7d496766.js"><link rel="prefetch" href="/assets/js/248.53a79d30.js"><link rel="prefetch" href="/assets/js/249.c656f428.js"><link rel="prefetch" href="/assets/js/25.6721ba75.js"><link rel="prefetch" href="/assets/js/250.937c9618.js"><link rel="prefetch" href="/assets/js/251.45d47370.js"><link rel="prefetch" href="/assets/js/252.31586cac.js"><link rel="prefetch" href="/assets/js/253.4c5f1c56.js"><link rel="prefetch" href="/assets/js/254.b55d061f.js"><link rel="prefetch" href="/assets/js/255.430a5205.js"><link rel="prefetch" href="/assets/js/256.b8f0c210.js"><link rel="prefetch" href="/assets/js/257.444fbfce.js"><link rel="prefetch" href="/assets/js/258.2aea2fdf.js"><link rel="prefetch" href="/assets/js/259.a55d7e97.js"><link rel="prefetch" href="/assets/js/26.b8e268ff.js"><link rel="prefetch" href="/assets/js/260.1d978212.js"><link rel="prefetch" href="/assets/js/261.9dc8e2d0.js"><link rel="prefetch" href="/assets/js/262.106e52d7.js"><link rel="prefetch" href="/assets/js/263.33d96f41.js"><link rel="prefetch" href="/assets/js/264.6b1670a2.js"><link rel="prefetch" href="/assets/js/265.3d14ef0c.js"><link rel="prefetch" href="/assets/js/266.987d548d.js"><link rel="prefetch" href="/assets/js/267.a820b9ff.js"><link rel="prefetch" href="/assets/js/268.a269de66.js"><link rel="prefetch" href="/assets/js/269.6d654a9c.js"><link rel="prefetch" href="/assets/js/27.c5acc2c6.js"><link rel="prefetch" href="/assets/js/270.03405f8d.js"><link rel="prefetch" href="/assets/js/271.27ab2828.js"><link rel="prefetch" href="/assets/js/272.b68d6a86.js"><link rel="prefetch" href="/assets/js/273.19422139.js"><link rel="prefetch" href="/assets/js/274.7bf021c3.js"><link rel="prefetch" href="/assets/js/275.ef57cf40.js"><link rel="prefetch" href="/assets/js/276.07a8661c.js"><link rel="prefetch" href="/assets/js/277.f02f8f08.js"><link rel="prefetch" href="/assets/js/278.f994b3e0.js"><link rel="prefetch" href="/assets/js/279.a3baf49e.js"><link rel="prefetch" href="/assets/js/28.69807ec0.js"><link rel="prefetch" href="/assets/js/280.626abee7.js"><link rel="prefetch" href="/assets/js/281.add2b3e4.js"><link rel="prefetch" href="/assets/js/282.948879f0.js"><link rel="prefetch" href="/assets/js/283.ee09f985.js"><link rel="prefetch" href="/assets/js/284.81950efe.js"><link rel="prefetch" href="/assets/js/285.1353807d.js"><link rel="prefetch" href="/assets/js/286.0f72007b.js"><link rel="prefetch" href="/assets/js/287.d40eddf7.js"><link rel="prefetch" href="/assets/js/288.5f7638b8.js"><link rel="prefetch" href="/assets/js/289.b26d1d7b.js"><link rel="prefetch" href="/assets/js/29.14d56b2b.js"><link rel="prefetch" href="/assets/js/290.15584b13.js"><link rel="prefetch" href="/assets/js/291.72345897.js"><link rel="prefetch" href="/assets/js/292.fdd2e053.js"><link rel="prefetch" href="/assets/js/293.d4487201.js"><link rel="prefetch" href="/assets/js/294.b480449f.js"><link rel="prefetch" href="/assets/js/295.a1b490f4.js"><link rel="prefetch" href="/assets/js/296.180c182d.js"><link rel="prefetch" href="/assets/js/297.b0672705.js"><link rel="prefetch" href="/assets/js/298.f8be3ac3.js"><link rel="prefetch" href="/assets/js/299.f67fe965.js"><link rel="prefetch" href="/assets/js/3.2a7d62d9.js"><link rel="prefetch" href="/assets/js/30.32cce164.js"><link rel="prefetch" href="/assets/js/300.d10c5f67.js"><link rel="prefetch" href="/assets/js/301.51795ccf.js"><link rel="prefetch" href="/assets/js/302.d46db625.js"><link rel="prefetch" href="/assets/js/303.b5d1b61b.js"><link rel="prefetch" href="/assets/js/304.c0b02a34.js"><link rel="prefetch" href="/assets/js/305.75499e05.js"><link rel="prefetch" href="/assets/js/306.26a32284.js"><link rel="prefetch" href="/assets/js/307.f501c205.js"><link rel="prefetch" href="/assets/js/308.1791416f.js"><link rel="prefetch" href="/assets/js/309.3a52afb0.js"><link rel="prefetch" href="/assets/js/31.0edd9cdf.js"><link rel="prefetch" href="/assets/js/310.c26262e6.js"><link rel="prefetch" href="/assets/js/311.a183e375.js"><link rel="prefetch" href="/assets/js/312.24ce1803.js"><link rel="prefetch" href="/assets/js/313.2c136fb1.js"><link rel="prefetch" href="/assets/js/314.2abfff90.js"><link rel="prefetch" href="/assets/js/315.fe6181cc.js"><link rel="prefetch" href="/assets/js/316.8957412d.js"><link rel="prefetch" href="/assets/js/317.4190bc51.js"><link rel="prefetch" href="/assets/js/318.3f2dedf3.js"><link rel="prefetch" href="/assets/js/319.8ad9eebf.js"><link rel="prefetch" href="/assets/js/32.f61d9027.js"><link rel="prefetch" href="/assets/js/320.15fbc739.js"><link rel="prefetch" href="/assets/js/321.b99e8db1.js"><link rel="prefetch" href="/assets/js/322.a4c8fc30.js"><link rel="prefetch" href="/assets/js/323.569a1cef.js"><link rel="prefetch" href="/assets/js/324.783a5819.js"><link rel="prefetch" href="/assets/js/325.52af8c29.js"><link rel="prefetch" href="/assets/js/326.6ebffdbf.js"><link rel="prefetch" href="/assets/js/327.419390c8.js"><link rel="prefetch" href="/assets/js/328.42057c23.js"><link rel="prefetch" href="/assets/js/329.f07ac3aa.js"><link rel="prefetch" href="/assets/js/33.0f4f1d17.js"><link rel="prefetch" href="/assets/js/330.2c391f65.js"><link rel="prefetch" href="/assets/js/331.59d12871.js"><link rel="prefetch" href="/assets/js/332.93575003.js"><link rel="prefetch" href="/assets/js/333.50b52d22.js"><link rel="prefetch" href="/assets/js/334.65683d98.js"><link rel="prefetch" href="/assets/js/335.ee338089.js"><link rel="prefetch" href="/assets/js/336.600867c4.js"><link rel="prefetch" href="/assets/js/337.5d62acdc.js"><link rel="prefetch" href="/assets/js/338.f60fb5d4.js"><link rel="prefetch" href="/assets/js/339.7930a5db.js"><link rel="prefetch" href="/assets/js/34.5d0cacb8.js"><link rel="prefetch" href="/assets/js/340.9df49c80.js"><link rel="prefetch" href="/assets/js/341.889eb58d.js"><link rel="prefetch" href="/assets/js/342.9e97e534.js"><link rel="prefetch" href="/assets/js/343.d7efc8e1.js"><link rel="prefetch" href="/assets/js/344.e69a20e6.js"><link rel="prefetch" href="/assets/js/345.94546cf9.js"><link rel="prefetch" href="/assets/js/346.a21e125e.js"><link rel="prefetch" href="/assets/js/347.a3ce83aa.js"><link rel="prefetch" href="/assets/js/348.826ea2b2.js"><link rel="prefetch" href="/assets/js/349.7853d4a3.js"><link rel="prefetch" href="/assets/js/35.3391178c.js"><link rel="prefetch" href="/assets/js/350.98fd6dda.js"><link rel="prefetch" href="/assets/js/351.12b1ae60.js"><link rel="prefetch" href="/assets/js/352.cfcc4bd2.js"><link rel="prefetch" href="/assets/js/353.619c3e77.js"><link rel="prefetch" href="/assets/js/354.53ad1f43.js"><link rel="prefetch" href="/assets/js/355.b983e8ad.js"><link rel="prefetch" href="/assets/js/356.7c115748.js"><link rel="prefetch" href="/assets/js/357.e0b1e970.js"><link rel="prefetch" href="/assets/js/358.e5a2345e.js"><link rel="prefetch" href="/assets/js/359.24f05e78.js"><link rel="prefetch" href="/assets/js/36.1736c4ac.js"><link rel="prefetch" href="/assets/js/360.81c37678.js"><link rel="prefetch" href="/assets/js/361.e7419a44.js"><link rel="prefetch" href="/assets/js/362.ace12cc8.js"><link rel="prefetch" href="/assets/js/363.56e567c8.js"><link rel="prefetch" href="/assets/js/364.bf992048.js"><link rel="prefetch" href="/assets/js/365.b758ba83.js"><link rel="prefetch" href="/assets/js/366.cbf670c9.js"><link rel="prefetch" href="/assets/js/367.625e994c.js"><link rel="prefetch" href="/assets/js/368.86243716.js"><link rel="prefetch" href="/assets/js/369.0acd74d9.js"><link rel="prefetch" href="/assets/js/37.5fa1565f.js"><link rel="prefetch" href="/assets/js/370.303fd9e7.js"><link rel="prefetch" href="/assets/js/371.db1b626d.js"><link rel="prefetch" href="/assets/js/372.30237839.js"><link rel="prefetch" href="/assets/js/373.9546efef.js"><link rel="prefetch" href="/assets/js/374.1dfa20f3.js"><link rel="prefetch" href="/assets/js/375.9b22e2b0.js"><link rel="prefetch" href="/assets/js/376.ba1ee8e0.js"><link rel="prefetch" href="/assets/js/377.866305db.js"><link rel="prefetch" href="/assets/js/378.8383d05c.js"><link rel="prefetch" href="/assets/js/379.98d9c4cf.js"><link rel="prefetch" href="/assets/js/38.31e00ff5.js"><link rel="prefetch" href="/assets/js/380.4e89acd5.js"><link rel="prefetch" href="/assets/js/381.687da0bf.js"><link rel="prefetch" href="/assets/js/382.16713d62.js"><link rel="prefetch" href="/assets/js/383.a0c1cb8d.js"><link rel="prefetch" href="/assets/js/384.0838cb84.js"><link rel="prefetch" href="/assets/js/385.d6f2acd1.js"><link rel="prefetch" href="/assets/js/386.325369d6.js"><link rel="prefetch" href="/assets/js/387.46007650.js"><link rel="prefetch" href="/assets/js/388.31d6b55b.js"><link rel="prefetch" href="/assets/js/389.3104a291.js"><link rel="prefetch" href="/assets/js/39.ed773dcc.js"><link rel="prefetch" href="/assets/js/390.e50a908d.js"><link rel="prefetch" href="/assets/js/391.b611ca6c.js"><link rel="prefetch" href="/assets/js/392.67e4359c.js"><link rel="prefetch" href="/assets/js/393.fafbe589.js"><link rel="prefetch" href="/assets/js/394.fbd63805.js"><link rel="prefetch" href="/assets/js/395.1e75fb04.js"><link rel="prefetch" href="/assets/js/396.eebdcdb3.js"><link rel="prefetch" href="/assets/js/4.de636e58.js"><link rel="prefetch" href="/assets/js/40.75ce6b0e.js"><link rel="prefetch" href="/assets/js/41.cb560de0.js"><link rel="prefetch" href="/assets/js/42.fb0cfc41.js"><link rel="prefetch" href="/assets/js/43.6b0840bf.js"><link rel="prefetch" href="/assets/js/44.8d09cfb5.js"><link rel="prefetch" href="/assets/js/45.51240e62.js"><link rel="prefetch" href="/assets/js/46.211f6323.js"><link rel="prefetch" href="/assets/js/47.be16052c.js"><link rel="prefetch" href="/assets/js/48.c527e880.js"><link rel="prefetch" href="/assets/js/49.f6bd1944.js"><link rel="prefetch" href="/assets/js/5.8ed6d450.js"><link rel="prefetch" href="/assets/js/50.c23981ea.js"><link rel="prefetch" href="/assets/js/51.b15fe314.js"><link rel="prefetch" href="/assets/js/52.7639ea49.js"><link rel="prefetch" href="/assets/js/53.0eb86ad7.js"><link rel="prefetch" href="/assets/js/54.ed3edd59.js"><link rel="prefetch" href="/assets/js/55.6603a455.js"><link rel="prefetch" href="/assets/js/56.bb58d4b6.js"><link rel="prefetch" href="/assets/js/57.ea5b296d.js"><link rel="prefetch" href="/assets/js/58.a632b145.js"><link rel="prefetch" href="/assets/js/59.8c1a4402.js"><link rel="prefetch" href="/assets/js/60.b36489f9.js"><link rel="prefetch" href="/assets/js/61.1c5762b6.js"><link rel="prefetch" href="/assets/js/62.5ad8a56f.js"><link rel="prefetch" href="/assets/js/63.93cb6a04.js"><link rel="prefetch" href="/assets/js/64.618da899.js"><link rel="prefetch" href="/assets/js/65.796cb868.js"><link rel="prefetch" href="/assets/js/66.210dbf6f.js"><link rel="prefetch" href="/assets/js/67.5cb4fa40.js"><link rel="prefetch" href="/assets/js/68.c9a2e237.js"><link rel="prefetch" href="/assets/js/69.09f7dfc5.js"><link rel="prefetch" href="/assets/js/7.3071659c.js"><link rel="prefetch" href="/assets/js/70.9177084f.js"><link rel="prefetch" href="/assets/js/71.ed961fe5.js"><link rel="prefetch" href="/assets/js/72.d0b57308.js"><link rel="prefetch" href="/assets/js/73.77c42cc9.js"><link rel="prefetch" href="/assets/js/74.54d084d8.js"><link rel="prefetch" href="/assets/js/75.991bd29c.js"><link rel="prefetch" href="/assets/js/76.545ee447.js"><link rel="prefetch" href="/assets/js/77.54639f8d.js"><link rel="prefetch" href="/assets/js/78.32ce8f94.js"><link rel="prefetch" href="/assets/js/79.af1dc28a.js"><link rel="prefetch" href="/assets/js/8.95745524.js"><link rel="prefetch" href="/assets/js/80.8cb87fe1.js"><link rel="prefetch" href="/assets/js/81.391fb58d.js"><link rel="prefetch" href="/assets/js/82.6f91a95d.js"><link rel="prefetch" href="/assets/js/83.d064b0b6.js"><link rel="prefetch" href="/assets/js/84.95b8c015.js"><link rel="prefetch" href="/assets/js/85.f08e2457.js"><link rel="prefetch" href="/assets/js/86.6bf7dd17.js"><link rel="prefetch" href="/assets/js/87.2e205aa0.js"><link rel="prefetch" href="/assets/js/88.237e8561.js"><link rel="prefetch" href="/assets/js/89.68aa61b1.js"><link rel="prefetch" href="/assets/js/9.0ffa89b7.js"><link rel="prefetch" href="/assets/js/90.5ebf528f.js"><link rel="prefetch" href="/assets/js/91.73119cce.js"><link rel="prefetch" href="/assets/js/92.5e7a910a.js"><link rel="prefetch" href="/assets/js/93.3d23bb54.js"><link rel="prefetch" href="/assets/js/94.cd7cf047.js"><link rel="prefetch" href="/assets/js/95.4f2f86be.js"><link rel="prefetch" href="/assets/js/96.946d4800.js"><link rel="prefetch" href="/assets/js/97.60d85d7e.js"><link rel="prefetch" href="/assets/js/98.16d86374.js"><link rel="prefetch" href="/assets/js/99.83a8364f.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.fd160284.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.02e500f3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-130b300a><div data-v-130b300a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-130b300a data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>星哥私有教程</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>星哥说事vuepress描述，包含前端、后端、运维、等技术的介绍</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2025
+        </a></span></div></div> <div class="hide" data-v-130b300a><header class="navbar" data-v-130b300a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">星哥私有教程</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/jumpserver/" class="nav-link"><i class="undefined"></i>
+  JumpServer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      云服务
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud/aliyun/" class="nav-link"><i class="undefined"></i>
+  阿里云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/tengxunyun/" class="nav-link"><i class="undefined"></i>
+  腾讯云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/aws/" class="nav-link"><i class="undefined"></i>
+  亚马逊云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/other/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-130b300a></div> <aside class="sidebar" data-v-130b300a><div class="personal-info-wrapper" data-v-39576ba9 data-v-130b300a><!----> <!----> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>357</h3> <h6 data-v-39576ba9>Articles</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>0</h3> <h6 data-v-39576ba9>Tags</h6></div></div> <ul class="social-links" data-v-39576ba9></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      Linux基础教程
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux-basis/" class="nav-link"><i class="undefined"></i>
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/devops/" class="nav-link"><i class="undefined"></i>
+  DevOps
+</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link"><i class="undefined"></i>
+  WEB服务
+</a></li><li class="dropdown-item"><!----> <a href="/file-system/" class="nav-link"><i class="undefined"></i>
+  文件系统
+</a></li><li class="dropdown-item"><!----> <a href="/nginx/" class="nav-link"><i class="undefined"></i>
+  Nginx
+</a></li><li class="dropdown-item"><!----> <a href="/docker/" class="nav-link"><i class="undefined"></i>
+  Docker
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      开源软件
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-Source-Software/" class="nav-link"><i class="undefined"></i>
+  开源软件
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/Open-databases/" class="nav-link"><i class="undefined"></i>
+  数据库
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/android/" class="nav-link"><i class="undefined"></i>
+  安卓相关
+</a></li><li class="dropdown-item"><!----> <a href="/kaiyuan/jumpserver/" class="nav-link"><i class="undefined"></i>
+  JumpServer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      云服务
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/cloud/aliyun/" class="nav-link"><i class="undefined"></i>
+  阿里云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/tengxunyun/" class="nav-link"><i class="undefined"></i>
+  腾讯云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/aws/" class="nav-link"><i class="undefined"></i>
+  亚马逊云
+</a></li><li class="dropdown-item"><!----> <a href="/cloud/other/" class="nav-link"><i class="undefined"></i>
+  其他
+</a></li></ul></div></div><div class="nav-item"><a href="/safe/" class="nav-link"><i class="undefined"></i>
+  服务器安全
+</a></div><div class="nav-item"><a href="/software/" class="nav-link"><i class="undefined"></i>
+  常用软件
+</a></div><div class="nav-item"><a href="/internet/" class="nav-link"><i class="undefined"></i>
+  互联网福利
+</a></div><div class="nav-item"><a href="/debug/" class="nav-link"><i class="undefined"></i>
+  调试Debug
+</a></div> <!----></nav> <ul class="sidebar-links"><li><a href="/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/linux-basis/" class="sidebar-link">基础知识</a></li><li><a href="/git/" class="sidebar-link">Git服务</a></li><li><a href="/safe/" class="sidebar-link">网络安全</a></li><li><a href="/kaiyuan/Open-Source-Software/" class="sidebar-link">开源软件</a></li><li><a href="/mysql/" class="sidebar-link">MySQL</a></li><li><a href="/nginx/" class="sidebar-link">Nginx</a></li><li><a href="/chatgpt/" class="sidebar-link">ChatGPT</a></li><li><a href="/shell/" class="sidebar-link">Shell</a></li><li><a href="/Ubuntu/" class="sidebar-link">Ubuntu</a></li><li><a href="/hardware/" class="sidebar-link">硬件</a></li><li><a href="/NAS/" class="sidebar-link">NAS</a></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2></h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2025
+        </a></span></div></div> <div data-v-130b300a><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">中国人自己的Cursor？腾讯CodeBuddy从零打造家庭相册</h1> <div data-v-f875f3fc><!----> <!----> <i class="iconfont reco-eye" data-v-f875f3fc><span id="/cloud/tengxun2025/8.%E4%B8%AD%E5%9B%BD%E4%BA%BA%E8%87%AA%E5%B7%B1%E7%9A%84Cursor%EF%BC%9F%E8%85%BE%E8%AE%AFCodeBuddy%E8%AE%A9%E4%BA%BA%E4%BA%BA%E9%83%BD%E8%83%BD%E6%88%90%E4%B8%BA%E7%A8%8B%E5%BA%8F%E5%91%98.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-f875f3fc><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <!----></div></div> <div class="theme-reco-content content__default"><h1 id="中国人自己的cursor-腾讯codebuddy从零打造家庭相册"><a href="#中国人自己的cursor-腾讯codebuddy从零打造家庭相册" class="header-anchor">#</a> 中国人自己的Cursor？腾讯CodeBuddy从零打造家庭相册</h1> <p>大家好，我是星哥，作为一个二手的高级程序猿，五一出去游玩跟家人的照片想要做个一个web页面分享给家人，今天就用出品的腾讯云代码助手（CodeBuddy）一行代码都不用自己写，看能不能实现的我小愿望。</p> <blockquote><p>PS:我正在参加CodeBuddy「首席试玩官」内容创作大赛，本文所使用的 CodeBuddy 免费下载链接：<a href="https://copilot.tencent.com/?fromSource=gwzcw.9661261.9661261.9661261&amp;utm_medium=cpc&amp;utm_id=gwzcw.9661261.9661261.9661261&amp;from_column=20421&amp;from=20421" target="_blank" rel="noopener noreferrer">腾讯云代码助手 CodeBuddy - AI 时代的智能编程伙伴<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513194617724.png?aliyun" alt="image-20250513194617724"></p> <h2 id="初识腾讯云代码助手-codebuddy"><a href="#初识腾讯云代码助手-codebuddy" class="header-anchor">#</a> 初识腾讯云代码助手（CodeBuddy）</h2> <p>腾讯自研的AI编程提效工具，凭借腾讯混元与 DeepSeek 混合模型，专为开发者打造。CodeBuddy不仅支持200+编程语言、兼容多种主流IDE，是国内首个支持 MCP 的代码助手，还为开发者提供开发智能体 Craft、智能代码补全、单元测试、代码诊断等多项高效功能，帮助开发者在编码过程中节省时间、提升效率。目前腾讯内部 85% 以上的开发者已使用 CodeBuddy，编码时间平均缩短 40% 以上，AI生成代码占比超四成，研发效率提升超 16%。</p> <h2 id="codebuddy兼容ide"><a href="#codebuddy兼容ide" class="header-anchor">#</a> CodeBuddy兼容IDE</h2> <p>兼容 Visual Studio Code、Pycharm、Android Studio、鸿蒙DevEco Studio、Visual studio、cloudstudio 、微信开发者小程序工具、XCode等主流的集成开发环境。</p> <h2 id="codebuddy编程语言及框架"><a href="#codebuddy编程语言及框架" class="header-anchor">#</a> CodeBuddy编程语言及框架</h2> <p>支持Java、Python、Go、C/C++、JavaScript、TypeScript、HTML、PHPRuby、Rust、Swift、Scala、Lua、 Dart、Node.JS、csS3 等200+种编程语言。</p> <h1 id="安装vs-code"><a href="#安装vs-code" class="header-anchor">#</a> 安装VS Code</h1> <p>下载地址：https://code.visualstudio.com/ ，点击“Download for Windows”下载，安装。</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513173913986.png?aliyun" alt="image-20250513173913986"></p> <h2 id="vscode设置中文"><a href="#vscode设置中文" class="header-anchor">#</a> VSCode设置中文</h2> <p>点击扩展搜索“chinese”安装扩展，Chinese (Simplified) (简体中文) 的扩展。</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513174055682.png?aliyun" alt="image-20250513174055682"></p> <p>1、打开 VSCode 软件，然后按住键盘上的“Ctrl+Shift+P”组合键，打开命令面板。</p> <p>2、在命令面板中输入“Configure Display Language”，然后点击“Configure Display Language”选项。</p> <p>3、在弹出的语言选择列表中，选择“zh-cn”，表示简体中文。</p> <p>4、点击列表中的“Restart”按钮，重启 VSCode，就可以变成了中文。</p> <h1 id="安装腾讯云codebuddy"><a href="#安装腾讯云codebuddy" class="header-anchor">#</a> 安装腾讯云CodeBuddy</h1> <p>点击扩展，再搜索“CodeBuddy”，点击安装，既可安装。</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513174147224.png?aliyun" alt="image-20250513174147224"></p> <p>另外的一种安装方式，直接访问官网 https://copilot.tencent.com/</p> <p>点击“免费使用”，再点击再vscode中使用。</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513174501848.png?aliyun" alt="image-20250513174501848"></p> <p><img src="H:%5Ctypora_images%5Cimage-20250513174431460.png" alt="image-20250513174431460"></p> <p>点击左侧的扩展按钮</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513174605351.png?aliyun" alt="image-20250513174605351"></p> <p>登录成功之后就可以使用Codebuddy了，这里我们可以看到</p> <h2 id="codebuddy界面"><a href="#codebuddy界面" class="header-anchor">#</a> Codebuddy界面</h2> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513194004448.png?aliyun" alt="image-20250513194004448"></p> <p>craft 助手模式，直接操作代码和命令行，适合修改和生成。
+chat 聊天模式，不修改代码，适合修复、解决问题和分析思路
+Code Review 代码审查
+Unit Test 单元测试</p> <h2 id="新建目录photos"><a href="#新建目录photos" class="header-anchor">#</a> 新建目录Photos</h2> <p>下面就可以开始规划做自己的家庭相册。</p> <p>先在桌面新建一个空的文件夹“Photos”，以后的代码都放到这里目录里，再用vscode打开这个目录。</p> <h2 id="做一个产品经理"><a href="#做一个产品经理" class="header-anchor">#</a> 做一个产品经理</h2> <p>把这个需求直接丢给Craft，看看有什么神奇的事情发生。</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513190825479.png?aliyun" alt="image-20250513190825479"></p> <p>给我回答了</p> <p>这个任务需要创建一个简单的WEB家庭相册页面，主要功能包括：</p> <ol><li><p>展示照片缩略图</p></li> <li><p>点击缩略图后以弹窗形式展示原图</p></li> <li><p>支持键盘左右键切换图片和ESC键关闭弹窗</p></li></ol> <p>首先需要明确几个要点：</p> <ol><li><p>照片文件是否已经存在？需要先查看当前目录下是否有照片文件</p></li> <li><p>需要创建HTML、CSS和JavaScript文件来实现功能</p></li> <li><p>需要处理图片的缩略图生成问题</p></li></ol> <p>接下来步骤：</p> <ol><li><p>先查看当前目录下有哪些图片文件</p></li> <li><p>根据图片文件创建相册页面</p></li> <li><p>实现缩略图展示和弹窗功能</p></li> <li><p>添加键盘事件处理</p></li></ol> <p>首先使用list_files工具查看当前目录下的图片文件，</p> <p>当前目录为空，需要先获取照片文件才能创建相册。我需要向用户确认：</p> <ol><li><p>照片文件是否已经准备好？如果已准备好，需要知道照片存放在哪个目录</p></li> <li><p>如果照片还未准备好，需要用户先上传照片到当前目录</p></li></ol> <p>由于当前目录为空，无法继续创建相册页面，需要用户提供照片文件</p> <p>当前目录为空，无法创建相册。请问您的照片文件是否已经准备好？如果已准备好，请告知照片存放的目录路径；如果还未准备好，请先将照片上传到当前目录(e:\360data\重要数据\桌面\Photos)。</p> <h2 id="什么是craft"><a href="#什么是craft" class="header-anchor">#</a> 什么是Craft</h2> <p>CodeBuddy 的“王炸”功能：Craft (智能创建)，就是个超级智能的 Agent (智能体)。你把 Prompt 往里一扔，它就跟打了鸡血似的，开始“噼里啪啦”一顿操作：创建项目结构、生成核心代码、配置依赖……全程自动化，你就嗑着瓜子等着就行。</p> <p>图片没有上传到目录中，我把图片再上传。</p> <h2 id="使用chat功能"><a href="#使用chat功能" class="header-anchor">#</a> 使用chat功能</h2> <p>把刚才的需求丢到chat里</p> <p>我需要做一个WEB家庭相册页面
+存放五一假期出游的照片
+功能
+1.照片原始尺寸较大，首先展示缩略图，点击打开原图
+2.在弹窗中打开原图，按键盘左右键实现查看上一张下一张图，按esc键可退出。</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513194129517.png?aliyun" alt="image-20250513194129517"></p> <p>经过一段时间的思考出了一个需求文档</p> <p>一、核心功能要求</p> <ol><li>智能图片处理系统</li></ol> <p>采用thumbnail.js自动生成缩略图（建议尺寸：320x240）
+图片预加载机制（相邻3张提前加载）
+支持WebP格式自动转换（兼容性处理）
+2. 响应式相册布局</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;div class=&quot;gallery-grid&quot;&gt;
+  &lt;!-- 动态生成缩略图 --&gt;
+  &lt;div class=&quot;thumb-card&quot; v-for=&quot;(img, index) in images&quot;&gt;
+    &lt;img :src=&quot;img.thumb&quot; @click=&quot;openLightbox(index)&quot;&gt;
+    &lt;div class=&quot;exif-info&quot;&gt;{{ img.date | formatDate }}&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ol start="3"><li>智能灯箱组件</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>class Lightbox {
+  constructor(images) {
+    this.currentIndex = 0
+    this.initKeyboardControls()
+  }
+  
+  navigate(direction) {
+    // 带缓动的图片切换动画
+    // 实现LRU缓存策略提升性能
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>二、交互增强方案</p> <ol><li><p>键盘控制体系</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>document.addEventListener('keydown', (e) =&gt; {
+  if (e.key === 'ArrowLeft') this.prevImage()
+  if (e.key === 'ArrowRight') this.nextImage()
+  if (e.key === 'Escape') this.close()
+})
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></li> <li><p>手势支持（移动端优化）</p></li></ol> <p>集成hammer.js实现滑动手势
+双击缩放（1x/2x/适应屏幕）</p> <p>三、性能优化建议</p> <ol><li>图片加载策略</li></ol> <p>实现Intersection Observer API懒加载
+渐进式JPEG加载
+加载状态骨架屏
+2. 缓存机制</p> <p>Service Worker预缓存策略
+IndexedDB本地存储原始图片
+四、扩展功能建议</p> <ol><li>可视化过滤器</li></ol> <p>按地点/人物/场景类型分类
+时间轴模式（地图轨迹集成）
+2. 社交功能</p> <p>图片批注系统
+分享组件（生成旅游故事）</p> <p>五、技术栈推荐</p> <p>视图层：Vue3 + Vuetify
+状态管理：Pinia
+构建工具：Vite</p> <h2 id="生成代码"><a href="#生成代码" class="header-anchor">#</a> 生成代码</h2> <p>index.html</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513191215580.png?aliyun" alt="image-20250513191215580"></p> <p>点击修改，或者改成自动修改文件</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513191312439.png?aliyun" alt="image-20250513191312439"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;五一假期家庭相册&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;家庭相册&lt;/h1&gt;
+    &lt;div class=&quot;gallery&quot;&gt;
+        &lt;div class=&quot;thumbnail&quot; data-src=&quot;mamanainai-SS.png&quot;&gt;
+            &lt;img src=&quot;mamanainai-SS.png&quot; alt=&quot;家庭照片&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;thumbnail&quot; data-src=&quot;QQ图片20250328112327.png&quot;&gt;
+            &lt;img src=&quot;QQ图片20250328112327.png&quot; alt=&quot;家庭照片&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;thumbnail&quot; data-src=&quot;QQ图片20250328153035-Q版.png&quot;&gt;
+            &lt;img src=&quot;QQ图片20250328153035-Q版.png&quot; alt=&quot;家庭照片&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;thumbnail&quot; data-src=&quot;全家福2024年-Q版.png&quot;&gt;
+            &lt;img src=&quot;全家福2024年-Q版.png&quot; alt=&quot;家庭照片&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;thumbnail&quot; data-src=&quot;奔跑-Q版.png&quot;&gt;
+            &lt;img src=&quot;奔跑-Q版.png&quot; alt=&quot;家庭照片&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;thumbnail&quot; data-src=&quot;奔跑_看图王-Q版.png&quot;&gt;
+            &lt;img src=&quot;奔跑_看图王-Q版.png&quot; alt=&quot;家庭照片&quot;&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 图片弹窗 --&gt;
+    &lt;div class=&quot;modal&quot;&gt;
+        &lt;span class=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;
+        &lt;img class=&quot;modal-content&quot; id=&quot;modal-img&quot;&gt;
+        &lt;a class=&quot;prev&quot;&gt;&amp;#10094;&lt;/a&gt;
+        &lt;a class=&quot;next&quot;&gt;&amp;#10095;&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br></div></div><h2 id="生成style-css"><a href="#生成style-css" class="header-anchor">#</a> 生成style.css</h2> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513191430421.png?aliyun" alt="image-20250513191430421"></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #fff5f5;
+    background-image: linear-gradient(to bottom, #ffebee, #fff5f5);
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.thumbnail {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.03);
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* 弹窗样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .thumbnail img {
+        height: 150px;
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br></div></div><h2 id="生成script-js"><a href="#生成script-js" class="header-anchor">#</a> 生成script.js</h2> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513191533075.png?aliyun" alt="image-20250513191533075"></p> <p>生成的代码。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>document.addEventListener('DOMContentLoaded', function() {
+    // 获取所有元素
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const modal = document.querySelector('.modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.querySelector('.close');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    
+    let currentIndex = 0;
+    const images = Array.from(thumbnails).map(thumb =&gt; thumb.getAttribute('data-src'));
+    
+    // 为每个缩略图添加点击事件
+    thumbnails.forEach((thumb, index) =&gt; {
+        thumb.addEventListener('click', function() {
+            currentIndex = index;
+            showImage(currentIndex);
+        });
+    });
+    
+    // 显示图片函数
+    function showImage(index) {
+        modalImg.src = images[index];
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // 防止背景滚动
+    }
+    
+    // 关闭弹窗
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+    // 上一张图片
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+    
+    // 下一张图片
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+    
+    // 事件监听
+    closeBtn.addEventListener('click', closeModal);
+    prevBtn.addEventListener('click', prevImage);
+    nextBtn.addEventListener('click', nextImage);
+    
+    // 键盘事件
+    document.addEventListener('keydown', function(e) {
+        if (modal.style.display === 'block') {
+            switch(e.key) {
+                case 'Escape':
+                    closeModal();
+                    break;
+                case 'ArrowLeft':
+                    prevImage();
+                    break;
+                case 'ArrowRight':
+                    nextImage();
+                    break;
+            }
+        }
+    });
+    
+    // 点击弹窗背景关闭
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br></div></div><h2 id="打开页面验证"><a href="#打开页面验证" class="header-anchor">#</a> 打开页面验证</h2> <p>直接用浏览器打开</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513191703950.png?aliyun" alt="image-20250513191703950"></p> <h2 id="再微调一下"><a href="#再微调一下" class="header-anchor">#</a> 再微调一下</h2> <p>把页面背景改成温馨一点的，把第二张图片去掉</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513191842075.png?aliyun" alt="image-20250513191842075"></p> <p>会显示变更前和变更后的代码</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513192502374.png?aliyun" alt="image-20250513192502374"></p> <p>一顿自动操作之后，再次打开</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513191926704.png?aliyun" alt="image-20250513191926704"></p> <h1 id="改变需求"><a href="#改变需求" class="header-anchor">#</a> 改变需求</h1> <p>创建一个基于 Web 的家庭相册项目，使用 React 框架</p> <p>分析需求：</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513194952475.png?aliyun" alt="image-20250513194952475"></p> <p>创建一个基于React的家庭相册项目需要以下步骤：</p> <ol><li><p>初始化React项目</p></li> <li><p>创建相册组件结构</p></li> <li><p>实现图片展示功能</p></li> <li><p>添加图片查看模态框</p></li> <li><p>实现键盘导航功能</p></li></ol> <p>首先需要初始化React项目，然后逐步实现功能。由于当前工作目录已有普通HTML相册，建议新建一个目录来存放React项目。</p> <p>我将先创建一个新的React项目。</p> <p>会自动执行</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>npx create-react-app family-album-react --template typescript
+Need to install the following packages:
+  create-react-app
+Ok to proceed? (y) y
+npm WARN deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p><img src="https://imgoss.xgss.net/picgo2025/image-20250513195050674.png?aliyun" alt="image-20250513195050674"></p> <p>完成</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513195235912.png?aliyun" alt="image-20250513195235912"></p> <p>打开localhost+端口。</p> <p><img src="https://imgoss.xgss.net/picgo2025/image-20250513195301914.png?aliyun" alt="image-20250513195301914"></p> <h1 id="结束"><a href="#结束" class="header-anchor">#</a> 结束</h1> <p>通过使用腾讯 CodeBuddy 从零打造家庭相册项目，深刻感受到了它作为一款智能编程助手的强大能力。在整个开发过程中，CodeBuddy 就像一位贴心的技术伙伴，从项目的基础框架搭建到各个功能的实现，再到问题的解决和优化，都给予了开发者全方位的支持，极大地提升了开发效率和项目质量。与 Cursor 等国外同类工具相比，CodeBuddy 凭借其本土化优势、对国内云服务的深度整合以及对国内开发场景的针对性优化，展现出了独特的竞争力，有望成为国内开发者心目中 “中国人自己的 Cursor”。</p> <p>就目前的表现而言，腾讯云代码助手CodeBuddy工具已经有了国产Cursor的媲美的功能。从代码质量来看，其生成的代码质量尚可，预设功能也基本能够实现，对于新手开发者而言，若想借助AI工具完成工程项目，从零开始直接使用AI的最佳选择。</p> <p>展望未来，随着人工智能技术的不断发展和 CodeBuddy 的持续迭代升级，相信它将在更多的开发场景中发挥重要作用，程序员小伙伴你们颤抖了吗？</p></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-cb1513f6></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.5d560444.js" defer></script><script src="/assets/js/6.69b26328.js" defer></script><script src="/assets/js/2.27d09e23.js" defer></script><script src="/assets/js/1.a642877b.js" defer></script><script src="/assets/js/133.3f843a2a.js" defer></script>
+  </body>
+</html>
